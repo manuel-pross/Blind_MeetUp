@@ -3,10 +3,18 @@ Voraussetzungen:
 1. Serversoftware (XAMPP: https://www.apachefriends.org/de/index.html oder MAMP: https://www.mamp.info/de/windows/)
 2. Composer (https://getcomposer.org/)
 3. Node.js (https://nodejs.org/en/)
+4. (optional) ConEmu: (https://conemu.github.io/); ermöglicht multiple Tabs in der Kommandozeile
 
 Nach dem Clonen:
 
 1. npm install
+
+Workflow:
+
+1. Im Control Panel von der Serversoftware den Apache (braucht man eventuell nicht) und MySQL starten
+2. php artisan serve
+3. npm run watch
+
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
