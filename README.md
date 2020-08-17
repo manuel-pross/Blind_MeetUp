@@ -1,3 +1,14 @@
+Voraussetzungen:
+
+1. Serversoftware (XAMPP: https://www.apachefriends.org/de/index.html oder MAMP: https://www.mamp.info/de/windows/)
+2. Composer (https://getcomposer.org/)
+3. Node.js (https://nodejs.org/en/)
+
+Nach dem Clonen:
+
+1. npm install
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
