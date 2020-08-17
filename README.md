@@ -8,10 +8,12 @@ Voraussetzungen:
 Nach dem Clonen:
 
 1. npm install
+2. Über phpmyadmin eine neue Datenbank anlegen
+3. Im .env-file den Eintrag: DB_DATABASE=larvel auf DB_DATABASE=nameDeinerDatenbank
 
 Workflow:
 
-1. Im Control Panel von der Serversoftware den Apache (braucht man eventuell nicht) und MySQL starten
+1. Im Control Panel von der Serversoftware den Apache (braucht man eventuell nicht) und MySQL (auf jeden Fall) starten
 2. php artisan serve
 3. npm run watch
 
