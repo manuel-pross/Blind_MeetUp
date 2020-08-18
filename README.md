@@ -8,10 +8,11 @@ Voraussetzungen:
 Nach dem Clonen:
 
 1. npm install
-2. Über phpmyadmin eine neue Datenbank anlegen
-3. Im .env-file den Eintrag: DB_DATABASE=laravel auf DB_DATABASE=nameDeinerDatenbank
-4. Damit die Änderungen übernommen werden muss man den Cache leeren: php artisan config:cache
-5. Um die bestehenden migrations der Tabellen zu migrieren: php artisan migrate
+2. composer install
+3. Über phpmyadmin eine neue Datenbank anlegen
+4. Im .env-file den Eintrag: DB_DATABASE=laravel auf DB_DATABASE=nameDeinerDatenbank
+5. Damit die Änderungen übernommen werden muss man den Cache leeren: php artisan config:cache
+6. Um die bestehenden migrations der Tabellen zu migrieren: php artisan migrate
 
 Workflow:
 
