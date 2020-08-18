@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <div id="example"></div>
                     Hier kommt der Styleguide
                 </div>
             </div>
