@@ -1,19 +1,35 @@
-// Body
-$body-bg: #f8fafc;
+$c1-main: #000000;
+$c2-main: #ffffff;
+$c3-main: #424242;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$c1-second: #50b375;
+$c2-second: #2e6c48;
+$c3-second: #ee220c;
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$c-white: #fefefe;
+$c-black: #010101;
+$c-grey: #999999;
+
+$c-success: #5cb85c;
+$c-warn: #f0ad4e;
+$c-error: #d9534f;
+
+$transision: 0.3s;
+$box-shadow: #01010159;
+
+/* --------------------------------------------------
+
+Breakpoint Settings
+
+-------------------------------------------------- */
+
+$media-direction: min; // min / max — default is min (mobile first)
+
+$breakpoints: (
+  " ": " ",
+  "xs": 565px,
+  "sm": 768px,
+  "md": 992px,
+  "lg": 1200px,
+  "xl": 1920px,
+);

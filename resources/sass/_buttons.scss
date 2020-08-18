@@ -1,0 +1,120 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 30px !important;
+  border-radius: 30px !important;
+  border: 0 !important;
+
+  &-primary {
+    color: $c-white;
+    font-weight: 400 !important;
+    background-color: $c1-second;
+
+    &:hover {
+      background-color: $c2-second;
+    }
+  }
+
+  &-second {
+    color: $c2-second !important;
+    background-color: $c-white !important;
+    border: 2px solid rgba(46, 107, 71, 0.302) !important;
+
+    &:hover {
+      border-color: $c2-second !important;
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed !important;
+    // color: $c2-second !important;
+    background-color: $c-white !important;
+    border: 2px solid rgba(46, 108, 72, 0.3) !important;
+  }
+}
+
+.sg_btn {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: solid $c2-second 4px;
+  width: 100px;
+  height: 100px;
+  padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+  transition: border-width 0.2s;
+
+  span {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.sg_copy_color,
+.sg_copy_ut {
+  cursor: pointer;
+}
+
+.btn-alternative {
+  border: none;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $c1-second;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($c1-second, 15%);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.alt-primary {
+  cursor: pointer;
+  display: block;
+  padding: 10px 25px !important;
+  border-radius: 25px !important;
+  border: 0 !important;
+  color: $c-white;
+  font-weight: 400 !important;
+  background-color: $c1-second;
+  margin-bottom: 2px;
+  transition: background-color 0.15s ease-in;
+
+  &:hover {
+    background-color: $c2-second !important;
+  }
+}
