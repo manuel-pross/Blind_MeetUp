@@ -1,5 +1,5 @@
 import React from "react";
-import "../../public/css/app.css";
+import "../sass/app.scss";
 import Styleguide from "./styleguide/Styleguide";
 
 function main() {
