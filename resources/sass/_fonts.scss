@@ -1,90 +1,95 @@
 /* maven-pro-regular - latin */
 @font-face {
-  font-family: "Maven Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""), url("../assets/fonts/maven-pro-v20-latin-regular.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-regular.svg#MavenPro") format("svg"); /* Legacy iOS */
+    font-family: "Maven Pro regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../assets/fonts/maven-pro-v20-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-regular.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("../assets/fonts/maven-pro-v20-latin-regular.woff")
+            format("woff"),
+        /* Modern Browsers */
+            url("../assets/fonts/maven-pro-v20-latin-regular.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/maven-pro-v20-latin-regular.svg#MavenPro")
+            format("svg"); /* Legacy iOS */
 }
 /* maven-pro-500 - latin */
 @font-face {
-  font-family: "Maven Pro";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../assets/fonts/maven-pro-v20-latin-500.eot"); /* IE9 Compat Modes */
-  src: local(""), url("../assets/fonts/maven-pro-v20-latin-500.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-500.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.woff") format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-500.svg#MavenPro") format("svg"); /* Legacy iOS */
+    font-family: "Maven Pro Bold";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../assets/fonts/maven-pro-v20-latin-500.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../assets/fonts/maven-pro-v20-latin-500.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-500.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("../assets/fonts/maven-pro-v20-latin-500.woff") format("woff"),
+        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/maven-pro-v20-latin-500.svg#MavenPro")
+            format("svg"); /* Legacy iOS */
 }
 /* maven-pro-700 - latin */
 @font-face {
-  font-family: "Maven Pro";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/fonts/maven-pro-v20-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""), url("../assets/fonts/maven-pro-v20-latin-700.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.woff") format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-700.svg#MavenPro") format("svg"); /* Legacy iOS */
+    font-family: "Maven Pro Black";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../assets/fonts/maven-pro-v20-latin-700.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../assets/fonts/maven-pro-v20-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-700.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("../assets/fonts/maven-pro-v20-latin-700.woff") format("woff"),
+        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/maven-pro-v20-latin-700.svg#MavenPro")
+            format("svg"); /* Legacy iOS */
 }
 
+body {
+    font-family: "Maven Pro regular" !important;
+}
 h1 {
-  font-family: "Maven Pro";
-  font-size: 24px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 26.4px;
+    font-family: "Maven Pro Black";
+    font-size: 24px;
+    line-height: 26.4px;
 }
 
 h2 {
-  font-family: "Maven Pro";
-  font-size: 20px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 20.4px;
+    font-family: "Maven Pro Black";
+    font-size: 20px;
+    line-height: 20.4px;
 }
 
 h3 {
-  font-family: "Maven Pro";
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 15.4px;
+    font-family: "Maven Pro Bold";
+    font-size: 14px;
+    line-height: 15.4px;
 }
 
 p {
-  color: $c3-main;
-  font-family: "Maven Pro";
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 20px;
+    color: $c3-main;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 blockquote {
-  font-family: "Maven Pro";
-  font-size: 21px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 30px;
+    font-size: 21px;
+    line-height: 30px;
 }
 
 pre {
-  font-family: "Maven Pro";
-  font-size: 13px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 18.5714px;
+    font-size: 13px;
+    line-height: 18.5714px;
 }
