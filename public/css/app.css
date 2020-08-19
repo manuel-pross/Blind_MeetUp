@@ -11139,7 +11139,7 @@ Breakpoint Mixin
 /* maven-pro-regular - latin */
 
 @font-face {
-  font-family: "Maven Pro regular";
+  font-family: "Maven Pro Regular";
   font-style: normal;
   font-weight: 400;
   src: local(""), url(/fonts/maven-pro-v20-latin-regular.eot?10a70cffa843943ca7b779abe9cbfb4e) format("embedded-opentype"), url(/fonts/maven-pro-v20-latin-regular.woff2?167af2a4006b90c9902559b1fe636daa) format("woff2"), url(/fonts/maven-pro-v20-latin-regular.woff?864183322a64fd9bb7eb5030a0ac33b6) format("woff"), url(/fonts/maven-pro-v20-latin-regular.ttf?0662688da684377155650fd9ce4137ff) format("truetype"), url(/fonts/maven-pro-v20-latin-regular.svg?9c4648097591162f7570b70c7dc5c68b) format("svg");
@@ -11171,7 +11171,7 @@ Breakpoint Mixin
 }
 
 body {
-  font-family: "Maven Pro regular" !important;
+  font-family: "Maven Pro Regular" !important;
 }
 
 h1 {
