@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./Styleguide";
 
 // Components
 import OneColor from "./OneColor/OneColor";

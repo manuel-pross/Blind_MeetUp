@@ -1,10 +1,10 @@
 import React from "react";
-import logoFullBlack from "./../../assets/img/Bildmarke.png";
-import logoFullWhite from "./../../assets/img/Bildmarke_invertiert.png";
-import oneLineBlack from "./../../assets/img/Wortmarke_OneLine.png";
-import oneLineWhite from "./../../assets/img/Wortmarke_OneLine_invertiert.png";
-import twoLineBlack from "./../../assets/img/Wortmarke_TwoLine.png";
-import twoLineWhite from "./../../assets/img/Wortmarke_TwoLine_invertiert.png";
+import logoFullBlack from "../../../assets/img/Bildmarke.png";
+import logoFullWhite from "../../../assets/img/Bildmarke_invertiert.png";
+import oneLineBlack from "../../../assets/img/Wortmarke_OneLine.png";
+import oneLineWhite from "../../../assets/img/Wortmarke_OneLine_invertiert.png";
+import twoLineBlack from "../../../assets/img/Wortmarke_TwoLine.png";
+import twoLineWhite from "../../../assets/img/Wortmarke_TwoLine_invertiert.png";
 
 const Logos = () => {
   return (
