@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import TeamSlider from '../../components/TeamSlider/TeamSlider'
 import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
@@ -9,7 +9,7 @@ class LandingPage extends Component {
         return (
             <React.Fragment >
                 <Navbar />
-                <div style={{ backgroundColor: '#F5F5F5' }}>
+                <div className="container">
                     <div
                         style={{ height: '500px', paddingTop: '70px' }}
                         id="Projekt">
@@ -24,13 +24,7 @@ class LandingPage extends Component {
                             Ablauf
                     </h2>
                     </div>
-                    <div
-                        style={{ height: '500px' }}
-                        id="Team">
-                        <h2>
-                            Unser Team
-                    </h2>
-                    </div>
+                    <TeamSlider />
                     <div
                         style={{ height: '5000px' }}
                         id="FAQ">
