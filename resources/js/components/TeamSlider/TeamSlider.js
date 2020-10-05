@@ -21,7 +21,7 @@ const Stylename = [
 
 const nameString = [
    "Pia Zeller",
-   "Manuel Pross",
+   "Manuel Proß",
    "Patrick Neudert",
    "Gion Egel",
    "Simon Dold",

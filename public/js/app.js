@@ -77354,7 +77354,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 var Stylename = ["teamSlider__cover__image-pia", "teamSlider__cover__image-manuel", "teamSlider__cover__image-patrickN", "teamSlider__cover__image-gion", "teamSlider__cover__image-simon", "teamSlider__cover__image-patrickK"];
-var nameString = ["Pia Zeller", "Manuel Pross", "Patrick Neudert", "Gion Egel", "Simon Dold", "Patrick Kaserer"];
+var nameString = ["Pia Zeller", "Manuel Proß", "Patrick Neudert", "Gion Egel", "Simon Dold", "Patrick Kaserer"];
 var desc = ["Marketing", "Projekt-Initiator & Entwickler", "Design & Konzeption", "Design & Konzeption", "Entwickler", "Projekt-Initiator & Entwickler"];
 
 var TeamSlider = /*#__PURE__*/function (_Component) {
