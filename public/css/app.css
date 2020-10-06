@@ -10215,3 +10215,7 @@ template {
   background-color: #EFFCEF;
 }
 
+.header__image {
+  width: 100%;
+}
+
