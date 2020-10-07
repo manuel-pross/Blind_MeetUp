@@ -4,9 +4,11 @@ import ReactDOM from 'react-dom';
 import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import DevSizeBtn from './components/hoc/DevSizeBtn';
 
 ReactDOM.render(
   <BrowserRouter>
+    <DevSizeBtn />
     <React.StrictMode>
       <Root />
     </React.StrictMode>

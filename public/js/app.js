@@ -76961,14 +76961,14 @@ module.exports = "/images/Wortmarke_TwoLine_invertiert.png?96b60cda753d310e83bbe
 
 /***/ }),
 
-/***/ "./resources/assets/img/placeholder/1920x930-placeholder.png":
-/*!*******************************************************************!*\
-  !*** ./resources/assets/img/placeholder/1920x930-placeholder.png ***!
-  \*******************************************************************/
+/***/ "./resources/assets/img/placeholder/landing-page-background.jpg":
+/*!**********************************************************************!*\
+  !*** ./resources/assets/img/placeholder/landing-page-background.jpg ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/1920x930-placeholder.png?44c71acdc5aaeba5ee0349ea3058c96d";
+module.exports = "/images/landing-page-background.jpg?e1c99e57df3713763f447eb4b59edbc4";
 
 /***/ }),
 
@@ -77087,8 +77087,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _assets_img_placeholder_1920x930_placeholder_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/img/placeholder/1920x930-placeholder.png */ "./resources/assets/img/placeholder/1920x930-placeholder.png");
-/* harmony import */ var _assets_img_placeholder_1920x930_placeholder_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_img_placeholder_1920x930_placeholder_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_img_placeholder_landing_page_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/img/placeholder/landing-page-background.jpg */ "./resources/assets/img/placeholder/landing-page-background.jpg");
+/* harmony import */ var _assets_img_placeholder_landing_page_background_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_img_placeholder_landing_page_background_jpg__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _hoc_Auxy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hoc/Auxy */ "./resources/js/components/hoc/Auxy.js");
 
 
@@ -77099,19 +77099,21 @@ var header = function header(props) {
     className: "header position-relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "header__image",
-    src: _assets_img_placeholder_1920x930_placeholder_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: _assets_img_placeholder_landing_page_background_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
     alt: "headerImage"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "header__title"
   }, "Triff dich mit neuen Leuten aus deiner Hochschule und connecte dich. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "header__p"
-  }, "Nutze die M\xF6glichkeit, an spannenden Treffen in ganz Furtwangen teilzunehmen, dich mit verschiedenen Studierenden zu treffen, dich mit ihnen auszutauschen oder Kontakte zu kn\xFCpfen. Wir bieten dir eine Plattform und organisieren alles.  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Nutze die M\xF6glichkeit, an spannenden Treffen in ganz Furtwangen teilzunehmen, dich mit verschiedenen Studierenden zu treffen, dich mit ihnen auszutauschen oder Kontakte zu kn\xFCpfen. Wir bieten dir eine Plattform und organisieren alles.  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header__btn__wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "header__firstBtn btn btn-primary"
   }, "Jetzt anmelden"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-secondary"
-  }, "Mehr erfahren"))));
+  }, "Mehr erfahren")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (header);
@@ -77508,6 +77510,29 @@ var auxy = function auxy(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (auxy);
+
+/***/ }),
+
+/***/ "./resources/js/components/hoc/DevSizeBtn.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/hoc/DevSizeBtn.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var devSizeBtn = function devSizeBtn(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "devBtn"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (devSizeBtn);
 
 /***/ }),
 
@@ -78230,13 +78255,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Root */ "./resources/js/Root.js");
 /* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./serviceWorker */ "./resources/js/serviceWorker.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_hoc_DevSizeBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/hoc/DevSizeBtn */ "./resources/js/components/hoc/DevSizeBtn.js");
 
  // import './index.scss';
 
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))), document.getElementById('app')); // If you want your app to work offline and load faster, you can change
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hoc_DevSizeBtn__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))), document.getElementById('app')); // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
