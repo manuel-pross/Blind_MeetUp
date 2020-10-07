@@ -9474,6 +9474,27 @@ pre {
   }
 }
 
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -10217,5 +10238,16 @@ template {
 
 .header__image {
   width: 100%;
+}
+
+.header__wrapper {
+  position: absolute;
+  bottom: 7rem;
+  left: 5rem;
+  max-width: 55rem;
+}
+
+.header__firstBtn {
+  margin-right: 1rem;
 }
 

@@ -77095,21 +77095,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var header = function header(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header position-relative"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "header__image",
     src: _assets_img_placeholder_1920x930_placeholder_png__WEBPACK_IMPORTED_MODULE_1___default.a,
     alt: "headerImage"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header__wrapper container"
+    className: "header__wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "header__title"
   }, "Triff dich mit neuen Leuten aus deiner Hochschule und connecte dich. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "header__p"
   }, "Nutze die M\xF6glichkeit, an spannenden Treffen in ganz Furtwangen teilzunehmen, dich mit verschiedenen Studierenden zu treffen, dich mit ihnen auszutauschen oder Kontakte zu kn\xFCpfen. Wir bieten dir eine Plattform und organisieren alles.  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-primary"
+    className: "header__firstBtn btn btn-primary"
   }, "Jetzt anmelden"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-secondary"
-  }, "Mehr erfahren")));
+  }, "Mehr erfahren"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (header);
