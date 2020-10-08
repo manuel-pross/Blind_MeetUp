@@ -9,7 +9,7 @@ class LandingPage extends Component {
         return (
             <React.Fragment >
                 <Navbar />
-                <div style={{ backgroundColor: '#F5F5F5' }}>
+                <div>
                     <div
                         style={{ height: '500px', paddingTop: '70px' }}
                         id="Projekt">
