@@ -39,7 +39,7 @@ class LandingPage extends Component {
                             FAQ
                     </h2>
                         <Link to="/styleguide">Styleguide</Link>
-                        <CTA></CTA>
+                        <CTA/>
                     </div>
                 </div>
             </React.Fragment>
