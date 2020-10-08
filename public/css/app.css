@@ -10351,7 +10351,7 @@ template {
 }
 
 .header__p {
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
   color: #fefefe;
   font-size: 15px;
 }
@@ -10359,6 +10359,7 @@ template {
 @media (min-width: 576px) {
   .header__p {
     font-size: 25px;
+    margin-bottom: 3.5rem;
     line-height: 30px;
   }
 }
@@ -10384,20 +10385,20 @@ template {
 }
 
 .header__btn__wrapper {
-  margin: 0 2rem;
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 576px) {
   .header__btn__wrapper {
+    margin: 0 2rem;
     flex-direction: row;
     margin: 0;
   }
 }
 
 .header__firstBtn {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
