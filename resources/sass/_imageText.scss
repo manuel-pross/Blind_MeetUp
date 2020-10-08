@@ -1,0 +1,19 @@
+.imageText {
+   @include breakpoint("lg") {
+      display: flex;
+   }
+
+   &__img {
+      margin-bottom: 2rem;
+      width: 100%;
+
+      @media (max-width: 992px) {
+         margin-left: 0 !important;
+         margin-right: 0 !important;
+      }
+
+      @include breakpoint("lg") {
+         width: 50%;
+      }
+   }
+}

@@ -4,7 +4,7 @@ import Aux from '../hoc/Auxy';
 
 const header = (props) => (
    <Aux>
-      <div className="header position-relative">
+      <div className="header position-relative mb-300">
          <img className="header__image" src={headerImage} alt="headerImage" />
          <div className="header__wrapper">
             <h2 className="header__title">Triff dich mit neuen Leuten aus deiner Hochschule und connecte dich. </h2>

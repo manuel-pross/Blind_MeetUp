@@ -15,15 +15,13 @@
 @import "./navbar";
 @import "./utility";
 
-
 // normalizer
 @import "./normalizer";
 
-//slick-slider
-@import "./teamSlider";
-
-//header
-@import "./header";
-
 //dev
 @import "./devSizeBtn";
+
+//landingpage
+@import "./header";
+@import "./teamSlider";
+@import "./imageText";

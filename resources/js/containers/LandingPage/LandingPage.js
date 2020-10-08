@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header'
 import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
+import AboutProject from '../../components/AboutProject/AboutProject';
 
 class LandingPage extends Component {
     render() {
@@ -11,6 +12,7 @@ class LandingPage extends Component {
             <React.Fragment >
                 <Navbar />
                 <Header />
+                <AboutProject/>
                 <div className="container">
                     <div
                         style={{ height: '500px', paddingTop: '70px' }}
