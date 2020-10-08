@@ -16037,15 +16037,25 @@ pre {
   padding: 0;
 }
 
-.navbar__logo {
+.navbar__logo1 {
   height: 100%;
-  cursor: pointer;
-  content: url(/images/Wortmarke_OneLine.png?7d18c1907b4d1c1dfe59018e9030c904);
+  display: block !important;
 }
 
-@media (max-width: 450px) {
-  .navbar__logo {
-    content: url(/images/Bildmarke.png?1c6452901be48855e6ba4796c1c8287c);
+.navbar__logo2 {
+  height: 100%;
+  display: none !important;
+}
+
+@media only screen and (max-width: 460px) {
+  .navbar__logo1 {
+    height: 100%;
+    display: none !important;
+  }
+
+  .navbar__logo2 {
+    height: 100%;
+    display: block !important;
   }
 }
 
@@ -16063,7 +16073,7 @@ pre {
   border-bottom: 3px solid transparent;
   display: block;
   padding-left: 7px;
-  display: none;
+  display: block;
 }
 
 .navLinks__hash:hover {
@@ -16071,9 +16081,9 @@ pre {
   color: #010101;
 }
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 800px) {
   .navLinks__hash {
-    display: block;
+    display: none;
   }
 }
 

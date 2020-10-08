@@ -22,24 +22,32 @@
         padding: 0;
     }
 
-    &__logo{
+    &__logo1 {
         height: 100%;
-        cursor: pointer;
-        content:url("../assets/img/Wortmarke_OneLine.png");
+        display: block !important;
     }
 
-    @media (max-width: 450px){
-            &__logo{
-                content:url("../assets/img/Bildmarke.png"); 
+    &__logo2 {
+        height: 100%;
+        display: none !important;
+    }
+
+    @media only screen and (max-width: 460px) {
+        &__logo1 {
+            height: 100%;
+            display: none !important;
+        }
+
+        &__logo2 {
+            height: 100%;
+            display: block !important;
         }
     }
-}
-
-.navbar {
     nav{
         height: 100%;
     }
 }
+
 .navLinks {
     &__hash{
         color: $c-black;
@@ -51,15 +59,15 @@
         border-bottom: 3px solid transparent;
         display: block;
         padding-left: 7px;
-        display: none;
+        display: block;
 
         &:hover {
             text-decoration: none;
             color: $c-black;
         }
 
-        @include breakpoint("sm") {
-            display: block;
+        @media only screen and (max-width: 800px){
+            display: none;
         }
     }
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import { animateScroll as scroll} from 'react-scroll'
- 
+import { animateScroll as scroll } from 'react-scroll'
+
+import Wortmarke_OneLine from '../../../assets/img/Wortmarke_OneLine.png';
+import Bildmarke from '../../../assets/img/Bildmarke.png';
 
 
 import NavigationItems from './NavigationItems/NavigationItems';
@@ -16,8 +18,14 @@ class Navbar extends Component {
         return (
             <header className="navbar">
                 <img
-                    className="navbar__logo"
-                    alt="BlindMeetUp_Logo"
+                    src={Wortmarke_OneLine}
+                    className="navbar__logo1"
+                    alt="BlindMeetUp_Logo1"
+                    onClick={this.scrollToTop} />
+                <img
+                    src={Bildmarke}
+                    className="navbar__logo2"
+                    alt="BlindMeetUp_Logo2"
                     onClick={this.scrollToTop} />
                 <nav>
                     <ul className="navbar__Items">
