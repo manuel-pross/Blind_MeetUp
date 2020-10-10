@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
+import TimelineDesc from "./TimelineDesc"
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import TimelinePoint from './TimelinePoint'
-//import TimelineDesc from './TimelineDesc'
-
 const descs = [
-    {
-        headingText: 'Heading 1', descText: 'Heading 1 Lorem Ipsum'
-    },
-    {
-        headingText: 'Heading 2', descText: 'Heading 2 Lorem Ipsum'
-    },
-    {
-        headingText: 'Heading 3', descText: 'Heading 3 Lorem Ipsum'
-    },
-    {
-        headingText: 'Heading 4', descText: 'Heading 4 Lorem Ipsum'
-    },
-    {
-        headingText: 'Heading 5', descText: 'Heading 5 Lorem Ipsum'
-    },
+    { headingText: 'Heading 1', descText: 'Heading 1 Lorem Ipsum'},
+    { headingText: 'Heading 2', descText: 'Heading 2 Lorem Ipsum' },
+    { headingText: 'Heading 3', descText: 'Heading 3 Lorem Ipsum'},
+    { headingText: 'Heading 4', descText: 'Heading 4 Lorem Ipsum' },
+    { headingText: 'Heading 5', descText: 'Heading 5 Lorem Ipsum' },
 ]
 
 function SampleNextArrow(props) {
@@ -49,15 +37,30 @@ function SampleNextArrow(props) {
   }
 
 class Timeline extends Component {
-    render() {
 
+    state = {
+        descs : [
+            { headingText: 'Heading 1', descText: 'Heading 1 Lorem Ipsum', class: "timeline__point--active" },
+            { headingText: 'Heading 2', descText: 'Heading 2 Lorem Ipsum', class: "timeline__point" },
+            { headingText: 'Heading 3', descText: 'Heading 3 Lorem Ipsum', class: "timeline__point" },
+            { headingText: 'Heading 4', descText: 'Heading 4 Lorem Ipsum', class: "timeline__point" },
+            { headingText: 'Heading 5', descText: 'Heading 5 Lorem Ipsum', class: "timeline__point" },
+        ],
+        activeSlide: 0
+    }
+
+    render() {
         const settings = {
             infinite: false,
-            speed: 500,
-            slidesToShow: 1,
             arrows: true,
-            slidesToScroll: 1,
-            className: "slides",
+            beforeChange: (current, next) => {
+                const descs = [...this.state.descs]
+                descs.forEach((desc) => {
+                   desc.class = "timeline__point"
+                });
+                descs[next].class = "timeline__point--active"
+                this.setState({descs : descs})
+            },
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />
         }
@@ -66,19 +69,16 @@ class Timeline extends Component {
             <div className="timeline">
                 <h2 className="timeline__heading">Ablauf &amp; Funktionsweise</h2>
                 <div className="timeline__stroke">
-                    <TimelinePoint/>
-                    <TimelinePoint/>
-                    <TimelinePoint/>
-                    <TimelinePoint/>
-                    <TimelinePoint/>
+                {this.state.descs.map((descs) => {
+                    return (
+                        <div className={descs.class}/>
+                    )
+                })}
                 </div>
                 <Slider {...settings}>
                 {descs.map((desc) => {
                     return (
-                        <div>
-                            <h3>{desc.headingText}</h3>
-                            <p>{desc.descText}</p>
-                        </div>
+                        <TimelineDesc heading={desc.headingText} desc={desc.descText}/>
                     )
                 })}
                 </Slider>

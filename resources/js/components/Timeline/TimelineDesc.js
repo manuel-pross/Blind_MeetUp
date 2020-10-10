@@ -1,10 +1,12 @@
 import React from 'react';
 
-const TimelineDesc = (props) => (
-   <div className="timeline__desc-wrapper">
-       <h3 className="timeline__subheading"></h3>
-       <p className="timeline__desc"></p>
-   </div>
+
+const cta = (props) => (
+    <div className="timeline__desc">
+        <h3 className="timeline__subheading">{props.heading}</h3>
+        <p className="timeline__desc-text">{props.desc}</p>
+    </div>
 );
 
-export default TimelineDesc;
+
+export default cta;
