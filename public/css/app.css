@@ -10908,6 +10908,28 @@ template {
   }
 }
 
+.timeline__heading {
+  text-align: center;
+}
+
+.timeline__stroke {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(270deg, #2e6c48 0%, #50b375 100%);
+}
+
+.timeline__point {
+  width: 25px;
+  height: 25px;
+  border: 4px solid #50b375;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
 .devBtn:after {
   position: fixed;
   line-height: 0.9;
