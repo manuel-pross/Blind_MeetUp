@@ -78364,22 +78364,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var descs = [{
-  headingText: 'Heading 1',
-  descText: 'Heading 1 Lorem Ipsum'
-}, {
-  headingText: 'Heading 2',
-  descText: 'Heading 2 Lorem Ipsum'
-}, {
-  headingText: 'Heading 3',
-  descText: 'Heading 3 Lorem Ipsum'
-}, {
-  headingText: 'Heading 4',
-  descText: 'Heading 4 Lorem Ipsum'
-}, {
-  headingText: 'Heading 5',
-  descText: 'Heading 5 Lorem Ipsum'
-}];
 
 function SampleNextArrow(props) {
   var onClick = props.onClick;
@@ -78421,24 +78405,24 @@ var Timeline = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       descs: [{
         headingText: 'Heading 1',
-        descText: 'Heading 1 Lorem Ipsum',
-        "class": "timeline__point--active"
+        descText: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+        pointColor: '#50b375'
       }, {
         headingText: 'Heading 2',
         descText: 'Heading 2 Lorem Ipsum',
-        "class": "timeline__point"
+        pointColor: ''
       }, {
         headingText: 'Heading 3',
         descText: 'Heading 3 Lorem Ipsum',
-        "class": "timeline__point"
+        pointColor: ''
       }, {
         headingText: 'Heading 4',
         descText: 'Heading 4 Lorem Ipsum',
-        "class": "timeline__point"
+        pointColor: ''
       }, {
         headingText: 'Heading 5',
         descText: 'Heading 5 Lorem Ipsum',
-        "class": "timeline__point"
+        pointColor: ''
       }],
       activeSlide: 0
     });
@@ -78458,33 +78442,45 @@ var Timeline = /*#__PURE__*/function (_Component) {
           var descs = _toConsumableArray(_this2.state.descs);
 
           descs.forEach(function (desc) {
-            desc["class"] = "timeline__point";
+            desc.pointColor = '';
           });
-          descs[next]["class"] = "timeline__point--active";
+          descs[next].pointColor = '#50b375';
 
           _this2.setState({
             descs: descs
           });
         },
         nextArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SampleNextArrow, null),
-        prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null)
+        prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null),
+        responsive: [{
+          breakpoint: 992
+        }, {
+          breakpoint: 10000000,
+          // a unrealistically big number to cover up greatest screen resolution
+          settings: 'unslick'
+        }]
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "timeline"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "timeline__heading"
       }, "Ablauf & Funktionsweise"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "timeline__content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "timeline__stroke"
-      }, this.state.descs.map(function (descs) {
+      }, this.state.descs.map(function (desc) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: descs["class"]
+          className: "timeline__point",
+          style: {
+            backgroundColor: desc.pointColor
+          }
         });
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, descs.map(function (desc) {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, this.state.descs.map(function (desc) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TimelineDesc__WEBPACK_IMPORTED_MODULE_2__["default"], {
           heading: desc.headingText,
           desc: desc.descText
         });
-      })));
+      }))));
     }
   }]);
 
