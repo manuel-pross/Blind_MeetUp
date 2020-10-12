@@ -1,5 +1,5 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
+
 import { Link } from 'react-scroll';
 
 
@@ -10,7 +10,7 @@ const navigationItem = (props) => {
     if (props.hashLink) {
         navElement = (
             <Link
-                className="hide-Nav-Elements"
+                className="navLinks__hash"
                 style={{ cursor: 'pointer' }}
                 to={props.link}
                 smooth={true}
@@ -29,6 +29,7 @@ const navigationItem = (props) => {
                 href={props.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn btn-primary navLinks__button"
             >
                 {props.children}
             </a >
@@ -36,7 +37,7 @@ const navigationItem = (props) => {
     }
 
     return (
-        <div className="navigation-Item">
+        <div className="navLinks">
             {navElement}
         </div>
     );
