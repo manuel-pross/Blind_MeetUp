@@ -14,28 +14,30 @@ class LandingPage extends Component {
                 <Header />
                 <div className="container">
                     <div
-                        style={{ height: '500px', paddingTop: '70px' }}
+                        style={{ height: '500px'}}
                         id="Projekt">
                         <h2 >
                             Das Projekt
-                    </h2>
+                        </h2>
                     </div>
                     <div
                         style={{ height: '500px' }}
                         id="Ablauf">
                         <h2 >
                             Ablauf
-                    </h2>
+                        </h2>
                     </div>
-                    {/* <TeamSlider /> */}
+                    <div id="Team">
+                        {/* <TeamSlider /> */}
+                    </div>
                     <div
                         style={{ height: '5000px' }}
                         id="FAQ">
                         <h2>
                             FAQ
-                    </h2>
+                        </h2>
                         <Link to="/styleguide">Styleguide</Link>
-                        <CTA/>
+                        <CTA />
                     </div>
                 </div>
             </React.Fragment>
