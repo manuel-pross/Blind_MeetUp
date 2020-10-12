@@ -10940,17 +10940,22 @@ template {
   margin-bottom: 1.25rem;
 }
 
+.footer__text {
+  color: #fefefe;
+}
+
 .footer__button {
   background: none !important;
   background-color: none !important;
   color: #fefefe !important;
   border: 2px solid #fefefe !important;
   margin-bottom: 10px;
+  padding: 10px 20px !important;
 }
 
 .footer__logo {
   width: 100%;
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
 }
 
