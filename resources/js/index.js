@@ -8,7 +8,7 @@ import DevSizeBtn from './components/hoc/DevSizeBtn';
 
 ReactDOM.render(
   <BrowserRouter>
-    <DevSizeBtn />
+    {/* <DevSizeBtn /> */}
     <React.StrictMode>
       <Root />
     </React.StrictMode>

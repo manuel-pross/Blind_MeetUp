@@ -1,0 +1,24 @@
+.footer{
+    background-color: $c-darkGrey;
+
+    &__heading {
+        font-family: $font-main-2;
+        font-size: 1.25rem;
+        color: $c-white;
+        margin-bottom: 1.25rem;
+    }
+
+    &__button {
+       background: none !important;
+       background-color: none !important;
+       color: $c-white !important;
+       border: 2px solid $c-white !important;
+       margin-bottom: 10px;
+    }
+
+    &__logo{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}

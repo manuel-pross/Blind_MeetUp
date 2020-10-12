@@ -12,7 +12,6 @@
 @import "./fonts";
 @import "./styleguide";
 @import "./spaces";
-@import "./navbar";
 @import "./utility";
 
 
@@ -27,6 +26,12 @@
 
 //header
 @import "./header";
+
+//navbar
+@import "./navbar";
+
+//footer
+@import "./footer";
 
 //dev
 @import "./devSizeBtn";

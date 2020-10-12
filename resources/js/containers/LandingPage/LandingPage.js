@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import TeamSlider from '../../components/TeamSlider/TeamSlider'
-import Header from '../../components/Header/Header'
+import TeamSlider from '../../components/TeamSlider/TeamSlider';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
-import CTA from '../../components/CTA/CTA'
+import CTA from '../../components/CTA/CTA';
 
 class LandingPage extends Component {
     render() {
@@ -14,7 +15,7 @@ class LandingPage extends Component {
                 <Header />
                 <div className="container">
                     <div
-                        style={{ height: '500px'}}
+                        style={{ height: '500px' }}
                         id="Projekt">
                         <h2 >
                             Das Projekt
@@ -31,7 +32,7 @@ class LandingPage extends Component {
                         {/* <TeamSlider /> */}
                     </div>
                     <div
-                        style={{ height: '5000px' }}
+                        style={{ height: '500px' }}
                         id="FAQ">
                         <h2>
                             FAQ
@@ -40,6 +41,7 @@ class LandingPage extends Component {
                         <CTA />
                     </div>
                 </div>
+                <Footer />
             </React.Fragment>
         );
     }
