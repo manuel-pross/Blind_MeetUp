@@ -10979,3 +10979,38 @@ template {
   }
 }
 
+.text-icon__heading-mobile {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-icon__heading-mobile {
+    display: none;
+  }
+}
+
+.text-icon__heading-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .text-icon__heading-desktop {
+    display: inline-block;
+  }
+}
+
+.text-icon__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .text-icon__img {
+    margin: 0;
+    max-width: 160px;
+  }
+}
+
