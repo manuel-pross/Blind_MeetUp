@@ -28,7 +28,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         height: 9px;
         border-radius: 5px;
         background: $horizontal-gradient;
@@ -69,6 +68,7 @@
     }
 
     &__desc {
+
         @include breakpoint("lg") {
             flex: 0 0 100%;
             margin-bottom: 3rem;
@@ -186,4 +186,12 @@
 
 .regular {
     width: 100%;
+}
+
+.slick-list {
+    max-width: 300px !important;
+
+    @include breakpoint("sm") {
+        max-width: none !important;
+    }
 }
