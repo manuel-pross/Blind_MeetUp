@@ -2,7 +2,7 @@ import React from 'react';
 import headerImage from '../../../assets/img/placeholder/landing-page-background.jpg'
 import Aux from '../hoc/Auxy';
 
-const header = (props) => (
+const header = () => (
    <Aux>
       <div className="header position-relative">
          <img className="header__image" src={headerImage} alt="headerImage" />

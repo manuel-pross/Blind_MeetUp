@@ -3,20 +3,11 @@
     font-family: "Maven Pro Regular";
     font-style: normal;
     font-weight: 400;
-    src: local(""),
-        url("../assets/fonts/maven-pro-v20-latin-regular.eot?#iefix")
-            format("embedded-opentype"),
-        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-regular.woff2")
-            format("woff2"),
-        /* Super Modern Browsers */
-            url("../assets/fonts/maven-pro-v20-latin-regular.woff")
-            format("woff"),
-        /* Modern Browsers */
-            url("../assets/fonts/maven-pro-v20-latin-regular.ttf")
-            format("truetype"),
-        /* Safari, Android, iOS */
-            url("../assets/fonts/maven-pro-v20-latin-regular.svg#MavenPro")
-            format("svg"); /* Legacy iOS */
+    src: local(""), url("../assets/fonts/maven-pro-v20-latin-regular.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-regular.svg#MavenPro") format("svg"); /* Legacy iOS */
 }
 /* maven-pro-500 - latin */
 @font-face {
@@ -24,18 +15,11 @@
     font-style: normal;
     font-weight: 500;
     src: url("../assets/fonts/maven-pro-v20-latin-500.eot"); /* IE9 Compat Modes */
-    src: local(""),
-        url("../assets/fonts/maven-pro-v20-latin-500.eot?#iefix")
-            format("embedded-opentype"),
-        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-500.woff2")
-            format("woff2"),
-        /* Super Modern Browsers */
-            url("../assets/fonts/maven-pro-v20-latin-500.woff") format("woff"),
-        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.ttf")
-            format("truetype"),
-        /* Safari, Android, iOS */
-            url("../assets/fonts/maven-pro-v20-latin-500.svg#MavenPro")
-            format("svg"); /* Legacy iOS */
+    src: local(""), url("../assets/fonts/maven-pro-v20-latin-500.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-500.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.woff") format("woff"),
+        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-500.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-500.svg#MavenPro") format("svg"); /* Legacy iOS */
 }
 /* maven-pro-700 - latin */
 @font-face {
@@ -43,54 +27,173 @@
     font-style: normal;
     font-weight: 700;
     src: url("../assets/fonts/maven-pro-v20-latin-700.eot"); /* IE9 Compat Modes */
-    src: local(""),
-        url("../assets/fonts/maven-pro-v20-latin-700.eot?#iefix")
-            format("embedded-opentype"),
-        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-700.woff2")
-            format("woff2"),
-        /* Super Modern Browsers */
-            url("../assets/fonts/maven-pro-v20-latin-700.woff") format("woff"),
-        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.ttf")
-            format("truetype"),
-        /* Safari, Android, iOS */
-            url("../assets/fonts/maven-pro-v20-latin-700.svg#MavenPro")
-            format("svg"); /* Legacy iOS */
+    src: local(""), url("../assets/fonts/maven-pro-v20-latin-700.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../assets/fonts/maven-pro-v20-latin-700.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.woff") format("woff"),
+        /* Modern Browsers */ url("../assets/fonts/maven-pro-v20-latin-700.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("../assets/fonts/maven-pro-v20-latin-700.svg#MavenPro") format("svg"); /* Legacy iOS */
 }
 
-body {
-    font-family: "Maven Pro Regular" !important;
+$scaleSM: 1.2;
+$scale-md: 1.5;
+$scale-lg: 1.7;
+$scale-xl: 1.9;
+$scale-xxl: 2.6;
+$fs-h1: 24px;
+$fs-h2: 20px;
+$fs-h3: 14px;
+$fs-p: 14px;
+$lh-h1: 30.4px;
+$lh-h2: 28.4px;
+$lh-h3: 19.4px;
+$lh-p: 24px;
+
+@include breakpoint("xs") {
+    body {
+        font-family: "Maven Pro Regular" !important;
+    }
+
+    h1 {
+        font-family: "Maven Pro Black";
+        font-size: $fs-h1;
+        line-height: $lh-h1;
+    }
+
+    h2 {
+        font-family: "Maven Pro Black";
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+    }
+
+    h3 {
+        font-family: "Maven Pro Bold";
+        font-size: $fs-h3;
+        line-height: $lh-h3;
+    }
+
+    p {
+        color: $c3-main;
+        font-size: $fs-p;
+        line-height: $lh-p;
+    }
+
+    blockquote {
+        font-size: 21px;
+        line-height: 34px;
+    }
+
+    pre {
+        font-size: 13px;
+        line-height: 18.5714px;
+    }
 }
 
-h1 {
-    font-family: "Maven Pro Black";
-    font-size: 24px;
-    line-height: 30.4px;
+@include breakpoint("sm") {
+    h1 {
+        font-size: $fs-h1 * $scaleSM;
+        line-height: $lh-h1 * $scaleSM;
+    }
+
+    h2 {
+        font-size: $fs-h2 * $scaleSM;
+        line-height: $lh-h2 * $scaleSM;
+    }
+
+    h3 {
+        font-size: $fs-h3 * $scaleSM;
+        line-height: $lh-h3 * $scaleSM;
+    }
+
+    p {
+        font-size: $fs-p * $scaleSM;
+        line-height: $lh-p * $scaleSM;
+    }
 }
 
-h2 {
-    font-family: "Maven Pro Black";
-    font-size: 20px;
-    line-height: 28.4px;
+@include breakpoint("md") {
+    h1 {
+        font-size: $fs-h1 * $scale-md;
+        line-height: $lh-h1 * $scale-md;
+    }
+
+    h2 {
+        font-size: $fs-h2 * $scale-md;
+        line-height: $lh-h2 * $scale-md;
+    }
+
+    h3 {
+        font-size: $fs-h3 * $scale-md;
+        line-height: $lh-h3 * $scale-md;
+    }
+
+    p {
+        font-size: $fs-p * $scale-md;
+        line-height: $lh-p * $scale-md;
+    }
 }
 
-h3 {
-    font-family: "Maven Pro Bold";
-    font-size: 14px;
-    line-height: 19.4px;
+@include breakpoint("lg") {
+    h1 {
+        font-size: $fs-h1 * $scale-lg,;
+        line-height: $lh-h1 * $scale-lg,;
+    }
+
+    h2 {
+        font-size: $fs-h2 * $scale-lg,;
+        line-height: $lh-h2 * $scale-lg,;
+    }
+
+    h3 {
+        font-size: $fs-h3 * $scale-lg,;
+        line-height: $lh-h3 * $scale-lg,;
+    }
+
+    p {
+        font-size: $fs-p * $scale-lg,;
+        line-height: $lh-p * $scale-lg,;
+    }
 }
 
-p {
-    color: $c3-main;
-    font-size: 14px;
-    line-height: 24px;
+@include breakpoint("xl") {
+    h1 {
+        font-size: $fs-h1 * $scale-xl;
+        line-height: $lh-h1 * $scale-xl;
+    }
+
+    h2 {
+        font-size: $fs-h2 * $scale-xl;
+        line-height: $lh-h2 * $scale-xl;
+    }
+
+    h3 {
+        font-size: $fs-h3 * $scale-xl;
+        line-height: $lh-h3* $scale-xl;
+    }
+
+    p {
+        font-size: $fs-p * $scale-xl;
+        line-height: $lh-p * $scale-xl;
+    }
 }
 
-blockquote {
-    font-size: 21px;
-    line-height: 34px;
-}
+@include breakpoint("xxl") {
+    h1 {
+        font-size: $fs-h1 * $scale-xxl;
+        line-height: $lh-h1 * $scale-xxl;
+    }
 
-pre {
-    font-size: 13px;
-    line-height: 18.5714px;
+    h2 {
+        font-size: $fs-h2 * $scale-xxl;
+        line-height: $lh-h2 * $scale-xxl;
+    }
+
+    h3 {
+        font-size: $fs-h3 * $scale-xxl;
+        line-height: $lh-h3 * $scale-xxl;
+        }
+
+    p {
+        font-size: $fs-p * $scale-xxl;
+        line-height: $lh-p * $scale-xxl;
+    }
 }
