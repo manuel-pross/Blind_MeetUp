@@ -19,21 +19,8 @@
     object-fit: cover;
     object-position: 40% 100%;
 
-    @include breakpoint("sm") {
-      width: 768px;
-    }
-    @include breakpoint("md") {
-      width: 992px;
-    }
-    @include breakpoint("lg") {
-      width: 1200px;
-    }
     @include breakpoint("xl") {
-      width: 1920px;
       height: 930px;
-    }
-    @include breakpoint("xxl") {
-      width: 100%;
     }
   }
 
@@ -54,15 +41,6 @@
       top: 4rem;
       right: 10rem;
     }
-    @include breakpoint("lg") {
-      // margin: 90px;
-      // top: 5rem;
-    }
-    // @include breakpoint("xl") {
-    // margin: 5rem 20rem;
-    //   margin: 90px;
-    //   top: 5rem;
-    // }
   }
 
   &__title {

@@ -77110,7 +77110,7 @@ __webpack_require__.r(__webpack_exports__);
 var firstText = "Dazu entwickeln wir gemeinsam mit Prof. Dr. Gabriel Rausch eine Anwendung, die es ermöglicht an einem realen Treffen seiner Wahl teilnehmen zu können. Es kann ausgewählt werden, ob man sich lieber mit nur einer weiteren Person treffen möchte oder mit einer Gruppe (mit bis zu 5 Personen). Dabei geschieht der ganze Prozess völlig anonym, sodass man bis zum Treffen nicht weiß, wer einem gegenüber steht. So wollen wir den Alltag in Furtwangen aufwerten. Bei den Treffen kannst du dich mit den anderen nach Belieben austauschen, was auch immer dich interessiert.";
 var secText = "Außerdem sehen wir die Chance neue Studierende kennenzulernen, die man noch nicht kannte; mit ihnen „networken“ und neue Freundschaften entwickeln. Auch für Internationals stellt es eine Möglichkeit dar, sich einzubringen, sich hier vertraut zu machen und Kontakte knüpfen zu können. Wir sind von unserer Vorstellung überzeugt und hoffen, du bist es auch. Sei jetzt auch ein Teil von Blind MeetUp!";
 
-var AboutProject = function AboutProject(props) {
+var AboutProject = function AboutProject() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -77153,19 +77153,14 @@ function ImageText(props) {
     flexDirection: 'row'
   } : {
     flexDirection: 'row-reverse'
-  };
-  var imageStyle = props.alignment ? {
-    marginRight: '2rem'
-  } : {
-    marginLeft: '2rem'
-  };
+  }; // const imageStyle = props.alignment ? { marginRight: '2rem' } : { marginLeft: '2rem' };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "imageText",
     style: wrapperStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.img,
     alt: "",
-    style: imageStyle,
     className: "imageText__img"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", _defineProperty({
     className: "imageText__text"
@@ -77194,7 +77189,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var header = function header(props) {
+var header = function header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header position-relative mb-300"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

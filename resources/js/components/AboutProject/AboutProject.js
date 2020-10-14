@@ -9,7 +9,7 @@ const firstText = "Dazu entwickeln wir gemeinsam mit Prof. Dr. Gabriel Rausch ei
 
 const secText = "Außerdem sehen wir die Chance neue Studierende kennenzulernen, die man noch nicht kannte; mit ihnen „networken“ und neue Freundschaften entwickeln. Auch für Internationals stellt es eine Möglichkeit dar, sich einzubringen, sich hier vertraut zu machen und Kontakte knüpfen zu können. Wir sind von unserer Vorstellung überzeugt und hoffen, du bist es auch. Sei jetzt auch ein Teil von Blind MeetUp!"
 
-const AboutProject = (props) => (
+const AboutProject = () => (
    <div className="container">
       <h1 className="aboutProject__title">Über das Projekt</h1>
       <p className="aboutProject__text mb-200">Sechs Studierende, ein Team, eine Vision — das ist Blind MeetUp. Wir haben es uns zur Aufgabe gemacht, dich und andere Studierende an der Hochschule Furtwangen miteinander zu „connecten“. So sehen wir die perfekte Möglichkeit, die internen Beziehungen zwischen den einzelnen Fakultäten in Furtwangen stärken zu können und eine Interaktion zu fördern.</p>

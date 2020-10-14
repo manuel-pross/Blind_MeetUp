@@ -1,19 +1,22 @@
 .imageText {
-   @include breakpoint("lg") {
+   @include breakpoint("xl") {
       display: flex;
+      flex-wrap: wrap;
    }
 
    &__img {
       margin-bottom: 2rem;
       width: 100%;
 
-      @media (max-width: 992px) {
-         margin-left: 0 !important;
-         margin-right: 0 !important;
+      @include breakpoint("xl") {
+         flex: 0 0 45%;
       }
+   }
 
-      @include breakpoint("lg") {
-         width: 50%;
+   &__text {
+      @include breakpoint("xl") {
+         flex: 0 0 55%;
+         padding: 1.5rem;
       }
    }
 }
