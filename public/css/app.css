@@ -10447,14 +10447,14 @@ template {
 
 @media (min-width: 1200px) {
   .imageText__img {
-    flex: 0 0 45%;
+    width: 44%;
   }
 }
 
 @media (min-width: 1200px) {
   .imageText__text {
     flex: 0 0 55%;
-    padding: 1.5rem;
+    padding: 3rem;
   }
 }
 
