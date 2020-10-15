@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 function SampleNextArrow(props) {
     const { onClick } = props;
-    console.log(props.className)
     return (
         <div
         className={"slick-arrow slick-next timeline__arrow-right"}

@@ -78734,9 +78734,9 @@ var TeamImage = function TeamImage(props) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "teamSlider__desc"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "teamSlider__desc-title"
-  }, props.nameString), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, props.nameString), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "teamSlider__desc-desc"
   }, props.desc)));
 };
@@ -78839,11 +78839,9 @@ var TeamSlider = /*#__PURE__*/function (_Component) {
       var settings = {
         className: "teamImages",
         infinite: true,
-        lazyLoad: false,
-        adaptiveHeight: true,
-        variableWidth: true,
-        nextArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SampleNextArrow, null),
-        prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null)
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "teamSlider mb-1000"
@@ -78859,26 +78857,6 @@ var TeamSlider = /*#__PURE__*/function (_Component) {
         styleName: Stylename[5],
         nameString: nameString[5],
         desc: desc[5]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_pia_png__WEBPACK_IMPORTED_MODULE_3___default.a,
-        styleName: Stylename[0],
-        nameString: nameString[0],
-        desc: desc[0]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_patrickN_png__WEBPACK_IMPORTED_MODULE_5___default.a,
-        styleName: Stylename[2],
-        nameString: nameString[2],
-        desc: desc[2]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_gion_png__WEBPACK_IMPORTED_MODULE_8___default.a,
-        styleName: Stylename[3],
-        nameString: nameString[3],
-        desc: desc[3]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_simon_png__WEBPACK_IMPORTED_MODULE_7___default.a,
-        styleName: Stylename[4],
-        nameString: nameString[4],
-        desc: desc[4]
       })));
     }
   }]);
@@ -78987,7 +78965,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function SampleNextArrow(props) {
   var onClick = props.onClick;
-  console.log(props.className);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "slick-arrow slick-next timeline__arrow-right",
     onClick: onClick
@@ -79255,7 +79232,7 @@ var LandingPage = /*#__PURE__*/function (_Component) {
         id: "Ablauf"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Timeline_Timeline__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TeamSlider_TeamSlider__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "FAQ"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FAQ_FAQ__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CTA_CTA__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
@@ -80012,7 +79989,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))), document.getElementById('app')); // If you want your app to work offline and load faster, you can change
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hoc_DevSizeBtn__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))), document.getElementById('app')); // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 

@@ -37,9 +37,21 @@
       top: 3rem;
       margin: 45px;
     }
-    @include breakpoint("md") {
+    
+    @include breakpoint("lg") {
       top: 4rem;
+      margin: 55px;
+      margin-right: 80px;
+    }
+    
+    @include breakpoint("xl") {
       right: 10rem;
+      margin: 80px;
+      margin-right: 10rem;
+    }
+
+    @include breakpoint("xxl") {
+      margin-right: 15rem;
     }
   }
 
@@ -53,6 +65,18 @@
 
     @include breakpoint("sm") {
       margin-bottom: 3.5rem;
+    }
+
+    @include breakpoint("lg") {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint("xl") {
+      margin-bottom: 7.5rem;
+    }
+
+    @include breakpoint("xxl") {
+      margin-bottom: 10rem;
     }
   }
 

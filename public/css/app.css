@@ -4587,13 +4587,13 @@ Breakpoint Mixin
 
   h1 {
     font-family: "Maven Pro Black";
-    font-size: 28px !important;
-    line-height: 30.4px !important;
+    font-size: 33px !important;
+    line-height: 40.4px !important;
   }
 
   h2 {
     font-family: "Maven Pro Black";
-    font-size: 23px !important;
+    font-size: 28px !important;
     line-height: 26.4px !important;
   }
 
@@ -4605,7 +4605,7 @@ Breakpoint Mixin
 
   p {
     color: #424242;
-    font-size: 13px !important;
+    font-size: 16px !important;
     line-height: 18.4px !important;
   }
 
@@ -4622,12 +4622,12 @@ Breakpoint Mixin
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 30.8px !important;
-    line-height: 33.44px !important;
+    font-size: 36.3px !important;
+    line-height: 44.44px !important;
   }
 
   h2 {
-    font-size: 25.3px !important;
+    font-size: 30.8px !important;
     line-height: 29.04px !important;
   }
 
@@ -4637,19 +4637,19 @@ Breakpoint Mixin
   }
 
   p {
-    font-size: 14.3px !important;
+    font-size: 17.6px !important;
     line-height: 20.24px !important;
   }
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 33.6px !important;
-    line-height: 39.52px !important;
+    font-size: 39.6px !important;
+    line-height: 52.52px !important;
   }
 
   h2 {
-    font-size: 27.6px !important;
+    font-size: 33.6px !important;
     line-height: 34.32px !important;
   }
 
@@ -4659,19 +4659,19 @@ Breakpoint Mixin
   }
 
   p {
-    font-size: 15.6px !important;
+    font-size: 19.2px !important;
     line-height: 23.92px !important;
   }
 }
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 36.4px !important;
-    line-height: 45.6px !important;
+    font-size: 42.9px !important;
+    line-height: 60.6px !important;
   }
 
   h2 {
-    font-size: 29.9px !important;
+    font-size: 36.4px !important;
     line-height: 39.6px !important;
   }
 
@@ -4681,19 +4681,19 @@ Breakpoint Mixin
   }
 
   p {
-    font-size: 16.9px !important;
+    font-size: 20.8px !important;
     line-height: 27.6px !important;
   }
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 39.2px !important;
-    line-height: 54.72px !important;
+    font-size: 46.2px !important;
+    line-height: 72.72px !important;
   }
 
   h2 {
-    font-size: 32.2px !important;
+    font-size: 39.2px !important;
     line-height: 47.52px !important;
   }
 
@@ -4703,19 +4703,19 @@ Breakpoint Mixin
   }
 
   p {
-    font-size: 18.2px !important;
+    font-size: 22.4px !important;
     line-height: 33.12px !important;
   }
 }
 
 @media (min-width: 1920px) {
   h1 {
-    font-size: 42px !important;
-    line-height: 54.72px !important;
+    font-size: 49.5px !important;
+    line-height: 72.72px !important;
   }
 
   h2 {
-    font-size: 34.5px !important;
+    font-size: 42px !important;
     line-height: 47.52px !important;
   }
 
@@ -4725,7 +4725,7 @@ Breakpoint Mixin
   }
 
   p {
-    font-size: 19.5px !important;
+    font-size: 24px !important;
     line-height: 33.12px !important;
   }
 }
@@ -10468,10 +10468,25 @@ template {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header__wrapper {
     top: 4rem;
+    margin: 55px;
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__wrapper {
     right: 10rem;
+    margin: 80px;
+    margin-right: 10rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header__wrapper {
+    margin-right: 15rem;
   }
 }
 
@@ -10487,6 +10502,24 @@ template {
 @media (min-width: 576px) {
   .header__p {
     margin-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__p {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__p {
+    margin-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header__p {
+    margin-bottom: 10rem;
   }
 }
 
