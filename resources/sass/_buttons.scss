@@ -9,16 +9,16 @@
   font-size: 20px;
 
   @include breakpoint("sm") {
-    font-size: 21.5px;
+    font-size: 18.5px;
   }
   @include breakpoint("lg") {
-    font-size: 23px;
+    font-size: 20px;
   }
   @include breakpoint("xl") {
-    font-size: 24.5px;
+    font-size: 21.5px;
   }
   @include breakpoint("xxl") {
-    font-size: 26px;
+    font-size: 23px;
   }
 
   &-primary {
