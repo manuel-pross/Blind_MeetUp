@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import CTA from '../../components/CTA/CTA'
 import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
+import Timeline from '../../components/Timeline/Timeline'
 
 class LandingPage extends Component {
     render() {
@@ -15,7 +16,7 @@ class LandingPage extends Component {
                 <Header />
                 <div className="container">
                     <div
-                        style={{ height: '500px'}}
+                        style={{ height: '500px' }}
                         id="Projekt">
                         <h2 >
                             Das Projekt
@@ -28,10 +29,13 @@ class LandingPage extends Component {
                             Ablauf
                         </h2>
                     </div>
+
+                    <div id="Timeline">
+                        <Timeline />
+                    </div>
                     <div id="Team">
                         {/* <TeamSlider /> */}
-                        <TextIconHFU/>
-
+                        <TextIconHFU />
                     </div>
                     <div
                         style={{ height: '5000px' }}
