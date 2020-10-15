@@ -10931,13 +10931,43 @@ template {
 
 .footer {
   background-color: #2F2F2F;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (min-width: 576px) {
+  .footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .footer__heading {
   font-family: "Maven Pro Bold";
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #fefefe;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .footer__heading {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer__heading {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
 }
 
 .footer__text {
@@ -10957,6 +10987,20 @@ template {
   width: 100%;
   max-width: 200px;
   height: auto;
+}
+
+.footer__flags {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__flag {
+  width: 100%;
+  max-width: 35px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .devBtn:after {
