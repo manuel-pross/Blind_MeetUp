@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import FooterButton from './FooterButton/FooterButton';
 import Wortmarke_OneLine_invertiert_cut from '../../../assets/img/Wortmarke_OneLine_invertiert_cut.png';
 
+import FlagDE from '../../../assets/img/flags/flag-de.svg';
+import FlagEN from '../../../assets/img/flags/flag-en.svg';
+
 class Footer extends Component {
     render() {
         return (
@@ -28,8 +31,8 @@ class Footer extends Component {
                     </div>
                     <div className="col-lg-5 col-4">
                         <div className="footer__flags">
-                            <FaFlagUsa size={30} color="white" style={{ marginRight: "10px" }} />
-                            <FaFlagUsa size={30} color="white" style={{ marginRight: "10px" }} />
+                            <img src={FlagDE} className="footer__flag" alt="BlindMeetUp_flag_de"></img>
+                            <img src={FlagEN} className="footer__flag" alt="BlindMeetUp_flag_en"></img>
                         </div>
                     </div>
                 </div>

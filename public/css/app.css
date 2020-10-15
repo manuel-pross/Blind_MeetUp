@@ -11393,6 +11393,13 @@ template {
   height: 100%;
 }
 
+.footer__flag {
+  width: 100%;
+  max-width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
+
 .devBtn:after {
   position: fixed;
   line-height: 0.9;

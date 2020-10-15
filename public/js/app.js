@@ -77760,6 +77760,28 @@ module.exports = "/images/Wortmarke_TwoLine_invertiert.png?96b60cda753d310e83bbe
 
 /***/ }),
 
+/***/ "./resources/assets/img/flags/flag-de.svg":
+/*!************************************************!*\
+  !*** ./resources/assets/img/flags/flag-de.svg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/flag-de.svg?d810f62137d64a0a58035c80489b7d54";
+
+/***/ }),
+
+/***/ "./resources/assets/img/flags/flag-en.svg":
+/*!************************************************!*\
+  !*** ./resources/assets/img/flags/flag-en.svg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/flag-en.svg?e5564902e2642c5e6e2e98e68a7d41f5";
+
+/***/ }),
+
 /***/ "./resources/assets/img/placeholder/720x485-placeholder.png":
 /*!******************************************************************!*\
   !*** ./resources/assets/img/placeholder/720x485-placeholder.png ***!
@@ -78273,6 +78295,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FooterButton_FooterButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterButton/FooterButton */ "./resources/js/components/Footer/FooterButton/FooterButton.js");
 /* harmony import */ var _assets_img_Wortmarke_OneLine_invertiert_cut_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/img/Wortmarke_OneLine_invertiert_cut.png */ "./resources/assets/img/Wortmarke_OneLine_invertiert_cut.png");
 /* harmony import */ var _assets_img_Wortmarke_OneLine_invertiert_cut_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_img_Wortmarke_OneLine_invertiert_cut_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_img_flags_flag_de_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/img/flags/flag-de.svg */ "./resources/assets/img/flags/flag-de.svg");
+/* harmony import */ var _assets_img_flags_flag_de_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_img_flags_flag_de_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_img_flags_flag_en_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../assets/img/flags/flag-en.svg */ "./resources/assets/img/flags/flag-en.svg");
+/* harmony import */ var _assets_img_flags_flag_en_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_img_flags_flag_en_svg__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -78294,6 +78320,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
 
 
 
@@ -78355,18 +78383,14 @@ var Footer = /*#__PURE__*/function (_Component) {
         className: "col-lg-5 col-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer__flags"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FaFlagUsa, {
-        size: 30,
-        color: "white",
-        style: {
-          marginRight: "10px"
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FaFlagUsa, {
-        size: 30,
-        color: "white",
-        style: {
-          marginRight: "10px"
-        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _assets_img_flags_flag_de_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+        className: "footer__flag",
+        alt: "BlindMeetUp_flag_de"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _assets_img_flags_flag_en_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+        className: "footer__flag",
+        alt: "BlindMeetUp_flag_en"
       })))));
     }
   }]);

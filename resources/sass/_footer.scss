@@ -53,4 +53,11 @@
         align-items: center;
         height: 100%;
     }
+
+    &__flag{
+        width: 100%;
+        max-width: 35px;
+        height: auto;
+        margin-right: 10px;
+    }
 }
