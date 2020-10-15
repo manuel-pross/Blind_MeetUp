@@ -12,7 +12,6 @@
 @import "./fonts";
 @import "./styleguide";
 @import "./spaces";
-@import "./navbar";
 @import "./utility";
 
 // normalizer
@@ -26,6 +25,12 @@
 @import "./cta";
 @import "./timeline";
 @import "./FAQ";
+
+//navbar
+@import "./navbar";
+
+//footer
+@import "./footer";
 
 //dev
 @import "./devSizeBtn";

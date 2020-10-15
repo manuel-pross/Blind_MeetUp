@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import TeamSlider from '../../components/TeamSlider/TeamSlider'
-import Header from '../../components/Header/Header'
+import TeamSlider from '../../components/TeamSlider/TeamSlider';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
@@ -28,6 +29,7 @@ class LandingPage extends Component {
                     <FAQ />
                     <CTA />
                 </div>
+                <Footer />
             </React.Fragment>
         );
     }
