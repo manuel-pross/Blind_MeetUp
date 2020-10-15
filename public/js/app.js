@@ -78727,18 +78727,20 @@ __webpack_require__.r(__webpack_exports__);
 var TeamImage = function TeamImage(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "teamSlider__cover"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: props.styleName + " teamSlider__cover__image",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "teamSlider__cover__image",
+    src: props.img,
     style: {
-      backgroundImage: "url(".concat(props.teamName, ")")
+      width: '100%',
+      height: 'auto'
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "teamSlider__desc"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "teamSlider__desc-title"
-  }, props.nameString), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.descText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "teamSlider__desc-desc"
-  }, props.desc)));
+  }, props.descText)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TeamImage);
@@ -78775,6 +78777,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -78789,6 +78795,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -78798,25 +78805,99 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var Stylename = ["teamSlider__cover__image-pia", "teamSlider__cover__image-manuel", "teamSlider__cover__image-patrickN", "teamSlider__cover__image-gion", "teamSlider__cover__image-simon", "teamSlider__cover__image-patrickK"];
-var nameString = ["Pia Zeller", "Manuel Proß", "Patrick Neudert", "Gion Egel", "Simon Dold", "Patrick Kaserer"];
+
 var desc = ["Marketing", "Projekt-Initiator & Entwickler", "Design & Konzeption", "Design & Konzeption", "Entwickler", "Projekt-Initiator & Entwickler"];
+var Stylename = ["teamSlider__cover__image-pia", "teamSlider__cover__image-manuel", "teamSlider__cover__image-patrickN", "teamSlider__cover__image-gion", "teamSlider__cover__image-simon", "teamSlider__cover__image-patrickK"];
 
-var TeamSlider = /*#__PURE__*/function (_Component) {
-  _inherits(TeamSlider, _Component);
+var Teamslider = /*#__PURE__*/function (_Component) {
+  _inherits(Teamslider, _Component);
 
-  var _super = _createSuper(TeamSlider);
+  var _super = _createSuper(Teamslider);
 
-  function TeamSlider() {
-    _classCallCheck(this, TeamSlider);
+  function Teamslider() {
+    var _this;
 
-    return _super.apply(this, arguments);
+    _classCallCheck(this, Teamslider);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      descs: [{
+        img: _assets_img_TeamImages_manuel_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+        descText: "Projekt-Initiator & Entwickler"
+      }, {
+        img: _assets_img_TeamImages_patrickK_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+        descText: "Projekt-Initiator & Entwickler"
+      }, {
+        img: _assets_img_TeamImages_simon_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+        descText: "Entwickler"
+      }, {
+        img: _assets_img_TeamImages_pia_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+        descText: "Marketing"
+      }, {
+        img: _assets_img_TeamImages_patrickN_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+        descText: "Design & Konzeption"
+      }, {
+        img: _assets_img_TeamImages_gion_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+        descText: "Design & Konzeption"
+      }]
+    });
+
+    return _this;
   }
 
-  return TeamSlider;
+  _createClass(Teamslider, [{
+    key: "render",
+    value: function render() {
+      function SampleNextArrow(props) {
+        var onClick = props.onClick;
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "slick-arrow slick-next teamSlider__arrow-right",
+          onClick: onClick
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "teamSlider__arrow-right-stroke"
+        }));
+      }
+
+      function SamplePrevArrow(props) {
+        var onClick = props.onClick;
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "slick-arrow slick-prev teamSlider__arrow-left",
+          onClick: onClick
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "teamSlider__arrow-left-stroke"
+        }));
+      }
+
+      var settings = {
+        className: "teamImages",
+        infinite: true,
+        lazyLoad: false,
+        adaptiveHeight: true,
+        variableWidth: true,
+        arrows: true,
+        nextArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SampleNextArrow, null),
+        prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null)
+      };
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container mb-1000"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, this.state.descs.map(function (desc, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          img: desc.img,
+          descText: desc.descText
+        });
+      })));
+    }
+  }]);
+
+  return Teamslider;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (TeamSlider);
+/* harmony default export */ __webpack_exports__["default"] = (Teamslider);
 
 /***/ }),
 
@@ -79182,7 +79263,7 @@ var LandingPage = /*#__PURE__*/function (_Component) {
         id: "Ablauf"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Timeline_Timeline__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TeamSlider_TeamSlider__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "FAQ"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FAQ_FAQ__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CTA_CTA__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
@@ -80068,8 +80149,8 @@ function unregister() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
