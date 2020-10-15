@@ -77108,6 +77108,231 @@ var cta = function cta() {
 
 /***/ }),
 
+/***/ "./resources/js/components/FAQ/Content.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/FAQ/Content.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var key = 0; // current categories: Anmeldung, Allgemeines, Treffen, Sonstiges
+
+var Content = [/////////////// Anmeldung /////////////// 
+{
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 01",
+  content: "Anmeldung 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 02",
+  content: "Anmeldung 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 03",
+  content: "Anmeldung 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 01",
+  content: "Anmeldung 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 02",
+  content: "Anmeldung 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Anmeldung",
+  key: key++,
+  title: "Anmeldung 03",
+  content: "Anmeldung 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, /////////////// Allgemeines /////////////// 
+{
+  cat: "Allgemeines",
+  key: key++,
+  title: "Allgemeines 01",
+  content: "Allgemeines 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Allgemeines",
+  key: key++,
+  title: "Allgemeines 02",
+  content: "Allgemeines 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Allgemeines",
+  key: key++,
+  title: "Allgemeines 03",
+  content: "Allgemeines 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, /////////////// Treffen /////////////// 
+{
+  cat: "Treffen",
+  key: key++,
+  title: "Treffen 01",
+  content: "Treffen 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Treffen",
+  key: key++,
+  title: "Treffen 02",
+  content: "Treffen 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Treffen",
+  key: key++,
+  title: "Treffen 03",
+  content: "Treffen 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, /////////////// Sonstiges /////////////// 
+{
+  cat: "Sonstiges",
+  key: key++,
+  title: "Sonstiges 01",
+  content: "Sonstiges 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Sonstiges",
+  key: key++,
+  title: "Sonstiges 02",
+  content: "Sonstiges 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}, {
+  cat: "Sonstiges",
+  key: key++,
+  title: "Sonstiges 03",
+  content: "Sonstiges 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+}];
+/* harmony default export */ __webpack_exports__["default"] = (Content);
+
+/***/ }),
+
+/***/ "./resources/js/components/FAQ/FAQ.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/FAQ/FAQ.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hoc/Auxy */ "./resources/js/components/hoc/Auxy.js");
+/* harmony import */ var _Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Content */ "./resources/js/components/FAQ/Content.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+var categoryList = ["Anmeldung", "Treffen", "Allgemeines", "Sonstiges"];
+
+var FAQ = function FAQ() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "FAQ__contentTitle--noMargin",
+    key: -1
+  })]),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentTitles = _useState2[0],
+      setTitles = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "FAQ__contentText--noMargin",
+    key: -2
+  }, "Bitte eine Kategorie ausw\xE4hlen")]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentText = _useState4[0],
+      setText = _useState4[1];
+
+  var category = "Kategorie auswählen";
+
+  var buttonClickHandler = function buttonClickHandler(index) {
+    // document.getElementById("FAQ-Cat").innerHTML = categoryList[index];
+    category = categoryList[index];
+    setTitles([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      className: "FAQ__contentTitle--noMargin",
+      key: -1
+    })]);
+    setText([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "FAQ__contentText--noMargin",
+      key: -2
+    })]);
+
+    var _loop = function _loop(i) {
+      if (category == _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].cat) {
+        setTitles(function (currentTitles) {
+          return [].concat(_toConsumableArray(currentTitles), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+            className: "FAQ__contentTitle",
+            key: _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].key + "-t"
+          }, _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].title)]);
+        });
+        setTitles(function (currentText) {
+          return [].concat(_toConsumableArray(currentText), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            className: "FAQ__contentText",
+            key: i + "-p"
+          }, _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].content)]);
+        });
+      }
+    };
+
+    for (var i = 0; i < _Content__WEBPACK_IMPORTED_MODULE_2__["default"].length; i++) {
+      _loop(i);
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "FAQ"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "FAQ__title"
+  }, "H\xE4ufig gestellte Fragen f\xFCr neue Nutzer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "FAQ__wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "FAQ__catWrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return buttonClickHandler(0);
+    },
+    className: "btn btn-tertiary FAQ__btn"
+  }, " ", categoryList[0], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return buttonClickHandler(1);
+    },
+    className: "btn btn-tertiary FAQ__btn"
+  }, " ", categoryList[1], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return buttonClickHandler(2);
+    },
+    className: "btn btn-tertiary FAQ__btn"
+  }, " ", categoryList[2], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return buttonClickHandler(3);
+    },
+    className: "btn btn-tertiary FAQ__btn"
+  }, " ", categoryList[3], " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "FAQ__contentWrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentTitles, currentText))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FAQ);
+
+/***/ }),
+
 /***/ "./resources/js/components/Header/Header.js":
 /*!**************************************************!*\
   !*** ./resources/js/components/Header/Header.js ***!
@@ -77135,7 +77360,7 @@ var header = function header() {
     alt: "headerImage"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "header__title"
   }, "Triff dich mit neuen Leuten aus deiner Hochschule und connecte dich. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "header__p"
@@ -77568,10 +77793,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TeamSlider_TeamSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/TeamSlider/TeamSlider */ "./resources/js/components/TeamSlider/TeamSlider.js");
-/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Header/Header */ "./resources/js/components/Header/Header.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Navbar/Navbar */ "./resources/js/components/Navbar/Navbar.js");
-/* harmony import */ var _components_CTA_CTA__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/CTA/CTA */ "./resources/js/components/CTA/CTA.js");
+/* harmony import */ var _components_FAQ_FAQ__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/FAQ/FAQ */ "./resources/js/components/FAQ/FAQ.js");
+/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Header/Header */ "./resources/js/components/Header/Header.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Navbar/Navbar */ "./resources/js/components/Navbar/Navbar.js");
+/* harmony import */ var _components_CTA_CTA__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/CTA/CTA */ "./resources/js/components/CTA/CTA.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -77601,6 +77827,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var LandingPage = /*#__PURE__*/function (_Component) {
   _inherits(LandingPage, _Component);
 
@@ -77615,9 +77842,7 @@ var LandingPage = /*#__PURE__*/function (_Component) {
   _createClass(LandingPage, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           height: '500px'
         },
@@ -77629,14 +77854,14 @@ var LandingPage = /*#__PURE__*/function (_Component) {
         id: "Ablauf"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ablauf")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FAQ_FAQ__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           height: '5000px'
         },
         id: "FAQ"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "FAQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "FAQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
         to: "/styleguide"
-      }, "Styleguide"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CTA_CTA__WEBPACK_IMPORTED_MODULE_5__["default"], null))));
+      }, "Styleguide"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CTA_CTA__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
     }
   }]);
 
