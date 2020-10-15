@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
 import CTA from '../../components/CTA/CTA'
+import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 
 class LandingPage extends Component {
     render() {
@@ -29,6 +30,8 @@ class LandingPage extends Component {
                     </div>
                     <div id="Team">
                         {/* <TeamSlider /> */}
+                        <TextIconHFU/>
+
                     </div>
                     <div
                         style={{ height: '5000px' }}

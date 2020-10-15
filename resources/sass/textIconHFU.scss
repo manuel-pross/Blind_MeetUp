@@ -1,0 +1,31 @@
+.text-icon {
+
+    &__heading-mobile {
+        text-align: center;
+
+        @include breakpoint("md") {
+            display: none;
+        }
+    }
+
+    &__heading-desktop {
+        display: none;
+
+        @include breakpoint("md") {
+            display: inline-block;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 120px;
+        margin: 0 auto;
+
+        @include breakpoint("md") {
+            margin: 0;
+            max-width: 160px;
+        }
+    }
+}

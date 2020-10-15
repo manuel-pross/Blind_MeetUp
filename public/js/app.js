@@ -76851,6 +76851,17 @@ module.exports = "/images/Bildmarke_invertiert.png?2406904b3c51c00d8e322c8db59c7
 
 /***/ }),
 
+/***/ "./resources/assets/img/Hochschule_Furtwangen_logo.svg":
+/*!*************************************************************!*\
+  !*** ./resources/assets/img/Hochschule_Furtwangen_logo.svg ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Hochschule_Furtwangen_logo.svg?74a98cfa8b208b2e11cc16e260944f47";
+
+/***/ }),
+
 /***/ "./resources/assets/img/TeamImages/gion.png":
 /*!**************************************************!*\
   !*** ./resources/assets/img/TeamImages/gion.png ***!
@@ -77516,6 +77527,39 @@ var TeamSlider = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/TextIconHFU/TextIconHFU.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/TextIconHFU/TextIconHFU.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_img_Hochschule_Furtwangen_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/img/Hochschule_Furtwangen_logo.svg */ "./resources/assets/img/Hochschule_Furtwangen_logo.svg");
+/* harmony import */ var _assets_img_Hochschule_Furtwangen_logo_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_img_Hochschule_Furtwangen_logo_svg__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var textIconHFU = function textIconHFU() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-icon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "text-icon__heading-mobile"
+  }, "Unterst\xFCtzt durch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "text-icon__heading-desktop"
+  }, "Im Auftrag und in Kooperation mit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "text-icon__img",
+    src: _assets_img_Hochschule_Furtwangen_logo_svg__WEBPACK_IMPORTED_MODULE_1___default.a
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (textIconHFU);
+
+/***/ }),
+
 /***/ "./resources/js/components/hoc/Auxy.js":
 /*!*********************************************!*\
   !*** ./resources/js/components/hoc/Auxy.js ***!
@@ -77572,6 +77616,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Navbar/Navbar */ "./resources/js/components/Navbar/Navbar.js");
 /* harmony import */ var _components_CTA_CTA__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/CTA/CTA */ "./resources/js/components/CTA/CTA.js");
+/* harmony import */ var _components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/TextIconHFU/TextIconHFU */ "./resources/js/components/TextIconHFU/TextIconHFU.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -77593,6 +77638,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -77629,7 +77675,7 @@ var LandingPage = /*#__PURE__*/function (_Component) {
         id: "Ablauf"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ablauf")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           height: '5000px'
         },
