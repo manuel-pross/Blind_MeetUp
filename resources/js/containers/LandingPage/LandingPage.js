@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import CTA from '../../components/CTA/CTA'
 import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 import Timeline from '../../components/Timeline/Timeline'
+import AboutProject from '../../components/AboutProject/AboutProject';
 
 class LandingPage extends Component {
     render() {
@@ -15,22 +16,11 @@ class LandingPage extends Component {
                 <Navbar />
                 <Header />
                 <div className="container">
-                    <div
-                        style={{ height: '500px' }}
+                    <div style={{ height: '500px' }}
                         id="Projekt">
-                        <h2 >
-                            Das Projekt
-                        </h2>
+                        <AboutProject />
                     </div>
-                    <div
-                        style={{ height: '500px' }}
-                        id="Ablauf">
-                        <h2 >
-                            Ablauf
-                        </h2>
-                    </div>
-
-                    <div id="Timeline">
+                    <div id="Ablauf">
                         <Timeline />
                     </div>
                     <div id="Team">

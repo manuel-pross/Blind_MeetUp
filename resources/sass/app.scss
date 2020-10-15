@@ -15,24 +15,18 @@
 @import "./navbar";
 @import "./utility";
 
-
 // normalizer
 @import "./normalizer";
 
-//slick-slider
-@import "./teamSlider";
-
-//CTA
-@import "./cta";
-
-//header
+//landingpage
 @import "./header";
-
-//timeline
+@import "./teamSlider";
+@import "./imageText";
+@import "./textIconHFU";
+@import "./cta";
 @import "./timeline";
+@import "./devSizeBtn";
 
 //dev
 @import "./devSizeBtn";
 
-//text icon hfu
-@import "./textIconHFU"

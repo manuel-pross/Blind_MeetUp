@@ -1,0 +1,23 @@
+.imageText {
+   @include breakpoint("xl") {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__img {
+      margin-bottom: 2rem;
+      width: 100%;
+
+      @include breakpoint("xl") {
+         //flex: 0 0 40%;
+         width: 44%;
+      }
+   }
+
+   &__text {
+      @include breakpoint("xl") {
+         flex: 0 0 55%;
+         padding: 3rem;
+      }
+   }
+}

@@ -77749,6 +77749,17 @@ module.exports = "/images/Wortmarke_TwoLine_invertiert.png?96b60cda753d310e83bbe
 
 /***/ }),
 
+/***/ "./resources/assets/img/placeholder/720x485-placeholder.png":
+/*!******************************************************************!*\
+  !*** ./resources/assets/img/placeholder/720x485-placeholder.png ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/720x485-placeholder.png?261f335bf400fd55d77be68ce6876061";
+
+/***/ }),
+
 /***/ "./resources/assets/img/placeholder/landing-page-background.jpg":
 /*!**********************************************************************!*\
   !*** ./resources/assets/img/placeholder/landing-page-background.jpg ***!
@@ -77864,6 +77875,90 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/AboutProject/AboutProject.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/AboutProject/AboutProject.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hoc/Auxy */ "./resources/js/components/hoc/Auxy.js");
+/* harmony import */ var _ImageText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageText */ "./resources/js/components/AboutProject/ImageText.js");
+/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/img/placeholder/720x485-placeholder.png */ "./resources/assets/img/placeholder/720x485-placeholder.png");
+/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var firstText = "Dazu entwickeln wir gemeinsam mit Prof. Dr. Gabriel Rausch eine Anwendung, die es ermöglicht an einem realen Treffen seiner Wahl teilnehmen zu können. Es kann ausgewählt werden, ob man sich lieber mit nur einer weiteren Person treffen möchte oder mit einer Gruppe (mit bis zu 5 Personen). Dabei geschieht der ganze Prozess völlig anonym, sodass man bis zum Treffen nicht weiß, wer einem gegenüber steht. So wollen wir den Alltag in Furtwangen aufwerten. Bei den Treffen kannst du dich mit den anderen nach Belieben austauschen, was auch immer dich interessiert.";
+var secText = "Außerdem sehen wir die Chance neue Studierende kennenzulernen, die man noch nicht kannte; mit ihnen „networken“ und neue Freundschaften entwickeln. Auch für Internationals stellt es eine Möglichkeit dar, sich einzubringen, sich hier vertraut zu machen und Kontakte knüpfen zu können. Wir sind von unserer Vorstellung überzeugt und hoffen, du bist es auch. Sei jetzt auch ein Teil von Blind MeetUp!";
+
+var AboutProject = function AboutProject() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "aboutProject__title"
+  }, "\xDCber das Projekt"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "aboutProject__text mb-200"
+  }, "Sechs Studierende, ein Team, eine Vision \u2014 das ist Blind MeetUp. Wir haben es uns zur Aufgabe gemacht, dich und andere Studierende an der Hochschule Furtwangen miteinander zu \u201Econnecten\u201C. So sehen wir die perfekte M\xF6glichkeit, die internen Beziehungen zwischen den einzelnen Fakult\xE4ten in Furtwangen st\xE4rken zu k\xF6nnen und eine Interaktion zu f\xF6rdern."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    alignment: true,
+    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    text: firstText
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    alignment: false,
+    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    text: secText
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutProject);
+
+/***/ }),
+
+/***/ "./resources/js/components/AboutProject/ImageText.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/AboutProject/ImageText.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var wrapperStyle = {};
+
+function ImageText(props) {
+  var wrapperStyle = props.alignment ? {
+    flexDirection: 'row'
+  } : {
+    flexDirection: 'row-reverse'
+  }; // const imageStyle = props.alignment ? { marginRight: '2rem' } : { marginLeft: '2rem' };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "imageText",
+    style: wrapperStyle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.img,
+    alt: "",
+    className: "imageText__img"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", _defineProperty({
+    className: "imageText__text"
+  }, "className", "imageText__text"), props.text));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ImageText);
+
+/***/ }),
+
 /***/ "./resources/js/components/CTA/CTA.js":
 /*!********************************************!*\
   !*** ./resources/js/components/CTA/CTA.js ***!
@@ -77916,7 +78011,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var header = function header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header position-relative"
+    className: "header position-relative mb-300"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "header__image",
     src: _assets_img_placeholder_landing_page_background_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
@@ -78608,6 +78703,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CTA_CTA__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/CTA/CTA */ "./resources/js/components/CTA/CTA.js");
 /* harmony import */ var _components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/TextIconHFU/TextIconHFU */ "./resources/js/components/TextIconHFU/TextIconHFU.js");
 /* harmony import */ var _components_Timeline_Timeline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Timeline/Timeline */ "./resources/js/components/Timeline/Timeline.js");
+/* harmony import */ var _components_AboutProject_AboutProject__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/AboutProject/AboutProject */ "./resources/js/components/AboutProject/AboutProject.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -78639,6 +78735,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var LandingPage = /*#__PURE__*/function (_Component) {
   _inherits(LandingPage, _Component);
 
@@ -78660,13 +78757,8 @@ var LandingPage = /*#__PURE__*/function (_Component) {
           height: '500px'
         },
         id: "Projekt"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Das Projekt")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          height: '500px'
-        },
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutProject_AboutProject__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Ablauf"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ablauf")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "Timeline"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Timeline_Timeline__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
