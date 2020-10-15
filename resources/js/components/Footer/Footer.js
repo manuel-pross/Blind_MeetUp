@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-
 import FooterButton from './FooterButton/FooterButton';
-
 import Wortmarke_OneLine_invertiert_cut from '../../../assets/img/Wortmarke_OneLine_invertiert_cut.png';
-import { FaFlagUsa } from 'react-icons/fa';
 
 class Footer extends Component {
     render() {
