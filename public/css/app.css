@@ -4417,6 +4417,31 @@ Breakpoint Mixin
   border: 0 !important;
   text-decoration: none;
   text-align: center;
+  font-size: 20px;
+}
+
+@media (min-width: 576px) {
+  .btn {
+    font-size: 21.5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    font-size: 24.5px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .btn {
+    font-size: 26px;
+  }
 }
 
 .btn-primary {
@@ -11273,7 +11298,7 @@ template {
 }
 
 .navbar {
-  height: 60px;
+  height: 85px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -11402,6 +11427,7 @@ template {
 
 .footer__text {
   color: #fefefe;
+  font-size: 19px !important;
 }
 
 .footer__button {

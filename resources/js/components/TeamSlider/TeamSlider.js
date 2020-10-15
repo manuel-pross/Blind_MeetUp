@@ -40,50 +40,52 @@ const desc = [
 
 
 class TeamSlider extends Component {
-   render() {
+   // render() {
 
-      function SampleNextArrow(props) {
-         const { onClick } = props;
-         return (
-            <h1
-               className="slick-arrow slick-next teamSlider__arrowRight"
-               onClick={onClick}
-            />
-         );
-      }
+   //    function SampleNextArrow(props) {
+   //       const { onClick } = props;
+   //       return (
+   //          <h1
+   //             className="slick-arrow slick-next teamSlider__arrowRight"
+   //             onClick={onClick}
+   //          />
+   //       );
+   //    }
 
-      function SamplePrevArrow(props) {
-         const { onClick } = props;
-         return (
-            <h1
-               className="slick-arrow slick-prev teamSlider__arrowLeft"
-               onClick={onClick}
-            />
-         );
-      }
+   //    function SamplePrevArrow(props) {
+   //       const { onClick } = props;
+   //       return (
+   //          <h1
+   //             className="slick-arrow slick-prev teamSlider__arrowLeft"
+   //             onClick={onClick}
+   //          />
+   //       );
+   //    }
 
-      const settings = {
-         className: "teamImages",
-         infinite: true,
-         speed: 500,
-         slidesToShow: 3,
-         slidesToScroll: 3
-      };
+   //    const settings = {
+   //       className: "teamImages",
+   //       infinite: true,
+   //       lazyLoad: false,
+   //       adaptiveHeight: true,
+   //       variableWidth: true,
+   //       nextArrow: <SampleNextArrow />,
+   //       prevArrow: <SamplePrevArrow />
+   //    };
       
-      return (
-         <div className="teamSlider mb-1000">
-            <h1 className="mb-250" >Unser Team</h1>
-            <Slider {...settings}>
-               <TeamImage teamName={manuel} styleName={Stylename[1]} nameString={nameString[1]} desc={desc[1]} />
-               <TeamImage teamName={patrickK} styleName={Stylename[5]} nameString={nameString[5]} desc={desc[5]} />
-               {/* <TeamImage teamName={pia} styleName={Stylename[0]} nameString={nameString[0]} desc={desc[0]} />
-               <TeamImage teamName={patrickN} styleName={Stylename[2]} nameString={nameString[2]} desc={desc[2]} />
-               <TeamImage teamName={gion} styleName={Stylename[3]} nameString={nameString[3]} desc={desc[3]} />
-               <TeamImage teamName={simon} styleName={Stylename[4]} nameString={nameString[4]} desc={desc[4]} /> */}
-            </Slider>
-         </div>
-      );
-   }
+   //    return (
+   //       <div className="teamSlider mb-1000">
+   //          <h1 className="mb-250" >Unser Team</h1>
+   //          <Slider {...settings}>
+   //             <TeamImage teamName={manuel} styleName={Stylename[1]} nameString={nameString[1]} desc={desc[1]} />
+   //             <TeamImage teamName={patrickK} styleName={Stylename[5]} nameString={nameString[5]} desc={desc[5]} />
+   //             <TeamImage teamName={pia} styleName={Stylename[0]} nameString={nameString[0]} desc={desc[0]} />
+   //             <TeamImage teamName={patrickN} styleName={Stylename[2]} nameString={nameString[2]} desc={desc[2]} />
+   //             <TeamImage teamName={gion} styleName={Stylename[3]} nameString={nameString[3]} desc={desc[3]} />
+   //             <TeamImage teamName={simon} styleName={Stylename[4]} nameString={nameString[4]} desc={desc[4]} />
+   //          </Slider>
+   //       </div>
+   //    );
+   // }
 }
 
 export default TeamSlider;

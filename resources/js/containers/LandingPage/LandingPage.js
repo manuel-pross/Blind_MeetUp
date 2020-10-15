@@ -23,7 +23,7 @@ class LandingPage extends Component {
                     <Timeline />
                 </div>
                 <div id="Team">
-                    <TeamSlider />
+                    {/* <TeamSlider /> */}
                 </div>
                 <div id="FAQ">
                     <FAQ />

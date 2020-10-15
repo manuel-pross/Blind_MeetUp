@@ -6,6 +6,20 @@
   border: 0 !important;
   text-decoration: none;
   text-align: center;
+  font-size: 20px;
+
+  @include breakpoint("sm") {
+    font-size: 21.5px;
+  }
+  @include breakpoint("lg") {
+    font-size: 23px;
+  }
+  @include breakpoint("xl") {
+    font-size: 24.5px;
+  }
+  @include breakpoint("xxl") {
+    font-size: 26px;
+  }
 
   &-primary {
     color: $c-white;

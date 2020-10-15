@@ -77949,10 +77949,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hoc/Auxy */ "./resources/js/components/hoc/Auxy.js");
-/* harmony import */ var _ImageText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageText */ "./resources/js/components/AboutProject/ImageText.js");
-/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/img/placeholder/720x485-placeholder.png */ "./resources/assets/img/placeholder/720x485-placeholder.png");
-/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ImageText__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImageText */ "./resources/js/components/AboutProject/ImageText.js");
+/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/img/placeholder/720x485-placeholder.png */ "./resources/assets/img/placeholder/720x485-placeholder.png");
+/* harmony import */ var _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/TextIconHFU/TextIconHFU */ "./resources/js/components/TextIconHFU/TextIconHFU.js");
 
 
 
@@ -77963,20 +77963,20 @@ var secText = "Außerdem sehen wir die Chance neue Studierende kennenzulernen, d
 
 var AboutProject = function AboutProject() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
+    className: "container mb-400"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "aboutProject__title"
   }, "\xDCber das Projekt"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "aboutProject__text mb-200"
-  }, "Sechs Studierende, ein Team, eine Vision \u2014 das ist Blind MeetUp. Wir haben es uns zur Aufgabe gemacht, dich und andere Studierende an der Hochschule Furtwangen miteinander zu \u201Econnecten\u201C. So sehen wir die perfekte M\xF6glichkeit, die internen Beziehungen zwischen den einzelnen Fakult\xE4ten in Furtwangen st\xE4rken zu k\xF6nnen und eine Interaktion zu f\xF6rdern."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Sechs Studierende, ein Team, eine Vision \u2014 das ist Blind MeetUp. Wir haben es uns zur Aufgabe gemacht, dich und andere Studierende an der Hochschule Furtwangen miteinander zu \u201Econnecten\u201C. So sehen wir die perfekte M\xF6glichkeit, die internen Beziehungen zwischen den einzelnen Fakult\xE4ten in Furtwangen st\xE4rken zu k\xF6nnen und eine Interaktion zu f\xF6rdern."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_1__["default"], {
     alignment: true,
-    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_2___default.a,
     text: firstText
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageText__WEBPACK_IMPORTED_MODULE_1__["default"], {
     alignment: false,
-    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _assets_img_placeholder_720x485_placeholder_png__WEBPACK_IMPORTED_MODULE_2___default.a,
     text: secText
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AboutProject);
@@ -78685,22 +78685,22 @@ var navigationItems = function navigationItems() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     hashLink: true,
     link: "Projekt",
-    offset: -60,
+    offset: -85,
     duration: 500
   }, "Das Projekt"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     hashLink: true,
     link: "Ablauf",
-    offset: -60,
+    offset: -85,
     duration: 500
   }, "Ablauf"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     hashLink: true,
     link: "Team",
-    offset: -60,
+    offset: -85,
     duration: 500
   }, "Unser Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     hashLink: true,
     link: "FAQ",
-    offset: -60,
+    offset: -85,
     duration: 500
   }, "FAQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     link: "https://www.hs-furtwangen.de/"
@@ -78775,10 +78775,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -78816,50 +78812,6 @@ var TeamSlider = /*#__PURE__*/function (_Component) {
 
     return _super.apply(this, arguments);
   }
-
-  _createClass(TeamSlider, [{
-    key: "render",
-    value: function render() {
-      function SampleNextArrow(props) {
-        var onClick = props.onClick;
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-          className: "slick-arrow slick-next teamSlider__arrowRight",
-          onClick: onClick
-        });
-      }
-
-      function SamplePrevArrow(props) {
-        var onClick = props.onClick;
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-          className: "slick-arrow slick-prev teamSlider__arrowLeft",
-          onClick: onClick
-        });
-      }
-
-      var settings = {
-        className: "teamImages",
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "teamSlider mb-1000"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "mb-250"
-      }, "Unser Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_manuel_png__WEBPACK_IMPORTED_MODULE_6___default.a,
-        styleName: Stylename[1],
-        nameString: nameString[1],
-        desc: desc[1]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        teamName: _assets_img_TeamImages_patrickK_png__WEBPACK_IMPORTED_MODULE_4___default.a,
-        styleName: Stylename[5],
-        nameString: nameString[5],
-        desc: desc[5]
-      })));
-    }
-  }]);
 
   return TeamSlider;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
@@ -78915,11 +78867,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _TimelineDesc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TimelineDesc */ "./resources/js/components/Timeline/TimelineDesc.js");
-/* harmony import */ var _components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/TextIconHFU/TextIconHFU */ "./resources/js/components/TextIconHFU/TextIconHFU.js");
-/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-carousel/slick/slick.css */ "./node_modules/slick-carousel/slick/slick.css");
-/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! slick-carousel/slick/slick-theme.css */ "./node_modules/slick-carousel/slick/slick-theme.css");
-/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! slick-carousel/slick/slick.css */ "./node_modules/slick-carousel/slick/slick.css");
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-carousel/slick/slick-theme.css */ "./node_modules/slick-carousel/slick/slick-theme.css");
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -78955,7 +78906,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -79081,7 +79031,7 @@ var Timeline = /*#__PURE__*/function (_Component) {
           heading: desc.headingText,
           desc: desc.descText
         });
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextIconHFU_TextIconHFU__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+      })))));
     }
   }]);
 
@@ -79232,7 +79182,7 @@ var LandingPage = /*#__PURE__*/function (_Component) {
         id: "Ablauf"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Timeline_Timeline__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Team"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TeamSlider_TeamSlider__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "FAQ"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FAQ_FAQ__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CTA_CTA__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }

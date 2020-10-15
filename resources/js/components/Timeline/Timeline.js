@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
 import TimelineDesc from "./TimelineDesc"
-import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -88,7 +87,6 @@ class Timeline extends Component {
                         
                     </div>
                 </div>
-                <TextIconHFU />
             </div>
         )
     }
