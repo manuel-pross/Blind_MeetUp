@@ -11266,106 +11266,6 @@ template {
   }
 }
 
-.devBtn:after {
-  position: fixed;
-  line-height: 0.9;
-  font-size: 30px;
-  color: #fefefe;
-  background-color: #50b375;
-  opacity: 0.6;
-  padding: 30px;
-  bottom: 5rem;
-  left: 5rem;
-  border-radius: 30px !important;
-  z-index: 10;
-}
-
-@media (min-width: 0) {
-  .devBtn:after {
-    content: "XS";
-  }
-}
-
-@media (min-width: 576px) {
-  .devBtn:after {
-    content: "SM";
-  }
-}
-
-@media (min-width: 768px) {
-  .devBtn:after {
-    content: "MD";
-  }
-}
-
-@media (min-width: 992px) {
-  .devBtn:after {
-    content: "LG";
-  }
-}
-
-@media (min-width: 1200px) {
-  .devBtn:after {
-    content: "XL";
-  }
-}
-
-@media (min-width: 1920px) {
-  .devBtn:after {
-    content: "XXL";
-  }
-}
-
-.devBtn:after {
-  position: fixed;
-  line-height: 0.9;
-  font-size: 30px;
-  color: #fefefe;
-  background-color: #50b375;
-  opacity: 0.6;
-  padding: 30px;
-  bottom: 5rem;
-  left: 5rem;
-  border-radius: 30px !important;
-  z-index: 10;
-}
-
-@media (min-width: 0) {
-  .devBtn:after {
-    content: "XS";
-  }
-}
-
-@media (min-width: 576px) {
-  .devBtn:after {
-    content: "SM";
-  }
-}
-
-@media (min-width: 768px) {
-  .devBtn:after {
-    content: "MD";
-  }
-}
-
-@media (min-width: 992px) {
-  .devBtn:after {
-    content: "LG";
-  }
-}
-
-@media (min-width: 1200px) {
-  .devBtn:after {
-    content: "XL";
-  }
-}
-
-@media (min-width: 1920px) {
-  .devBtn:after {
-    content: "XXL";
-  }
-}
-
 .FAQ {
   background-color: #EFFCEF;
   padding: 1rem 0;
@@ -11423,6 +11323,56 @@ template {
 @media (min-width: 992px) {
   .FAQ__selectCat {
     margin-top: 0;
+  }
+}
+
+.devBtn:after {
+  position: fixed;
+  line-height: 0.9;
+  font-size: 30px;
+  color: #fefefe;
+  background-color: #50b375;
+  opacity: 0.6;
+  padding: 30px;
+  bottom: 5rem;
+  left: 5rem;
+  border-radius: 30px !important;
+  z-index: 10;
+}
+
+@media (min-width: 0) {
+  .devBtn:after {
+    content: "XS";
+  }
+}
+
+@media (min-width: 576px) {
+  .devBtn:after {
+    content: "SM";
+  }
+}
+
+@media (min-width: 768px) {
+  .devBtn:after {
+    content: "MD";
+  }
+}
+
+@media (min-width: 992px) {
+  .devBtn:after {
+    content: "LG";
+  }
+}
+
+@media (min-width: 1200px) {
+  .devBtn:after {
+    content: "XL";
+  }
+}
+
+@media (min-width: 1920px) {
+  .devBtn:after {
+    content: "XXL";
   }
 }
 

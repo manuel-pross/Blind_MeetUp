@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
 import TimelineDesc from "./TimelineDesc"
+import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -67,24 +68,28 @@ class Timeline extends Component {
         }
 
         return (
-            <div className="timeline">
-                <h2 className="timeline__heading">Ablauf &amp; Funktionsweise</h2>
-                <div className="timeline__content">
-                    <div className="timeline__stroke">
-                    {this.state.descs.map((desc) => {
-                        return (
-                            <div className="timeline__point" style={{backgroundColor: desc.pointColor}}/>
-                        )
-                    })}
-                    </div>
-                    <Slider {...settings}>
-                        {this.state.descs.map((desc) => {
+            <div className="container mb-1000">
+                <div className="timeline">
+                    <h2 className="timeline__heading">Ablauf &amp; Funktionsweise</h2>
+                    <div className="timeline__content">
+                        <div className="timeline__stroke">
+                        {this.state.descs.map((desc, i) => {
                             return (
-                                <TimelineDesc heading={desc.headingText} desc={desc.descText}/>
+                                <div key={i} className="timeline__point" style={{backgroundColor: desc.pointColor}}/>
                             )
                         })}
-                    </Slider>
+                        </div>
+                        <Slider {...settings}>
+                            {this.state.descs.map((desc, i) => {
+                                return (
+                                    <TimelineDesc key={i} heading={desc.headingText} desc={desc.descText}/>
+                                )
+                            })}
+                        </Slider>
+                        
+                    </div>
                 </div>
+                <TextIconHFU />
             </div>
         )
     }
