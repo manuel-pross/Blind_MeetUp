@@ -1,0 +1,64 @@
+.FAQ {
+   background-color: $c3-second;
+   padding: 1rem 0;
+
+   &__wrapper {
+      @include breakpoint("lg") {
+         display: flex;
+      }
+   }
+
+   &__catWrapper {
+      margin-bottom: 2rem;
+      
+      @include breakpoint("lg") {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 0;
+      }
+   }
+
+   &__contentWrapper {
+      h3 {
+         margin-top: 0;
+      }
+   }
+
+   &__contentTitle,
+   &__contentText {
+      &--noMargin {
+         margin: 0;
+      }
+   }
+
+   // &__contentTitle,
+   // &__contentText {
+   //    &--disabled {
+   //       display: none;
+   //    }
+   // }
+
+   &__title {
+      text-align: center;
+
+      @include breakpoint("lg") {
+         text-align: left;
+      }
+   }
+
+   &__btn {
+      margin: 0 0.7rem 0.3rem 0;
+
+      @include breakpoint("lg") {
+         background-color: $c3-second;
+         align-self: flex-start;
+         margin-right: 4.5rem;
+      }
+   }
+
+   &__selectCat {
+      @include breakpoint("lg") {
+         margin-top: 0;
+      }
+   }
+}

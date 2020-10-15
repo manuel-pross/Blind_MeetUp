@@ -32,6 +32,17 @@
     background-color: $c-white !important;
     border: 2px solid rgba(46, 108, 72, 0.3) !important;
   }
+
+  &-tertiary {
+    color: $c-grey;
+    font-weight: 400 !important;
+    background-color: $c-white;
+    padding: 9px 20px !important;
+
+    &:hover {
+      color: $c-black;
+    }
+  }
 }
 
 .sg_btn {
