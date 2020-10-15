@@ -1,11 +1,31 @@
 .footer{
     background-color: $c-darkGrey;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    @include breakpoint("sm") {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+      @include breakpoint("md") {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 
     &__heading {
         font-family: $font-main-2;
-        font-size: 1.25rem;
+        font-size: 1.3rem;
         color: $c-white;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.3rem;
+
+        @include breakpoint("md") {
+            font-size: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+        @include breakpoint("lg") {
+            font-size: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
     }
 
     &__text {
@@ -25,5 +45,12 @@
         width: 100%;
         max-width: 200px;
         height: auto;
+    }
+
+    &__flags{
+        float: right;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 }
