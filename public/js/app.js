@@ -77823,6 +77823,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_Pages_Dataprotection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./containers/Pages/Dataprotection */ "./resources/js/containers/Pages/Dataprotection.js");
 /* harmony import */ var _containers_Pages_Guidelines__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./containers/Pages/Guidelines */ "./resources/js/containers/Pages/Guidelines.js");
 /* harmony import */ var _containers_Pages_Impressum__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./containers/Pages/Impressum */ "./resources/js/containers/Pages/Impressum.js");
+/* harmony import */ var _containers_Dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./containers/Dashboard/Dashboard */ "./resources/js/containers/Dashboard/Dashboard.js");
+
 
 
 
@@ -77862,6 +77864,10 @@ function Root() {
     exact: true,
     path: "/impressum",
     component: _containers_Pages_Impressum__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/dashboard",
+    component: _containers_Dashboard_Dashboard__WEBPACK_IMPORTED_MODULE_9__["default"]
   }));
 }
 
@@ -78629,6 +78635,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-scroll */ "./node_modules/react-scroll/modules/index.js");
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_scroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -78649,12 +78657,18 @@ var navigationItem = function navigationItem(props) {
       activeClass: "active"
     }, props.children);
   } else {
-    navElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: props.link,
-      target: "_blank",
-      rel: "noopener noreferrer",
-      className: "btn btn-primary navLinks__button"
-    }, props.children);
+    navElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      className: "btn btn-primary navLinks__button",
+      to: props.link
+    }, props.children) // <a
+    //     href={props.link}
+    //     target="_blank"
+    //     rel="noopener noreferrer"
+    //     className="btn btn-primary navLinks__button"
+    // >
+    //     {props.children}
+    // </a >
+    ;
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -78703,7 +78717,7 @@ var navigationItems = function navigationItems() {
     offset: -85,
     duration: 500
   }, "FAQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    link: "https://www.hs-furtwangen.de/"
+    link: "/dashboard"
   }, "Anmelden"));
 };
 
@@ -79187,6 +79201,27 @@ var devSizeBtn = function devSizeBtn(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (devSizeBtn);
+
+/***/ }),
+
+/***/ "./resources/js/containers/Dashboard/Dashboard.js":
+/*!********************************************************!*\
+  !*** ./resources/js/containers/Dashboard/Dashboard.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Dashboard = function Dashboard() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Dashboard");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Dashboard);
 
 /***/ }),
 

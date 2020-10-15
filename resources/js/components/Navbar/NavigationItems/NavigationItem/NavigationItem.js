@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Link } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
+
+import { Link } from 'react-router-dom';
 
 
 const navigationItem = (props) => {
@@ -9,7 +11,7 @@ const navigationItem = (props) => {
 
     if (props.hashLink) {
         navElement = (
-            <Link
+            <LinkScroll
                 className="navLinks__hash"
                 style={{ cursor: 'pointer' }}
                 to={props.link}
@@ -20,19 +22,24 @@ const navigationItem = (props) => {
                 activeClass="active"
             >
                 {props.children}
-            </Link>
+            </LinkScroll>
         );
 
     } else {
         navElement = (
-            <a
-                href={props.link}
-                target="_blank"
-                rel="noopener noreferrer"
+            <Link
                 className="btn btn-primary navLinks__button"
-            >
+                to={props.link}>
                 {props.children}
-            </a >
+            </Link>
+            // <a
+            //     href={props.link}
+            //     target="_blank"
+            //     rel="noopener noreferrer"
+            //     className="btn btn-primary navLinks__button"
+            // >
+            //     {props.children}
+            // </a >
         );
     }
 
