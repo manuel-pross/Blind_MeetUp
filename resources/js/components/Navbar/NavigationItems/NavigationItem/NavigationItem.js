@@ -25,10 +25,18 @@ const navigationItem = (props) => {
             </LinkScroll>
         );
 
-    } else {
+    } else if (props.onlyText) {
         navElement = (
+            <a className="navLinks__text">
+                {props.children}
+            </a >
+        );
+    }
+    else {
+        navElement = (
+
             <Link
-                className="btn btn-primary navLinks__button"
+                className={props.children === "Startseite" ? "navLinks__hash" : "btn btn-primary navLinks__button"}
                 to={props.link}>
                 {props.children}
             </Link>

@@ -11458,6 +11458,10 @@ template {
   margin-left: 10px;
 }
 
+.navLinks__text {
+  cursor: default;
+}
+
 .active {
   color: #50b375 !important;
   border-bottom: 3px solid #50b375 !important;
