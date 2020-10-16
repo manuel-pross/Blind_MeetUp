@@ -31,8 +31,8 @@ class Footer extends Component {
                     </div>
                     <div className="col-lg-5 col-4">
                         <div className="footer__flags">
-                            <img src={FlagDE} className="footer__flag" alt="BlindMeetUp_flag_de"></img>
-                            <img src={FlagEN} className="footer__flag" alt="BlindMeetUp_flag_en"></img>
+                            <img src={FlagDE} className="footer__flag" alt="BlindMeetUp_flag_de" style={{ width: "200px" }}></img>
+                            <img src={FlagEN} className="footer__flag" alt="BlindMeetUp_flag_en" style={{ width: "200px" }}></img>
                         </div>
                     </div>
                 </div>
