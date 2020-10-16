@@ -27,9 +27,11 @@ const navigationItem = (props) => {
 
     } else if (props.onlyText) {
         navElement = (
-            <a className="navLinks__hash navLinks__text">
-                {props.children}
-            </a >
+            <div className="navLinks">
+                <a className="navLinks__hash navLinks__text">
+                    {props.children}
+                </a >
+            </div>
         );
     }
     else {
