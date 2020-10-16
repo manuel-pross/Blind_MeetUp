@@ -27,7 +27,7 @@ const navigationItem = (props) => {
 
     } else if (props.onlyText) {
         navElement = (
-            <a className="navLinks__text">
+            <a className="navLinks__hash navLinks__text">
                 {props.children}
             </a >
         );
@@ -40,14 +40,6 @@ const navigationItem = (props) => {
                 to={props.link}>
                 {props.children}
             </Link>
-            // <a
-            //     href={props.link}
-            //     target="_blank"
-            //     rel="noopener noreferrer"
-            //     className="btn btn-primary navLinks__button"
-            // >
-            //     {props.children}
-            // </a >
         );
     }
 
