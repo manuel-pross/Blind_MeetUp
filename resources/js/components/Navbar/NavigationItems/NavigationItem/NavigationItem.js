@@ -28,7 +28,7 @@ const navigationItem = (props) => {
     } else if (props.onlyText) {
         navElement = (
             <div className="navLinks">
-                <a className="navLinks__hash navLinks__text">
+                <a className="navLinks__hash" style={{ cursor: 'default' }}>
                     {props.children}
                 </a >
             </div>
