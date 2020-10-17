@@ -78392,11 +78392,17 @@ var Footer = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _assets_img_flags_flag_de_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
         className: "footer__flag",
-        alt: "BlindMeetUp_flag_de"
+        alt: "BlindMeetUp_flag_de",
+        style: {
+          width: "200px"
+        }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _assets_img_flags_flag_en_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
         className: "footer__flag",
-        alt: "BlindMeetUp_flag_en"
+        alt: "BlindMeetUp_flag_en",
+        style: {
+          width: "200px"
+        }
       })))));
     }
   }]);
@@ -78657,22 +78663,19 @@ var navigationItem = function navigationItem(props) {
       activeClass: "active"
     }, props.children);
   } else if (props.onlyText) {
-    navElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "navLinks__text"
-    }, props.children);
+    navElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navLinks"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "navLinks__hash",
+      style: {
+        cursor: 'default'
+      }
+    }, props.children));
   } else {
     navElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       className: props.children === "Startseite" ? "navLinks__hash" : "btn btn-primary navLinks__button",
       to: props.link
-    }, props.children) // <a
-    //     href={props.link}
-    //     target="_blank"
-    //     rel="noopener noreferrer"
-    //     className="btn btn-primary navLinks__button"
-    // >
-    //     {props.children}
-    // </a >
-    ;
+    }, props.children);
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -80269,8 +80272,8 @@ function unregister() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

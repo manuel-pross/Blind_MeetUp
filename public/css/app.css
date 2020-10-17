@@ -73,7 +73,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1700px;
+    max-width: 1140px;
   }
 }
 
@@ -11220,7 +11220,7 @@ template {
 }
 
 .timeline__arrow-right {
-  top: 155% !important;
+  top: 125% !important;
   left: 120px !important;
   display: flex !important;
   justify-content: center;
@@ -11270,7 +11270,7 @@ template {
 }
 
 .timeline__arrow-left {
-  top: 155% !important;
+  top: 125% !important;
   left: 0 !important;
   display: flex !important;
   justify-content: center;
@@ -11429,7 +11429,7 @@ template {
   display: none !important;
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 650px) {
   .navbar__logo1 {
     height: 100%;
     display: none !important;
@@ -11472,10 +11472,6 @@ template {
 .navLinks__button {
   color: #ffffff;
   margin-left: 10px;
-}
-
-.navLinks__text {
-  cursor: default;
 }
 
 .active {
