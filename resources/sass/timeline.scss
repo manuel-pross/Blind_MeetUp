@@ -32,6 +32,11 @@
         border-radius: 5px;
         background: $horizontal-gradient;
         margin-bottom: 1.75rem;
+        margin-right: 0.6rem;
+        
+        @include breakpoint("sm") {
+            margin-right: 0;
+        }
 
         @include breakpoint("lg") {
             flex-wrap: wrap;
@@ -182,16 +187,17 @@
             transform: rotate(45deg);
         }
     }
-}
 
-.regular {
-    width: 100%;
-}
+    .slick-list {
+        max-width: 300px !important;
+    
+        @include breakpoint("sm") {
+            max-width: none !important;
+        }
+    }
 
-.slick-list {
-    max-width: 300px !important;
-
-    @include breakpoint("sm") {
-        max-width: none !important;
+    .regular {
+        width: 100%;
     }
 }
+

@@ -10,7 +10,6 @@ import manuel from '../../../assets/img/TeamImages/manuel.png';
 import simon from '../../../assets/img/TeamImages/simon.png';
 import gion from '../../../assets/img/TeamImages/gion.png';
 
-
 const desc = [
    "Marketing",
    "Projekt-Initiator & Entwickler",
@@ -69,10 +68,32 @@ class Teamslider extends Component {
       const settings = {
          className: "teamImages",
          infinite: true,
-         lazyLoad: false,
-         adaptiveHeight: true,
          variableWidth: true,
-         arrows: true,
+         arrows: true, 
+         slidesToShow: 1,
+         // responsive: [
+         // //   {
+         // //     breakpoint: 1024,
+         // //     settings: {
+         // //       slidesToShow: 3,
+         // //       slidesToScroll: 3,
+         // //       infinite: true,
+         // //       dots: true
+         // //     }
+         // //   },
+         //   {
+         //     breakpoint: 764,
+         //     settings: {
+         //       slidesToShow: 2,
+         //     }
+         //   },
+         //   {
+         //     breakpoint: 576,
+         //     settings: {
+         //       slidesToShow: 2,
+         //     }
+         //   }
+         // ],
          nextArrow: <SampleNextArrow />,
          prevArrow: <SamplePrevArrow />
       };
