@@ -78726,6 +78726,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var TeamImage = function TeamImage(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    key: props.key,
     className: "teamSlider__cover"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "teamSlider__cover__image",
@@ -78738,7 +78739,7 @@ var TeamImage = function TeamImage(props) {
     className: "teamSlider__desc"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "teamSlider__desc-title"
-  }, props.descText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "teamSlider__desc-desc"
   }, props.descText)));
 };
@@ -78828,21 +78829,27 @@ var Teamslider = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       descs: [{
         img: _assets_img_TeamImages_manuel_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+        name: "Manuel Proß",
         descText: "Projekt-Initiator & Entwickler"
       }, {
         img: _assets_img_TeamImages_patrickK_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+        name: "Patrick Kaserer",
         descText: "Projekt-Initiator & Entwickler"
       }, {
         img: _assets_img_TeamImages_simon_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+        name: "Simon Dold",
         descText: "Entwickler"
       }, {
         img: _assets_img_TeamImages_pia_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+        name: "Pia Zeller",
         descText: "Marketing"
       }, {
         img: _assets_img_TeamImages_patrickN_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+        name: "Patrick Neudert",
         descText: "Design & Konzeption"
       }, {
         img: _assets_img_TeamImages_gion_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+        name: "Gion Egel",
         descText: "Design & Konzeption"
       }]
     });
@@ -78884,9 +78891,11 @@ var Teamslider = /*#__PURE__*/function (_Component) {
         prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null)
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container mb-1000"
+        className: "container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, this.state.descs.map(function (desc, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: i,
+          name: desc.name,
           img: desc.img,
           descText: desc.descText
         });
@@ -80149,8 +80158,8 @@ function unregister() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Blind_MeetUp\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

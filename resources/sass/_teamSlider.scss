@@ -244,6 +244,11 @@
       width: 430px !important;
       height: 430px !important;
       border-radius: 78px !important;
+      margin-bottom: 8rem;
+
+      @include breakpoint("xl") {
+         margin-bottom: 12rem;
+      }
 
       &__image {
          position: absolute !important;
@@ -300,7 +305,7 @@
          right: 0;
          padding: 45px 0;
          left: 0;
-         bottom: 63px;
+         bottom: 49px;
          opacity: 0.7;
          background-color: $c-black;
       }
@@ -312,27 +317,28 @@
       bottom: 58px;
       right: 30px;
 
-      &-title {
-         text-align: right;
-         color: $c-white;
-      }
-
+      &-title,
       &-desc {
+         margin: 0;
          text-align: right;
          color: $c-white;
       }
    }
 
    &__arrow-right {
-      top: 155% !important;
-      left: 120px !important;
-      display: flex !important;
+      display: none !important;
+      top: 90% !important;
+      right: 0 !important;
       justify-content: center;
       align-items: center;
       width: 90px !important;
       height: 90px !important;
       border-radius: 50%;
       background: $c3-second !important;
+
+      @include breakpoint("xl") {
+         display: flex !important;
+      }
 
       &::before {
          display: none;
@@ -374,15 +380,19 @@
    }
 
    &__arrow-left {
-      top: 155% !important;
+      top: 90% !important;
       left: 0 !important;
-      display: flex !important;
+      display: none !important;
       justify-content: center;
       align-items: center;
       width: 90px !important;
       height: 90px !important;
       border-radius: 50%;
       background: $c3-second !important;
+
+      @include breakpoint("xl") {
+         display: flex !important;
+      }
 
       &::before {
          display: none;

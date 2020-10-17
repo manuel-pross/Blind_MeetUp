@@ -34,12 +34,12 @@ class Teamslider extends Component {
 
    state = {
       descs: [
-         { img: manuel, descText: "Projekt-Initiator & Entwickler" },
-         { img: patrickK, descText: "Projekt-Initiator & Entwickler" },
-         { img: simon, descText: "Entwickler" },
-         { img: pia, descText: "Marketing" },
-         { img: patrickN, descText: "Design & Konzeption" },
-         { img: gion, descText: "Design & Konzeption" },
+         { img: manuel, name: "Manuel Proß", descText: "Projekt-Initiator & Entwickler" },
+         { img: patrickK, name: "Patrick Kaserer", descText: "Projekt-Initiator & Entwickler" },
+         { img: simon, name: "Simon Dold", descText: "Entwickler" },
+         { img: pia, name: "Pia Zeller", descText: "Marketing" },
+         { img: patrickN, name: "Patrick Neudert", descText: "Design & Konzeption" },
+         { img: gion, name: "Gion Egel", descText: "Design & Konzeption" },
       ]
    }
 
@@ -78,17 +78,14 @@ class Teamslider extends Component {
       };
 
       return (
-         <div className="container mb-1000">
-
+         <div className="container">
             <Slider {...settings}>
                {this.state.descs.map((desc, i) => {
                   return (
-                     <TeamImage img={desc.img} descText={desc.descText} />
+                     <TeamImage key={i} name={desc.name} img={desc.img} descText={desc.descText} />
                   )
                })}
             </Slider>
-
-
          </div>
       )
    }
