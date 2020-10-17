@@ -33,7 +33,7 @@
         display: none !important;
     }
 
-    @media only screen and (max-width: 460px) {
+    @media only screen and (max-width: 650px) {
         &__logo1 {
             height: 100%;
             display: none !important;
@@ -44,13 +44,13 @@
             display: block !important;
         }
     }
-    nav{
+    nav {
         height: 100%;
     }
 }
 
 .navLinks {
-    &__hash{
+    &__hash {
         color: $c-black;
         text-decoration: none;
         width: 100%;
@@ -67,12 +67,12 @@
             color: $c-black;
         }
 
-        @media only screen and (max-width: 943px){
+        @media only screen and (max-width: 943px) {
             display: none;
         }
     }
 
-    &__button{
+    &__button {
         color: $c2-main;
         margin-left: 10px;
         // padding: 9px 9px !important;

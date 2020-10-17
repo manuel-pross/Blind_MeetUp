@@ -1,13 +1,14 @@
 import React from 'react';
+
 import Navbar from '../../components/Navbar/Navbar';
 
-const Guidelines = () => (
+const Dashboard = () => (
     <React.Fragment>
         <Navbar />
         <div style={{ paddingTop: "100px" }}>
-            Guidelines
+            Dashboard
         </div>
     </React.Fragment>
 );
 
-export default Guidelines;
+export default Dashboard;
