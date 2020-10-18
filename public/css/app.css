@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1700px;
+    max-width: 1140px;
   }
 }
 
@@ -11372,5 +11372,32 @@ template {
   .devBtn:after {
     content: "XXL";
   }
+}
+
+.social-media__heading {
+  text-align: center;
+}
+
+.social-media__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  background: linear-gradient(360deg, #2e6c48 35%, #50b375 100%);
+}
+
+.social-media__link:last-child {
+  margin-right: 0;
+}
+
+.social-media__icon {
+  fill: #fefefe;
 }
 
