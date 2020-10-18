@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1700px;
+    max-width: 1140px;
   }
 }
 
@@ -11087,10 +11087,6 @@ template {
   border-radius: 3px;
   background-color: inherit;
   transform: rotate(45deg);
-}
-
-.timeline .slick-list {
-  max-width: 300px !important;
 }
 
 @media (min-width: 576px) {
