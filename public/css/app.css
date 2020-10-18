@@ -10851,9 +10851,7 @@ template {
   }
 }
 
-.cta__desc {
-  font-family: "Maven Pro Bold";
-  font-size: 1.25rem;
+.cta__heading {
   text-align: center;
   margin-bottom: 1.25rem;
 }
