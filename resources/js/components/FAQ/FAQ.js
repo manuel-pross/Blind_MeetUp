@@ -1,61 +1,81 @@
 import React, { useState } from 'react';
-import Aux from '../hoc/Auxy';
 import Content from './Content';
-
-const categoryList = [
-   "Anmeldung",
-   "Treffen",
-   "Allgemeines",
-   "Sonstiges"
-]
 
 const FAQ = () => {
 
-   const [currentTitles, setTitles] = useState([
-      <h3 className="FAQ__contentTitle--noMargin" key={-1}></h3>
+   const Categories = [
+      "Anmeldung",
+      "Treffen",
+      "Allgemeines",
+      "Sonstiges",
+   ]
+
+   const [btnClass, setBtnClasses] = useState(
+      "FAQ__contentWrapper__btn--disabled"
+   )
+
+   const [currentContent, setContent] = useState([
+      <h3 className="FAQ__content--noMargin" key={-1}></h3>,
+      <p className="FAQ__contentText--noMargin" key={-2}>Bitte eine Kategorie auswählen</p>,
    ])
-   const [currentText, setText] = useState([
-      <p className="FAQ__contentText--noMargin" key={-2}>Bitte eine Kategorie auswählen</p>
-   ])
+
+   const [ifExtended, setifExtended] = useState(false)
+   const [extendedContent, setExtendedContent] = useState(false)
 
    let category = "Kategorie auswählen";
-   const buttonClickHandler = (index) => {
-      // document.getElementById("FAQ-Cat").innerHTML = categoryList[index];
-      category = (categoryList[index]);
-      setTitles([<h3 className="FAQ__contentTitle--noMargin" key={-1}></h3>])
-      setText([<p className="FAQ__contentText--noMargin" key={-2}></p>])
+   const CatButtonClickHandler = (i) => {
+      category = (Categories[i]);
+      setContent([<h3 className="FAQ__content--noMargin" key={-1}></h3>])
+      setExtendedContent([<h3 className={"FAQ__content--extended"} key={-2}></h3>])
 
+      let visibleIndex = 0;
       for (let i = 0; i < Content.length; i++) {
          if (category == Content[i].cat) {
-            setTitles(currentTitles => [...currentTitles, <h3 className="FAQ__contentTitle" key={Content[i].key + "-t"}>{Content[i].title}</h3>])
-            setTitles(currentText => [...currentText, <p className="FAQ__contentText" key={i + "-p"}>{Content[i].content}</p>])
+            visibleIndex++;
+            if (visibleIndex < 4) {
+               setContent(setContent => [...setContent, <h3 className="FAQ__content" key={Content[i].key + "-t"}>{Content[i].title}</h3>])
+               setContent(setContent => [...setContent, <p className="FAQ__content FAQ__contentText" key={i + "-p"}>{Content[i].content}</p>])
+            } else {
+               setExtendedContent(setExtendedContent => [...setExtendedContent, <h3 className={"FAQ__content"} key={Content[i].key + "-et"}>{Content[i].title}</h3>])
+               setExtendedContent(setExtendedContent => [...setExtendedContent, <p className={"FAQ__content"} key={i + " - ep"}>{Content[i].content}</p>])
+            }
          }
+      }
+      if (visibleIndex > 3) {
+         setBtnClasses("FAQ__contentWrapper__btn");
       }
    }
 
+   const extendetButtonClickHandler = () => {
+      if (ifExtended) {
+         setifExtended(false);
+      } else setifExtended(true);
+   }
+
    return (
-      <Aux>
-         <div className="FAQ mb-1000" >
-            <div className="container">
-               <h2 className="FAQ__title">Häufig gestellte Fragen für neue Nutzer</h2>
-               <div className="FAQ__wrapper">
-                  <div className="FAQ__catWrapper">
-                     <button onClick={() => buttonClickHandler(0)} className="btn btn-tertiary FAQ__btn"> {categoryList[0]} </button>
-                     <button onClick={() => buttonClickHandler(1)} className="btn btn-tertiary FAQ__btn"> {categoryList[1]} </button>
-                     <button onClick={() => buttonClickHandler(2)} className="btn btn-tertiary FAQ__btn"> {categoryList[2]} </button>
-                     <button onClick={() => buttonClickHandler(3)} className="btn btn-tertiary FAQ__btn"> {categoryList[3]} </button>
+      <div className="FAQ mb-1000" >
+         <div className="container">
+            <h2 className="FAQ__title">Häufig gestellte Fragen für neue Nutzer</h2>
+            <div className="FAQ__wrapper">
+               <div className="FAQ__catWrapper">
+                  {Categories.map((e, i) => {
+                     return (
+                        <button key={i} onClick={() => CatButtonClickHandler(i)} className="btn btn-tertiary FAQ__btn">{e}</button>
+                     )
+                  })}
+               </div>
+               <div className="FAQ__contentWrapper">
+                  <div>
+                     {currentContent}
                   </div>
-                  <div className="FAQ__contentWrapper">
-                     {/* <h3 id="FAQ-Cat" className="FAQ__selectCat">{category}</h3> */}
-                     <div>
-                        {currentTitles}
-                        {currentText}
-                     </div>
+                  <button onClick={extendetButtonClickHandler} className={"btn btn-primary " + btnClass.class}>Mehr anzeigen</button>
+                  <div className={ifExtended ? "FAQ__content" : "FAQ__content--extended"}>
+                     {extendedContent}
                   </div>
                </div>
             </div>
          </div>
-      </Aux >
+      </div>
    )
 };
 
