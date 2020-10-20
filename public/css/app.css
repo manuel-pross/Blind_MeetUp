@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1700px;
   }
 }
 
@@ -11151,7 +11151,7 @@ template {
   }
 }
 
-.FAQ__contentWrapper h3 {
+.FAQ__contentWrapper h4 {
   margin-top: 0;
 }
 
