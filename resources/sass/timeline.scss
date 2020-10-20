@@ -189,7 +189,6 @@
     }
 
     .slick-list {
-        max-width: 300px !important;
     
         @include breakpoint("sm") {
             max-width: none !important;
