@@ -10,25 +10,6 @@ import manuel from '../../../assets/img/TeamImages/manuel.png';
 import simon from '../../../assets/img/TeamImages/simon.png';
 import gion from '../../../assets/img/TeamImages/gion.png';
 
-const desc = [
-   "Marketing",
-   "Projekt-Initiator & Entwickler",
-   "Design & Konzeption",
-   "Design & Konzeption",
-   "Entwickler",
-   "Projekt-Initiator & Entwickler"
-]
-
-const Stylename = [
-   "teamSlider__cover__image-pia",
-   "teamSlider__cover__image-manuel",
-   "teamSlider__cover__image-patrickN",
-   "teamSlider__cover__image-gion",
-   "teamSlider__cover__image-simon",
-   "teamSlider__cover__image-patrickK"
-]
-
-
 class Teamslider extends Component {
 
    state = {
@@ -71,29 +52,6 @@ class Teamslider extends Component {
          variableWidth: true,
          arrows: true, 
          slidesToShow: 1,
-         // responsive: [
-         // //   {
-         // //     breakpoint: 1024,
-         // //     settings: {
-         // //       slidesToShow: 3,
-         // //       slidesToScroll: 3,
-         // //       infinite: true,
-         // //       dots: true
-         // //     }
-         // //   },
-         //   {
-         //     breakpoint: 764,
-         //     settings: {
-         //       slidesToShow: 2,
-         //     }
-         //   },
-         //   {
-         //     breakpoint: 576,
-         //     settings: {
-         //       slidesToShow: 2,
-         //     }
-         //   }
-         // ],
          nextArrow: <SampleNextArrow />,
          prevArrow: <SamplePrevArrow />
       };

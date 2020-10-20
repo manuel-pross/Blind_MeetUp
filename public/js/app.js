@@ -78092,18 +78092,18 @@ var Content = [/////////////// Anmeldung ///////////////
 }, {
   cat: "Anmeldung",
   key: key++,
-  title: "Anmeldung 01",
-  content: "Anmeldung 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+  title: "Anmeldung 04",
+  content: "Anmeldung 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
 }, {
   cat: "Anmeldung",
   key: key++,
-  title: "Anmeldung 02",
-  content: "Anmeldung 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+  title: "Anmeldung 05",
+  content: "Anmeldung 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
 }, {
   cat: "Anmeldung",
   key: key++,
-  title: "Anmeldung 03",
-  content: "Anmeldung 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+  title: "Anmeldung 06",
+  content: "Anmeldung 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
 }, /////////////// Allgemeines /////////////// 
 {
   cat: "Allgemeines",
@@ -78168,8 +78168,7 @@ var Content = [/////////////// Anmeldung ///////////////
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hoc/Auxy */ "./resources/js/components/hoc/Auxy.js");
-/* harmony import */ var _Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Content */ "./resources/js/components/FAQ/Content.js");
+/* harmony import */ var _Content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Content */ "./resources/js/components/FAQ/Content.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -78177,6 +78176,12 @@ function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread n
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -78193,62 +78198,116 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var categoryList = ["Anmeldung", "Treffen", "Allgemeines", "Sonstiges"];
-
 var FAQ = function FAQ() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "FAQ__contentTitle--noMargin",
-    key: -1
-  })]),
+  var Categories = ["Anmeldung", "Treffen", "Allgemeines", "Sonstiges"];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    "class": "btn btn-disabled",
+    active: "disabled"
+  }),
       _useState2 = _slicedToArray(_useState, 2),
-      currentTitles = _useState2[0],
-      setTitles = _useState2[1];
+      btnClass = _useState2[0],
+      setBtnClasses = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "FAQ__contentText--noMargin",
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "FAQ__content--noMargin",
+    key: -1
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "FAQ__content__text--noMargin",
     key: -2
-  }, "Bitte eine Kategorie ausw\xE4hlen")]),
+  }, "Hier findet ihr ein FAQ mit vielen n\xFCtzlichen Informationen rund um Blind MeetUp")]),
       _useState4 = _slicedToArray(_useState3, 2),
-      currentText = _useState4[0],
-      setText = _useState4[1];
+      currentContent = _useState4[0],
+      setContent = _useState4[1];
 
-  var category = "Kategorie auswählen";
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      ifExtended = _useState6[0],
+      setifExtended = _useState6[1];
 
-  var buttonClickHandler = function buttonClickHandler(index) {
-    // document.getElementById("FAQ-Cat").innerHTML = categoryList[index];
-    category = categoryList[index];
-    setTitles([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-      className: "FAQ__contentTitle--noMargin",
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      extendedContent = _useState8[0],
+      setExtendedContent = _useState8[1];
+
+  var CatButtonClickHandler = function CatButtonClickHandler(i) {
+    if (ifExtended) {
+      setifExtended(false);
+    }
+
+    var category = Categories[i];
+    setContent([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "FAQ__content--noMargin",
       key: -1
     })]);
-    setText([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      className: "FAQ__contentText--noMargin",
+    setExtendedContent([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "FAQ__content--extended",
       key: -2
     })]);
+    var visibleIndex = 0;
 
-    var _loop = function _loop(i) {
-      if (category == _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].cat) {
-        setTitles(function (currentTitles) {
-          return [].concat(_toConsumableArray(currentTitles), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-            className: "FAQ__contentTitle",
-            key: _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].key + "-t"
-          }, _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].title)]);
-        });
-        setTitles(function (currentText) {
-          return [].concat(_toConsumableArray(currentText), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-            className: "FAQ__contentText",
-            key: i + "-p"
-          }, _Content__WEBPACK_IMPORTED_MODULE_2__["default"][i].content)]);
-        });
+    var _loop = function _loop(_i2) {
+      if (category == _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].cat) {
+        visibleIndex++;
+
+        if (visibleIndex < 4) {
+          setContent(function (setContent) {
+            return [].concat(_toConsumableArray(setContent), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+              className: "FAQ__content",
+              key: _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].key + "-t"
+            }, _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].title)]);
+          });
+          setContent(function (setContent) {
+            return [].concat(_toConsumableArray(setContent), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+              className: "FAQ__content FAQ__content__text",
+              key: _i2 + "-p"
+            }, _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].content)]);
+          });
+        } else {
+          setExtendedContent(function (setExtendedContent) {
+            return [].concat(_toConsumableArray(setExtendedContent), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+              className: "FAQ__content",
+              key: _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].key + "-et"
+            }, _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].title)]);
+          });
+          setExtendedContent(function (setExtendedContent) {
+            return [].concat(_toConsumableArray(setExtendedContent), [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+              className: "FAQ__content FAQ__content__text",
+              key: _i2 + " - ep"
+            }, _Content__WEBPACK_IMPORTED_MODULE_1__["default"][_i2].content)]);
+          });
+        }
       }
     };
 
-    for (var i = 0; i < _Content__WEBPACK_IMPORTED_MODULE_2__["default"].length; i++) {
-      _loop(i);
+    for (var _i2 = 0; _i2 < _Content__WEBPACK_IMPORTED_MODULE_1__["default"].length; _i2++) {
+      _loop(_i2);
+    }
+
+    if (visibleIndex > 3) {
+      setBtnClasses(_objectSpread(_objectSpread({}, btnClass), {}, {
+        "class": "btn btn-primary",
+        active: ""
+      }));
+    } else if (visibleIndex <= 3 && btnClass.active != "disabled") {
+      setBtnClasses(_objectSpread(_objectSpread({}, btnClass), {}, {
+        "class": "btn btn-disabled",
+        active: "disabled"
+      }));
     }
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_Auxy__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var extendetButtonClickHandler = function extendetButtonClickHandler() {
+    if (ifExtended) {
+      setifExtended(false);
+      document.getElementById("FAQ-btn").innerText = "Mehr Anzeigen";
+    } else {
+      document.getElementById("FAQ-btn").innerText = "weniger Anzeigen";
+      setifExtended(true);
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "FAQ mb-1000"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
@@ -78258,29 +78317,24 @@ var FAQ = function FAQ() {
     className: "FAQ__wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "FAQ__catWrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return buttonClickHandler(0);
-    },
-    className: "btn btn-tertiary FAQ__btn"
-  }, " ", categoryList[0], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return buttonClickHandler(1);
-    },
-    className: "btn btn-tertiary FAQ__btn"
-  }, " ", categoryList[1], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return buttonClickHandler(2);
-    },
-    className: "btn btn-tertiary FAQ__btn"
-  }, " ", categoryList[2], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return buttonClickHandler(3);
-    },
-    className: "btn btn-tertiary FAQ__btn"
-  }, " ", categoryList[3], " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, Categories.map(function (e, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      key: i,
+      onClick: function onClick() {
+        return CatButtonClickHandler(i);
+      },
+      className: "btn btn-tertiary FAQ__btn"
+    }, e);
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "FAQ__contentWrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentTitles, currentText))))));
+  }, currentContent, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: ifExtended ? "FAQ__content__extendedWrapper" : "FAQ__content__extendedWrapper--extended"
+  }, extendedContent), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: extendetButtonClickHandler,
+    disabled: btnClass.active,
+    id: "FAQ-btn",
+    className: btnClass["class"] + " my-100"
+  }, "Mehr anzeigen")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FAQ);
@@ -78864,8 +78918,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var desc = ["Marketing", "Projekt-Initiator & Entwickler", "Design & Konzeption", "Design & Konzeption", "Entwickler", "Projekt-Initiator & Entwickler"];
-var Stylename = ["teamSlider__cover__image-pia", "teamSlider__cover__image-manuel", "teamSlider__cover__image-patrickN", "teamSlider__cover__image-gion", "teamSlider__cover__image-simon", "teamSlider__cover__image-patrickK"];
 
 var Teamslider = /*#__PURE__*/function (_Component) {
   _inherits(Teamslider, _Component);
@@ -78943,29 +78995,6 @@ var Teamslider = /*#__PURE__*/function (_Component) {
         variableWidth: true,
         arrows: true,
         slidesToShow: 1,
-        // responsive: [
-        // //   {
-        // //     breakpoint: 1024,
-        // //     settings: {
-        // //       slidesToShow: 3,
-        // //       slidesToScroll: 3,
-        // //       infinite: true,
-        // //       dots: true
-        // //     }
-        // //   },
-        //   {
-        //     breakpoint: 764,
-        //     settings: {
-        //       slidesToShow: 2,
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 576,
-        //     settings: {
-        //       slidesToShow: 2,
-        //     }
-        //   }
-        // ],
         nextArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SampleNextArrow, null),
         prevArrow: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SamplePrevArrow, null)
       };

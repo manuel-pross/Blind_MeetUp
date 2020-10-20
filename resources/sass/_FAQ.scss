@@ -10,7 +10,7 @@
 
    &__catWrapper {
       margin-bottom: 2rem;
-      
+
       @include breakpoint("lg") {
          display: flex;
          flex-direction: column;
@@ -22,27 +22,28 @@
       h3 {
          margin-top: 0;
       }
-   }
 
-   &__contentTitle,
-   &__contentText {
-      &--noMargin {
-         margin: 0;
+      &__btn {
+         &--disabled {
+            display: none !important;
+         }
       }
    }
 
-   // &__contentTitle,
-   // &__contentText {
-   //    &--disabled {
-   //       display: none;
-   //    }
-   // }
+   &__content {
+      &--noMargin {
+         margin: 0;
+      }
 
-   &__title {
-      text-align: center;
-
-      @include breakpoint("lg") {
-         text-align: left;
+      &__text {
+         &--noMargin {
+            margin: 0;
+         }
+      }
+      &__extendedWrapper {
+         &--extended {
+            display: none;
+         }
       }
    }
 

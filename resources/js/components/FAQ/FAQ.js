@@ -10,46 +10,60 @@ const FAQ = () => {
       "Sonstiges",
    ]
 
-   const [btnClass, setBtnClasses] = useState(
-      "FAQ__contentWrapper__btn--disabled"
-   )
+   const [btnClass, setBtnClasses] = useState({
+      class: "btn btn-disabled",
+      active: "disabled"
+   })
 
    const [currentContent, setContent] = useState([
-      <h3 className="FAQ__content--noMargin" key={-1}></h3>,
-      <p className="FAQ__contentText--noMargin" key={-2}>Bitte eine Kategorie auswählen</p>,
+      <h4 className="FAQ__content--noMargin" key={-1}></h4>,
+      <p className="FAQ__content__text--noMargin" key={-2}>Hier findet ihr ein FAQ mit vielen nützlichen Informationen rund um Blind MeetUp</p>,
    ])
 
    const [ifExtended, setifExtended] = useState(false)
    const [extendedContent, setExtendedContent] = useState(false)
 
-   let category = "Kategorie auswählen";
    const CatButtonClickHandler = (i) => {
-      category = (Categories[i]);
-      setContent([<h3 className="FAQ__content--noMargin" key={-1}></h3>])
-      setExtendedContent([<h3 className={"FAQ__content--extended"} key={-2}></h3>])
+      if (ifExtended) {
+         setifExtended(false)
+      }
+      const category = (Categories[i]);
+      setContent([<h4 className="FAQ__content--noMargin" key={-1}></h4>])
+      setExtendedContent([<h4 className={"FAQ__content--extended"} key={-2} ></h4>])
 
       let visibleIndex = 0;
       for (let i = 0; i < Content.length; i++) {
          if (category == Content[i].cat) {
+
             visibleIndex++;
             if (visibleIndex < 4) {
-               setContent(setContent => [...setContent, <h3 className="FAQ__content" key={Content[i].key + "-t"}>{Content[i].title}</h3>])
-               setContent(setContent => [...setContent, <p className="FAQ__content FAQ__contentText" key={i + "-p"}>{Content[i].content}</p>])
+               setContent(setContent => [...setContent, <h4 className="FAQ__content" key={Content[i].key + "-t"}>{Content[i].title}</h4>])
+               setContent(setContent => [...setContent, <p className="FAQ__content FAQ__content__text" key={i + "-p"}>{Content[i].content}</p>])
             } else {
-               setExtendedContent(setExtendedContent => [...setExtendedContent, <h3 className={"FAQ__content"} key={Content[i].key + "-et"}>{Content[i].title}</h3>])
-               setExtendedContent(setExtendedContent => [...setExtendedContent, <p className={"FAQ__content"} key={i + " - ep"}>{Content[i].content}</p>])
+               setExtendedContent(setExtendedContent => [...setExtendedContent, <h4 className={"FAQ__content"} key={Content[i].key + "-et"}>{Content[i].title}</h4>])
+               setExtendedContent(setExtendedContent => [...setExtendedContent, <p className={"FAQ__content FAQ__content__text"} key={i + " - ep"}>{Content[i].content}</p>])
+
             }
          }
       }
+
       if (visibleIndex > 3) {
-         setBtnClasses("FAQ__contentWrapper__btn");
+         setBtnClasses({ ...btnClass, class: "btn btn-primary", active: "" });
+      } else if (visibleIndex <= 3 && btnClass.active != "disabled") {
+         setBtnClasses({ ...btnClass, class: "btn btn-disabled", active: "disabled" });
+
       }
    }
 
    const extendetButtonClickHandler = () => {
       if (ifExtended) {
          setifExtended(false);
-      } else setifExtended(true);
+         document.getElementById("FAQ-btn").innerText = "Mehr Anzeigen"
+      } else {
+         document.getElementById("FAQ-btn").innerText = "weniger Anzeigen"
+         setifExtended(true);
+      }
+
    }
 
    return (
@@ -65,13 +79,11 @@ const FAQ = () => {
                   })}
                </div>
                <div className="FAQ__contentWrapper">
-                  <div>
-                     {currentContent}
-                  </div>
-                  <button onClick={extendetButtonClickHandler} className={"btn btn-primary " + btnClass.class}>Mehr anzeigen</button>
-                  <div className={ifExtended ? "FAQ__content" : "FAQ__content--extended"}>
+                  {currentContent}
+                  <div className={ifExtended ? "FAQ__content__extendedWrapper" : "FAQ__content__extendedWrapper--extended"}>
                      {extendedContent}
                   </div>
+                  <button onClick={extendetButtonClickHandler} disabled={btnClass.active} id="FAQ-btn" className={btnClass.class + " my-100"}>Mehr anzeigen</button>
                </div>
             </div>
          </div>
