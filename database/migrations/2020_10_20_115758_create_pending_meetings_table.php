@@ -15,8 +15,10 @@ class CreatePendingMeetingsTable extends Migration
     {
         Schema::create('pending_meetings', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('date')->nullable();
+            $table->timestamp('date');
             $table->string('place');
+            $table->integer('numberOfMembers');
+            $table->integer('maxMembers');
             $table->timestamps();
         });
     }

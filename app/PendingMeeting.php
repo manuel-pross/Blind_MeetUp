@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class PendingMeeting extends Model
 {
-    protected $fillable = ['date', 'place'];
+    protected $fillable = ['date', 'place', 'numberOfMembers', 'maxMembers'];
 }
