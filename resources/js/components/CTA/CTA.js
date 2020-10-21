@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const cta = () => (
-    <div className="container mb-1000">
+    <div className="container mb-600">
         <div className="cta">
             <h3 className="cta__heading">Ist nun alles klar für dich? Dann starte jetzt Durch</h3>
             <div className="cta__buttons">

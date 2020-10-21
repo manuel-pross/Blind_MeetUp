@@ -9,6 +9,7 @@ import CTA from '../../components/CTA/CTA';
 import FAQ from '../../components/FAQ/FAQ';
 import Timeline from '../../components/Timeline/Timeline'
 import AboutProject from '../../components/AboutProject/AboutProject';
+import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 import SocialMedia from '../../components/SocialMedia/SocialMedia'
 
 class LandingPage extends Component {
@@ -19,6 +20,7 @@ class LandingPage extends Component {
                 <Header />
                 <div id="Projekt">
                     <AboutProject />
+                    <TextIconHFU />
                 </div>
                 <div id="Ablauf">
                     <Timeline />

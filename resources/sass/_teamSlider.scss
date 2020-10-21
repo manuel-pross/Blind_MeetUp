@@ -247,6 +247,11 @@
 }
 
 .teamSlider {
+
+   &__heading {
+      margin-bottom: 2rem;
+   }
+
    &__cover {
       position: relative !important;
       overflow: hidden;

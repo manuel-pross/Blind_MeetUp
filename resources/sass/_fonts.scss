@@ -72,24 +72,28 @@ $fs-p: 16px;
         font-family: "Maven Pro Black";
         font-size: $fs-h1 !important;
         line-height: $lh-h1 !important;
+        text-align: center;
     }
 
     h2 {
         font-family: "Maven Pro Black";
         font-size: $fs-h2 !important;
         line-height: $lh-h2 !important;
+        text-align: center;
     }
 
     h3 {
         font-family: "Maven Pro Bold";
         font-size: $fs-h3 !important;
         line-height: $lh-h3 !important;
+        text-align: center;
     }
 
     h4 {
         font-family: "Maven Pro Regular";
         font-size: $fs-h4 !important;
         line-height: $lh-h4 !important;
+        text-align: center;
     }
 
     p {
@@ -140,21 +144,25 @@ $fs-p: 16px;
     h1 {
         font-size: $fs-h1 * $scale-fs-md !important;
         line-height: $lh-h1 * $scale-lh-md !important;
+        text-align: left;
     }
 
     h2 {
         font-size: $fs-h2 * $scale-fs-md !important;
         line-height: $lh-h2 * $scale-lh-md !important;
+        text-align: left;
     }
 
     h3 {
         font-size: $fs-h3 * $scale-fs-md !important;
         line-height: $lh-h3 * $scale-lh-md !important;
+        text-align: left;
     }
     
     h4 {
         font-size: $fs-h4 * $scale-fs-md !important;
         line-height: $lh-h4 * $scale-lh-md !important;
+        text-align: left;
     }
 
     p {

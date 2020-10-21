@@ -67,6 +67,8 @@
     }
 
     &__subheading {
+        text-align: left;
+
         @include breakpoint("lg") {
             margin: 0 0 0.5rem 0;
         }

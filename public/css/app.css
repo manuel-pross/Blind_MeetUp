@@ -4612,24 +4612,28 @@ Breakpoint Mixin
     font-family: "Maven Pro Black";
     font-size: 33px !important;
     line-height: 40.4px !important;
+    text-align: center;
   }
 
   h2 {
     font-family: "Maven Pro Black";
     font-size: 28px !important;
     line-height: 26.4px !important;
+    text-align: center;
   }
 
   h3 {
     font-family: "Maven Pro Bold";
     font-size: 18px !important;
     line-height: 22.4px !important;
+    text-align: center;
   }
 
   h4 {
     font-family: "Maven Pro Regular";
     font-size: 17px !important;
     line-height: 20.4px !important;
+    text-align: center;
   }
 
   p {
@@ -4680,21 +4684,25 @@ Breakpoint Mixin
   h1 {
     font-size: 39.6px !important;
     line-height: 52.52px !important;
+    text-align: left;
   }
 
   h2 {
     font-size: 33.6px !important;
     line-height: 34.32px !important;
+    text-align: left;
   }
 
   h3 {
     font-size: 21.6px !important;
     line-height: 29.12px !important;
+    text-align: left;
   }
 
   h4 {
     font-size: 20.4px !important;
     line-height: 26.52px !important;
+    text-align: left;
   }
 
   p {
@@ -10476,7 +10484,7 @@ template {
 
 .header {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 6rem auto;
 }
 
 .header:after {
@@ -10613,6 +10621,10 @@ template {
 
 .regular {
   width: 100%;
+}
+
+.teamSlider__heading {
+  margin-bottom: 2rem;
 }
 
 .teamSlider__cover {
@@ -10997,6 +11009,10 @@ template {
   }
 }
 
+.timeline__subheading {
+  text-align: left;
+}
+
 @media (min-width: 992px) {
   .timeline__subheading {
     margin: 0 0 0.5rem 0;
@@ -11157,6 +11173,10 @@ template {
 
 .FAQ__contentWrapper__btn--disabled {
   display: none !important;
+}
+
+.FAQ__content {
+  text-align: left;
 }
 
 .FAQ__content--noMargin {

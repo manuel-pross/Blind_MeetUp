@@ -57,14 +57,17 @@ class Teamslider extends Component {
       };
 
       return (
-         <div className="container">
-            <Slider {...settings}>
-               {this.state.descs.map((desc, i) => {
-                  return (
-                     <TeamImage key={i} name={desc.name} img={desc.img} descText={desc.descText} />
-                  )
-               })}
-            </Slider>
+         <div className="container mb-400">
+            <div className="teamSlider">
+               <h2 className="teamSlider__heading">Unser Team</h2>
+               <Slider {...settings}>
+                  {this.state.descs.map((desc, i) => {
+                     return (
+                        <TeamImage key={i} name={desc.name} img={desc.img} descText={desc.descText} />
+                     )
+                  })}
+               </Slider>
+            </div>
          </div>
       )
    }
