@@ -25,6 +25,10 @@ Route::get('/impressum', function () {
     return view('styleguide');
 });
 
+Route::get('/richtlinien', function () {
+    return view('styleguide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

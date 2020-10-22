@@ -11404,3 +11404,32 @@ template {
   white-space: pre-line;
 }
 
+.subpages__subtext {
+  font-size: 13px !important;
+}
+
+@media (min-width: 576px) {
+  .subpages__subtext {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .subpages__subtext {
+    font-size: 20px !important;
+  }
+}
+
+.guidelines__container {
+  display: flex;
+  align-items: center;
+}
+
+.guidelines__icon {
+  width: 100%;
+  max-width: 25px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+

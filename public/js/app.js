@@ -83659,7 +83659,7 @@ module.exports = JSON.parse("{\"Informations\":\"Informationen\",\"SignIn\":\"An
 /*! exports provided: Heading, Heading text, Provider, Provider informations, Project management, Project management informations, Contact, Contact informations, Liability for content, Liability for content text, Disclaimer of liability, Disclaimer of liability text, Copyright, Copyright text, Technical implementation, Technical implementation text, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"Heading\":\"Impressum \\n blindmeetup.hs-furtwangen.de\",\"Heading text\":\"Die nachstehenden Informationen enthalten die gesetzlich vorgesehenen Pflichtangaben zur Anbieterkennzeichnung und weitere Hinweise zur Internetpräsenz „www.blindmeetup.hs-furtwangen.de“\",\"Provider\":\"Anbieter der Internetseiten\",\"Provider informations\":\"Hochschule Furtwangen Robert-Gerwig-Platz 1 78120 Furtwangen Vertreten durch den Rektor der Hochschule Furtwangen, Prof. Dr. Rolf Schofer\",\"Project management\":\"Projektleitung\",\"Project management informations\":\"Manuel Proß, Patrick Kaserer Projektbetreuung durch Prof. Dr. Gabriel Rausch\",\"Contact\":\"Kontakt\",\"Contact informations\":\"E-Mail-Adresse: blindmeetup@web.de Telefon: 07723 920-0\",\"Liability for content\":\"Haftung für Inhalte\",\"Liability for content text\":\"Die Projektbeteiligten sowie die Hochschule Furtwangen sind um Richtigkeit und Aktualität der auf dieser Internetpräsenz bereitgestellten Informationen bemüht. Trotzdem können Fehler und Unklarheiten nicht vollständig ausgeschlossen werden. Die Hochschule Furtwangen übernimmt deshalb keine Gewähr für die Aktualität, Richtigkeit, Vollständigkeit oder Qualität der bereitgestellten Informationen.\",\"Disclaimer of liability\":\"Haftungsausschluss\",\"Disclaimer of liability text\":\"Für die Inhalte von Publikationen und Internet-Auftritten Dritter, die durch Querverweise und sog. Links auf den Internetseiten der Hochschule Furtwangen zugänglich gemacht werden, wird jegliche Haftung ausgeschlossen, da die Hochschule Furtwangen auf deren Inhalte, Richtigkeit und Vollständigkeit der Information, Legalität und Sittlichkeit keinen Einfluss hat, sondern lediglich den Zugang zu deren Nutzung vermittelt. Die Hochschule Furtwangen distanziert sich ausdrücklich von den Inhalten Dritter und macht sich deren Inhalte nicht zu eigen. Die Verantwortung für die Inhalte auf Internetseiten Dritter hat ausschließlich der jeweilige Anbieter zu übernehmen.\",\"Copyright\":\"Urheberrecht\",\"Copyright text\":\"Das Layout der Homepage, Bilder, Texte, Grafiken, Ton- und Videodokumente, Filme und andere multimediale Dateien auf den Internetseiten der Hochschule Furtwangen (einschließlich dieser Seite) sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung, Einspeicherung, Verarbeitung und Wiedergabe dieser Dateien und Inhalte bedarf der ausdrücklichen Zustimmung der Hochschule Furtwangen. Die Zustimmung ist bei der Redaktion schriftlich zu beantragen und wird in Schriftform erteilt. Alle Urheberrechte an Dateien, Texten, Bildern, Filmen, Ton- und Videoaufzeichnungen und sonstigen multimedialen Dateien, ausführbaren Programmen und sonstigen Publikationen Dritter werden respektiert und sind uneingeschränkt geschützt. Alle Marken- und Warenzeichen innerhalb der Homepage der Hochschule Furtwangen unterliegen uneingeschränkt dem jeweils gültigen Kennzeichnungsrecht und sind durch die Rechte Dritter geschützt.\",\"Technical implementation\":\"Technische Umsetzung und Betrieb\",\"Technical implementation text\":\"Rechenzentrum der Hochschule Furtwangen\"}");
+module.exports = JSON.parse("{\"Heading\":\"Impressum \\n blindmeetup.hs-furtwangen.de\",\"Heading text\":\"Die nachstehenden Informationen enthalten die gesetzlich vorgesehenen Pflichtangaben zur Anbieterkennzeichnung und weitere Hinweise zur Internetpräsenz „www.blindmeetup.hs-furtwangen.de“\",\"Provider\":\"Anbieter der Internetseiten\",\"Provider informations\":\"Hochschule Furtwangen \\n Robert-Gerwig-Platz 1 \\n 78120 Furtwangen \\n Vertreten durch den Rektor der Hochschule Furtwangen, Prof. Dr. Rolf Schofer\",\"Project management\":\"Projektleitung\",\"Project management informations\":\"Manuel Proß, Patrick Kaserer \\n Projektbetreuung durch Prof. Dr. Gabriel Rausch\",\"Contact\":\"Kontakt\",\"Contact informations\":\"E-Mail-Adresse: blindmeetup@web.de \\n Telefon: 07723 920-0\",\"Liability for content\":\"Haftung für Inhalte\",\"Liability for content text\":\"Die Projektbeteiligten sowie die Hochschule Furtwangen sind um Richtigkeit und Aktualität der auf dieser Internetpräsenz bereitgestellten Informationen bemüht. Trotzdem können Fehler und Unklarheiten nicht vollständig ausgeschlossen werden. Die Hochschule Furtwangen übernimmt deshalb keine Gewähr für die Aktualität, Richtigkeit, Vollständigkeit oder Qualität der bereitgestellten Informationen.\",\"Disclaimer of liability\":\"Haftungsausschluss\",\"Disclaimer of liability text\":\"Für die Inhalte von Publikationen und Internet-Auftritten Dritter, die durch Querverweise und sog. Links auf den Internetseiten der Hochschule Furtwangen zugänglich gemacht werden, wird jegliche Haftung ausgeschlossen, da die Hochschule Furtwangen auf deren Inhalte, Richtigkeit und Vollständigkeit der Information, Legalität und Sittlichkeit keinen Einfluss hat, sondern lediglich den Zugang zu deren Nutzung vermittelt. Die Hochschule Furtwangen distanziert sich ausdrücklich von den Inhalten Dritter und macht sich deren Inhalte nicht zu eigen. Die Verantwortung für die Inhalte auf Internetseiten Dritter hat ausschließlich der jeweilige Anbieter zu übernehmen.\",\"Copyright\":\"Urheberrecht\",\"Copyright text\":\"Das Layout der Homepage, Bilder, Texte, Grafiken, Ton- und Videodokumente, Filme und andere multimediale Dateien auf den Internetseiten der Hochschule Furtwangen (einschließlich dieser Seite) sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung, Einspeicherung, Verarbeitung und Wiedergabe dieser Dateien und Inhalte bedarf der ausdrücklichen Zustimmung der Hochschule Furtwangen. Die Zustimmung ist bei der Redaktion schriftlich zu beantragen und wird in Schriftform erteilt. Alle Urheberrechte an Dateien, Texten, Bildern, Filmen, Ton- und Videoaufzeichnungen und sonstigen multimedialen Dateien, ausführbaren Programmen und sonstigen Publikationen Dritter werden respektiert und sind uneingeschränkt geschützt. Alle Marken- und Warenzeichen innerhalb der Homepage der Hochschule Furtwangen unterliegen uneingeschränkt dem jeweils gültigen Kennzeichnungsrecht und sind durch die Rechte Dritter geschützt.\",\"Technical implementation\":\"Technische Umsetzung und Betrieb\",\"Technical implementation text\":\"Rechenzentrum der Hochschule Furtwangen\"}");
 
 /***/ }),
 
@@ -83681,7 +83681,7 @@ module.exports = JSON.parse("{\"Informations\":\"Informations\",\"SignIn\":\"Sig
 /*! exports provided: Heading, Heading text, Provider, Provider informations, Project management, Project management informations, Contact, Contact informations, Liability for content, Liability for content text, Disclaimer of liability, Disclaimer of liability text, Copyright, Copyright text, Technical implementation, Technical implementation text, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"Heading\":\"Impressum blindmeetup.hs-furtwangen.de\",\"Heading text\":\"The following information contains the legally required information on the provider identification and further information on the website „www.blindmeetup.hs-furtwangen.de“\",\"Provider\":\"Provider of the Internet pages\",\"Provider informations\":\"Furtwangen University Robert-Gerwig-Platz 1 78120 Furtwangen Represented by the Rector of Furtwangen University, Prof. Dr. Rolf Schofer\",\"Project management\":\"Project management\",\"Project management informations\":\"Manuel Proß, Patrick Kaserer Project support by Prof. Dr. Gabriel Rausch\",\"Contact\":\"Contact\",\"Contact informations\":\"Email address: blindmeetup@web.de Telephone: 07723 920-0\",\"Liability for content\":\"Liability for content\",\"Liability for content text\":\"Those involved in the project and Furtwangen University make every effort to ensure that the information provided on this website is correct and up-to-date. Nevertheless, errors and ambiguities cannot be completely ruled out. Furtwangen University therefore does not accept any liability for the topicality, correctness, completeness or quality of the information provided.\",\"Disclaimer of liability\":\"Disclaimer of liability\",\"Disclaimer of liability text\":\"Any liability is excluded for the content of publications and third-party websites that are made accessible through cross-references and so-called links on the website of Furtwangen University, as Furtwangen University is responsible for their content, correctness and completeness of information, legality and morality has no influence, but merely provides access to their use. Furtwangen University expressly distances itself from the content of third parties and does not adopt their content as its own. The respective provider is solely responsible for the content of third-party websites.\",\"Copyright\":\"Copyright\",\"Copyright text\":\"The layout of the homepage, images, texts, graphics, sound and video documents, films and other multimedia files on the Furtwangen University website (including this page) are protected by copyright. Duplication, editing, saving, processing and reproduction of these files and contents requires the express consent of Furtwangen University. Approval must be requested in writing from the editorial office and will be given in writing. All copyrights to files, texts, images, films, sound and video recordings and other multimedia files, executable programs and other third-party publications are respected and protected without restriction. All brands and trademarks on the Furtwangen University homepage are subject to the applicable labeling law without restriction and are protected by the rights of third parties.\",\"Technical implementation\":\"Technical implementation and operation\",\"Technical implementation text\":\"Computing center at Furtwangen University\"}");
+module.exports = JSON.parse("{\"Heading\":\"Impressum \\n blindmeetup.hs-furtwangen.de\",\"Heading text\":\"The following information contains the legally required information on the provider identification and further information on the website „www.blindmeetup.hs-furtwangen.de“\",\"Provider\":\"Provider of the Internet pages\",\"Provider informations\":\"Furtwangen University \\n Robert-Gerwig-Platz 1 \\n 78120 Furtwangen \\n Represented by the Rector of Furtwangen University, Prof. Dr. Rolf Schofer\",\"Project management\":\"Project management\",\"Project management informations\":\"Manuel Proß, Patrick Kaserer \\n Project support by Prof. Dr. Gabriel Rausch\",\"Contact\":\"Contact\",\"Contact informations\":\"Email address: blindmeetup@web.de \\n Telephone: 07723 920-0\",\"Liability for content\":\"Liability for content\",\"Liability for content text\":\"Those involved in the project and Furtwangen University make every effort to ensure that the information provided on this website is correct and up-to-date. Nevertheless, errors and ambiguities cannot be completely ruled out. Furtwangen University therefore does not accept any liability for the topicality, correctness, completeness or quality of the information provided.\",\"Disclaimer of liability\":\"Disclaimer of liability\",\"Disclaimer of liability text\":\"Any liability is excluded for the content of publications and third-party websites that are made accessible through cross-references and so-called links on the website of Furtwangen University, as Furtwangen University is responsible for their content, correctness and completeness of information, legality and morality has no influence, but merely provides access to their use. Furtwangen University expressly distances itself from the content of third parties and does not adopt their content as its own. The respective provider is solely responsible for the content of third-party websites.\",\"Copyright\":\"Copyright\",\"Copyright text\":\"The layout of the homepage, images, texts, graphics, sound and video documents, films and other multimedia files on the Furtwangen University website (including this page) are protected by copyright. Duplication, editing, saving, processing and reproduction of these files and contents requires the express consent of Furtwangen University. Approval must be requested in writing from the editorial office and will be given in writing. All copyrights to files, texts, images, films, sound and video recordings and other multimedia files, executable programs and other third-party publications are respected and protected without restriction. All brands and trademarks on the Furtwangen University homepage are subject to the applicable labeling law without restriction and are protected by the rights of third parties.\",\"Technical implementation\":\"Technical implementation and operation\",\"Technical implementation text\":\"Computing center at Furtwangen University\"}");
 
 /***/ }),
 
@@ -83858,6 +83858,17 @@ module.exports = "/images/flag-de.svg?d810f62137d64a0a58035c80489b7d54";
 /***/ (function(module, exports) {
 
 module.exports = "/images/flag-en.svg?e5564902e2642c5e6e2e98e68a7d41f5";
+
+/***/ }),
+
+/***/ "./resources/assets/img/icons/alert-cross.svg":
+/*!****************************************************!*\
+  !*** ./resources/assets/img/icons/alert-cross.svg ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/alert-cross.svg?1778ad422e7716adf2d5aec9c2d6291e";
 
 /***/ }),
 
@@ -85619,15 +85630,118 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Navbar/Navbar */ "./resources/js/components/Navbar/Navbar.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../assets/img/icons/alert-cross.svg */ "./resources/assets/img/icons/alert-cross.svg");
+/* harmony import */ var _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 
 var Guidelines = function Guidelines() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container",
     style: {
-      paddingTop: "100px"
+      marginTop: '100px',
+      marginBottom: '200px'
     }
-  }, "Guidelines"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Richtlinien im \xDCberblick"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-500"
+  }, "Damit alle Nutzer und Nutzerinnen im Umgang mit der Anwendung den Spa\xDF nicht verlieren haben wir bestimmte Regelungen aufgestellt, die es zu beachten gilt."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, "Grundlegendes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Wir erwarten von allen Teilnehmern und Teilnehmerinnen einen respektvollen Umgang mit allen, die die Anwendung nutzen."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, "Untersagt/Verboten"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "guidelines__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_icons_alert_cross_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "guidelines__icon",
+    alt: "BlindMeetUp_alert-cross",
+    style: {
+      width: "200px",
+      "float": 'left'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, "Missbrauch oder widriges Verhalten melden"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext mb-300"
+  }, "Du bist der Meinung, dass sich jemand in der Anwendung selbst oder w\xE4hrend eines Treffens falsch benommen hat, eine oder mehrere unserer Richtlinien nicht eingehalten hat? Bitte kontaktiere uns \xFCber das Kontaktformular und wir werden uns so schnell wie m\xF6glich mit dir in Kontakt setzen um eine L\xF6sung f\xFCr das Problem zu finden."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/kontakt"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-primary"
+  }, "Kontaktieren"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Guidelines);
@@ -85657,11 +85771,43 @@ var Impressum = function Impressum(_ref) {
   var t = _ref.t;
   // const { t, i18n } = useTranslation();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+    className: "container mb-1000",
     style: {
       marginTop: '100px'
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, t('Heading')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, t('Heading text'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "subpages__heading"
+  }, t('Heading')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-500"
+  }, t('Heading text')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Provider')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Provider informations')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Project management')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Project management informations')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Contact')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Contact informations')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Liability for content')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Liability for content text')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Disclaimer of liability')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Disclaimer of liability text')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Copyright')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Copyright text')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, t('Technical implementation')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, t('Technical implementation text'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_i18next__WEBPACK_IMPORTED_MODULE_3__["withTranslation"])('impressum')(Impressum));
@@ -86361,7 +86507,7 @@ i18next__WEBPACK_IMPORTED_MODULE_0__["default"] // load translation using http -
   resources: resources,
   fallbackLng: 'en',
   debug: true,
-  lng: 'de',
+  // lng: 'de',
   // detection: options,
   interpolation: {
     escapeValue: false // not needed for react as it escapes by default

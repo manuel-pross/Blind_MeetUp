@@ -65,7 +65,7 @@ i18n
         resources,
         fallbackLng: 'en',
         debug: true,
-        lng: 'de',
+        // lng: 'de',
         // detection: options,
 
         interpolation: {

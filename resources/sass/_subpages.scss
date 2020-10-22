@@ -1,0 +1,26 @@
+.subpages {
+    &__subtext {
+        font-size: 13px !important;
+
+        @include breakpoint("sm") {
+            font-size: 15px !important;
+        }
+        @include breakpoint("md") {
+            font-size: 20px !important;
+        }
+    }
+}
+
+.guidelines {
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        width: 100%;
+        max-width: 25px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
