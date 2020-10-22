@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get({any}, function () {
-//     return view('index'); 
-// })->where('any', '.*');
-
 Route::get('/', function () {
     return view('startpage');
 });
@@ -25,12 +21,6 @@ Route::get('/styleguide', function () {
     return view('styleguide');
 });
 
-Route::get('/impressum', function () {
-    return view('styleguide');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
