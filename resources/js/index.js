@@ -5,7 +5,6 @@ import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
-import './i18next';
 
 ReactDOM.render(
   <BrowserRouter>
