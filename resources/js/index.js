@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
 
+// For translations
+import './i18n';
+
 ReactDOM.render(
   <BrowserRouter>
     <DevSizeBtn />

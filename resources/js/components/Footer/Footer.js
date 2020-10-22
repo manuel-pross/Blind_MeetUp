@@ -5,8 +5,8 @@ import Wortmarke_OneLine_invertiert_cut from '../../../assets/img/Wortmarke_OneL
 import FlagDE from '../../../assets/img/flags/flag-de.svg';
 import FlagEN from '../../../assets/img/flags/flag-en.svg';
 
-import { withNamespaces } from 'react-i18next';
-import i18n from '../../i18next';
+import { withTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 class Footer extends Component {
 
@@ -19,7 +19,7 @@ class Footer extends Component {
         return (
             <div className="footer container-fluid">
                 <div className="row">
-                    <div className="col-lg-7">
+                <div className="col-lg-7">
                         <p className="footer__heading">{t('Informations')}</p>
                         <FooterButton href link="https://www.hs-furtwangen.de/">{t('SignIn')}</FooterButton>
                         <FooterButton link="/feedback">{t('Feedback')}</FooterButton>
@@ -51,4 +51,4 @@ class Footer extends Component {
     }
 }
 
-export default withNamespaces('footer')(Footer);
+export default withTranslation('footer')(Footer);

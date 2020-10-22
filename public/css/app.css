@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1700px;
+    max-width: 1140px;
   }
 }
 
@@ -11398,5 +11398,9 @@ template {
   .devBtn:after {
     content: "XXL";
   }
+}
+
+#app {
+  white-space: pre-line;
 }
 
