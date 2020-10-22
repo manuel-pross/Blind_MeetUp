@@ -1,0 +1,29 @@
+.social-media {
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        padding: 0.75rem;
+        border-radius: 50%;
+        background: $vertical-gradient;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        fill: $c-white;
+    }
+}

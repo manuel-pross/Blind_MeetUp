@@ -1,5 +1,5 @@
 .navbar {
-    height: 85px;
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -67,7 +67,12 @@
             color: $c-black;
         }
 
-        @media only screen and (max-width: 943px) {
+        
+        @media only screen and (max-width: 1028px) {
+            font-size: 18.6px;  
+        }
+
+        @media only screen and (max-width: 983px) {
             display: none;
         }
     }

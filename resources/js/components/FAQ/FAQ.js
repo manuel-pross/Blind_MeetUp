@@ -67,7 +67,7 @@ const FAQ = () => {
    }
 
    return (
-      <div className="FAQ mb-600" >
+      <div className="FAQ" >
          <div className="container">
             <h2 className="FAQ__title">Häufig gestellte Fragen für neue Nutzer</h2>
             <div className="FAQ__wrapper">

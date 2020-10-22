@@ -1,0 +1,35 @@
+.cta {
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include breakpoint("sm") {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__button-item {
+        flex: 0 0 55%;
+        white-space: nowrap;
+
+        @include breakpoint("sm") {
+            flex: 0 0 180px;
+        }
+
+        &:first-child {
+            margin-bottom: 1rem;
+
+            @include breakpoint("sm") {
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

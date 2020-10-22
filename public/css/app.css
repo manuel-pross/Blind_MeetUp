@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1700px;
   }
 }
 
@@ -4605,41 +4605,42 @@ Breakpoint Mixin
 
 @media (min-width: 0) {
   body {
-    font-family: "Maven Pro Regular" !important;
+    font-family: "Maven Pro Regular";
   }
 
   h1 {
     font-family: "Maven Pro Black";
-    font-size: 33px !important;
-    line-height: 40.4px !important;
+    font-size: 33px;
+    line-height: 40.4px;
     text-align: center;
   }
 
   h2 {
     font-family: "Maven Pro Black";
-    font-size: 28px !important;
-    line-height: 26.4px !important;
+    font-size: 28px;
+    line-height: 26.4px;
     text-align: center;
   }
 
   h3 {
     font-family: "Maven Pro Bold";
-    font-size: 18px !important;
-    line-height: 22.4px !important;
+    font-size: 18px;
+    line-height: 22.4px;
     text-align: center;
   }
 
   h4 {
     font-family: "Maven Pro Regular";
-    font-size: 17px !important;
-    line-height: 20.4px !important;
+    font-size: 17px;
+    line-height: 20.4px;
     text-align: center;
   }
 
-  p {
+  p,
+  a {
     color: #424242;
-    font-size: 16px !important;
-    line-height: 18.4px !important;
+    font-size: 16px;
+    line-height: 18.4px;
   }
 
   blockquote {
@@ -4655,140 +4656,145 @@ Breakpoint Mixin
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 36.3px !important;
-    line-height: 44.44px !important;
+    font-size: 36.3px;
+    line-height: 44.44px;
   }
 
   h2 {
-    font-size: 30.8px !important;
-    line-height: 29.04px !important;
+    font-size: 30.8px;
+    line-height: 29.04px;
   }
 
   h3 {
-    font-size: 19.8px !important;
-    line-height: 24.64px !important;
+    font-size: 19.8px;
+    line-height: 24.64px;
   }
 
   h4 {
-    font-size: 18.7px !important;
-    line-height: 22.44px !important;
+    font-size: 18.7px;
+    line-height: 22.44px;
   }
 
-  p {
-    font-size: 17.6px !important;
-    line-height: 20.24px !important;
+  p,
+  a {
+    font-size: 17.6px;
+    line-height: 20.24px;
   }
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 39.6px !important;
-    line-height: 52.52px !important;
+    font-size: 39.6px;
+    line-height: 52.52px;
     text-align: left;
   }
 
   h2 {
-    font-size: 33.6px !important;
-    line-height: 34.32px !important;
+    font-size: 33.6px;
+    line-height: 34.32px;
     text-align: left;
   }
 
   h3 {
-    font-size: 21.6px !important;
-    line-height: 29.12px !important;
+    font-size: 21.6px;
+    line-height: 29.12px;
     text-align: left;
   }
 
   h4 {
-    font-size: 20.4px !important;
-    line-height: 26.52px !important;
+    font-size: 20.4px;
+    line-height: 26.52px;
     text-align: left;
   }
 
-  p {
-    font-size: 19.2px !important;
-    line-height: 23.92px !important;
+  p,
+  a {
+    font-size: 19.2px;
+    line-height: 23.92px;
   }
 }
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 42.9px !important;
-    line-height: 60.6px !important;
+    font-size: 42.9px;
+    line-height: 60.6px;
   }
 
   h2 {
-    font-size: 36.4px !important;
-    line-height: 39.6px !important;
+    font-size: 36.4px;
+    line-height: 39.6px;
   }
 
   h3 {
-    font-size: 23.4px !important;
-    line-height: 33.6px !important;
+    font-size: 23.4px;
+    line-height: 33.6px;
   }
 
   h4 {
-    font-size: 22.1px !important;
-    line-height: 30.6px !important;
+    font-size: 22.1px;
+    line-height: 30.6px;
   }
 
-  p {
-    font-size: 20.8px !important;
-    line-height: 27.6px !important;
+  p,
+  a {
+    font-size: 20.8px;
+    line-height: 27.6px;
   }
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 46.2px !important;
-    line-height: 72.72px !important;
+    font-size: 46.2px;
+    line-height: 72.72px;
   }
 
   h2 {
-    font-size: 39.2px !important;
-    line-height: 47.52px !important;
+    font-size: 39.2px;
+    line-height: 47.52px;
   }
 
   h3 {
-    font-size: 25.2px !important;
-    line-height: 40.32px !important;
+    font-size: 25.2px;
+    line-height: 40.32px;
   }
 
   h4 {
-    font-size: 23.8px !important;
-    line-height: 36.72px !important;
+    font-size: 23.8px;
+    line-height: 36.72px;
   }
 
-  p {
-    font-size: 22.4px !important;
-    line-height: 33.12px !important;
+  p,
+  a {
+    font-size: 22.4px;
+    line-height: 33.12px;
   }
 }
 
 @media (min-width: 1920px) {
   h1 {
-    font-size: 49.5px !important;
-    line-height: 72.72px !important;
+    font-size: 49.5px;
+    line-height: 72.72px;
   }
 
   h2 {
-    font-size: 42px !important;
-    line-height: 47.52px !important;
+    font-size: 42px;
+    line-height: 47.52px;
   }
 
   h3 {
-    font-size: 27px !important;
-    line-height: 40.32px !important;
+    font-size: 27px;
+    line-height: 40.32px;
   }
 
   h4 {
-    font-size: 25.5px !important;
-    line-height: 36.72px !important;
+    font-size: 25.5px;
+    line-height: 36.72px;
   }
 
-  p {
-    font-size: 24px !important;
-    line-height: 33.12px !important;
+  p,
+  a {
+    font-size: 24px;
+    line-height: 33.12px;
   }
 }
 
@@ -10666,6 +10672,59 @@ template {
   }
 }
 
+.teamSlider__cover__image {
+  width: 400px !important;
+  height: 400px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+@media (min-width: 1200px) {
+  .teamSlider__cover__image {
+    width: 470px !important;
+    height: 470px !important;
+  }
+}
+
+.teamSlider__cover__image-pia {
+  -o-object-position: -88px -112px !important;
+     object-position: -88px -112px !important;
+}
+
+.teamSlider__cover__image-gion {
+  -o-object-position: -68px -52px !important;
+     object-position: -68px -52px !important;
+  width: 350px !important;
+  height: 350px !important;
+}
+
+@media (min-width: 1200px) {
+  .teamSlider__cover__image-gion {
+    width: 425px !important;
+    height: 425px !important;
+  }
+}
+
+.teamSlider__cover__image-manuel {
+  -o-object-position: -98px -92px !important;
+     object-position: -98px -92px !important;
+}
+
+.teamSlider__cover__image-simon {
+  -o-object-position: -98px -102px !important;
+     object-position: -98px -102px !important;
+}
+
+.teamSlider__cover__image-patrickN {
+  -o-object-position: -99px -102px !important;
+     object-position: -99px -102px !important;
+}
+
+.teamSlider__cover__image-patrickK {
+  -o-object-position: -100px -62px !important;
+     object-position: -100px -62px !important;
+}
+
 .teamSlider__cover:after {
   content: "";
   position: absolute;
@@ -10673,7 +10732,7 @@ template {
   padding: 20px 0;
   left: 0;
   bottom: 9px;
-  opacity: 0.7;
+  opacity: 0.5;
   background-color: #010101;
 }
 
@@ -10736,7 +10795,7 @@ template {
 .teamSlider__arrow-right {
   display: flex !important;
   top: 80% !important;
-  left: 120px !important;
+  left: 120px;
   justify-content: center;
   align-items: center;
   width: 90px !important;
@@ -10744,6 +10803,13 @@ template {
   border-radius: 50%;
   background: #EFFCEF !important;
   z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .teamSlider__arrow-right {
+    left: auto;
+    right: 0;
+  }
 }
 
 .teamSlider__arrow-right::before {
@@ -11209,8 +11275,60 @@ template {
   }
 }
 
+.dashboardHeader__image {
+  width: 100%;
+  height: auto;
+}
+
+.dashboardHeader__wrapper {
+  position: absolute;
+  margin: 35px;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media (min-width: 576px) {
+  .dashboardHeader__wrapper {
+    top: 3rem;
+    margin: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboardHeader__wrapper {
+    top: 4rem;
+    margin: 55px;
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dashboardHeader__wrapper {
+    right: 10rem;
+    margin: 80px;
+    margin-right: 10rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .dashboardHeader__wrapper {
+    margin-right: 15rem;
+  }
+}
+
+.meetUps {
+  padding-top: 250px;
+  padding-bottom: 250px;
+  padding-left: 350px;
+  padding-right: 350px;
+  border: 3px solid;
+}
+
 .navbar {
-  height: 85px;
+  height: 100px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -11279,7 +11397,13 @@ template {
   color: #010101;
 }
 
-@media only screen and (max-width: 943px) {
+@media only screen and (max-width: 1028px) {
+  .navLinks__hash {
+    font-size: 18.6px;
+  }
+}
+
+@media only screen and (max-width: 983px) {
   .navLinks__hash {
     display: none;
   }

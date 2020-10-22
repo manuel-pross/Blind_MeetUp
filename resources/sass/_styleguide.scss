@@ -1,0 +1,51 @@
+.sg {
+  margin: 0 auto;
+
+  &__navigation {
+    position: fixed;
+    background-color: $c-black;
+    border: solid 3px $c-grey;
+    border-radius: 15px;
+    top: 35%;
+    right: -10px;
+    padding: 1rem;
+    z-index: 10;
+
+    a {
+      font-size: 25px;
+      color: $c-white !important;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+
+  &__colors {
+    ul {
+      list-style-type: none !important;
+    }
+    &--desc {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: font-size 0.2s;
+    }
+  }
+
+  &__logo {
+    img {
+      width: inherit;
+    }
+  }
+}
+
+.is-clicked-ut {
+  font-size: 20px;
+}
+
+.is-clicked-color {
+  border-width: 20px;
+}

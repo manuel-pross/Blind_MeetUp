@@ -21,6 +21,10 @@ Route::get('/styleguide', function () {
     return view('styleguide');
 });
 
+Route::get('/dashboard', function () {
+    return view('styleguide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

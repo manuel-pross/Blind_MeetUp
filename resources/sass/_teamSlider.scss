@@ -247,7 +247,6 @@
 }
 
 .teamSlider {
-
    &__heading {
       margin-bottom: 2rem;
    }
@@ -283,10 +282,45 @@
       }
 
       &__image {
-         // position: absolute !important;
-         // background-position: 50% 50% !important;
-         // background-repeat: no-repeat !important;
-         // background-size: cover !important;
+         width: 400px !important;
+         height: 400px !important;
+         object-fit: cover !important;
+
+         @include breakpoint("xl") {
+            width: 470px !important;
+            height: 470px !important;
+         }
+
+         &-pia {
+            object-position: -88px -112px !important;
+         }
+
+         &-gion {
+            object-position: -68px -52px !important;
+            width: 350px !important;
+            height: 350px !important;
+
+            @include breakpoint("xl") {
+               width: 425px !important;
+               height: 425px !important;
+            }
+         }
+
+         &-manuel {
+            object-position: -98px -92px !important;
+         }
+
+         &-simon {
+            object-position: -98px -102px !important;
+         }
+
+         &-patrickN {
+            object-position: -99px -102px !important;
+         }
+
+         &-patrickK {
+            object-position: -100px -62px !important;
+         }
       }
 
       &:after {
@@ -296,7 +330,7 @@
          padding: 20px 0;
          left: 0;
          bottom: 9px;
-         opacity: 0.7;
+         opacity: 0.5;
          background-color: #010101;
 
          @include breakpoint("sm") {
@@ -324,7 +358,7 @@
       bottom: 18px;
       right: 8px;
       z-index: 1;
-      
+
       @include breakpoint("md") {
          right: 20px;
       }
@@ -346,7 +380,7 @@
    &__arrow-right {
       display: flex !important;
       top: 80% !important;
-      left: 120px !important;
+      left: 120px;
       justify-content: center;
       align-items: center;
       width: 90px !important;
@@ -354,6 +388,11 @@
       border-radius: 50%;
       background: $c3-second !important;
       z-index: 1;
+
+      @include breakpoint("lg") {
+         left: auto;
+         right: 0;
+      }
 
       &::before {
          display: none;
@@ -445,45 +484,3 @@
       }
    }
 }
-
-// &-pia {
-//    top: -200px !important;
-//    left: -220px !important;
-//    width: 160%;
-//    height: 160%;
-// }
-
-// &-gion {
-//    top: -100px !important;
-//    left: -180px !important;
-//    width: 150%;
-//    height: 150%;
-// }
-
-// &-manuel {
-//    top: -160px !important;
-//    left: -180px !important;
-//    width: 150%;
-//    height: 150%;
-// }
-
-// &-simon {
-//    top: -140px !important;
-//    left: -170px !important;
-//    width: 150%;
-//    height: 150%;
-// }
-
-// &-patrickN {
-//    top: -150px !important;
-//    left: -200px !important;
-//    width: 156%;
-//    height: 156%;
-// }
-
-// &-patrickK {
-//    top: -184px !important;
-//    left: -167px !important;
-//    width: 150%;
-//    height: 150%;
-// }

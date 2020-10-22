@@ -65,41 +65,41 @@ $fs-p: 16px;
 
 @include breakpoint("xs") {
     body {
-        font-family: "Maven Pro Regular" !important;
+        font-family: "Maven Pro Regular";
     }
 
     h1 {
         font-family: "Maven Pro Black";
-        font-size: $fs-h1 !important;
-        line-height: $lh-h1 !important;
+        font-size: $fs-h1;
+        line-height: $lh-h1;
         text-align: center;
     }
 
     h2 {
         font-family: "Maven Pro Black";
-        font-size: $fs-h2 !important;
-        line-height: $lh-h2 !important;
+        font-size: $fs-h2;
+        line-height: $lh-h2;
         text-align: center;
     }
 
     h3 {
         font-family: "Maven Pro Bold";
-        font-size: $fs-h3 !important;
-        line-height: $lh-h3 !important;
+        font-size: $fs-h3;
+        line-height: $lh-h3;
         text-align: center;
     }
 
     h4 {
         font-family: "Maven Pro Regular";
-        font-size: $fs-h4 !important;
-        line-height: $lh-h4 !important;
+        font-size: $fs-h4;
+        line-height: $lh-h4;
         text-align: center;
     }
 
-    p {
+    p, a {
         color: $c3-main;
-        font-size: $fs-p !important;
-        line-height: $lh-p !important;
+        font-size: $fs-p;
+        line-height: $lh-p;
     }
 
     blockquote {
@@ -115,139 +115,139 @@ $fs-p: 16px;
 
 @include breakpoint("sm") {
     h1 {
-        font-size: $fs-h1 * $scale-fs-sm !important;
-        line-height: $lh-h1 * $scale-lh-sm  !important;
+        font-size: $fs-h1 * $scale-fs-sm;
+        line-height: $lh-h1 * $scale-lh-sm ;
     }
 
     h2 {
-        font-size: $fs-h2 * $scale-fs-sm !important;
-        line-height: $lh-h2 * $scale-lh-sm !important;
+        font-size: $fs-h2 * $scale-fs-sm;
+        line-height: $lh-h2 * $scale-lh-sm;
     }
 
     h3 {
-        font-size: $fs-h3 * $scale-fs-sm !important;
-        line-height: $lh-h3 * $scale-lh-sm !important;
+        font-size: $fs-h3 * $scale-fs-sm;
+        line-height: $lh-h3 * $scale-lh-sm;
     }
 
     h4 {
-        font-size: $fs-h4 * $scale-fs-sm !important;
-        line-height: $lh-h4 * $scale-lh-sm !important;
+        font-size: $fs-h4 * $scale-fs-sm;
+        line-height: $lh-h4 * $scale-lh-sm;
     }
 
-    p {
-        font-size: $fs-p * $scale-fs-sm !important;
-        line-height: $lh-p * $scale-lh-sm !important;
+    p, a {
+        font-size: $fs-p * $scale-fs-sm;
+        line-height: $lh-p * $scale-lh-sm;
     }
 }
 
 @include breakpoint("md") {
     h1 {
-        font-size: $fs-h1 * $scale-fs-md !important;
-        line-height: $lh-h1 * $scale-lh-md !important;
+        font-size: $fs-h1 * $scale-fs-md;
+        line-height: $lh-h1 * $scale-lh-md;
         text-align: left;
     }
 
     h2 {
-        font-size: $fs-h2 * $scale-fs-md !important;
-        line-height: $lh-h2 * $scale-lh-md !important;
+        font-size: $fs-h2 * $scale-fs-md;
+        line-height: $lh-h2 * $scale-lh-md;
         text-align: left;
     }
 
     h3 {
-        font-size: $fs-h3 * $scale-fs-md !important;
-        line-height: $lh-h3 * $scale-lh-md !important;
+        font-size: $fs-h3 * $scale-fs-md;
+        line-height: $lh-h3 * $scale-lh-md;
         text-align: left;
     }
     
     h4 {
-        font-size: $fs-h4 * $scale-fs-md !important;
-        line-height: $lh-h4 * $scale-lh-md !important;
+        font-size: $fs-h4 * $scale-fs-md;
+        line-height: $lh-h4 * $scale-lh-md;
         text-align: left;
     }
 
-    p {
-        font-size: $fs-p * $scale-fs-md !important;
-        line-height: $lh-p * $scale-lh-md !important;
+    p, a {
+        font-size: $fs-p * $scale-fs-md;
+        line-height: $lh-p * $scale-lh-md;
     }
 }
 
 @include breakpoint("lg") {
     h1 {
-        font-size: $fs-h1 * $scale-fs-lg !important;
-        line-height: $lh-h1 * $scale-lh-lg !important;
+        font-size: $fs-h1 * $scale-fs-lg;
+        line-height: $lh-h1 * $scale-lh-lg;
     }
 
     h2 {
-        font-size: $fs-h2 * $scale-fs-lg !important;
-        line-height: $lh-h2 * $scale-lh-lg !important;
+        font-size: $fs-h2 * $scale-fs-lg;
+        line-height: $lh-h2 * $scale-lh-lg;
     }
 
     h3 {
-        font-size: $fs-h3 * $scale-fs-lg !important;
-        line-height: $lh-h3 * $scale-lh-lg !important;
+        font-size: $fs-h3 * $scale-fs-lg;
+        line-height: $lh-h3 * $scale-lh-lg;
     }
     
     h4 {
-        font-size: $fs-h4 * $scale-fs-lg !important;
-        line-height: $lh-h4 * $scale-lh-lg !important;
+        font-size: $fs-h4 * $scale-fs-lg;
+        line-height: $lh-h4 * $scale-lh-lg;
     }
 
-    p {
-        font-size: $fs-p * $scale-fs-lg !important;
-        line-height: $lh-p * $scale-lh-lg !important;
+    p, a {
+        font-size: $fs-p * $scale-fs-lg;
+        line-height: $lh-p * $scale-lh-lg;
     }
 }
 
 @include breakpoint("xl") {
     h1 {
-        font-size: $fs-h1 * $scale-fs-xl !important;
-        line-height: $lh-h1 * $scale-lh-xl !important;
+        font-size: $fs-h1 * $scale-fs-xl;
+        line-height: $lh-h1 * $scale-lh-xl;
     }
 
     h2 {
-        font-size: $fs-h2 * $scale-fs-xl !important;
-        line-height: $lh-h2 * $scale-lh-xl !important;
+        font-size: $fs-h2 * $scale-fs-xl;
+        line-height: $lh-h2 * $scale-lh-xl;
     }
 
     h3 {
-        font-size: $fs-h3 * $scale-fs-xl !important;
-        line-height: $lh-h3 * $scale-lh-xl !important;
+        font-size: $fs-h3 * $scale-fs-xl;
+        line-height: $lh-h3 * $scale-lh-xl;
     }
 
     h4 {
-        font-size: $fs-h4 * $scale-fs-xl !important;
-        line-height: $lh-h4 * $scale-lh-xl !important;
+        font-size: $fs-h4 * $scale-fs-xl;
+        line-height: $lh-h4 * $scale-lh-xl;
     }
 
-    p {
-        font-size: $fs-p * $scale-fs-xl !important;
-        line-height: $lh-p * $scale-lh-xl !important;
+    p, a {
+        font-size: $fs-p * $scale-fs-xl;
+        line-height: $lh-p * $scale-lh-xl;
     }
 }
 
 @include breakpoint("xxl") {
     h1 {
-        font-size: $fs-h1 * $scale-fs-xxl !important;
-        line-height: $lh-h1 * $scale-lh-xl !important;
+        font-size: $fs-h1 * $scale-fs-xxl;
+        line-height: $lh-h1 * $scale-lh-xl;
     }
 
     h2 {
-        font-size: $fs-h2 * $scale-fs-xxl !important;
-        line-height: $lh-h2 * $scale-lh-xl !important;
+        font-size: $fs-h2 * $scale-fs-xxl;
+        line-height: $lh-h2 * $scale-lh-xl;
     }
 
     h3 {
-        font-size: $fs-h3 * $scale-fs-xxl !important;
-        line-height: $lh-h3 * $scale-lh-xl !important;
+        font-size: $fs-h3 * $scale-fs-xxl;
+        line-height: $lh-h3 * $scale-lh-xl;
     }
 
     h4 {
-        font-size: $fs-h4 * $scale-fs-xxl !important;
-        line-height: $lh-h4 * $scale-lh-xl !important;
+        font-size: $fs-h4 * $scale-fs-xxl;
+        line-height: $lh-h4 * $scale-lh-xl;
     }
 
-    p {
-        font-size: $fs-p * $scale-fs-xxl !important;
-        line-height: $lh-p * $scale-lh-xl !important;
+    p, a {
+        font-size: $fs-p * $scale-fs-xxl;
+        line-height: $lh-p * $scale-lh-xl;
     }
 }

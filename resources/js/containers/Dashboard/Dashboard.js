@@ -1,13 +1,19 @@
 import React from 'react';
 
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import MeetUps from '../../components/MeetUps/MeetUps';
+import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
+import FAQ from '../../components/FAQ/FAQ';
+
 
 const Dashboard = () => (
     <React.Fragment>
         <Navbar />
-        <div style={{ paddingTop: "100px" }}>
-            Dashboard
-        </div>
+        <DashboardHeader />
+        <MeetUps/>
+        <FAQ />
+        <Footer />
     </React.Fragment>
 );
 
