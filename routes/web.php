@@ -29,6 +29,10 @@ Route::get('/richtlinien', function () {
     return view('styleguide');
 });
 
+Route::get('/datenschutz', function () {
+    return view('styleguide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

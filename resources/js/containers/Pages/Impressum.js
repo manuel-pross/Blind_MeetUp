@@ -5,7 +5,6 @@ import { withTranslation } from 'react-i18next';
 
 
 const Impressum = ({ t }) => {
-    // const { t, i18n } = useTranslation();
     return (
         <React.Fragment>
             <Navbar />

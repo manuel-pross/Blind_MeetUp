@@ -85645,15 +85645,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Navbar/Navbar */ "./resources/js/components/Navbar/Navbar.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+
 
 
 
 var Dataprotection = function Dataprotection() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container",
     style: {
-      paddingTop: "100px"
+      marginTop: '100px',
+      marginBottom: '200px'
     }
-  }, "Dataprotection"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Datenschutzerkl\xE4rung ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "blindmeetup.hs-furtwangen.de"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-500"
+  }, "Die nachstehenden Informationen enthalten die gesetzlich vorgesehenen Pflichtangaben zur Anbieterkennzeichnung und weitere Hinweise zur Internetpr\xE4senz \u201Ewww.blindmeetup.hs-furtwangen.de\u201C  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, "1. Datenschutz"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Der Schutz aller personenbezogenen Daten ist f\xFCr uns ein wichtiges Anliegen. In diesen Datenschutzhinweisen erkl\xE4ren wir, wie wir Ihre personenbezogenen Daten erheben, was wir damit tun, f\xFCr welche Zwecke und auf welchen Rechtsgrundlagen dies geschieht und welche Rechte und Anspr\xFCche sich damit f\xFCr Sie verbinden. Unsere Datenschutzhinweise f\xFCr den Gebrauch unserer Webseite gilt nicht f\xFCr Ihre Aktivit\xE4ten auf den Webseiten von sozialen Netzwerken oder anderen Anbietern, die Sie \xFCber die Links auf unserer Webseiter erreichen k\xF6nnen. Bitte informieren Sie sich auf den Webseiten dieser Anbieter \xFCber deren Datenschutzbestimmungen."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "subpages__subheading"
+  }, "2. Verantwortlicher"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext mb-300"
+  }, "Verantwortlicher f\xFCr die Verarbeitung Ihrer personenbezogenen Daten ist:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "subpages__subtext"
+  }, "Hochschule Furtwangen ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Robert-Gerwig-Platz 1 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " 78120 Furtwangen")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dataprotection);
@@ -85838,7 +85854,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var Impressum = function Impressum(_ref) {
   var t = _ref.t;
-  // const { t, i18n } = useTranslation();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mb-1000",
     style: {
