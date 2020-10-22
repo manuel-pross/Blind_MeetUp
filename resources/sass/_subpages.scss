@@ -1,9 +1,9 @@
 .subpages {
     &__subtext {
-        font-size: 13px !important;
+        font-size: 15px !important;
 
         @include breakpoint("sm") {
-            font-size: 15px !important;
+            font-size: 16px !important;
         }
         @include breakpoint("md") {
             font-size: 20px !important;

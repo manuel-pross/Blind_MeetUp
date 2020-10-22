@@ -6,11 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
 
+import RouteToTop from './components/hoc/RouterToTop';
+
 // For translations
 import './i18n';
 
 ReactDOM.render(
   <BrowserRouter>
+    <RouteToTop />
     <DevSizeBtn />
     <React.StrictMode>
       <Root />

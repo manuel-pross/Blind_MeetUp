@@ -11405,12 +11405,12 @@ template {
 }
 
 .subpages__subtext {
-  font-size: 13px !important;
+  font-size: 15px !important;
 }
 
 @media (min-width: 576px) {
   .subpages__subtext {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
 }
 
