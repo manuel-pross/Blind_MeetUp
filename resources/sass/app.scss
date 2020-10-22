@@ -1,9 +1,8 @@
-
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap-grid';
+@import "~bootstrap/scss/bootstrap-grid";
 
 // Utility
 @import "./mixins";
@@ -35,5 +34,7 @@
 //dev
 @import "./devSizeBtn";
 
-//FAQ
+//translation text
+@import "./i18nextTranslation";
 
+//FAQ
