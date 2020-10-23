@@ -30,6 +30,7 @@ const ContactForm = () => {
         console.log("Problem: " + problem);
         console.log("Problem Text: " + problemText);
         setIsSubmitted(true);
+        goToTop();
     }
     const resetValues = () => {
         setName("");
@@ -37,6 +38,10 @@ const ContactForm = () => {
         setProblem(null);
         setProblemText("");
     }
+    const goToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
 
     const fomular = (
         <form className="contactForm" onSubmit={handleSubmit}>
@@ -64,14 +69,14 @@ const ContactForm = () => {
     );
 
     const formFeedbackText = (
-        <div className="guidelines__container">
+        <div className="guidelines__container mb-600">
             <img src={AlertCheck} className="guidelines__icon" alt="BlindMeetUp_alert-cross" style={{ width: "200px", float: 'left' }}></img>
             <p className="subpages__subtext feedbackForm__feedbackText">Vielen Dank, Wir haben haben deine Anfrage erhalten und werden uns demnächst bei dir melden.</p>
         </div>
     );
 
     return (
-        <div className="container" style={{ marginTop: '100px', marginBottom: '200px' }}>
+        <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
             <h1>Kontaktformular</h1>
             <p className="mb-400">Du hast eine Frage zu unserer Anwendung oder ein bestehendes Problem? Wir helfen dir gerne. Bitte fülle das Formular vollständig aus, sodass wir wissen, worum es geht.</p>
             {!isSubmitted ? fomular : formFeedbackText}

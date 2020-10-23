@@ -7,9 +7,7 @@ import Footer from '../../components/Footer/Footer';
 const Feedback = () => (
     <React.Fragment>
         <Navbar />
-        <div className="container" style={{ marginTop: '100px', marginBottom: '200px' }}>
-            <FeedbackForm />
-        </div>
+        <FeedbackForm />
         <Footer />
     </React.Fragment>
 );

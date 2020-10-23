@@ -13,15 +13,12 @@ const FeedbackForm = () => {
     const toggleFeedbackSmiley = (feedbackValue) => {
         setFeedbackSmiley(feedbackValue)
     }
-
     const togglefeedbackDevice = (feedbackValue) => {
         setFeedbackDevice(feedbackValue)
     }
-
     const handleUserText = (event) => {
         setFeedbackText(event.target.value)
     }
-
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -29,12 +26,15 @@ const FeedbackForm = () => {
         console.log("Device: " + feedbackDevice);
         console.log("Text: " + feedbackText);
         setIsSubmitted(true);
+        goToTop();
     }
-
     const resetValues = () => {
         setFeedbackSmiley(null);
         setFeedbackDevice(null);
         setFeedbackText("");
+    }
+    const goToTop = () => {
+        window.scrollTo(0, 0);
     }
 
     const fomular = (
@@ -83,14 +83,13 @@ const FeedbackForm = () => {
 
 
     return (
-        <React.Fragment>
+        <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
+
             <h1>Feedback geben</h1>
             <p className="mb-400">Wir freuen uns sehr, dass du hier her gefunden hast! Nur mithilfe deines ehrlichen und ausführlichen Feedbacks können wir unser Angebot und die Anwendung stetig verbessern. Also hau in die Tasten und lass uns von dir hören.</p>
 
             {!isSubmitted ? fomular : formFeedbackText}
-
-
-        </React.Fragment>
+        </div>
     );
 }
 
