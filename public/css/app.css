@@ -4468,6 +4468,18 @@ Breakpoint Mixin
   border: 2px solid rgba(46, 108, 72, 0.3) !important;
 }
 
+.btn-select {
+  color: #ffffff !important;
+  background-color: #959595 !important;
+  border: 2px solid #959595 !important;
+  transition: all 200ms;
+}
+
+.btn-select-active {
+  background-color: #2F2F2F !important;
+  border: 2px solid #2F2F2F !important;
+}
+
 .btn-tertiary {
   color: #999999;
   font-weight: 400 !important;
@@ -11431,5 +11443,40 @@ template {
   height: auto;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.feedbackForm input[type=radio] {
+  display: none;
+}
+
+.feedbackForm__smiley-container {
+  padding: 5px;
+  border-radius: 50%;
+  display: inline;
+  background-color: #707070;
+  margin-right: 25px;
+}
+
+.feedbackForm__smiley-active {
+  background-color: #2F2F2F;
+}
+
+.feedbackForm__smiley {
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.feedbackForm__button {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.feedbackForm input[type=text] {
+  height: 50px;
+  width: 100%;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
 }
 

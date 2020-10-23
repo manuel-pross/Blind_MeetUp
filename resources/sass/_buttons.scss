@@ -47,6 +47,18 @@
     border: 2px solid rgba(46, 108, 72, 0.3) !important;
   }
 
+  &-select {
+    color: $c2-main !important;
+    background-color: $c-lightGrey !important;
+    border: 2px solid $c-lightGrey !important;
+    transition: all 200ms;
+
+    &-active {
+      background-color: $c-darkGrey !important;
+      border: 2px solid $c-darkGrey !important;
+    }
+  }
+
   &-tertiary {
     color: $c-grey;
     font-weight: 400 !important;
