@@ -11480,3 +11480,7 @@ template {
   border-style: none;
 }
 
+.feedbackForm__feedbackText {
+  color: #50b375;
+}
+
