@@ -11432,6 +11432,22 @@ template {
   }
 }
 
+.subpages__subtext-small {
+  font-size: 12px !important;
+}
+
+@media (min-width: 576px) {
+  .subpages__subtext-small {
+    font-size: 13px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .subpages__subtext-small {
+    font-size: 16px !important;
+  }
+}
+
 .guidelines__container {
   display: flex;
   align-items: center;
@@ -11482,5 +11498,29 @@ template {
 
 .feedbackForm__feedbackText {
   color: #50b375;
+}
+
+.contactForm input[type=text] {
+  height: 50px;
+  width: 30%;
+  min-width: 300px;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
+}
+
+.contactForm__inputText {
+  width: 100% !important;
+}
+
+.contactForm input[type=email] {
+  height: 50px;
+  width: 30%;
+  min-width: 300px;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
 }
 

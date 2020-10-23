@@ -77,9 +77,8 @@ const FeedbackForm = () => {
     const formFeedbackText = (
         <div className="guidelines__container">
             <img src={AlertCheck} className="guidelines__icon" alt="BlindMeetUp_alert-cross" style={{ width: "200px", float: 'left' }}></img>
-            <p className="subpages__subtext feedbackForm__feedbackText">Vielen Dank, wir haben dein Feedback erhalten.</p>
+            <p className="subpages__subtext feedbackForm__feedbackText">Vielen Dank, Wir haben dein Feedback erhalten.</p>
         </div>
-
     );
 
 

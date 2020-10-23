@@ -37,6 +37,10 @@ Route::get('/feedback', function () {
     return view('styleguide');
 });
 
+Route::get('/kontakt', function () {
+    return view('styleguide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
