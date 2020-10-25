@@ -55,9 +55,9 @@
         text-decoration: none;
         width: 100%;
         height: 100%;
-        padding: 34px 10px;
+        padding: 32px 10px;
         box-sizing: border-box;
-        border-bottom: 3px solid transparent;
+        border-bottom: 4px solid transparent;
         display: block;
         padding-left: 7px;
         display: block;
@@ -67,9 +67,8 @@
             color: $c-black;
         }
 
-        
         @media only screen and (max-width: 1028px) {
-            font-size: 18.6px;  
+            font-size: 18.6px;
         }
 
         @media only screen and (max-width: 983px) {
@@ -86,5 +85,16 @@
 
 .active {
     color: $c1-second !important;
-    border-bottom: 3px solid $c1-second !important;
+    border-bottom: 4px solid $c1-second !important;
+}
+
+
+.show {
+    transform: translateY(0);
+    transition: 0.2s ease-in-out;
+}
+
+.hide {
+    transform: translateY(-98%);
+    transition: 0.2s ease-in-out;
 }

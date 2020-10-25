@@ -66,7 +66,7 @@ class Timeline extends Component {
         }
 
         return (
-            <div className="container mb-1000">
+            <div className="container pb-1000">
                 <div className="timeline">
                     <h2 className="timeline__heading">Ablauf &amp; Funktionsweise</h2>
                     <div className="timeline__content">

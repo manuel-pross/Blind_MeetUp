@@ -9,14 +9,45 @@ import Bildmarke from '../../../assets/img/Bildmarke.png';
 import NavigationItems from './NavigationItems/NavigationItems';
 
 class Navbar extends Component {
+    state = {
+        firstPosition: window.scrollY,
+        initScrollEvent: true,
+        showToolbar: true,
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        let newPosition = window.scrollY;
+        if (((this.state.firstPosition > newPosition) && !this.state.showToolbar) || newPosition === 0) {
+            this.setState({ showToolbar: true });
+        }
+        if ((this.state.firstPosition < newPosition) && this.state.showToolbar && !(newPosition === 0)) {
+            this.setState({ showToolbar: false });
+        }
+        this.setState({ firstPosition: newPosition })
+    }
 
     scrollToTop() {
         scroll.scrollToTop();
     }
 
     render() {
+        let classesForScrollHide = "navbar";
+        if (this.state.showToolbar) {
+            classesForScrollHide = classesForScrollHide + " " + "show";
+        } else {
+            classesForScrollHide = classesForScrollHide + " " + "hide";
+        }
+
         return (
-            <header className="navbar">
+            <header className={classesForScrollHide}>
                 <img
                     src={Wortmarke_OneLine}
                     className="navbar__logo1"

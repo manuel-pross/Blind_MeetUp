@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TeamSlider from '../../components/TeamSlider/TeamSlider';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
 import CTA from '../../components/CTA/CTA';
