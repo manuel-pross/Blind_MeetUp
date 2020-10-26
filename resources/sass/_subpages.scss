@@ -1,0 +1,119 @@
+.subpages {
+    &__subtext {
+        font-size: 15px !important;
+
+        @include breakpoint("sm") {
+            font-size: 16px !important;
+        }
+        @include breakpoint("md") {
+            font-size: 20px !important;
+        }
+    }
+    &__subtext-small {
+        font-size: 12px !important;
+
+        @include breakpoint("sm") {
+            font-size: 13px !important;
+        }
+        @include breakpoint("md") {
+            font-size: 16px !important;
+        }
+    }
+}
+
+.guidelines {
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        width: 100%;
+        max-width: 25px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+
+.feedbackForm {
+    input[type="radio"] {
+        display: none;
+    }
+
+    &__smiley-container {
+        padding: 5px;
+        border-radius: 50%;
+        display: inline;
+        background-color: $c4-main;
+        margin-right: 25px;
+    }
+    &__smiley-active {
+        background-color: $c-darkGrey;
+    }
+
+    &__smiley {
+        cursor: pointer;
+        transition: all 200ms;
+    }
+
+    &__button {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    input[type="text"] {
+        height: 50px;
+        width: 100%;
+        background-color: $c-lightGreyInput;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border-style: none;
+    }
+
+    &__feedbackText-success {
+        color: $c1-second;
+    }
+    &__feedbackText-error {
+        color: $c-error;
+    }
+}
+
+.contactForm {
+    input[type="text"] {
+        height: 50px;
+        width: 30%;
+        min-width: 300px;
+        background-color: $c-lightGreyInput;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border-style: none;
+    }
+    &__inputText {
+        width: 100% !important;
+    }
+
+    input[type="email"] {
+        height: 50px;
+        width: 30%;
+        min-width: 300px;
+        background-color: $c-lightGreyInput;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border-style: none;
+    }
+
+    &__inputSymbol {
+        position: relative;
+    }
+
+    &__inputSymbol:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url(../assets/img/icons/action-check.svg)
+            center / contain no-repeat;
+    }
+}

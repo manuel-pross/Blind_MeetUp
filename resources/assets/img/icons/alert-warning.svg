@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="alert-warning.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="135.12871"
+     inkscape:cy="148.32773"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="785"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <circle
+       style="opacity:1;fill:#50b375;fill-opacity:1;stroke:none;stroke-width:0.98568016;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path815"
+       cx="39.744198"
+       cy="257.25577"
+       r="39.026043" />
+    <g
+       id="g1136"
+       transform="matrix(0.12195644,0,0,0.12195644,13.726804,231.23843)"
+       style="fill:#ffffff">
+      <g
+         id="g1076"
+         style="fill:#ffffff">
+        <g
+           id="g1074"
+           style="fill:#ffffff">
+          <g
+             id="g1072"
+             style="fill:#ffffff">
+            <path
+               id="path1066"
+               d="M 213.227,0 C 95.36,0 0,95.467 0,213.333 c 0,117.866 95.36,213.333 213.227,213.333 117.867,0 213.44,-95.467 213.44,-213.333 C 426.667,95.467 331.093,0 213.227,0 Z m 0.106,384 C 119.04,384 42.666,307.627 42.666,213.333 42.666,119.039 119.04,42.667 213.333,42.667 307.626,42.667 384,119.04 384,213.333 384,307.626 307.627,384 213.333,384 Z"
+               inkscape:connector-curvature="0"
+               style="fill:#ffffff" />
+            <rect
+               id="rect1068"
+               height="42.667"
+               width="42.667"
+               y="277.33301"
+               x="192"
+               style="fill:#ffffff" />
+            <rect
+               id="rect1070"
+               height="128"
+               width="42.667"
+               y="106.667"
+               x="192"
+               style="fill:#ffffff" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g1078"
+         style="fill:#ffffff" />
+      <g
+         id="g1080"
+         style="fill:#ffffff" />
+      <g
+         id="g1082"
+         style="fill:#ffffff" />
+      <g
+         id="g1084"
+         style="fill:#ffffff" />
+      <g
+         id="g1086"
+         style="fill:#ffffff" />
+      <g
+         id="g1088"
+         style="fill:#ffffff" />
+      <g
+         id="g1090"
+         style="fill:#ffffff" />
+      <g
+         id="g1092"
+         style="fill:#ffffff" />
+      <g
+         id="g1094"
+         style="fill:#ffffff" />
+      <g
+         id="g1096"
+         style="fill:#ffffff" />
+      <g
+         id="g1098"
+         style="fill:#ffffff" />
+      <g
+         id="g1100"
+         style="fill:#ffffff" />
+      <g
+         id="g1102"
+         style="fill:#ffffff" />
+      <g
+         id="g1104"
+         style="fill:#ffffff" />
+      <g
+         id="g1106"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

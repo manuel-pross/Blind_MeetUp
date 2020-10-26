@@ -25,10 +25,16 @@
     color: $c-white;
     font-weight: 400 !important;
     background-color: $c1-second;
+    background-image: linear-gradient(#4dac71, #2e6c48);
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
 
     &:hover {
-      background-color: $c2-second;
+      background-color: $c1-second;
+      // background-image: linear-gradient(#2e6c48, #4dac71);
+      opacity: 0.8;
     }
+
   }
 
   &-second {
@@ -45,6 +51,18 @@
     cursor: not-allowed !important;
     background-color: $c-white !important;
     border: 2px solid rgba(46, 108, 72, 0.3) !important;
+  }
+
+  &-select {
+    color: $c2-main !important;
+    background-color: $c-lightGrey !important;
+    border: 2px solid $c-lightGrey !important;
+    transition: all 200ms;
+
+    &-active {
+      background-color: $c-darkGrey !important;
+      border: 2px solid $c-darkGrey !important;
+    }
   }
 
   &-tertiary {

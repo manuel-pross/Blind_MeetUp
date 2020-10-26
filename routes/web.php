@@ -21,7 +21,23 @@ Route::get('/styleguide', function () {
     return view('styleguide');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/impressum', function () {
+    return view('styleguide');
+});
+
+Route::get('/richtlinien', function () {
+    return view('styleguide');
+});
+
+Route::get('/datenschutz', function () {
+    return view('styleguide');
+});
+
+Route::get('/feedback', function () {
+    return view('styleguide');
+});
+
+Route::get('/kontakt', function () {
     return view('styleguide');
 });
 
