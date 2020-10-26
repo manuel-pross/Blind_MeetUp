@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="alert-check.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="135.12871"
+     inkscape:cy="148.32773"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="785"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <circle
+       style="opacity:1;fill:#50b375;fill-opacity:1;stroke:none;stroke-width:0.98568016;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path815"
+       cx="39.744198"
+       cy="257.25577"
+       r="39.026043" />
+    <g
+       id="g958"
+       transform="matrix(0.13201811,0,0,0.13201811,12.992609,230.50415)"
+       style="fill:#ffffff">
+      <g
+         id="g902"
+         style="fill:#ffffff">
+        <path
+           id="path900"
+           d="M 393.401,124.425 179.603,338.208 c -15.832,15.835 -41.514,15.835 -57.361,0 L 11.878,227.836 c -15.838,-15.835 -15.838,-41.52 0,-57.358 15.841,-15.841 41.521,-15.841 57.355,-0.006 l 81.698,81.699 185.106,-185.107 c 15.841,-15.841 41.523,-15.829 57.358,0 15.835,15.838 15.835,41.514 0.006,57.361 z"
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff" />
+      </g>
+      <g
+         id="g904"
+         style="fill:#ffffff" />
+      <g
+         id="g906"
+         style="fill:#ffffff" />
+      <g
+         id="g908"
+         style="fill:#ffffff" />
+      <g
+         id="g910"
+         style="fill:#ffffff" />
+      <g
+         id="g912"
+         style="fill:#ffffff" />
+      <g
+         id="g914"
+         style="fill:#ffffff" />
+      <g
+         id="g916"
+         style="fill:#ffffff" />
+      <g
+         id="g918"
+         style="fill:#ffffff" />
+      <g
+         id="g920"
+         style="fill:#ffffff" />
+      <g
+         id="g922"
+         style="fill:#ffffff" />
+      <g
+         id="g924"
+         style="fill:#ffffff" />
+      <g
+         id="g926"
+         style="fill:#ffffff" />
+      <g
+         id="g928"
+         style="fill:#ffffff" />
+      <g
+         id="g930"
+         style="fill:#ffffff" />
+      <g
+         id="g932"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

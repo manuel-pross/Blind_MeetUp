@@ -3,12 +3,14 @@ import { FaRegSmile, FaRegMeh, FaRegFrown } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
+import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
 
 const FeedbackForm = () => {
     const [feedbackSmiley, setFeedbackSmiley] = useState(null);
     const [feedbackDevice, setFeedbackDevice] = useState(null);
     const [feedbackText, setFeedbackText] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [showFillError, setShowFillError] = useState(false);
 
     const toggleFeedbackSmiley = (feedbackValue) => {
         setFeedbackSmiley(feedbackValue)
@@ -21,14 +23,19 @@ const FeedbackForm = () => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        console.log("Smiley: " + feedbackSmiley);
-        console.log("Device: " + feedbackDevice);
-        console.log("Text: " + feedbackText);
-        setIsSubmitted(true);
-        goToTop();
+        if (feedbackSmiley != null && feedbackDevice != null && feedbackText != "") {
+            console.log("Smiley: " + feedbackSmiley);
+            console.log("Device: " + feedbackDevice);
+            console.log("Text: " + feedbackText);
+            setShowFillError(false);
+            setIsSubmitted(true);
+            goToTop();
+        } else {
+            setShowFillError(true);
+        }
     }
     const resetValues = () => {
+        setShowFillError(false);
         setFeedbackSmiley(null);
         setFeedbackDevice(null);
         setFeedbackText("");
@@ -81,6 +88,14 @@ const FeedbackForm = () => {
         </div>
     );
 
+    const notCompletedMessage = (
+        <div className="guidelines__container">
+            <img src={ActionCancel} className="guidelines__icon" alt="BlindMeetUp_action-cancel" style={{ width: "200px", float: 'left' }}></img>
+            <p className="subpages__subtext feedbackForm__feedbackText-error">Bitte alle Felder korrekt ausfüllen</p>
+        </div>
+    );
+
+
 
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
@@ -89,6 +104,7 @@ const FeedbackForm = () => {
             <p className="mb-400">Wir freuen uns sehr, dass du hier her gefunden hast! Nur mithilfe deines ehrlichen und ausführlichen Feedbacks können wir unser Angebot und die Anwendung stetig verbessern. Also hau in die Tasten und lass uns von dir hören.</p>
 
             {!isSubmitted ? fomular : formFeedbackText}
+            {showFillError ? notCompletedMessage : null}
         </div>
     );
 }

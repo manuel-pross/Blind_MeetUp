@@ -9,7 +9,7 @@
             font-size: 20px !important;
         }
     }
-    &__subtext-small{
+    &__subtext-small {
         font-size: 12px !important;
 
         @include breakpoint("sm") {
@@ -70,8 +70,11 @@
         border-style: none;
     }
 
-    &__feedbackText {
+    &__feedbackText-success {
         color: $c1-second;
+    }
+    &__feedbackText-error {
+        color: $c-error;
     }
 }
 
@@ -97,5 +100,20 @@
         padding: 12px 20px;
         border-radius: 25px;
         border-style: none;
+    }
+
+    &__inputSymbol {
+        position: relative;
+    }
+
+    &__inputSymbol:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url(../assets/img/icons/action-check.svg)
+            center / contain no-repeat;
     }
 }

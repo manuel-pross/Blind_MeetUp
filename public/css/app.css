@@ -4446,10 +4446,14 @@ Breakpoint Mixin
   color: #fefefe;
   font-weight: 400 !important;
   background-color: #50b375;
+  background-image: linear-gradient(#4dac71, #2e6c48);
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #2e6c48;
+  background-color: #50b375;
+  opacity: 0.8;
 }
 
 .btn-second {
@@ -11496,8 +11500,12 @@ template {
   border-style: none;
 }
 
-.feedbackForm__feedbackText {
+.feedbackForm__feedbackText-success {
   color: #50b375;
+}
+
+.feedbackForm__feedbackText-error {
+  color: #d9534f;
 }
 
 .contactForm input[type=text] {
@@ -11522,5 +11530,19 @@ template {
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
+}
+
+.contactForm__inputSymbol {
+  position: relative;
+}
+
+.contactForm__inputSymbol:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(/images/action-check.svg?29b464f9d0dd84b144b0895701a63e0a) center/contain no-repeat;
 }
 
