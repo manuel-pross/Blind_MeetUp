@@ -25,6 +25,10 @@
 @import "./timeline";
 @import "./FAQ";
 
+//dashboard
+@import "./dashboardHeader";
+@import "./meetUps";
+
 //navbar
 @import "./navbar";
 
@@ -33,6 +37,9 @@
 
 //dev
 @import "./devSizeBtn";
+
+//Social-Media
+@import "./socialMedia";
 
 //translation text
 @import "./i18nextTranslation";

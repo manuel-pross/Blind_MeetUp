@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1700px;
+    max-width: 1140px;
   }
 }
 
@@ -4446,10 +4446,14 @@ Breakpoint Mixin
   color: #fefefe;
   font-weight: 400 !important;
   background-color: #50b375;
+  background-image: linear-gradient(#4dac71, #2e6c48);
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #2e6c48;
+  background-color: #50b375;
+  opacity: 0.8;
 }
 
 .btn-second {
@@ -4466,6 +4470,18 @@ Breakpoint Mixin
   cursor: not-allowed !important;
   background-color: #fefefe !important;
   border: 2px solid rgba(46, 108, 72, 0.3) !important;
+}
+
+.btn-select {
+  color: #ffffff !important;
+  background-color: #959595 !important;
+  border: 2px solid #959595 !important;
+  transition: all 200ms;
+}
+
+.btn-select-active {
+  background-color: #2F2F2F !important;
+  border: 2px solid #2F2F2F !important;
 }
 
 .btn-tertiary {
@@ -11275,58 +11291,6 @@ template {
   }
 }
 
-.dashboardHeader__image {
-  width: 100%;
-  height: auto;
-}
-
-.dashboardHeader__wrapper {
-  position: absolute;
-  margin: 35px;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-@media (min-width: 576px) {
-  .dashboardHeader__wrapper {
-    top: 3rem;
-    margin: 45px;
-  }
-}
-
-@media (min-width: 992px) {
-  .dashboardHeader__wrapper {
-    top: 4rem;
-    margin: 55px;
-    margin-right: 80px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .dashboardHeader__wrapper {
-    right: 10rem;
-    margin: 80px;
-    margin-right: 10rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .dashboardHeader__wrapper {
-    margin-right: 15rem;
-  }
-}
-
-.meetUps {
-  padding-top: 250px;
-  padding-bottom: 250px;
-  padding-left: 350px;
-  padding-right: 350px;
-  border: 3px solid;
-}
-
 .navbar {
   height: 100px;
   width: 100%;
@@ -11569,5 +11533,135 @@ template {
 
 .social-media__icon {
   fill: #fefefe;
+}
+
+#app {
+  white-space: pre-line;
+}
+
+.subpages__subtext {
+  font-size: 15px !important;
+}
+
+@media (min-width: 576px) {
+  .subpages__subtext {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .subpages__subtext {
+    font-size: 20px !important;
+  }
+}
+
+.subpages__subtext-small {
+  font-size: 12px !important;
+}
+
+@media (min-width: 576px) {
+  .subpages__subtext-small {
+    font-size: 13px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .subpages__subtext-small {
+    font-size: 16px !important;
+  }
+}
+
+.guidelines__container {
+  display: flex;
+  align-items: center;
+}
+
+.guidelines__icon {
+  width: 100%;
+  max-width: 25px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.feedbackForm input[type=radio] {
+  display: none;
+}
+
+.feedbackForm__smiley-container {
+  padding: 5px;
+  border-radius: 50%;
+  display: inline;
+  background-color: #707070;
+  margin-right: 25px;
+}
+
+.feedbackForm__smiley-active {
+  background-color: #2F2F2F;
+}
+
+.feedbackForm__smiley {
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.feedbackForm__button {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.feedbackForm input[type=text] {
+  height: 50px;
+  width: 100%;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
+}
+
+.feedbackForm__feedbackText-success {
+  color: #50b375;
+}
+
+.feedbackForm__feedbackText-error {
+  color: #d9534f;
+}
+
+.contactForm input[type=text] {
+  height: 50px;
+  width: 30%;
+  min-width: 300px;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
+}
+
+.contactForm__inputText {
+  width: 100% !important;
+}
+
+.contactForm input[type=email] {
+  height: 50px;
+  width: 30%;
+  min-width: 300px;
+  background-color: #EDEDED;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border-style: none;
+}
+
+.contactForm__inputSymbol {
+  position: relative;
+}
+
+.contactForm__inputSymbol:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(/images/action-check.svg?29b464f9d0dd84b144b0895701a63e0a) center/contain no-repeat;
 }
 
