@@ -62,6 +62,9 @@ i18n
     // pass the i18n instance to react-i18next.
     .use(initReactI18next)
     .init({
+        react: {
+            useSuspense: false
+        },
         resources,
         fallbackLng: 'en',
         debug: true,
