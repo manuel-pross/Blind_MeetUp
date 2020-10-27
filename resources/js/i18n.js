@@ -8,10 +8,10 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import impressumEN from './../../public/translations/en/impressum.json';
-import impressumDE from './../../public/translations/de/impressum.json';
-import footerEN from '../../public/translations/en/footer.json';
-import footerDE from '../../public/translations/de/footer.json';
+import impressumEN from '../translations/en/impressum.json';
+import impressumDE from '../translations/de/impressum.json';
+import footerEN from '../translations/en/footer.json';
+import footerDE from '../translations/de/footer.json';
 
 // the translations
 const resources = {
