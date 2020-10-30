@@ -11359,13 +11359,13 @@ template {
 }
 
 .navbar__logo1:hover .navbar__icon-person1 {
-  -webkit-animation: rotateYPerson1 2s 1;
-          animation: rotateYPerson1 2s 1;
+  -webkit-animation: rotateYPerson1 0.5s 1;
+          animation: rotateYPerson1 0.5s 1;
 }
 
 .navbar__logo1:hover .navbar__icon-person2 {
-  -webkit-animation: rotateYPerson2 2s 1;
-          animation: rotateYPerson2 2s 1;
+  -webkit-animation: rotateYPerson2 0.5s 1;
+          animation: rotateYPerson2 0.5s 1;
 }
 
 .navbar__icon-person1 {
