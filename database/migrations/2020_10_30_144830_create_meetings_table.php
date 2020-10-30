@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePendingMeetingsTable extends Migration
+class CreateMeetingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreatePendingMeetingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pending_meetings', function (Blueprint $table) {
+        Schema::create('meetings', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('date');
+            $table->string('type');
+            $table->dateTime('date');
             $table->string('place');
-            $table->integer('numberOfMembers');
-            $table->integer('maxMembers');
+            $table->unsignedSmallInteger('members')->nullable();
+            $table->unsignedSmallInteger('max_members');
+            $table->unsignedSmallInteger('rating')->nullable();
+            $table->string('img_link')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreatePendingMeetingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pending_meetings');
+        Schema::dropIfExists('meetings');
     }
 }

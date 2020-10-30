@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'hfu_id', 'hfu_user_name', 'first_name', 'last_name', 'hfu_mail', 'role', 'password', 
     ];
 
     /**
@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function meetings() {
+        return $this->belongsToMany('App\Meeting');
+    } 
+
+    public function getPendingMeeting() {
+        return $this->belongsToMany('App\Meeting')
+        ->wherePivot('user_id', $this->id)
+        ->where('type', 'pending');
+    }
 }

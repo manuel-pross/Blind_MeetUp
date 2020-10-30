@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('pendingMeetings', 'PendingMeetingController@index');
-Route::post('pendingMeeting', 'PendingMeetingController@store');
-Route::put('pendingMeeting/{id}', 'PendingMeetingController@update');
-Route::delete('pendingMeeting/{id}', 'PendingMeetingController@delete');
+Route::get('meetings', 'MeetingController@index');
+Route::post('meeting', 'MeetingController@store');
+Route::put('meeting/{id}', 'MeetingController@update');
+Route::delete('meeting/{id}', 'MeetingController@delete');
