@@ -32,6 +32,7 @@
 
    &__content {
       text-align: left;
+      transition: 1s;
 
       &--noMargin {
          margin: 0;
@@ -42,9 +43,14 @@
             margin: 0;
          }
       }
-      &__extendedWrapper {
-         &--extended {
-            display: none;
+      &__collapsedWrapper {
+         overflow: hidden;
+         transition: transform 0.3s ease-out; // note that we're transitioning transform, not height!
+         height: auto;
+         transform-origin:top;
+         transform: scaleY(1);
+         &--collapsed {
+            transform: scaleY(0);
          }
       }
    }
