@@ -1,16 +1,14 @@
 import React from 'react';
 
-let wrapperStyle = {};
-
 function ImageText(props) {
 
    const wrapperStyle = props.alignment ? { flexDirection: 'row' } : { flexDirection: 'row-reverse' };
-   // const imageStyle = props.alignment ? { marginRight: '2rem' } : { marginLeft: '2rem' };
+   const textStyle = !props.alignment ? { marginRight: '3rem' } : { marginLeft: '3rem' };
 
    return (
       <div className="imageText" style={wrapperStyle}>
          <img src={props.img} alt=""  className="imageText__img" />
-         <p className="imageText__text" className="imageText__text">{props.text}</p>
+         <p className="imageText__text" className="imageText__text" style={textStyle}>{props.text}</p>
       </div>
    )
 }

@@ -282,8 +282,8 @@
       }
 
       &__image {
-         width: 400px !important;
-         height: 400px !important;
+         width: 415px !important;
+         height: 415px !important;
          object-fit: cover !important;
 
          @include breakpoint("xl") {
@@ -292,13 +292,30 @@
          }
 
          &-pia {
-            object-position: -88px -112px !important;
+            object-position: -96px -112px !important;
+
+            @include breakpoint("sm") {
+               object-position: -73px -112px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -50px -112px !important;
+            }
          }
 
          &-gion {
-            object-position: -68px -52px !important;
-            width: 350px !important;
-            height: 350px !important;
+            object-position: -85px -52px !important;
+
+            width: 370px !important;
+            height: 370px !important;
+
+            @include breakpoint("sm") {
+               object-position: -53px -52px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -29px -52px !important;
+            }
 
             @include breakpoint("xl") {
                width: 425px !important;
@@ -308,18 +325,50 @@
 
          &-manuel {
             object-position: -98px -92px !important;
+
+            @include breakpoint("sm") {
+               object-position: -78px -92px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -54px -92px !important;
+            }
          }
 
          &-simon {
-            object-position: -98px -102px !important;
+            object-position: -105px -102px !important;
+
+            @include breakpoint("sm") {
+               object-position: -81px -102px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -57px -102px !important;
+            }
          }
 
          &-patrickN {
-            object-position: -99px -102px !important;
+            object-position: -103px -108px !important;
+
+            @include breakpoint("sm") {
+               object-position: -80px -108px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -55px -108px !important;
+            }
          }
 
          &-patrickK {
-            object-position: -100px -62px !important;
+            object-position: -115px -69px !important;
+
+            @include breakpoint("sm") {
+               object-position: -85px -69px !important;
+            }
+
+            @include breakpoint("md") {
+               object-position: -59px -69px !important;
+            }
          }
       }
 
@@ -330,7 +379,7 @@
          padding: 20px 0;
          left: 0;
          bottom: 9px;
-         opacity: 0.5;
+         opacity: 0.65;
          background-color: #010101;
 
          @include breakpoint("sm") {
@@ -356,21 +405,31 @@
    &__desc {
       position: absolute !important;
       bottom: 18px;
-      right: 8px;
+      right: 0;
+      left: 0;
       z-index: 1;
 
       @include breakpoint("md") {
          right: 20px;
       }
 
+      @include breakpoint("xl") {
+        left: unset;
+      }
+
       &-title,
       &-desc {
-         margin: 0;
-         text-align: right;
+         margin: 0 auto;
+         text-align: center;
          color: $c-white;
+
+         @include breakpoint("xl") {
+            text-align: right;
+         }
       }
       &-desc {
          display: none;
+
          @include breakpoint("sm") {
             display: block;
          }

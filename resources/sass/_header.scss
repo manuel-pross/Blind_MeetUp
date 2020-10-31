@@ -20,7 +20,7 @@
     object-position: 40% 100%;
 
     @include breakpoint("xl") {
-      height: 930px;
+      height: 100vh;
     }
   }
 
