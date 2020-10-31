@@ -20,11 +20,11 @@ const FAQ = () => {
       <p className="FAQ__content__text--noMargin" key={-2}>Hier findet ihr ein FAQ mit vielen nützlichen Informationen rund um Blind MeetUp</p>,
    ])
 
-   const [ifExtended, setifExtended] = useState(false)
+   const [ifCollapsed, setifExtended] = useState(false)
    const [extendedContent, setExtendedContent] = useState(false)
 
    const CatButtonClickHandler = (i) => {
-      if (ifExtended) {
+      if (ifCollapsed) {
          setifExtended(false)
       }
       const category = (Categories[i]);
@@ -56,7 +56,7 @@ const FAQ = () => {
    }
 
    const extendetButtonClickHandler = () => {
-      if (ifExtended) {
+      if (ifCollapsed) {
          setifExtended(false);
          document.getElementById("FAQ-btn").innerText = "Mehr Anzeigen"
       } else {
@@ -80,9 +80,9 @@ const FAQ = () => {
                </div>
                <div className="FAQ__contentWrapper">
                   {currentContent}
-                  <div className={ifExtended ? "FAQ__content__extendedWrapper" : "FAQ__content__extendedWrapper--extended"}>
+                  <ddfiv className={ifCollapsed ? "FAQ__content__collapsedWrapper" : "FAQ__content__collapsedWrapper--collapsed"}>
                      {extendedContent}
-                  </div>
+                  </ddfiv>
                   <button onClick={extendetButtonClickHandler} disabled={btnClass.active} id="FAQ-btn" className={btnClass.class + " my-100"}>Mehr anzeigen</button>
                </div>
             </div>
