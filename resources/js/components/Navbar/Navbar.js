@@ -7,6 +7,7 @@ import Bildmarke from '../../../assets/img/Bildmarke.png';
 
 
 import NavigationItems from './NavigationItems/NavigationItems';
+import AnimatedSVGItem from './NavigationItems/AnimatedSVGItem/AnimatedSVGItem'
 
 class Navbar extends Component {
 
@@ -17,11 +18,12 @@ class Navbar extends Component {
     render() {
         return (
             <header className="navbar">
-                <img
+                {/* <img
                     src={Wortmarke_OneLine}
                     className="navbar__logo1"
                     alt="BlindMeetUp_Logo1"
-                    onClick={this.scrollToTop} />
+                    onClick={this.scrollToTop} /> */}
+                <AnimatedSVGItem />
                 <img
                     src={Bildmarke}
                     className="navbar__logo2"
