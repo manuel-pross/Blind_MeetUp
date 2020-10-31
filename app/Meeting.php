@@ -12,7 +12,7 @@ class Meeting extends Model
 
     public function users() {
         return $this->belongsToMany('App\User');
-    } 
+    }
 
     public function getPastMeetings() {
         return $this->where('type', 'past');

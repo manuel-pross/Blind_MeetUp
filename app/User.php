@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function meetings() {
         return $this->belongsToMany('App\Meeting');
-    } 
+    }
 
     public function getPendingMeeting() {
         return $this->belongsToMany('App\Meeting')

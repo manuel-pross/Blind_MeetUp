@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
@@ -11,6 +12,22 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 5)->create();
+        factory(App\User::class, 5)->create()
+            ->each(function ($user){
+                $meeting_ids = range(1, 5);
+                shuffle($meeting_ids);
+                $connections = array_slice($meeting_ids, 0, rand(0, 3));
+                foreach ($connections as $value) {
+                    DB::table('meeting_user')
+                        ->insert(
+                            [
+                                'user_id' => $user->id,
+                                'meeting_id' => $value,
+                                'created_at' => Now(),
+                                'updated_at' => Now()
+                            ]
+                        );
+                }
+            });
     }
 }
