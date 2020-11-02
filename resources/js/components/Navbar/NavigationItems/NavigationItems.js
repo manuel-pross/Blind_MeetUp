@@ -16,10 +16,10 @@ const navigationItems = () => {
                 <NavigationItem hashLink link="Ablauf" offset={-100} duration={500}>Ablauf</NavigationItem>
                 <NavigationItem hashLink link="Team" offset={-100} duration={500}>Unser Team</NavigationItem>
                 <NavigationItem hashLink link="FAQ" offset={-100} duration={500}>FAQ</NavigationItem>
-                <NavigationItem link="/dashboard">Anmelden</NavigationItem>
+                <NavigationItem link="/dashboard/anmelden">Anmelden</NavigationItem>
             </React.Fragment>
         );
-    } else if (currentPath == "/dashboard") {
+    } else if (currentPath == "/dashboard/anmelden" || "/dashboard/anstehend" || "/dashboard/vergangen") {
         navbarItems = (
             <React.Fragment>
                 <NavigationItem onlyText>Treffen</NavigationItem>
@@ -30,7 +30,7 @@ const navigationItems = () => {
         navbarItems = (
             <React.Fragment>
                 <NavigationItem link="/">Startseite</NavigationItem>
-                <NavigationItem link="/dashboard">Anmelden</NavigationItem>
+                <NavigationItem link="/dashboard/anmelden">Anmelden</NavigationItem>
             </React.Fragment>
         );
     }
