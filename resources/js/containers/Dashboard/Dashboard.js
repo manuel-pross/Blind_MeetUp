@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -6,15 +7,41 @@ import MeetUps from '../../components/MeetUps/MeetUps';
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import FAQ from '../../components/FAQ/FAQ';
 
+import SubNavbar from '../../components/SubNavbar/SubNavbar';
 
-const Dashboard = () => (
-    <React.Fragment>
-        <Navbar />
-        <DashboardHeader />
-        <MeetUps/>
-        <FAQ />
-        <Footer />
-    </React.Fragment>
-);
+
+
+class Dashboard extends Component {
+    state = {
+        meetings: []
+    }
+
+    loadTask = () => {
+        axios.get('/api/meetings').then((response) => {
+            // console.log(response);
+            this.setState({
+                meetings: response.data
+            });
+        });
+    }
+
+    componentWillMount() {
+        this.loadTask();
+    }
+
+
+    render() {
+        return (
+            <React.Fragment>
+                <Navbar />
+                {/* <DashboardHeader /> */}
+                <SubNavbar match={this.props.match} meetings={this.state.meetings} loadTask={this.loadTask} />
+                <FAQ />
+                <Footer />
+            </React.Fragment>
+        );
+    }
+
+}
 
 export default Dashboard;

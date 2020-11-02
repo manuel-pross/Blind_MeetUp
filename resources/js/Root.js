@@ -9,6 +9,8 @@ import Dataprotection from './containers/Pages/Dataprotection';
 import Guidelines from './containers/Pages/Guidelines';
 import Impressum from './containers/Pages/Impressum';
 
+import MeetUps from './components/MeetUps/MeetUps';
+
 import Dashboard from './containers/Dashboard/Dashboard';
 
 function Root() {
@@ -24,8 +26,7 @@ function Root() {
             <Route exact path="/richtlinien" component={Guidelines} />
             <Route exact path="/impressum" component={Impressum} />
 
-
-            <Route exact path="/dashboard" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} />
         </Switch>
     );
 }
