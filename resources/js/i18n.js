@@ -67,7 +67,7 @@ i18n
         },
         resources,
         fallbackLng: 'en',
-        debug: true,
+        // debug: true,
         // lng: 'de',
         // detection: options,
 

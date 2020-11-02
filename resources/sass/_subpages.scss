@@ -102,6 +102,16 @@
         border-style: none;
     }
 
+    input[type="number"] {
+        height: 50px;
+        width: 30%;
+        min-width: 300px;
+        background-color: $c-lightGreyInput;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border-style: none;
+    }
+
     &__inputSymbol {
         position: relative;
     }

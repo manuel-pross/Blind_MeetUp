@@ -21,6 +21,24 @@ Route::get('/dashboard', function () {
     return view('styleguide');
 });
 
+Route::get('/dashboard/anmelden', function () {
+    return view('styleguide');
+});
+
+Route::get('/dashboard/anstehend', function () {
+    return view('styleguide');
+});
+
+Route::get('/dashboard/vergangen', function () {
+    return view('styleguide');
+});
+
+
+
+Route::get('/dashboard/angemeldet', function () {
+    return view('styleguide');
+});
+
 Route::get('/styleguide', function () {
     return view('styleguide');
 });
@@ -44,6 +62,8 @@ Route::get('/feedback', function () {
 Route::get('/kontakt', function () {
     return view('styleguide');
 });
+
+Route::get('meetings', 'MeetingController@index');
 
 Auth::routes();
 
