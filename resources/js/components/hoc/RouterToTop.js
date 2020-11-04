@@ -1,18 +1,25 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
+import { useEffect } from 'react';
 
-class ScrollToTop extends React.Component {
-    componentDidUpdate(prevProps) {
-        if (
-            this.props.location.pathname !== prevProps.location.pathname
-        ) {
+const RouterToTop = ({ history, location }) => {
+    const dontScrollIntoViewOnPaths = ["/dashboard/vergangen", "/dashboard/anstehend", "/dashboard/anmelden"];
+
+    useEffect(() => {
+        if (history.action === "POP") {
+            return;
+        }
+
+        let { hash, pathname } = location;
+        if (hash) {
+            let element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ block: "start", behavior: "smooth" });
+            }
+        } else if (!dontScrollIntoViewOnPaths.includes(pathname)) {
             window.scrollTo(0, 0);
         }
-    }
+    });
 
-    render() {
-        return null;
-    }
-}
+    return null;
+};
 
-export default withRouter(ScrollToTop);
+export default RouterToTop;

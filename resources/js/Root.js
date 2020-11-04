@@ -9,25 +9,28 @@ import Dataprotection from './containers/Pages/Dataprotection';
 import Guidelines from './containers/Pages/Guidelines';
 import Impressum from './containers/Pages/Impressum';
 
-import MeetUps from './components/MeetUps/MeetUps';
-
 import Dashboard from './containers/Dashboard/Dashboard';
+
+import RouteToTop from './components/hoc/RouterToTop';
 
 function Root() {
     return (
-        <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/styleguide" component={Styleguide} />
+        <React.Fragment>
+            <Route component={RouteToTop} />
+            <Switch>
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/styleguide" component={Styleguide} />
 
-            {/* Footer Routes*/}
-            <Route exact path="/kontakt" component={Contact} />
-            <Route exact path="/feedback" component={Feedback} />
-            <Route exact path="/datenschutz" component={Dataprotection} />
-            <Route exact path="/richtlinien" component={Guidelines} />
-            <Route exact path="/impressum" component={Impressum} />
+                {/* Footer Routes*/}
+                <Route exact path="/kontakt" component={Contact} />
+                <Route exact path="/feedback" component={Feedback} />
+                <Route exact path="/datenschutz" component={Dataprotection} />
+                <Route exact path="/richtlinien" component={Guidelines} />
+                <Route exact path="/impressum" component={Impressum} />
 
+            </Switch>
             <Route path="/dashboard" component={Dashboard} />
-        </Switch>
+        </React.Fragment>
     );
 }
 

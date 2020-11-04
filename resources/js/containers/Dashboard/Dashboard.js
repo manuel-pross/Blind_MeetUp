@@ -34,7 +34,7 @@ class Dashboard extends Component {
         return (
             <React.Fragment>
                 <Navbar />
-                {/* <DashboardHeader /> */}
+                <DashboardHeader />
                 <SubNavbar match={this.props.match} meetings={this.state.meetings} loadTask={this.loadTask} />
                 <FAQ />
                 <Footer />

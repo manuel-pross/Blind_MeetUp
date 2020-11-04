@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Route  } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 
 
 import MeetUps from '../MeetUps/MeetUps';
@@ -10,7 +10,6 @@ class SubNavbar extends Component {
         registered: 0,
         pending: 2,
         past: 0,
-
     }
 
     render() {
