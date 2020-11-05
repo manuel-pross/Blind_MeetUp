@@ -11,12 +11,10 @@ import Impressum from './containers/Pages/Impressum';
 
 import Dashboard from './containers/Dashboard/Dashboard';
 
-import RouteToTop from './components/hoc/RouterToTop';
 
 function Root() {
     return (
         <React.Fragment>
-            <Route component={RouteToTop} />
             <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/styleguide" component={Styleguide} />
@@ -28,8 +26,8 @@ function Root() {
                 <Route exact path="/richtlinien" component={Guidelines} />
                 <Route exact path="/impressum" component={Impressum} />
 
+                <Route path="/dashboard" component={Dashboard} />
             </Switch>
-            <Route path="/dashboard" component={Dashboard} />
         </React.Fragment>
     );
 }

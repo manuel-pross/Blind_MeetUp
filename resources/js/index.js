@@ -5,16 +5,21 @@ import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
+import ScrollToTop from './components/hoc/ScrollToTop';
 
 // For translations
 import './i18n';
 
+
+
 ReactDOM.render(
   <BrowserRouter>
-    <DevSizeBtn />
-    <React.StrictMode>
-      <Root />
-    </React.StrictMode>
+    <ScrollToTop>
+      <DevSizeBtn />
+      <React.StrictMode>
+        <Root />
+      </React.StrictMode>
+    </ScrollToTop>
   </BrowserRouter>,
   document.getElementById('app')
 );
