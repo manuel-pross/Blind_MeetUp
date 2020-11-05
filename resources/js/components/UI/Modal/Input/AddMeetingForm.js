@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const AddMeetingForm = (props) => {
     const [type, setType] = useState("");
     const [place, setPlace] = useState("");
+    const [date, setDate] = useState("");
     const [members, setMembers] = useState("");
     const [max_members, setMaxMembers] = useState("");
     const [rating, seRating] = useState("");
@@ -10,26 +11,19 @@ const AddMeetingForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(location);
         addMeeting();
     }
 
     const addMeeting = () => {
-        const sendingData = { type: type, place: place, members: members, max_members: max_members, rating: rating, img_link: img_link };
+        console.log(date);
+        let sendingData = { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link };
         console.log(sendingData);
-        let dummyData = { type: "pending", place: "Mensa", members: 7, max_members: 20, rating: 1, img_link: "adsfsfd" }
-        axios.post('/api/meeting', { sendingData }).then((response) => {
-            // let { tasks } = this.state;
-            // this.loadTask();
-            // this.setState({
-            //     tasks,
-            //     newTaskModal: false,
-            //     newTaskData: {
-            //         name: "",
-            //         description: ""
-            //     }
-            // });
-            console.log('gesetzt')
+        let dummyData = { type: "pending", place: "Mensa", date: "2020-11-11T16:52", members: 7, max_members: 20, rating: 1, img_link: "adsfsfd" }
+        console.log(dummyData);
+        axios.post('/api/meeting', sendingData).then((response) => {
+            props.loadTask();
+            props.modalHandler();
+            resetEditState();
         })
         // .catch(error => {
         //     console.log(error)
@@ -64,6 +58,10 @@ const AddMeetingForm = (props) => {
             <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Place:</p>
                 <input className="mb-100" type="text" name="place" placeholder="Place" value={place} onChange={(event) => setPlace(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Date:</p>
+                <input className="mb-100" type="datetime-local" name="date" placeholder="Date" value={date} onChange={(event) => setDate(event.target.value)} />
             </div>
             <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Members:</p>

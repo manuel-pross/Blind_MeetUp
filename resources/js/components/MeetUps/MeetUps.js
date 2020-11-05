@@ -14,6 +14,7 @@ class MeetUps extends Component {
       editMeetingData: {
          id: "",
          type: "",
+         date: "",
          place: "",
          members: "",
          max_members: "",
@@ -30,11 +31,12 @@ class MeetUps extends Component {
       });
    }
 
-   editMeeting = (id, type, place, members, max_members, rating, img_link) => {
+   editMeeting = (id, type, date, place, members, max_members, rating, img_link) => {
       this.setState({
          editMeetingData: {
             id,
             type,
+            date,
             place,
             members,
             max_members,
@@ -69,12 +71,13 @@ class MeetUps extends Component {
             <ul key={meeting.id}>
                {/* <li> <strong>ID: </strong>{meeting.id}</li> */}
                <li><strong>type:</strong> {meeting.type}</li>
+               <li><strong>date:</strong> {meeting.date}</li>
                <li><strong>place:</strong> {meeting.place}</li>
                <li><strong>members:</strong> {meeting.members}</li>
                <li><strong>max_members:</strong> {meeting.max_members}</li>
                <li><strong>rating:</strong> {meeting.rating}</li>
                {/* <li><strong>img_link:</strong> {meeting.img_link}</li> */}
-               <button onClick={() => this.editMeeting(meeting.id, meeting.type, meeting.place, meeting.members, meeting.max_members, meeting.rating, meeting.img_link)}>Bearbeiten</button>
+               <button onClick={() => this.editMeeting(meeting.id, meeting.type, meeting.date, meeting.place, meeting.members, meeting.max_members, meeting.rating, meeting.img_link)}>Bearbeiten</button>
                <button onClick={() => this.deleteMeeting(meeting.id)}>Löschen</button>
             </ul>
 

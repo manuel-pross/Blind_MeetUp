@@ -18,14 +18,13 @@ class Dashboard extends Component {
 
     loadTask = () => {
         axios.get('/api/meetings').then((response) => {
-            // console.log(response);
             this.setState({
                 meetings: response.data
             });
         });
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.loadTask();
     }
 

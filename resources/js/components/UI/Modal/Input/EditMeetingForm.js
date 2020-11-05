@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const EditMeetingForm = (props) => {
-    const [type, setType] = useState("");
+const EditMeetingForm = props => {
+    const [type, setType] = useState(props.editMeetingData.type);
     const [place, setPlace] = useState("");
+    const [date, setDate] = useState("");
     const [members, setMembers] = useState("");
     const [max_members, setMaxMembers] = useState("");
     const [rating, seRating] = useState("");
     const [img_link, setImgLink] = useState("");
+
+    // useEffect(() => {
+    //     console.log("aufgerufen")
+    //     setType(props.editMeetingData.type);
+    //     setDate(props.editMeetingData.place);
+    //     setPlace(props.editMeetingData.date);
+    //     setMembers(props.editMeetingData.members);
+    //     setMaxMembers(props.editMeetingData.max_members);
+    //     seRating(props.editMeetingData.rating);
+    //     setImgLink(props.editMeetingData.img_link);
+    // });
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -14,7 +26,7 @@ const EditMeetingForm = (props) => {
     }
 
     const updateMeeting = () => {
-        axios.put('/api/meeting/' + props.editMeetingData.id, { type: type, place: place, members: members, max_members: max_members, rating: rating, img_link: img_link })
+        axios.put('/api/meeting/' + props.editMeetingData.id, { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link })
             .then((response) => {
                 props.loadTask();
                 props.modalHandler();
@@ -24,6 +36,7 @@ const EditMeetingForm = (props) => {
 
     const resetEditState = () => {
         setType("");
+        setDate("");
         setPlace("");
         setMembers("");
         setMaxMembers("");
@@ -42,6 +55,10 @@ const EditMeetingForm = (props) => {
             <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Type:</p>
                 <input className="mb-100" type="text" name="type" placeholder="Type" value={type} onChange={(event) => setType(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Date:</p>
+                <input className="mb-100" type="datetime-local" name="date" placeholder="Date" value={date} onChange={(event) => setDate(event.target.value)} />
             </div>
             <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Place:</p>
