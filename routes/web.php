@@ -34,7 +34,6 @@ Route::get('/dashboard/vergangen', function () {
 });
 
 
-
 Route::get('/dashboard/angemeldet', function () {
     return view('styleguide');
 });

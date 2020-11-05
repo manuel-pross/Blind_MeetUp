@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 const AddMeetingForm = (props) => {
-    const [type, setLocation] = useState("pending"); 
-    const [place, setPlace] = useState("Mensa");
-    const [members, setMembers] = useState(0);
-    const [max_members, setMaxMembers] = useState(5);
-    const [rating, seRating] = useState(5);
-    const [img_link, setIMGLink] = useState(null);
+    const [type, setType] = useState("");
+    const [place, setPlace] = useState("");
+    const [members, setMembers] = useState("");
+    const [max_members, setMaxMembers] = useState("");
+    const [rating, seRating] = useState("");
+    const [img_link, setImgLink] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -14,25 +14,11 @@ const AddMeetingForm = (props) => {
         addMeeting();
     }
 
-    const handleLocation = (event) => {
-        setLocation(event.target.value);
-    }
-
-    const handleMaxMembers = (event) => {
-        setMaxMembers(event.target.value);
-    }
-
     const addMeeting = () => {
         const sendingData = { type: type, place: place, members: members, max_members: max_members, rating: rating, img_link: img_link };
         console.log(sendingData);
-        axios.post('/api/meeting', {
-            type: "pending",
-            place: "Mensa",
-            members: 3,
-            max_mebers: 6,
-            rating: 1,
-            img_link: null
-        }).then((response) => {
+        let dummyData = { type: "pending", place: "Mensa", members: 7, max_members: 20, rating: 1, img_link: "adsfsfd" }
+        axios.post('/api/meeting', { sendingData }).then((response) => {
             // let { tasks } = this.state;
             // this.loadTask();
             // this.setState({
@@ -51,19 +37,53 @@ const AddMeetingForm = (props) => {
     }
 
 
+
+    const resetEditState = () => {
+        setType("");
+        setPlace("");
+        setMembers("");
+        setMaxMembers("");
+        seRating("");
+        setImgLink("");
+    }
+
+    const cancelHandler = () => {
+        props.modalHandler();
+        resetEditState();
+    }
+
+
+
     return (
         <form className="contactForm" onSubmit={handleSubmit}>
+            <h4 className="mt-0">Termin hinzufügen</h4>
             <div>
-                Ort/Platz
-            <input className="mb-100" type="text" name="Ort" placeholder="Ort/Platz" value={place} onChange={handleLocation} />
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Type:</p>
+                <input className="mb-100" type="text" name="type" placeholder="Type" value={type} onChange={(event) => setType(event.target.value)} />
             </div>
             <div>
-                Anzahl der maximalen Teilnehmer
-            <input className="mb-100" type="number" name="max_Members" placeholder="Anzahl der maximalen Teilnehmer" value={max_members} onChange={handleMaxMembers} />
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Place:</p>
+                <input className="mb-100" type="text" name="place" placeholder="Place" value={place} onChange={(event) => setPlace(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Members:</p>
+                <input className="mb-100" type="number" name="members" placeholder="Members" value={members} onChange={(event) => setMembers(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Max Members:</p>
+                <input className="mb-100" type="number" name="max_Members" placeholder="Max Members" value={max_members} onChange={(event) => setMaxMembers(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Rating:</p>
+                <input className="mb-100" type="number" name="rating" placeholder="Rating" value={rating} onChange={(event) => seRating(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Img Link:</p>
+                <input className="mb-100" type="text" name="img_link" placeholder="Img Link" value={img_link} onChange={(event) => setImgLink(event.target.value)} />
             </div>
 
             <input className="btn btn-primary mr-100 mb-50" type="submit" value="Abschicken" />
-            <div className="btn btn-second" onClick={props.modalHandler} >Abbrechen</div>
+            <div className="btn btn-second" onClick={cancelHandler} >Abbrechen</div>
         </form>
     );
 
