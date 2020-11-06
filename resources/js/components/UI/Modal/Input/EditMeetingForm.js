@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import moment from 'moment';
+
 const EditMeetingForm = props => {
     const [type, setType] = useState("");
     const [place, setPlace] = useState("");
@@ -9,9 +11,10 @@ const EditMeetingForm = props => {
     const [rating, seRating] = useState("");
     const [img_link, setImgLink] = useState("");
 
-    useEffect(() => {  
+
+    useEffect(() => {
         setType(props.editMeetingData.type);
-        setDate(props.editMeetingData.date);
+        setDate(moment(props.editMeetingData.date).format("YYYY-MM-DDTkk:mm") == "Invalid date" ? "" : moment(props.editMeetingData.date).format("YYYY-MM-DDTkk:mm"));
         setPlace(props.editMeetingData.place);
         setMembers(props.editMeetingData.members);
         setMaxMembers(props.editMeetingData.max_members);
