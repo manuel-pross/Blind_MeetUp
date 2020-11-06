@@ -1,0 +1,58 @@
+{
+   "categories": {
+      "cat1": "Login",
+      "cat2": "General",
+      "cat3": "Meeting",
+      "cat4": "Other"
+   },
+   "title": "Frequently asked questions for new users",
+   "text": "Choose a category to show the most frequently asked questions",
+   "buttonDesc": {
+      "collapsed": "Show more",
+      "open": "Show less"
+   },
+   "Login": {
+      "title1": "Login 01",
+      "content1": "Login 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title2": "Login 02",
+      "content2": "Login 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title3": "Login 03",
+      "content3": "Login 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title4": "Login 04",
+      "content4": "Login 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title5": "Login 05",
+      "content5": "Login 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title6": "Login 06",
+      "content6": "Login 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   },
+   "General": {
+      "title1": "General 01",
+      "content1": "General 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title2": "General 02",
+      "content2": "General 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title3": "General 03",
+      "content3": "General 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title4": "General 04",
+      "content4": "General 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title5": "General 05",
+      "content5": "General 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title6": "General 06",
+      "content6": "General 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   },
+   "Meeting": {
+      "title1": "Meeting 01",
+      "content1": "Meeting 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title2": "Meeting 02",
+      "content2": "Meeting 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title3": "Meeting 03",
+      "content3": "Meeting 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   },
+   "Other": {
+      "title1": "Other 01",
+      "content1": "Other 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title2": "Other 02",
+      "content2": "Other 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
+      "title3": "Other 03",
+      "content3": "Other 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   }
+}

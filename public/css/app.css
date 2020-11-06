@@ -11336,6 +11336,10 @@ template {
   }
 }
 
+.FAQ__desc {
+  margin-top: 0;
+}
+
 .FAQ__catWrapper {
   margin-bottom: 2rem;
 }
@@ -11348,37 +11352,25 @@ template {
   }
 }
 
-.FAQ__contentWrapper h4 {
+.FAQ__content__title {
   margin-top: 0;
-}
-
-.FAQ__contentWrapper__btn--disabled {
-  display: none !important;
-}
-
-.FAQ__content {
+  margin-bottom: 0.5rem;
   text-align: left;
-  transition: 1s;
 }
 
-.FAQ__content--noMargin {
+.FAQ__content__text {
   margin: 0;
+  margin-bottom: 1.3rem;
 }
 
-.FAQ__content__text--noMargin {
-  margin: 0;
+@media (min-width: 992px) {
+  .FAQ__content__text {
+    margin-bottom: 2rem;
+  }
 }
 
-.FAQ__content__collapsedWrapper {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-  height: auto;
-  transform-origin: top;
-  transform: scaleY(1);
-}
-
-.FAQ__content__collapsedWrapper--collapsed {
-  transform: scaleY(0);
+.FAQ__content__btn--disabled {
+  display: none !important;
 }
 
 .FAQ__btn {
@@ -11397,6 +11389,28 @@ template {
   .FAQ__selectCat {
     margin-top: 0;
   }
+}
+
+.FAQ__trigger {
+  cursor: pointer;
+  content: "Show more";
+  color: #2e6c48;
+  display: inline-block;
+  padding: 15px 30px !important;
+  border-radius: 30px !important;
+  border: 1px solid #2e6b474d !important;
+  background-color: #fefefe;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+.FAQ__trigger:hover {
+  border: 1px solid #2e6c48 !important;
+}
+
+.FAQ__trigger--collapsed {
+  display: none;
 }
 
 .dashboardHeader__image {

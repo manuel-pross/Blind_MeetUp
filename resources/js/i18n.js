@@ -12,16 +12,20 @@ import impressumEN from '../translations/en/impressum.json';
 import impressumDE from '../translations/de/impressum.json';
 import footerEN from '../translations/en/footer.json';
 import footerDE from '../translations/de/footer.json';
+import faqEN from '../translations/en/faq.json';
+import faqDE from '../translations/de/faq.json';
 
 // the translations
 const resources = {
     en: {
         impressum: impressumEN,
-        footer: footerEN
+        footer: footerEN,
+        faq: faqEN
     },
     de: {
         impressum: impressumDE,
-        footer: footerDE
+        footer: footerDE,
+        faq: faqDE
     }
 };
 
