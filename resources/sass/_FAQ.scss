@@ -55,12 +55,6 @@
       }
    }
 
-   &__selectCat {
-      @include breakpoint("lg") {
-         margin-top: 0;
-      }
-   }
-
    &__trigger {
       cursor: pointer;
       content: "Show more";

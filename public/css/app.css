@@ -11385,12 +11385,6 @@ template {
   }
 }
 
-@media (min-width: 992px) {
-  .FAQ__selectCat {
-    margin-top: 0;
-  }
-}
-
 .FAQ__trigger {
   cursor: pointer;
   content: "Show more";
