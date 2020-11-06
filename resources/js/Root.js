@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Styleguide from './containers/Styleguide/Styleguide';
 import LandingPage from './containers/LandingPage/LandingPage';
 
@@ -26,7 +26,9 @@ function Root() {
                 <Route exact path="/richtlinien" component={Guidelines} />
                 <Route exact path="/impressum" component={Impressum} />
 
-                <Route path="/dashboard" component={Dashboard} />
+                <Route path="/dashboard" component={Dashboard}>
+
+                </Route>
             </Switch>
         </React.Fragment>
     );

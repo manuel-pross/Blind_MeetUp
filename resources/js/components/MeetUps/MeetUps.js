@@ -19,7 +19,7 @@ class MeetUps extends Component {
          members: "",
          max_members: "",
          rating: "",
-         img_link: null
+         img_link: ""
       }
    }
 

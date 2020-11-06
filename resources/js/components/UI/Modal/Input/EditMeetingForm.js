@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const EditMeetingForm = props => {
-    const [type, setType] = useState(props.editMeetingData.type);
+    const [type, setType] = useState("");
     const [place, setPlace] = useState("");
     const [date, setDate] = useState("");
     const [members, setMembers] = useState("");
@@ -9,16 +9,15 @@ const EditMeetingForm = props => {
     const [rating, seRating] = useState("");
     const [img_link, setImgLink] = useState("");
 
-    // useEffect(() => {
-    //     console.log("aufgerufen")
-    //     setType(props.editMeetingData.type);
-    //     setDate(props.editMeetingData.place);
-    //     setPlace(props.editMeetingData.date);
-    //     setMembers(props.editMeetingData.members);
-    //     setMaxMembers(props.editMeetingData.max_members);
-    //     seRating(props.editMeetingData.rating);
-    //     setImgLink(props.editMeetingData.img_link);
-    // });
+    useEffect(() => {  
+        setType(props.editMeetingData.type);
+        setDate(props.editMeetingData.date);
+        setPlace(props.editMeetingData.place);
+        setMembers(props.editMeetingData.members);
+        setMaxMembers(props.editMeetingData.max_members);
+        seRating(props.editMeetingData.rating);
+        setImgLink(props.editMeetingData.img_link);
+    }, [props]);
 
     const handleSubmit = (event) => {
         event.preventDefault();

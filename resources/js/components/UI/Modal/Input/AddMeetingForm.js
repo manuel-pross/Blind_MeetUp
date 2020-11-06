@@ -25,12 +25,7 @@ const AddMeetingForm = (props) => {
             props.modalHandler();
             resetEditState();
         })
-        // .catch(error => {
-        //     console.log(error)
-        // });
     }
-
-
 
     const resetEditState = () => {
         setType("");
@@ -45,8 +40,6 @@ const AddMeetingForm = (props) => {
         props.modalHandler();
         resetEditState();
     }
-
-
 
     return (
         <form className="contactForm" onSubmit={handleSubmit}>
