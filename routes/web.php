@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('startpage');
 });
 
-Route::get('/dashboard', function () {
-    return view('startpage');
-});
-
 Route::get('/styleguide', function () {
     return view('startpage');
 });
