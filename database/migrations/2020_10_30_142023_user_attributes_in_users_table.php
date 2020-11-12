@@ -15,7 +15,7 @@ class UserAttributesInUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('hfu_id')->after('id');
-            $table->string('hfu_user_name')->after('hfu_id');
+            $table->string('hfu_user_name')->unique()->after('hfu_id');
             $table->renameColumn('name', 'first_name');
             $table->string('last_name')->after('name');
             $table->renameColumn('email', 'hfu_mail');
