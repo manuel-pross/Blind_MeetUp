@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
-
 import TeamImage from './TeamImage';
+
+import { withTranslation } from 'react-i18next';
 
 import pia from '../../../assets/img/TeamImages/pia.png';
 import patrickK from '../../../assets/img/TeamImages/patrickK.png';
@@ -12,18 +13,18 @@ import gion from '../../../assets/img/TeamImages/gion.png';
 
 class Teamslider extends Component {
 
-   state = {
-      descs: [
-         { img: manuel, name: "Manuel Proß", descText: "Projekt-Initiator & Entwickler", class: "-manuel" },
-         { img: patrickK, name: "Patrick Kaserer", descText: "Projekt-Initiator & Entwickler", class: "-patrickK" },
-         { img: simon, name: "Simon Dold", descText: "Entwickler", class: "-simon" },
-         { img: pia, name: "Pia Zeller", descText: "Marketing", class: "-pia" },
-         { img: patrickN, name: "Patrick Neudert", descText: "Design & Konzeption", class: "-patrickN" },
-         { img: gion, name: "Gion Egel", descText: "Design & Konzeption", class: "-gion" },
-      ]
-   }
-
    render() {
+
+      const { t } = this.props;
+      const team = [
+         { img: manuel, name: "Manuel Proß", descText: t("manuel"), class: "-manuel" },
+         { img: patrickK, name: "Patrick Kaserer", descText: t("patrickK"), class: "-patrickK" },
+         { img: simon, name: "Simon Dold", descText: t("simon"), class: "-simon" },
+         { img: pia, name: "Pia Zeller", descText: t("pia"), class: "-pia" },
+         { img: gion, name: "Gion Egel", descText: t("gion"), class: "-gion" },
+         { img: patrickN, name: "Patrick Neudert", descText: t("patrickN"), class: "-patrickN" },
+      ]
+
       function SampleNextArrow(props) {
          const { onClick } = props;
          return (
@@ -50,7 +51,7 @@ class Teamslider extends Component {
          className: "teamImages",
          infinite: true,
          variableWidth: true,
-         arrows: true, 
+         arrows: true,
          slidesToShow: 1,
          nextArrow: <SampleNextArrow />,
          prevArrow: <SamplePrevArrow />
@@ -61,7 +62,7 @@ class Teamslider extends Component {
             <div className="teamSlider">
                <h2 className="teamSlider__heading">Unser Team</h2>
                <Slider {...settings}>
-                  {this.state.descs.map((desc, i) => {
+                  {team.map((desc, i) => {
                      return (
                         <TeamImage key={i} name={desc.name} class={desc.class} img={desc.img} descText={desc.descText} />
                      )
@@ -74,4 +75,4 @@ class Teamslider extends Component {
 }
 
 
-export default Teamslider;
+export default withTranslation('teamSlider')(Teamslider);

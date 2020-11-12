@@ -28,6 +28,10 @@ import textIconEN from '../translations/en/textIcon.json';
 import textIconDE from '../translations/de/textIcon.json';
 import socialMediaEN from '../translations/en/socialMedia.json';
 import socialMediaDE from '../translations/de/socialMedia.json';
+import teamSliderEN from '../translations/en/teamSlider.json';
+import teamSliderDE from '../translations/de/teamSlider.json';
+import dashboardHeaderEN from '../translations/en/dashboardHeader.json';
+import dashboardHeaderDE from '../translations/de/dashboardHeader.json';
 
 // the translations
 const resources = {
@@ -41,7 +45,9 @@ const resources = {
         navbar: navbarEN,
         cta: ctaEN,
         textIcon: textIconEN,
-        socialMedia: socialMediaEN
+        socialMedia: socialMediaEN,
+        teamSlider: teamSliderEN,
+        dashboardHeader: dashboardHeaderEN
     },
     de: {
         impressum: impressumDE,
@@ -53,7 +59,9 @@ const resources = {
         navbar: navbarDE,
         cta: ctaDE,
         textIcon: textIconDE,
-        socialMedia: socialMediaDE
+        socialMedia: socialMediaDE,
+        teamSlider: teamSliderDE,
+        dashboardHeader: dashboardHeaderDE
     }
 };
 
