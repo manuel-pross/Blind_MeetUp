@@ -11018,6 +11018,7 @@ template {
 @media (min-width: 1200px) {
   .imageText {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 2rem;
   }
@@ -11038,7 +11039,7 @@ template {
 @media (min-width: 1200px) {
   .imageText__text {
     margin-top: 0;
-    flex: 0 0 53%;
+    flex: 0 0 50%;
   }
 }
 

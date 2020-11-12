@@ -16,6 +16,8 @@ import faqEN from '../translations/en/faq.json';
 import faqDE from '../translations/de/faq.json';
 import timelineEN from '../translations/en/timeline.json';
 import timelineDE from '../translations/de/timeline.json';
+import aboutProjectEN from '../translations/en/aboutProject.json';
+import aboutProjectDE from '../translations/de/aboutProject.json';
 
 // the translations
 const resources = {
@@ -23,13 +25,15 @@ const resources = {
         impressum: impressumEN,
         footer: footerEN,
         faq: faqEN,
-        timeline: timelineEN
+        timeline: timelineEN,
+        aboutProject: aboutProjectEN
     },
     de: {
         impressum: impressumDE,
         footer: footerDE,
         faq: faqDE,
-        timeline: timelineDE
+        timeline: timelineDE,
+        aboutProject: aboutProjectDE
     }
 };
 

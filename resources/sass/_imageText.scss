@@ -1,6 +1,7 @@
 .imageText {
    @include breakpoint("xl") {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       margin-bottom: 2rem;
    }
@@ -18,7 +19,7 @@
    &__text {
       @include breakpoint("xl") {
          margin-top: 0;
-         flex: 0 0 53%;
+         flex: 0 0 50%;
       }
    }
 }
