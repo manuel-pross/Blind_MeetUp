@@ -20,6 +20,8 @@ import aboutProjectEN from '../translations/en/aboutProject.json';
 import aboutProjectDE from '../translations/de/aboutProject.json';
 import headerEN from '../translations/en/header.json';
 import headerDE from '../translations/de/header.json';
+import navbarEN from '../translations/en/navbar.json';
+import navbarDE from '../translations/de/navbar.json';
 
 // the translations
 const resources = {
@@ -29,7 +31,8 @@ const resources = {
         faq: faqEN,
         timeline: timelineEN,
         aboutProject: aboutProjectEN,
-        header: headerEN
+        header: headerEN,
+        navbar: navbarEN
     },
     de: {
         impressum: impressumDE,
@@ -37,7 +40,8 @@ const resources = {
         faq: faqDE,
         timeline: timelineDE,
         aboutProject: aboutProjectDE,
-        header: headerDE
+        header: headerDE,
+        navbar: navbarDE
     }
 };
 

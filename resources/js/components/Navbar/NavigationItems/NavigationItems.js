@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
 import { useLocation } from 'react-router-dom'
+import { withTranslation } from 'react-i18next';
 
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const navigationItems = () => {
+const navigationItems = (props) => {
+
+    const { t } = props;
     const [currentPath] = useState(useLocation().pathname);
 
     let navbarItems = null;
@@ -12,25 +15,25 @@ const navigationItems = () => {
     if (currentPath == "/") {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem hashLink link="Projekt" offset={-100} duration={500}>Das Projekt</NavigationItem>
-                <NavigationItem hashLink link="Ablauf" offset={-100} duration={500}>Ablauf</NavigationItem>
-                <NavigationItem hashLink link="Team" offset={-100} duration={500}>Unser Team</NavigationItem>
-                <NavigationItem hashLink link="FAQ" offset={-100} duration={500}>FAQ</NavigationItem>
-                <NavigationItem link="/dashboard">Anmelden</NavigationItem>
+                <NavigationItem hashLink link="Projekt" offset={-100} duration={500}>{t("project")}</NavigationItem>
+                <NavigationItem hashLink link="Ablauf" offset={-100} duration={500}>{t("procedure")}</NavigationItem>
+                <NavigationItem hashLink link="Team" offset={-100} duration={500}>{t("team")}</NavigationItem>
+                <NavigationItem hashLink link="FAQ" offset={-100} duration={500}>{t("faq")}</NavigationItem>
+                <NavigationItem link="/dashboard">{t("logIn")}</NavigationItem>
             </React.Fragment>
         );
     } else if (currentPath == "/dashboard") {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem onlyText>Treffen</NavigationItem>
-                <NavigationItem link="/">Abmelden</NavigationItem>
+                <NavigationItem onlyText>{t("meeting")}</NavigationItem>
+                <NavigationItem link="/">{t("logOut")}</NavigationItem>
             </React.Fragment>
         );
     } else {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem link="/">Startseite</NavigationItem>
-                <NavigationItem link="/dashboard">Anmelden</NavigationItem>
+                <NavigationItem link="/">{t("homePage")}</NavigationItem>
+                <NavigationItem link="/dashboard">{t("logIn")}</NavigationItem>
             </React.Fragment>
         );
     }
@@ -39,4 +42,4 @@ const navigationItems = () => {
 }
 
 
-export default navigationItems;
+export default withTranslation('navbar')(navigationItems);
