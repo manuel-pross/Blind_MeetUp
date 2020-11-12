@@ -17,32 +17,28 @@ Route::get('/', function () {
     return view('startpage');
 });
 
-Route::get('/dashboard', function () {
-    return view('styleguide');
-});
-
 Route::get('/styleguide', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/impressum', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/richtlinien', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/datenschutz', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/feedback', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/kontakt', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Auth::routes();

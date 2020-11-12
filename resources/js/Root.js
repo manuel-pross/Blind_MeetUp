@@ -25,7 +25,7 @@ function Root() {
             <Route exact path="/impressum" component={Impressum} />
 
 
-            <Route exact path="/dashboard" component={Dashboard} />
+            {/* <Route exact path="/dashboard" component={Dashboard} /> */}
         </Switch>
     );
 }
