@@ -20,18 +20,18 @@ class LandingPage extends Component {
                 <Header />
                 <div id="Projekt">
                     <AboutProject />
-                    {/* <TextIconHFU /> */}
+                    <TextIconHFU />
                 </div>
                 <div id="Ablauf">
                     <Timeline />
                 </div>
                 <div id="Team">
-                    {/* <TeamSlider /> */}
+                    <TeamSlider />
                 </div>
                 <div id="FAQ">
-                    {/* <FAQ />
+                    <FAQ />
                     <CTA />
-                    <SocialMedia /> */}
+                    <SocialMedia />
                 </div>
                 <Footer />
             </React.Fragment>
