@@ -10,7 +10,8 @@
     <title>@yield('title', 'Blind MeetUp')</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/landing/app.js') }}" defer></script>
+    <script src="{{ asset('js/dashboard/app.js') }}" defer></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

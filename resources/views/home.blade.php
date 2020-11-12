@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Blind MeetUp')
 @section('content')
-    <h1>Dashboard</h1>
+<div id="dashboard"></div>
+    {{-- <h1>Dashboard</h1>
 
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -15,5 +16,5 @@
         </form>
     </div>
 
-    <p>{{ Auth::user()->first_name }} </p>
+    <p>{{ Auth::user()->first_name }} </p> --}}
 @endsection
