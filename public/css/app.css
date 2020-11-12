@@ -11547,6 +11547,7 @@ template {
   display: block;
   padding-left: 7px;
   display: block;
+  transition: padding 0.2s ease-in-out;
 }
 
 .navLinks__hash:hover {
@@ -11574,6 +11575,21 @@ template {
 .active {
   color: #50b375 !important;
   border-bottom: 3px solid #50b375 !important;
+}
+
+.show {
+  height: 100px;
+  transition: height 0.2s ease-in-out;
+}
+
+.hide {
+  height: 70px;
+  transition: height 0.2s ease-in-out;
+}
+
+.hide .navLinks__hash {
+  padding: 20px 10px;
+  transition: padding 0.2s ease-in-out;
 }
 
 @keyframes rotateYPerson2 {
