@@ -22,3 +22,5 @@ Route::get('meetings', 'MeetingController@index');
 Route::post('meeting', 'MeetingController@store');
 Route::put('meeting/{id}', 'MeetingController@update');
 Route::delete('meeting/{id}', 'MeetingController@delete');
+
+// Route::post('logout', 'Auth\LoginController@loggedOut');
