@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('title', 'Blind MeetUp')
 @section('content')
+<!-- Scripts -->
+<script src="{{ asset('js/dashboard/app.js') }}" defer></script>
+
 <div id="dashboard"></div>
+
     {{-- <h1>Dashboard</h1>
 
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

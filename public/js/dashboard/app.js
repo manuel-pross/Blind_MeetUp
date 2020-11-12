@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -65772,6 +65772,27 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/DashboardApp.js":
+/*!**************************************!*\
+  !*** ./resources/js/DashboardApp.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function DashboardApp() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Dashbaord");
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (DashboardApp);
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -65817,27 +65838,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/dashboard/DashboardApp.js":
-/*!************************************************!*\
-  !*** ./resources/js/dashboard/DashboardApp.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function DashboardApp() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Dashbaord test");
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (DashboardApp);
-
-/***/ }),
-
 /***/ "./resources/js/dashboard/app.js":
 /*!***************************************!*\
   !*** ./resources/js/dashboard/app.js ***!
@@ -65858,14 +65858,14 @@ __webpack_require__(/*! ../bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ../indexDashboard */ "./resources/js/indexDashboard.js");
+__webpack_require__(/*! ./indexDashboard */ "./resources/js/dashboard/indexDashboard.js");
 
 /***/ }),
 
-/***/ "./resources/js/indexDashboard.js":
-/*!****************************************!*\
-  !*** ./resources/js/indexDashboard.js ***!
-  \****************************************/
+/***/ "./resources/js/dashboard/indexDashboard.js":
+/*!**************************************************!*\
+  !*** ./resources/js/dashboard/indexDashboard.js ***!
+  \**************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -65875,15 +65875,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _dashboard_DashboardApp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard/DashboardApp */ "./resources/js/dashboard/DashboardApp.js");
+/* harmony import */ var _DashboardApp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../DashboardApp */ "./resources/js/DashboardApp.js");
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_dashboard_DashboardApp__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('dashboard'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DashboardApp__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('dashboard'));
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************!*\
   !*** multi ./resources/js/dashboard/app.js ***!
   \*********************************************/
