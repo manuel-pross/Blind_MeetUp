@@ -1,6 +1,8 @@
 import React from 'react';
 
-// import { withRouter } from 'react-router-dom'
+// For IE 11 polyfill
+let ES6Promise = require("es6-promise");
+ES6Promise.polyfill();
 
 import axios from 'axios';
 
