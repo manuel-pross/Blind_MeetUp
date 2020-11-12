@@ -14,18 +14,22 @@ import footerEN from '../translations/en/footer.json';
 import footerDE from '../translations/de/footer.json';
 import faqEN from '../translations/en/faq.json';
 import faqDE from '../translations/de/faq.json';
+import timelineEN from '../translations/en/timeline.json';
+import timelineDE from '../translations/de/timeline.json';
 
 // the translations
 const resources = {
     en: {
         impressum: impressumEN,
         footer: footerEN,
-        faq: faqEN
+        faq: faqEN,
+        timeline: timelineEN
     },
     de: {
         impressum: impressumDE,
         footer: footerDE,
-        faq: faqDE
+        faq: faqDE,
+        timeline: timelineDE
     }
 };
 
