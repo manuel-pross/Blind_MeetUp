@@ -16,10 +16,10 @@ class LandingPage extends Component {
     render() {
         return (
             <React.Fragment >
-                {/* <Navbar />
-                <Header /> */}
+                {/* <Navbar /> */}
+                <Header />
                 <div id="Projekt">
-                    <AboutProject />
+                    {/* <AboutProject /> */}
                     {/* <TextIconHFU /> */}
                 </div>
                 <div id="Ablauf">

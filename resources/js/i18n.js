@@ -18,6 +18,8 @@ import timelineEN from '../translations/en/timeline.json';
 import timelineDE from '../translations/de/timeline.json';
 import aboutProjectEN from '../translations/en/aboutProject.json';
 import aboutProjectDE from '../translations/de/aboutProject.json';
+import headerEN from '../translations/en/header.json';
+import headerDE from '../translations/de/header.json';
 
 // the translations
 const resources = {
@@ -26,14 +28,16 @@ const resources = {
         footer: footerEN,
         faq: faqEN,
         timeline: timelineEN,
-        aboutProject: aboutProjectEN
+        aboutProject: aboutProjectEN,
+        header: headerEN
     },
     de: {
         impressum: impressumDE,
         footer: footerDE,
         faq: faqDE,
         timeline: timelineDE,
-        aboutProject: aboutProjectDE
+        aboutProject: aboutProjectDE,
+        header: headerDE
     }
 };
 
