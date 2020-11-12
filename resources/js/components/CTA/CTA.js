@@ -1,17 +1,23 @@
 import React from 'react';
 
+import { withTranslation } from 'react-i18next';
 
-const cta = () => (
-    <div className="container mb-600">
-        <div className="cta">
-            <h3 className="cta__heading">Ist nun alles klar für dich? Dann starte jetzt Durch</h3>
-            <div className="cta__buttons">
-                <a className="cta__button-item btn btn-primary" href="https://www.hs-furtwangen.de/">Jetzt anmelden</a>
-                <button className="cta__button-item btn btn-second">Feedback geben</button>
+
+const cta = (props) => {
+
+    const { t } = props;
+    return (
+        <div className="container mb-600">
+            <div className="cta">
+                <h3 className="cta__heading">{t("heading")}</h3>
+                <div className="cta__buttons">
+                    <a className="cta__button-item btn btn-primary" href="https://www.hs-furtwangen.de/">{t("logIn")}</a>
+                    <button className="cta__button-item btn btn-second">{t("feedback")}</button>
+                </div>
             </div>
         </div>
-    </div>
-);
+    )
+};
 
 
-export default cta;
+export default withTranslation('cta')(cta);

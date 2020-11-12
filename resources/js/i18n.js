@@ -22,6 +22,12 @@ import headerEN from '../translations/en/header.json';
 import headerDE from '../translations/de/header.json';
 import navbarEN from '../translations/en/navbar.json';
 import navbarDE from '../translations/de/navbar.json';
+import ctaEN from '../translations/en/cta.json';
+import ctaDE from '../translations/de/cta.json';
+import textIconEN from '../translations/en/textIcon.json';
+import textIconDE from '../translations/de/textIcon.json';
+import socialMediaEN from '../translations/en/socialMedia.json';
+import socialMediaDE from '../translations/de/socialMedia.json';
 
 // the translations
 const resources = {
@@ -32,7 +38,10 @@ const resources = {
         timeline: timelineEN,
         aboutProject: aboutProjectEN,
         header: headerEN,
-        navbar: navbarEN
+        navbar: navbarEN,
+        cta: ctaEN,
+        textIcon: textIconEN,
+        socialMedia: socialMediaEN
     },
     de: {
         impressum: impressumDE,
@@ -41,7 +50,10 @@ const resources = {
         timeline: timelineDE,
         aboutProject: aboutProjectDE,
         header: headerDE,
-        navbar: navbarDE
+        navbar: navbarDE,
+        cta: ctaDE,
+        textIcon: textIconDE,
+        socialMedia: socialMediaDE
     }
 };
 
