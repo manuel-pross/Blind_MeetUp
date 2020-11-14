@@ -19,7 +19,7 @@ ReactDOM.render(
       <Routes />
     </React.StrictMode>
   </BrowserRouter>,
-  document.getElementById('app')
+  document.getElementById('landing')
 );
 
 // If you want your app to work offline and load faster, you can change

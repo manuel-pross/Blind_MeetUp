@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
-    <BrowserRouter>
+    <BrowserRouter basename="/home">
         <DashboardApp />
     </BrowserRouter>, 
     document.getElementById('dashboard'));

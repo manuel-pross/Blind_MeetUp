@@ -43,4 +43,19 @@ Route::get('/kontakt', function () {
 
 Auth::routes();
 
+
+// Login Routes
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/home/anmelden', function () {
+    return view('home');
+});
+
+Route::get('/home/anstehend', function () {
+    return view('home');
+});
+
+Route::get('/home/vergangen', function () {
+    return view('home');
+});

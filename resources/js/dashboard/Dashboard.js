@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // For IE 11 polyfill
 let ES6Promise = require("es6-promise");
@@ -8,11 +8,15 @@ import axios from 'axios';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import FAQ from '../components/FAQ/FAQ';
+import SubNavbar from '../components/SubNavbar/SubNavbar';
 
 
-function DashboardApp({ history }) {
+class DashboardApp extends Component {
+    state = {
+        meetings: []
+    }
 
-    const handleLogout = () => {
+    handleLogout = () => {
         console.log('axios call');
         axios.post('/logout')
             .then(function (response) {
@@ -21,18 +25,32 @@ function DashboardApp({ history }) {
             })
     }
 
+    loadTask = () => {
+        axios.get('/api/meetings').then((response) => {
+            this.setState({
+                meetings: response.data
+            });
+        });
+    }
 
-    return (
-        <React.Fragment>
-            <Navbar />
-            <div style={{ paddingTop: '100px' }}>
-                Dashbaord
+    componentDidMount() {
+        this.loadTask();
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <Navbar />
+                <div style={{ paddingTop: '100px' }}>
+                    Dashbaord
             </div>
-            <button onClick={handleLogout}>Abmelden</button>
-            <FAQ />
-            <Footer />
-        </React.Fragment>
-    );
+                <SubNavbar meetings={this.state.meetings} loadTask={this.loadTask} />
+                <button onClick={this.handleLogout}>Abmelden</button>
+                <FAQ />
+                <Footer />
+            </React.Fragment>
+        );
+    }
 }
 
 export default DashboardApp;

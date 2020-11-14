@@ -3,5 +3,5 @@
 @section('content')
 <!-- Scripts -->
 <script src="{{ asset('js/landing/app.js') }}" defer></script>
-    <div id="app"></div>
+    <div id="landing"></div>
 @endsection
