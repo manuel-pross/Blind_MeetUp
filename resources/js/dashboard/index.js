@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import DashboardApp from './Dashboard';
 import { BrowserRouter } from 'react-router-dom';
 
+import Routes from './Routes';
 
 
 ReactDOM.render(
     <BrowserRouter basename="/home">
-        <DashboardApp />
+        <Routes />
     </BrowserRouter>, 
     document.getElementById('dashboard'));

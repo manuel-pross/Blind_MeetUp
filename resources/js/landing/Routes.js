@@ -11,7 +11,7 @@ import Impressum from '../containers/Pages/Impressum';
 
 import Dashboard from '../containers/Dashboard/Dashboard';
 
-function Root() {
+function Routes() {
     return (
         <Switch>
             <Route exact path="/" component={LandingPage} />
@@ -24,10 +24,8 @@ function Root() {
             <Route exact path="/richtlinien" component={Guidelines} />
             <Route exact path="/impressum" component={Impressum} />
 
-
-            {/* <Route exact path="/dashboard" component={Dashboard} /> */}
         </Switch>
     );
 }
 
-export default Root;
+export default Routes;

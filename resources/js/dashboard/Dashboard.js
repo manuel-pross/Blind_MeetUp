@@ -43,7 +43,7 @@ class DashboardApp extends Component {
                 <Navbar />
                 <div style={{ paddingTop: '100px' }}>
                     Dashbaord
-            </div>
+                </div>
                 <SubNavbar meetings={this.state.meetings} loadTask={this.loadTask} />
                 <button onClick={this.handleLogout}>Abmelden</button>
                 <FAQ />
