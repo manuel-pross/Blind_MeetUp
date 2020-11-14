@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1700px;
   }
 }
 
@@ -4410,7 +4410,7 @@ Breakpoint Mixin
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 15px 30px !important;
+  padding: 11px 30px !important;
   border-radius: 30px !important;
   border: 0 !important;
   text-decoration: none;
@@ -4529,7 +4529,7 @@ Breakpoint Mixin
   color: #fff;
   font-size: 1rem;
   letter-spacing: 0.15rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -4555,7 +4555,7 @@ Breakpoint Mixin
   width: 0%;
   height: 100%;
   background-color: #377f52;
-  transition: all 0.3s;
+  transition: all 0.2s;
   border-radius: 10rem;
   z-index: -1;
 }
@@ -4583,6 +4583,46 @@ Breakpoint Mixin
 
 .alt-primary:hover {
   background-color: #2e6c48 !important;
+}
+
+@-webkit-keyframes afterSlide {
+  0% {
+    right: -19px;
+  }
+
+  100% {
+    right: 62px;
+  }
+}
+
+@keyframes afterSlide {
+  0% {
+    right: -19px;
+  }
+
+  100% {
+    right: 62px;
+  }
+}
+
+@-webkit-keyframes beforeSlide {
+  0% {
+    right: -19px;
+  }
+
+  100% {
+    right: 48px;
+  }
+}
+
+@keyframes beforeSlide {
+  0% {
+    right: -19px;
+  }
+
+  100% {
+    right: 48px;
+  }
 }
 
 /* maven-pro-regular - latin */
@@ -11452,12 +11492,297 @@ template {
   }
 }
 
-.meetUps {
-  padding-top: 250px;
-  padding-bottom: 250px;
-  padding-left: 350px;
-  padding-right: 350px;
-  border: 3px solid;
+.meeting {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  margin: 1.5rem;
+  background-color: #2e6c48;
+  border-radius: 45px;
+}
+
+.meeting__dataWrapper {
+  position: relative;
+  padding: 10px;
+}
+
+.meeting__dataWrapper--pipe::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 46px;
+  height: 1.5px;
+  left: -17px;
+  top: 27px;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .meeting__dataWrapper--pipe::after {
+    top: 31px;
+  }
+}
+
+@media (min-width: 992px) {
+  .meeting__dataWrapper--pipe::after {
+    top: 37px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .meeting__dataWrapper--pipe::after {
+    width: 54px;
+    top: 43px;
+  }
+}
+
+.meeting__dataWrapperLocation {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 10px;
+}
+
+.meeting__dataWrapperLocation--pipe::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 28px;
+  height: 1.5px;
+  left: -8px;
+  top: 20px;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .meeting__dataWrapperLocation--pipe::after {
+    top: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .meeting__dataWrapperLocation--pipe::after {
+    left: -7px;
+    top: 26px;
+  }
+}
+
+.meeting__data {
+  color: #fefefe !important;
+  margin: 0;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.meeting__data--date {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .meeting__btnWrapper {
+    margin: 1.15rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .meeting__btnWrapper {
+    margin: 1.4rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .meeting__btnWrapper {
+    margin: 1.9rem 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .meeting__btnWrapper {
+    margin: 1.78rem 0;
+  }
+}
+
+.meeting__exitBtn {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 45px;
+  border: none;
+  top: 0;
+  right: 0;
+  padding: 22px;
+  transition: all 0.2s;
+}
+
+.meeting__exitBtn::before {
+  content: "";
+  position: absolute;
+  background-color: #999999;
+  height: 1.5px;
+  width: 23px;
+  transform: rotate(45deg);
+  left: 11px;
+  transition: all 0.2s;
+}
+
+.meeting__exitBtn::after {
+  content: "";
+  position: absolute;
+  background-color: #999999;
+  height: 1.5px;
+  width: 23px;
+  transform: rotate(135deg);
+  left: 11px;
+  transition: all 0.2s;
+}
+
+.meeting__exitBtn:hover {
+  background-color: #50b375;
+}
+
+.meeting__exitBtn:hover::before {
+  background-color: #fefefe;
+}
+
+.meeting__exitBtn:hover::after {
+  background-color: #fefefe;
+}
+
+.btn-meetingType {
+  transition: all 0.1s ease-in-out;
+  color: #999999;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-meetingType:hover {
+  background-color: #50b375;
+  color: #fefefe;
+}
+
+.btn-meeting {
+  color: #50b375;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-meeting:hover {
+  background-color: #50b375;
+  color: #fefefe;
+}
+
+.btn-meeting:hover .btn-meeting__arrow::after,
+.btn-meeting:hover .btn-meeting__arrow::before {
+  background-color: #fefefe;
+}
+
+.btn-meeting__arrow {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  border-radius: 3px;
+  background-color: #50b375;
+}
+
+.btn-meeting__arrow::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  right: -19px;
+  bottom: 11px;
+  display: block;
+  width: 13px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: inherit;
+  transform: rotate(45deg);
+}
+
+.btn-meeting__arrow::after {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  right: -19px;
+  bottom: 3px;
+  display: block;
+  width: 13px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: inherit;
+  transform: rotate(135deg);
+}
+
+.btn-meeting--animation {
+  color: #50b375;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-meeting--animation:hover {
+  background-color: #50b375;
+  color: #fefefe;
+}
+
+.btn-meeting--animation:hover .btn-meeting__arrow::after,
+.btn-meeting--animation:hover .btn-meeting__arrow::before {
+  background-color: #fefefe;
+}
+
+.btn-meeting--animation:focus {
+  background-color: #50b375;
+  color: transparent;
+  width: 50px;
+}
+
+.btn-meeting--animation:focus span::before {
+  transform: rotate(135deg);
+  top: 9px;
+  width: 20px;
+  background-color: white;
+  -webkit-animation: beforeSlide 1s;
+          animation: beforeSlide 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.btn-meeting--animation:focus span::after {
+  transform: rotate(45deg);
+  background-color: white;
+  -webkit-animation: afterSlide 1s;
+          animation: afterSlide 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.btn-meeting--animation__arrow {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  border-radius: 3px;
+  background-color: #50b375;
+}
+
+.btn-meeting--animation__arrow::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  right: -19px;
+  bottom: 11px;
+  display: block;
+  width: 13px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: inherit;
+  transform: rotate(45deg);
+}
+
+.btn-meeting--animation__arrow::after {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  right: -19px;
+  bottom: 3px;
+  display: block;
+  width: 13px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: inherit;
+  transform: rotate(135deg);
 }
 
 .navbar {

@@ -32,6 +32,8 @@ import teamSliderEN from '../translations/en/teamSlider.json';
 import teamSliderDE from '../translations/de/teamSlider.json';
 import dashboardHeaderEN from '../translations/en/dashboardHeader.json';
 import dashboardHeaderDE from '../translations/de/dashboardHeader.json';
+import meetUpsEN from '../translations/en/meetups.json';
+import meetUpsDE from '../translations/de/meetUps.json';
 
 // the translations
 const resources = {
@@ -47,7 +49,8 @@ const resources = {
         textIcon: textIconEN,
         socialMedia: socialMediaEN,
         teamSlider: teamSliderEN,
-        dashboardHeader: dashboardHeaderEN
+        dashboardHeader: dashboardHeaderEN,
+        meetUps: meetUpsEN
     },
     de: {
         impressum: impressumDE,
@@ -61,7 +64,8 @@ const resources = {
         textIcon: textIconDE,
         socialMedia: socialMediaDE,
         teamSlider: teamSliderDE,
-        dashboardHeader: dashboardHeaderDE
+        dashboardHeader: dashboardHeaderDE,
+        meetUps: meetUpsDE
     }
 };
 

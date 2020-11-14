@@ -29,17 +29,6 @@ function SamplePrevArrow(props) {
     );
 }
 
-// state = {
-//     descs : [
-//         { headingText: 'Heading 1', descText: 'Heading 2 Lorem Ipsum', pointColor: '#50b375' },
-//         { headingText: 'Heading 2', descText: 'Heading 2 Lorem Ipsum', pointColor: '' },
-//         { headingText: 'Heading 3', descText: 'Heading 3 Lorem Ipsum', pointColor: '' },
-//         { headingText: 'Heading 4', descText: 'Heading 4 Lorem Ipsum', pointColor: '' },
-//         { headingText: 'Heading 5', descText: 'Heading 5 Lorem Ipsum', pointColor: '' },
-//     ],
-//     activeSlide: 0
-// }
-
 class Timeline extends Component {
 
     state = {

@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardHeaderImage from '../../../assets/img/placeholder/1920x395-placeholder.png'
+import MeetUps from '../MeetUps/MeetUps';
 
 import { withTranslation } from 'react-i18next';
 
@@ -13,6 +14,7 @@ const DashboardHeader = (props) => {
             <h3 className="dashboardHeader__title">{t("greetings")}</h3>
             <p className="dashboardHeader__p">{t("text")}</p>
          </div>
+         <MeetUps/>
       </div>
    )
 };

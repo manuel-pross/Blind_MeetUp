@@ -1,8 +1,283 @@
 .meetUps {
    //placeholderstyle
-   padding-top: 250px;
-   padding-bottom: 250px;
-   padding-left: 350px;
-   padding-right: 350px;
-   border: 3px solid;
+}
+
+.meeting {
+   position: relative;
+   padding: 2.5rem 1.5rem;
+   margin: 1.5rem;
+   background-color: $c2-second;
+   border-radius: 45px;
+   // max-width: 370px;
+
+   @include breakpoint("md") {
+      // max-width: 370px;
+   }
+
+   &__dataWrapper {
+      position: relative;
+      padding: 10px;
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 46px;
+            height: 1.5px;
+            left: -17px;
+            top: 27px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 31px;
+            }
+
+            @include breakpoint("lg") {
+               top: 37px;
+            }
+
+            @include breakpoint("xl") {
+               width: 54px;
+               top: 43px;
+            }
+         }
+      }
+   }
+
+   &__dataWrapperLocation {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 10px;
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 28px;
+            height: 1.5px;
+            left: -8px;
+            top: 20px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 22px;
+            }
+
+            @include breakpoint("md") {
+               left: -7px;
+               top: 26px;
+            }
+         }
+      }
+   }
+
+   &__data {
+      color: $c-white !important;
+      margin: 0;
+      margin-left: 18px;
+      white-space: nowrap;
+
+      &--date {
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__btnWrapper {
+      @include breakpoint("lg") {
+         margin: 1.15rem 0;
+      }
+      @include breakpoint("md") {
+         margin: 1.4rem 0;
+      }
+      @include breakpoint("xl") {
+         margin: 1.9rem 0;
+      }
+      @include breakpoint("xxl") {
+         margin: 1.78rem 0;
+      }
+   }
+
+   &__exitBtn {
+      cursor: pointer;
+      position: absolute;
+      border-radius: 45px;
+      border: none;
+      top: 0;
+      right: 0;
+      padding: 22px;
+      transition: all 0.2s;
+
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: $c-grey;
+         height: 1.5px;
+         width: 23px;
+         transform: rotate(45deg);
+         left: 11px;
+         transition: all 0.2s;
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         background-color: $c-grey;
+         height: 1.5px;
+         width: 23px;
+         transform: rotate(135deg);
+         left: 11px;
+         transition: all 0.2s;
+      }
+
+      &:hover {
+         background-color: $c1-second;
+
+         &::before {
+            background-color: $c-white;
+         }
+
+         &::after {
+            background-color: $c-white;
+         }
+      }
+   }
+}
+
+// btn styles
+
+.btn-meetingType {
+   transition: all 0.1s ease-in-out;
+   color: $c-grey;
+   width: 100%;
+   margin-bottom: 10px;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+   }
+}
+
+.btn-meeting {
+   color: $c1-second;
+   width: 100%;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+
+      .btn-meeting__arrow::after,
+      .btn-meeting__arrow::before {
+         background-color: $c-white;
+      }
+   }
+
+   &__arrow {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      border-radius: 3px;
+      background-color: $c1-second;
+
+      &::before {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 11px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(45deg);
+      }
+      &::after {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 3px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(135deg);
+      }
+   }
+}
+
+.btn-meeting--animation {
+   color: $c1-second;
+   width: 100%;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+
+      .btn-meeting__arrow::after,
+      .btn-meeting__arrow::before {
+         background-color: $c-white;
+      }
+   }
+
+   &:focus {
+      background-color: #50b375;
+      color: transparent;
+      width: 50px;
+   }
+
+   &:focus span::before {
+      transform: rotate(135deg);
+      top: 9px;
+      width: 20px;
+      background-color: white;
+      animation: beforeSlide 1s;
+      animation-fill-mode: forwards;
+   }
+
+   &:focus span::after {
+      transform: rotate(45deg);
+      background-color: white;
+      animation: afterSlide 1s;
+      animation-fill-mode: forwards;
+   }
+
+   &__arrow {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      border-radius: 3px;
+      background-color: $c1-second;
+
+      &::before {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 11px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(45deg);
+      }
+
+      &::after {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 3px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(135deg);
+      }
+   }
 }

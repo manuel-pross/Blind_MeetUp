@@ -1,7 +1,7 @@
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 15px 30px !important;
+  padding: 11px 30px !important;
   border-radius: 30px !important;
   border: 0 !important;
   text-decoration: none;
@@ -34,7 +34,6 @@
       // background-image: linear-gradient(#2e6c48, #4dac71);
       opacity: 0.8;
     }
-
   }
 
   &-second {
@@ -111,7 +110,7 @@
   color: #fff;
   font-size: 1rem;
   letter-spacing: 0.15rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -134,7 +133,7 @@
     width: 0%;
     height: 100%;
     background-color: darken($c1-second, 15%);
-    transition: all 0.3s;
+    transition: all 0.2s;
     border-radius: 10rem;
     z-index: -1;
   }
@@ -160,5 +159,23 @@
 
   &:hover {
     background-color: $c2-second !important;
+  }
+}
+
+@keyframes afterSlide {
+  0% {
+    right: -19px;
+  }
+  100% {
+    right: 62px;
+  }
+}
+
+@keyframes beforeSlide {
+  0% {
+    right: -19px;
+  }
+  100% {
+    right: 48px;
   }
 }
