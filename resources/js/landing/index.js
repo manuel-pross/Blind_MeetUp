@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.scss';
-import Root from '../Root';
+import Routes from './Routes';
 import * as serviceWorker from '../serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from '../components/hoc/DevSizeBtn';
@@ -16,7 +16,7 @@ ReactDOM.render(
     <RouteToTop />
     <DevSizeBtn />
     <React.StrictMode>
-      <Root />
+      <Routes />
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById('app')
