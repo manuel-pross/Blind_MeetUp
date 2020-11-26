@@ -1,14 +1,17 @@
 import React from 'react';
-
 import { Link as LinkScroll } from 'react-scroll';
-
 import { Link } from 'react-router-dom';
 
 
 const navigationItem = (props) => {
 
-    let navElement = null;
+    const handleLogout = () => {
+        localStorage.clear();
+        props.setUser(null);
+    }
 
+    let navElement = null;
+    // For Scroll down Link
     if (props.hashLink) {
         navElement = (
             <LinkScroll
@@ -25,7 +28,9 @@ const navigationItem = (props) => {
             </LinkScroll>
         );
 
-    } else if (props.onlyText) {
+    }
+    // For only Text
+    else if (props.onlyText) {
         navElement = (
             <div className="navLinks">
                 <a className="navLinks__hash" style={{ cursor: 'default' }}>
@@ -34,11 +39,32 @@ const navigationItem = (props) => {
             </div>
         );
     }
+    // For Text with Router Link
+    else if (props.textWithLink) {
+        navElement = (
+            <Link
+                className={"navLinks__hash"}
+                to={props.link}>
+                {props.children}
+            </Link>
+        );
+    }
+    // For Sign Out Link
+    else if (props.signOut) {
+        navElement = (
+            <Link
+                className={"btn btn-primary navLinks__button"}
+                to={props.link}
+                onClick={handleLogout}>
+                {props.children}
+            </Link>
+        );
+    }
+    // 
     else {
         navElement = (
-
             <Link
-                className={props.children === "Startseite" ? "navLinks__hash" : "btn btn-primary navLinks__button"}
+                className={"btn btn-primary navLinks__button"}
                 to={props.link}>
                 {props.children}
             </Link>

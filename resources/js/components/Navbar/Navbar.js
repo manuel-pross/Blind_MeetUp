@@ -62,7 +62,7 @@ class Navbar extends Component {
                     onClick={this.scrollToTop} />
                 <nav>
                     <ul className="navbar__Items">
-                        <NavigationItems />
+                        <NavigationItems setUser={this.props.setUser}/>
                     </ul>
                 </nav>
             </header>

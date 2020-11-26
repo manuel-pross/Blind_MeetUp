@@ -21,7 +21,7 @@ class Footer extends Component {
                 <div className="row">
                 <div className="col-lg-7">
                         <p className="footer__heading">{t('Informations')}</p>
-                        <FooterButton href link="https://www.hs-furtwangen.de/">{t('SignIn')}</FooterButton>
+                        <FooterButton link="/login">{t('SignIn')}</FooterButton>
                         <FooterButton link="/feedback">{t('Feedback')}</FooterButton>
                         <FooterButton link="/kontakt">{t('Contact')}</FooterButton>
                         <FooterButton href link="https://www.hs-furtwangen.de/">{t('HochschuleFurtwangen')}</FooterButton>
