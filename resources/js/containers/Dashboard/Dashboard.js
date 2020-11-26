@@ -15,7 +15,7 @@ class Dashboard extends Component {
 
             <React.Fragment>
                 <Navbar setUser={this.props.setUser} />
-                <DashboardHeader />
+                <DashboardHeader user={this.props.user} />
                 <MeetUps />
                 <FAQ />
                 <Footer />

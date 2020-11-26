@@ -53,7 +53,7 @@ class Routes extends Component {
                 <Route exact path="/login" component={() => <Login setUser={this.setUser} user={this.state.user} />} />
 
 
-                <PrivateRoute exact path="/dashboard" component={() => <Dashboard setUser={this.setUser}/>} />
+                <PrivateRoute exact path="/dashboard" component={() => <Dashboard setUser={this.setUser} user={this.state.user}/>} />
             </Switch >
         );
     }
