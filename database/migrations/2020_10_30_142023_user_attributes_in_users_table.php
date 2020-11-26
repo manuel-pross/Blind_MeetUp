@@ -19,7 +19,7 @@ class UserAttributesInUsersTable extends Migration
             $table->renameColumn('name', 'first_name');
             $table->string('last_name')->after('name');
             $table->renameColumn('email', 'hfu_mail');
-            $table->string('role')->default('user')->after('email_verified_at');
+            $table->string('role')->default('user')->after('email');
         });
     }
 
