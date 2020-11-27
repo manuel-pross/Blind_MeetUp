@@ -74,8 +74,8 @@ class MeetUps extends Component {
                <li><strong>max_members:</strong> {meeting.max_members}</li>
                <li><strong>rating:</strong> {meeting.rating}</li>
                {/* <li><strong>img_link:</strong> {meeting.img_link}</li> */}
-               <button onClick={() => this.editMeeting(meeting.id, meeting.type, meeting.date, meeting.place, meeting.members, meeting.max_members, meeting.rating, meeting.img_link)}>Bearbeiten</button>
-               <button onClick={() => this.deleteMeeting(meeting.id)}>Löschen</button>
+               <button className="btn btn-tertiary"  onClick={() => this.editMeeting(meeting.id, meeting.type, meeting.date, meeting.place, meeting.members, meeting.max_members, meeting.rating, meeting.img_link)}>Bearbeiten</button>
+               <button className="btn btn-tertiary"  onClick={() => this.deleteMeeting(meeting.id)}>Löschen</button>
             </ul>
          );
       })
@@ -83,7 +83,7 @@ class MeetUps extends Component {
       return (
          <div className="container">
             {meetings}
-            <button onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
+            <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
             <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
                <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadTask={this.props.loadTask} />
             </Modal>
