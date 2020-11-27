@@ -11492,12 +11492,63 @@ template {
   }
 }
 
+.meeting--closed {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  margin: 1.5rem;
+  background-color: #2e6c48;
+  border-radius: 45px;
+  -webkit-animation: test 1.5s;
+          animation: test 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.meeting--disabled {
+  display: none;
+}
+
+@-webkit-keyframes test {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes test {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .meeting {
   position: relative;
   padding: 2.5rem 1.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
   border-radius: 45px;
+  height: 260px;
+}
+
+@media (min-width: 992px) {
+  .meeting {
+    height: 290px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .meeting {
+    height: 310px;
+  }
 }
 
 .meeting__dataWrapper {
@@ -11576,9 +11627,13 @@ template {
   margin-bottom: 1rem;
 }
 
+.meeting__btnWrapper {
+  margin: 2.8rem 0;
+}
+
 @media (min-width: 992px) {
   .meeting__btnWrapper {
-    margin: 1.15rem 0;
+    margin: 2.95rem 0;
   }
 }
 
@@ -11590,13 +11645,7 @@ template {
 
 @media (min-width: 1200px) {
   .meeting__btnWrapper {
-    margin: 1.9rem 0;
-  }
-}
-
-@media (min-width: 1920px) {
-  .meeting__btnWrapper {
-    margin: 1.78rem 0;
+    margin: 3.1rem 0;
   }
 }
 
@@ -11645,6 +11694,10 @@ template {
   background-color: #fefefe;
 }
 
+.meeting__joinBtnWrapper {
+  position: relative;
+}
+
 .btn-meetingType {
   transition: all 0.1s ease-in-out;
   color: #999999;
@@ -11657,10 +11710,17 @@ template {
   color: #fefefe;
 }
 
+.btn-meetingType:focus {
+  background-color: #50b375;
+  color: #fefefe;
+}
+
 .btn-meeting {
   color: #50b375;
   width: 100%;
   transition: all 0.2s ease-in-out;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-meeting:hover {
@@ -11675,43 +11735,48 @@ template {
 
 .btn-meeting__arrow {
   transition: all 0.2s ease-in-out;
-  position: relative;
   border-radius: 3px;
   background-color: #50b375;
+  width: 100%;
 }
 
 .btn-meeting__arrow::before {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: -19px;
-  bottom: 11px;
+  right: 43px;
+  top: 18px;
   display: block;
   width: 13px;
   height: 2px;
   border-radius: 3px;
   background-color: inherit;
   transform: rotate(45deg);
+  background-color: #50b375;
 }
 
 .btn-meeting__arrow::after {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: -19px;
-  bottom: 3px;
+  right: 42px;
+  top: 27px;
   display: block;
   width: 13px;
   height: 2px;
   border-radius: 3px;
   background-color: inherit;
   transform: rotate(135deg);
+  background-color: #50b375;
 }
 
 .btn-meeting--animation {
   color: #50b375;
   width: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  transition: width 1.7s;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-meeting--animation:hover {
@@ -11726,26 +11791,24 @@ template {
 
 .btn-meeting--animation:focus {
   background-color: #50b375;
-  color: transparent;
   width: 50px;
+  height: 50px;
+}
+
+.btn-meeting--animation:focus .meeting__btnDesc {
+  display: none;
 }
 
 .btn-meeting--animation:focus span::before {
-  transform: rotate(135deg);
-  top: 9px;
-  width: 20px;
-  background-color: white;
-  -webkit-animation: beforeSlide 1s;
-          animation: beforeSlide 1s;
+  -webkit-animation: beforeSlide 1.5s;
+          animation: beforeSlide 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .btn-meeting--animation:focus span::after {
-  transform: rotate(45deg);
-  background-color: white;
-  -webkit-animation: afterSlide 1s;
-          animation: afterSlide 1s;
+  -webkit-animation: afterSlide 1.5s;
+          animation: afterSlide 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -11783,6 +11846,269 @@ template {
   border-radius: 3px;
   background-color: inherit;
   transform: rotate(135deg);
+}
+
+@keyframes beforeSlide {
+  100% {
+    background-color: #fefefe;
+    transform: rotate(135deg);
+    right: 45%;
+    top: 23px;
+    width: 24px;
+  }
+}
+
+@keyframes afterSlide {
+  100% {
+    background-color: #fefefe;
+    transform: rotate(45deg);
+    right: 50%;
+    top: 27px;
+  }
+}
+
+@media (min-width: 768px) {
+@-webkit-keyframes beforeSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(135deg);
+      right: 44.5%;
+      top: 23px;
+      width: 24px;
+    }
+}
+@keyframes beforeSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(135deg);
+      right: 44.5%;
+      top: 23px;
+      width: 24px;
+    }
+}
+
+@-webkit-keyframes afterSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(45deg);
+      right: 50%;
+      top: 27px;
+    }
+}
+
+@keyframes afterSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(45deg);
+      right: 50%;
+      top: 27px;
+    }
+}
+}
+
+.jointMeeting {
+  position: relative;
+  display: flex;
+  margin: 0.5rem;
+  background-color: #2e6c48;
+  border-radius: 75px;
+  color: #fefefe;
+}
+
+.jointMeeting__dayCount {
+  color: inherit;
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+.jointMeeting__img {
+  width: 45%;
+  border-radius: inherit;
+}
+
+.jointMeeting__contentWrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.jointMeeting__dataWrapper {
+  align-self: center;
+  position: relative;
+  padding: 10px;
+}
+
+@media (min-width: 992px) {
+  .jointMeeting__dataWrapper {
+    margin-left: 1rem;
+  }
+}
+
+.jointMeeting__dataWrapper--pipe::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 46px;
+  height: 1.5px;
+  left: -17px;
+  top: 27px;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__dataWrapper--pipe::after {
+    top: 31px;
+  }
+}
+
+@media (min-width: 992px) {
+  .jointMeeting__dataWrapper--pipe::after {
+    top: 37px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jointMeeting__dataWrapper--pipe::after {
+    width: 54px;
+    top: 43px;
+  }
+}
+
+.jointMeeting__data {
+  color: inherit !important;
+  margin: 0;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.jointMeeting__dataWrapperLocation {
+  position: relative;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__dataWrapperLocation {
+    margin-bottom: 3rem;
+  }
+}
+
+.jointMeeting__dataWrapperLocation--pipe::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 28px;
+  height: 1.5px;
+  left: -8px;
+  top: 20px;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__dataWrapperLocation--pipe::after {
+    top: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__dataWrapperLocation--pipe::after {
+    left: -7px;
+    top: 26px;
+  }
+}
+
+.jointMeeting__clickedBtnWrapper {
+  width: 100%;
+}
+
+.jointMeeting__clickedBtnWrapper__block {
+  display: flex;
+  margin: 1.5rem;
+  justify-content: space-around;
+}
+
+@media (min-width: 992px) {
+  .jointMeeting__clickedBtnWrapper__block {
+    margin: 4rem;
+  }
+}
+
+.jointMeeting__btnWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 992px) {
+  .jointMeeting__btnWrapper {
+    margin: 0 3rem;
+  }
+}
+
+.jointMeeting__btnWrapper img {
+  display: inline !important;
+  width: 23px;
+}
+
+.jointMeeting--column {
+  flex-wrap: wrap;
+}
+
+.btn-cancel {
+  color: #FF5454;
+  width: 80%;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cancel:hover {
+  background-color: #50b375;
+}
+
+.btn-cancel:hover .btn-meeting__arrow::after,
+.btn-cancel:hover .btn-meeting__arrow::before {
+  background-color: #fefefe;
+}
+
+.btn-jointMeeting {
+  white-space: nowrap;
+}
+
+.pastMeeting {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: 75px;
+  background-color: #707070;
+  text-align: center;
+  align-items: center;
+  height: 363px;
+  width: 363px;
+}
+
+.pastMeeting__textWrapper {
+  width: 100%;
+}
+
+.pastMeeting__text {
+  color: #fefefe;
+  padding: 0;
+  margin: 0;
+}
+
+.pastMeeting__smileyWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pastMeeting__smiley {
+  width: 50px;
+}
+
+.pastMeeting__btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .navbar {
