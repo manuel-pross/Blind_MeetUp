@@ -28,7 +28,6 @@ class Dashboard extends Component {
         this.loadTask();
     }
 
-
     render() {
         return (
             <React.Fragment>

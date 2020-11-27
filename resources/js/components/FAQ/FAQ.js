@@ -80,9 +80,9 @@ const FAQ = () => {
                </div>
                <div className="FAQ__contentWrapper">
                   {currentContent}
-                  <ddfiv className={ifCollapsed ? "FAQ__content__collapsedWrapper" : "FAQ__content__collapsedWrapper--collapsed"}>
+                  <div className={ifCollapsed ? "FAQ__content__collapsedWrapper" : "FAQ__content__collapsedWrapper--collapsed"}>
                      {extendedContent}
-                  </ddfiv>
+                  </div>
                   <button onClick={extendetButtonClickHandler} disabled={btnClass.active} id="FAQ-btn" className={btnClass.class + " my-100"}>Mehr anzeigen</button>
                </div>
             </div>

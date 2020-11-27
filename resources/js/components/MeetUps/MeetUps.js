@@ -27,7 +27,6 @@ class MeetUps extends Component {
 
       axios.delete('/api/meeting/' + id).then((response) => {
          this.props.loadTask();
-
       });
    }
 
@@ -63,8 +62,6 @@ class MeetUps extends Component {
       }
    }
 
-
-
    render() {
       let meetings = this.props.meetings.map((meeting) => {
          return (
@@ -80,7 +77,6 @@ class MeetUps extends Component {
                <button onClick={() => this.editMeeting(meeting.id, meeting.type, meeting.date, meeting.place, meeting.members, meeting.max_members, meeting.rating, meeting.img_link)}>Bearbeiten</button>
                <button onClick={() => this.deleteMeeting(meeting.id)}>Löschen</button>
             </ul>
-
          );
       })
 
