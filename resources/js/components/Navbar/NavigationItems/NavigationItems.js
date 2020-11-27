@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
 import { useLocation } from 'react-router-dom'
+import { withTranslation } from 'react-i18next';
 
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const navigationItems = () => {
+const navigationItems = (props) => {
+
+    const { t } = props;
     const [currentPath] = useState(useLocation().pathname);
 
     let navbarItems = null;
@@ -24,6 +27,7 @@ const navigationItems = () => {
             <React.Fragment>
                 <NavigationItem onlyText>Treffen</NavigationItem>
                 <NavigationItem link="/">Abmelden</NavigationItem>
+                <a href="/login">Login</a>
             </React.Fragment>
         );
     } else {
@@ -39,4 +43,4 @@ const navigationItems = () => {
 }
 
 
-export default navigationItems;
+export default withTranslation('navbar')(navigationItems);

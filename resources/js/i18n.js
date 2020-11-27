@@ -12,16 +12,60 @@ import impressumEN from '../translations/en/impressum.json';
 import impressumDE from '../translations/de/impressum.json';
 import footerEN from '../translations/en/footer.json';
 import footerDE from '../translations/de/footer.json';
+import faqEN from '../translations/en/faq.json';
+import faqDE from '../translations/de/faq.json';
+import timelineEN from '../translations/en/timeline.json';
+import timelineDE from '../translations/de/timeline.json';
+import aboutProjectEN from '../translations/en/aboutProject.json';
+import aboutProjectDE from '../translations/de/aboutProject.json';
+import headerEN from '../translations/en/header.json';
+import headerDE from '../translations/de/header.json';
+import navbarEN from '../translations/en/navbar.json';
+import navbarDE from '../translations/de/navbar.json';
+import ctaEN from '../translations/en/cta.json';
+import ctaDE from '../translations/de/cta.json';
+import textIconEN from '../translations/en/textIcon.json';
+import textIconDE from '../translations/de/textIcon.json';
+import socialMediaEN from '../translations/en/socialMedia.json';
+import socialMediaDE from '../translations/de/socialMedia.json';
+import teamSliderEN from '../translations/en/teamSlider.json';
+import teamSliderDE from '../translations/de/teamSlider.json';
+import dashboardHeaderEN from '../translations/en/dashboardHeader.json';
+import dashboardHeaderDE from '../translations/de/dashboardHeader.json';
+import meetUpsEN from '../translations/en/meetups.json';
+import meetUpsDE from '../translations/de/meetUps.json';
 
 // the translations
 const resources = {
     en: {
         impressum: impressumEN,
-        footer: footerEN
+        footer: footerEN,
+        faq: faqEN,
+        timeline: timelineEN,
+        aboutProject: aboutProjectEN,
+        header: headerEN,
+        navbar: navbarEN,
+        cta: ctaEN,
+        textIcon: textIconEN,
+        socialMedia: socialMediaEN,
+        teamSlider: teamSliderEN,
+        dashboardHeader: dashboardHeaderEN,
+        meetUps: meetUpsEN
     },
     de: {
         impressum: impressumDE,
-        footer: footerDE
+        footer: footerDE,
+        faq: faqDE,
+        timeline: timelineDE,
+        aboutProject: aboutProjectDE,
+        header: headerDE,
+        navbar: navbarDE,
+        cta: ctaDE,
+        textIcon: textIconDE,
+        socialMedia: socialMediaDE,
+        teamSlider: teamSliderDE,
+        dashboardHeader: dashboardHeaderDE,
+        meetUps: meetUpsDE
     }
 };
 

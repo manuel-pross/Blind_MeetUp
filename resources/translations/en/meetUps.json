@@ -1,0 +1,16 @@
+{
+   "title": "welcome",
+   "btnDuo": "Duo Meeting",
+   "btnGroup": "Group Meeting",
+   "btnJoin": "Join",
+   "btnCancel": "Cancel",
+   "accept": "Are you Sure?",
+   "acceptAgain": "Accept again",
+   "btnTime": "No more time",
+   "btnInteres": "No more time interest",
+   "btnAccidantlly": "Accidentally signed in",
+   "btnOther": "Other",
+   "satisfiedDesc": "Were you satisfied",
+   "satisfiedDesc2": "with your MeetUp?",
+   "btnRate": "Rate"
+}

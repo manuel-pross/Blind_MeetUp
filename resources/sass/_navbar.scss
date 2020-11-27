@@ -85,6 +85,7 @@
         display: block;
         padding-left: 7px;
         display: block;
+        transition: padding 0.2s ease-in-out;
 
         &:hover {
             text-decoration: none;
@@ -111,6 +112,21 @@
 .active {
     color: $c1-second !important;
     border-bottom: 3px solid $c1-second !important;
+}
+
+.show {
+    height: 100px;
+    transition: height 0.2s ease-in-out;
+    
+}
+
+.hide {
+    height: 70px;
+    transition: height 0.2s ease-in-out;
+    .navLinks__hash{
+        padding: 20px 10px;
+        transition: padding 0.2s ease-in-out;
+    }
 }
 
 @keyframes rotateYPerson2 {

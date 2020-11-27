@@ -8,6 +8,10 @@
       }
    }
 
+   &__desc {
+      margin-top: 0;
+   }
+
    &__catWrapper {
       margin-bottom: 2rem;
 
@@ -18,39 +22,25 @@
       }
    }
 
-   &__contentWrapper {
-      h4 {
+   &__content {
+      &__title {
          margin-top: 0;
+         margin-bottom: 0.5rem;
+         text-align: left;
+      }
+
+      &__text {
+         margin: 0;
+         margin-bottom: 1.3rem;
+
+         @include breakpoint("lg") {
+            margin-bottom: 2rem;
+         }
       }
 
       &__btn {
          &--disabled {
             display: none !important;
-         }
-      }
-   }
-
-   &__content {
-      text-align: left;
-      transition: 1s;
-
-      &--noMargin {
-         margin: 0;
-      }
-
-      &__text {
-         &--noMargin {
-            margin: 0;
-         }
-      }
-      &__collapsedWrapper {
-         overflow: hidden;
-         transition: transform 0.3s ease-out; // note that we're transitioning transform, not height!
-         height: auto;
-         transform-origin:top;
-         transform: scaleY(1);
-         &--collapsed {
-            transform: scaleY(0);
          }
       }
    }
@@ -65,9 +55,25 @@
       }
    }
 
-   &__selectCat {
-      @include breakpoint("lg") {
-         margin-top: 0;
+   &__trigger {
+      cursor: pointer;
+      content: "Show more";
+      color: #2e6c48;
+      display: inline-block;
+      padding: 15px 30px !important;
+      border-radius: 30px !important;
+      border: 1px solid #2e6b474d !important;
+      background-color: $c-white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+
+      &:hover {
+         border: 1px solid #2e6c48 !important;
+      }
+
+      &--collapsed {
+         display: none;
       }
    }
 }

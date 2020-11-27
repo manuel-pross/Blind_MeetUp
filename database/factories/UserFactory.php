@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'hfu_id' => $faker->unique()->numberBetween(1, 20),
-        'hfu_user_name' => $faker->name,
+        'hfu_user_name' => $faker->unique()->name,
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
         'hfu_mail' => $faker->unique()->safeEmail,

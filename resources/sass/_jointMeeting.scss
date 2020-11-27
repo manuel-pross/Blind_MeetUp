@@ -1,0 +1,153 @@
+.jointMeeting {
+   position: relative;
+   display: flex;
+   margin: 0.5rem;
+   background-color: $c2-second;
+   border-radius: 75px;
+   color: $c-white;
+
+   &__dayCount {
+      color: inherit;
+      margin: 0.5rem 0 0 1rem;
+      padding: 0;
+   }
+
+   &__img {
+      width: 45%;
+      border-radius: inherit;
+   }
+
+   &__contentWrapper {
+      width: 100%;
+      padding: 15px;
+   }
+
+   &__dataWrapper {
+      align-self: center;
+      position: relative;
+      padding: 10px;
+
+      @include breakpoint("lg") {
+         margin-left: 1rem;
+      }
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 46px;
+            height: 1.5px;
+            left: -17px;
+            top: 27px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 31px;
+            }
+
+            @include breakpoint("lg") {
+               top: 37px;
+            }
+
+            @include breakpoint("xl") {
+               width: 54px;
+               top: 43px;
+            }
+         }
+      }
+   }
+
+   &__data {
+      color: inherit !important;
+      margin: 0;
+      margin-left: 18px;
+      white-space: nowrap;
+   }
+
+   &__dataWrapperLocation {
+      position: relative;
+      padding: 10px;
+
+      @include breakpoint("md") {
+         margin-bottom: 3rem;
+      }
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 28px;
+            height: 1.5px;
+            left: -8px;
+            top: 20px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 22px;
+            }
+
+            @include breakpoint("md") {
+               left: -7px;
+               top: 26px;
+            }
+         }
+      }
+   }
+
+   &__clickedBtnWrapper {
+      width: 100%;
+
+      &__block {
+         display: flex;
+         margin: 1.5rem;
+         justify-content: space-around;
+         
+         @include breakpoint("lg") {
+            margin: 4rem;
+         }
+      }
+   }
+
+   &__btnWrapper {
+      display: flex;
+      justify-content: space-around;
+
+      @include breakpoint("lg") {
+         margin: 0 3rem;
+      }
+
+      img {
+         display: inline !important;
+         width: 23px;
+      }
+   }
+
+   &--column {
+      flex-wrap: wrap;
+   }
+}
+
+.btn-cancel {
+   color: $c4-second;
+   width: 80%;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      background-color: $c1-second;
+
+      .btn-meeting__arrow::after,
+      .btn-meeting__arrow::before {
+         background-color: $c-white;
+      }
+   }
+
+   // @include breakpoint("lg") {
+   //    width: 80%;
+   // }
+}
+
+.btn-jointMeeting {
+   white-space: nowrap;
+}
