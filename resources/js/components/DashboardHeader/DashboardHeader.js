@@ -4,9 +4,6 @@ import DashboardHeaderImage from '../../../assets/img/placeholder/1920x395-place
 import { withTranslation } from 'react-i18next';
 
 const DashboardHeader = (props) => {
-   // const [userName] = useState(props.user.first_name);
-
-
    const { t } = props;
    return (
       <div className="dashboardHeader mt-200 position-relative">

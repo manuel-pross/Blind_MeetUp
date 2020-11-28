@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-const Dataprotection = () => (
+const Dataprotection = (props) => (
     <React.Fragment>
-        <Navbar />
+        <Navbar setUser={props.setUser} user={props.user} />
         <div className="container" style={{ marginTop: '100px', marginBottom: '200px' }}>
             <h1>Datenschutzerklärung < br />blindmeetup.hs-furtwangen.de</h1>
             <p className="mb-500">Die nachstehenden Informationen enthalten die gesetzlich vorgesehenen Pflichtangaben zur Anbieterkennzeichnung und weitere Hinweise zur Internetpräsenz „www.blindmeetup.hs-furtwangen.de“  </p>

@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 import AlertCross from '../../../assets/img/icons/alert-cross.svg';
 
-const Guidelines = () => (
+const Guidelines = (props) => (
     <React.Fragment>
-        <Navbar />
+        <Navbar setUser={props.setUser} user={props.user} />
         <div className="container" style={{ marginTop: '100px', marginBottom: '200px' }}>
             <h1>Richtlinien im Überblick</h1>
             <p className="mb-500">Damit alle Nutzer und Nutzerinnen im Umgang mit der Anwendung den Spaß nicht verlieren haben wir bestimmte Regelungen aufgestellt, die es zu beachten gilt.</p>

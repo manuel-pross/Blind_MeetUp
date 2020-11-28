@@ -49,7 +49,7 @@ const navigationItem = (props) => {
             </Link>
         );
     }
-    // For Sign Out Link
+    // For Sign Out Button
     else if (props.signOut) {
         navElement = (
             <Link

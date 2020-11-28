@@ -14,7 +14,7 @@ class Dashboard extends Component {
         return (
 
             <React.Fragment>
-                <Navbar setUser={this.props.setUser} />
+                <Navbar setUser={this.props.setUser} user={this.props.user} />
                 <DashboardHeader user={this.props.user} />
                 <MeetUps />
                 <FAQ />

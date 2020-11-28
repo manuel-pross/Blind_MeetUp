@@ -3,10 +3,10 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <React.Fragment>
-            <Navbar />
+            <Navbar setUser={props.setUser} user={props.user} />
             <ContactForm />
             <Footer />
         </React.Fragment>

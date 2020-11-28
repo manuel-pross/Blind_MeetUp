@@ -4,9 +4,9 @@ import Navbar from '../../components/Navbar/Navbar';
 import FeedbackForm from '../../components/FeedbackForm/FeedbackForm';
 import Footer from '../../components/Footer/Footer';
 
-const Feedback = () => (
+const Feedback = (props) => (
     <React.Fragment>
-        <Navbar />
+        <Navbar setUser={props.setUser} user={props.user} />
         <FeedbackForm />
         <Footer />
     </React.Fragment>

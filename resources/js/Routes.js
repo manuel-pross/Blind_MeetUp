@@ -44,16 +44,16 @@ class Routes extends Component {
                 <Route exact path="/styleguide" component={Styleguide} />
 
                 {/* Footer Routes*/}
-                <Route exact path="/kontakt" component={Contact} />
-                <Route exact path="/feedback" component={Feedback} />
-                <Route exact path="/datenschutz" component={Dataprotection} />
-                <Route exact path="/richtlinien" component={Guidelines} />
-                <Route exact path="/impressum" component={Impressum} />
+                <Route exact path="/kontakt" component={() => <Contact setUser={this.setUser} user={this.state.user} />} />
+                <Route exact path="/feedback" component={() => <Feedback setUser={this.setUser} user={this.state.user} />} />
+                <Route exact path="/datenschutz" component={() => <Dataprotection setUser={this.setUser} user={this.state.user} />} />
+                <Route exact path="/richtlinien" component={() => <Guidelines setUser={this.setUser} user={this.state.user} />} />
+                <Route exact path="/impressum" component={() => <Impressum setUser={this.setUser} user={this.state.user} />} />
 
                 <Route exact path="/login" component={() => <Login setUser={this.setUser} user={this.state.user} />} />
 
 
-                <PrivateRoute exact path="/dashboard" component={() => <Dashboard setUser={this.setUser} user={this.state.user}/>} />
+                <PrivateRoute exact path="/dashboard" component={() => <Dashboard setUser={this.setUser} user={this.state.user} />} />
             </Switch >
         );
     }

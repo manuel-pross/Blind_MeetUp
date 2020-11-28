@@ -6,12 +6,13 @@ import { withTranslation } from 'react-i18next';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => {
+    console.log(props)
 
     const { t } = props;
     const [currentPath] = useState(useLocation().pathname);
 
     let navbarItems = null;
-
+    // Für LandingPage 
     if (currentPath == "/") {
         navbarItems = (
             <React.Fragment>
@@ -22,6 +23,7 @@ const navigationItems = (props) => {
                 <NavigationItem link="login">Anmelden</NavigationItem>
             </React.Fragment>
         );
+        // Für Dashboard wenn angemeldet
     } else if (currentPath == "/dashboard") {
         navbarItems = (
             <React.Fragment>
@@ -29,6 +31,15 @@ const navigationItems = (props) => {
                 <NavigationItem link="/" signOut setUser={props.setUser}>Abmelden</NavigationItem>
             </React.Fragment>
         );
+        // Für Impressum, Datenschutz,... wenn angemeldet
+    } else if (props.user != undefined) {
+        navbarItems = (
+            <React.Fragment>
+                <NavigationItem link="/dashboard" textWithLink>Dashboard</NavigationItem>
+                <NavigationItem link="/" signOut setUser={props.setUser}>Abmelden</NavigationItem>
+            </React.Fragment>
+        );
+        // Für Impressum, Datenschutz,... wenn abgemeldet
     } else {
         navbarItems = (
             <React.Fragment>
@@ -37,6 +48,7 @@ const navigationItems = (props) => {
             </React.Fragment>
         );
     }
+
 
     return navbarItems;
 }
