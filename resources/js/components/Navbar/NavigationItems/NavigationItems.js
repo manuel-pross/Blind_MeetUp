@@ -6,8 +6,6 @@ import { withTranslation } from 'react-i18next';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => {
-    console.log(props)
-
     const { t } = props;
     const [currentPath] = useState(useLocation().pathname);
 
