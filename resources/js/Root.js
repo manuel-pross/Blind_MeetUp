@@ -26,9 +26,7 @@ function Root() {
                 <Route exact path="/richtlinien" component={Guidelines} />
                 <Route exact path="/impressum" component={Impressum} />
 
-                <Route path="/dashboard" component={Dashboard}>
-
-                </Route>
+                <Route path="/dashboard" component={Dashboard} />
             </Switch>
         </React.Fragment>
     );

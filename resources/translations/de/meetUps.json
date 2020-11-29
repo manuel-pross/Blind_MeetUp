@@ -12,5 +12,12 @@
    "btnOther": "Sonstiges",
    "satisfiedDesc1": "Warst du zufrieden",
    "satisfiedDesc2": "mit deinem MeetUp?",
-   "btnRate": "Bewerten"
+   "btnRate": "Bewerten",
+   "monday": "Montag",
+   "thursday": "Dienstag",
+   "wednesday": "Mittwoch",
+   "tuesday": "Donnerstag",
+   "friday": "Freitag",
+   "saturday": "Samstag",
+   "sunday": "Sonntag"
 }

@@ -11,20 +11,18 @@ import Timeline from '../../components/Timeline/Timeline'
 import AboutProject from '../../components/AboutProject/AboutProject';
 import TextIconHFU from '../../components/TextIconHFU/TextIconHFU'
 import SocialMedia from '../../components/SocialMedia/SocialMedia'
-import MeetUps from '../../components/MeetUps/MeetUps';
 
 class LandingPage extends Component {
     render() {
         return (
             <React.Fragment >
-                {/* <Navbar /> */}
-                {/* <Header /> */}
+                <Navbar />
+                <Header />
                 <div id="Projekt">
                     {/* <AboutProject />
                     <TextIconHFU /> */}
                 </div>
                 <div id="Ablauf">
-                    <MeetUps/>
                     {/* <Timeline /> */}
                 </div>
                 <div id="Team">

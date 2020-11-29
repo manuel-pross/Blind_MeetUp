@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import MeetUps from '../../components/MeetUps/MeetUps';
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import FAQ from '../../components/FAQ/FAQ';
 

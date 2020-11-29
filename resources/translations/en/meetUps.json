@@ -12,5 +12,12 @@
    "btnOther": "Other",
    "satisfiedDesc": "Were you satisfied",
    "satisfiedDesc2": "with your MeetUp?",
-   "btnRate": "Rate"
+   "btnRate": "Rate",
+   "monday": "Monday",
+   "thursday": "Thursday",
+   "wednesday": "Wednesday",
+   "tuesday": "Tuesday",
+   "friday": "Friday",
+   "saturday": "Saturday",
+   "sunday": "Sunday"
 }

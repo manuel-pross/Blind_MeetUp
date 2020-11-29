@@ -1,0 +1,374 @@
+.meeting--closed {
+   position: relative;
+   padding: 2.5rem 1.5rem;
+   margin: 1.5rem;
+   background-color: $c2-second;
+   border-radius: 45px;
+   animation: fadeOut 1.5s;
+   animation-delay: 1.5s;
+   animation-fill-mode: forwards;
+}
+
+.meeting--disabled {
+   display: none;
+}
+
+.meeting {
+   position: relative;
+   padding: 2.5rem 2.5rem;
+   margin: 1.5rem;
+   background-color: $c2-second;
+   border-radius: 75px;
+   height: 260px;
+
+   @include breakpoint("lg") {
+      height: 290px;
+   }
+   @include breakpoint("xl") {
+      height: 310px;
+   }
+
+   &__wrapper {
+      height: 140px;
+
+      @include breakpoint("lg") {
+         height: 160px;
+      }
+   }
+
+   &__dataWrapper {
+      position: relative;
+      padding: 10px;
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 46px;
+            height: 1.5px;
+            left: -17px;
+            top: 27px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 31px;
+            }
+
+            @include breakpoint("lg") {
+               top: 37px;
+            }
+
+            @include breakpoint("xl") {
+               width: 54px;
+               top: 43px;
+            }
+         }
+      }
+   }
+
+   &__dataWrapperLocation {
+      position: relative;
+      padding: 10px;
+
+      &--pipe {
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $c-white;
+            width: 28px;
+            height: 1.5px;
+            left: -8px;
+            top: 20px;
+            transform: rotate(90deg);
+
+            @include breakpoint("md") {
+               top: 22px;
+            }
+
+            @include breakpoint("md") {
+               left: -7px;
+               top: 26px;
+            }
+         }
+      }
+   }
+
+   &__data {
+      color: $c-white !important;
+      margin: 0;
+      margin-left: 18px;
+      white-space: nowrap;
+
+      &--date {
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__btnWrapper {
+      // margin: 2.8rem 0;
+
+      // @include breakpoint("lg") {
+      //    margin: 2.95rem 0;
+      // }
+      // @include breakpoint("md") {
+      //    margin: 1.4rem 0;
+      // }
+      // @include breakpoint("xl") {
+      //    margin: 3.1rem 0;
+      // }
+      // @include breakpoint("xxl") {
+      //    margin: 3.15rem 0;
+      // }
+   }
+
+   &__exitBtn {
+      cursor: pointer;
+      position: absolute;
+      border-radius: 45px;
+      border: none;
+      top: 0;
+      right: 0;
+      padding: 22px;
+      transition: all 0.2s;
+
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: $c-grey;
+         height: 1.5px;
+         width: 23px;
+         transform: rotate(45deg);
+         left: 11px;
+         transition: all 0.2s;
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         background-color: $c-grey;
+         height: 1.5px;
+         width: 23px;
+         transform: rotate(135deg);
+         left: 11px;
+         transition: all 0.2s;
+      }
+
+      &:hover {
+         background-color: $c1-second;
+
+         &::before {
+            background-color: $c-white;
+         }
+
+         &::after {
+            background-color: $c-white;
+         }
+      }
+   }
+
+   &__joinBtnWrapper {
+      position: relative;
+   }
+}
+
+.btn-meetingType {
+   transition: all 0.1s ease-in-out;
+   color: $c-grey;
+   width: 100%;
+   margin-bottom: 10px;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+   }
+
+   &:focus {
+      background-color: $c1-second;
+      color: $c-white;
+   }
+}
+
+.btn-meeting {
+   color: $c1-second;
+   width: 100%;
+   transition: all 0.2s ease-in-out;
+   display: block;
+   margin: 0 auto;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+
+      .btn-meeting__arrow::after,
+      .btn-meeting__arrow::before {
+         background-color: $c-white;
+      }
+   }
+
+   &__arrow {
+      transition: all 0.2s ease-in-out;
+      border-radius: 3px;
+      background-color: $c1-second;
+      width: 100%;
+
+      &::before {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: 43px;
+         top: 18px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(45deg);
+         background-color: $c1-second;
+      }
+      &::after {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: 42px;
+         top: 27px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(135deg);
+         background-color: $c1-second;
+      }
+   }
+}
+
+.btn-meeting--animation {
+   color: $c1-second;
+   width: 100%;
+   transition: color 0.2s ease-in-out;
+   transition: width 1.7s;
+   display: block;
+   margin: 0 auto;
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+
+      .btn-meeting__arrow::after,
+      .btn-meeting__arrow::before {
+         background-color: $c-white;
+      }
+   }
+
+   &:focus {
+      background-color: $c1-second;
+      width: 50px;
+      height: 50px;
+   }
+   &:focus .meeting__btnDesc {
+      display: none;
+   }
+
+   &:focus span::before {
+      animation: beforeSlide 1.5s;
+      animation-fill-mode: forwards;
+   }
+
+   &:focus span::after {
+      animation: afterSlide 1.5s;
+      animation-fill-mode: forwards;
+   }
+
+   &__arrow {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      border-radius: 3px;
+      background-color: $c1-second;
+
+      &::before {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 11px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(45deg);
+      }
+
+      &::after {
+         transition: all 0.2s ease-in-out;
+         content: "";
+         position: absolute;
+         right: -19px;
+         bottom: 3px;
+         display: block;
+         width: 13px;
+         height: 2px;
+         border-radius: 3px;
+         background-color: inherit;
+         transform: rotate(135deg);
+      }
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes beforeSlide {
+   0% {
+   }
+   100% {
+      background-color: $c-white;
+      transform: rotate(135deg);
+      right: 45%;
+      top: 23px;
+      width: 24px;
+   }
+}
+
+@keyframes afterSlide {
+   0% {
+   }
+   100% {
+      background-color: $c-white;
+      transform: rotate(45deg);
+      right: 50%;
+      top: 27px;
+   }
+}
+
+@include breakpoint("md") {
+   @keyframes beforeSlide {
+      0% {
+      }
+      100% {
+         background-color: $c-white;
+         transform: rotate(135deg);
+         right: 44.5%;
+         top: 23px;
+         width: 24px;
+      }
+   }
+
+   @keyframes afterSlide {
+      0% {
+      }
+      100% {
+         background-color: $c-white;
+         transform: rotate(45deg);
+         right: 50%;
+         top: 27px;
+      }
+   }
+}

@@ -11498,8 +11498,8 @@ template {
   margin: 1.5rem;
   background-color: #2e6c48;
   border-radius: 45px;
-  -webkit-animation: test 1.5s;
-          animation: test 1.5s;
+  -webkit-animation: fadeOut 1.5s;
+          animation: fadeOut 1.5s;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
@@ -11510,32 +11510,12 @@ template {
   display: none;
 }
 
-@-webkit-keyframes test {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes test {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 .meeting {
   position: relative;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 45px;
+  border-radius: 75px;
   height: 260px;
 }
 
@@ -11548,6 +11528,16 @@ template {
 @media (min-width: 1200px) {
   .meeting {
     height: 310px;
+  }
+}
+
+.meeting__wrapper {
+  height: 140px;
+}
+
+@media (min-width: 992px) {
+  .meeting__wrapper {
+    height: 160px;
   }
 }
 
@@ -11588,7 +11578,6 @@ template {
 
 .meeting__dataWrapperLocation {
   position: relative;
-  margin-bottom: 1.5rem;
   padding: 10px;
 }
 
@@ -11625,28 +11614,6 @@ template {
 
 .meeting__data--date {
   margin-bottom: 1rem;
-}
-
-.meeting__btnWrapper {
-  margin: 2.8rem 0;
-}
-
-@media (min-width: 992px) {
-  .meeting__btnWrapper {
-    margin: 2.95rem 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .meeting__btnWrapper {
-    margin: 1.4rem 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .meeting__btnWrapper {
-    margin: 3.1rem 0;
-  }
 }
 
 .meeting__exitBtn {
@@ -11846,6 +11813,26 @@ template {
   border-radius: 3px;
   background-color: inherit;
   transform: rotate(135deg);
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes beforeSlide {

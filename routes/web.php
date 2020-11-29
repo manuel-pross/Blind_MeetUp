@@ -18,24 +18,23 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/dashboard/anmelden', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/dashboard/anstehend', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/dashboard/vergangen', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
-
 Route::get('/dashboard/angemeldet', function () {
-    return view('styleguide');
+    return view('startpage');
 });
 
 Route::get('/styleguide', function () {
