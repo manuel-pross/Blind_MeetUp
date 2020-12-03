@@ -29,5 +29,4 @@ Route::delete('meeting/{id}', 'MeetingController@delete');
 
 //Route::get('joinedMeetings', 'MeetingUserController@indexUserRegisteredMeetings')->middleware('auth:api');
 
-Route::get('joined_meetings/{user_id}', 'MeetingUserController@getJoinedMeetings')->middleware('auth:api');
-Route::get('past_meetings/{user_id}', 'MeetingUserController@getPastMeetings')->middleware('auth:api');
+Route::get('related_meetings/{user_id}', 'MeetingUserController@getRelatedMeetings');

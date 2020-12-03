@@ -8,27 +8,14 @@ use App\User;
 
 class MeetingUserController extends Controller
 {
-    public function __construct() {
-        $this->middleware('auth');
-    }
 
-    public function getJoinedMeetings($user_id) {
+    public function getRelatedMeetings($user_id) {
         // $meetings = auth()->id();
         // return $meetings;
         $user = new User();
-        $joinedMeetings = $user::findOrFail($user_id)
-            ->joinedMeetings()
+        $relatedMeetings = $user::findOrFail($user_id)
+            ->meetings()
             ->get();
-        return $joinedMeetings;
-    }
-
-    public function getPastMeetings($user_id) {
-        // $meetings = auth()->id();
-        // return $meetings;
-        $user = new User();
-        $pastMeetings = $user::findOrFail($user_id)
-            ->pastMeetings()
-            ->get();
-        return $pastMeetings;
+        return $relatedMeetings;
     }
 }

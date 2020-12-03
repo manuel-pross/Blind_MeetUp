@@ -15,7 +15,6 @@ class CreateMeetingsTable extends Migration
     {
         Schema::create('meetings', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
             $table->dateTime('date');
             $table->string('place');
             $table->unsignedSmallInteger('members')->nullable();
