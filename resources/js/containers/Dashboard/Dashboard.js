@@ -10,13 +10,27 @@ import axios from 'axios'
 
 
 class Dashboard extends Component {
+    state = {
+        meetings: []
+    }
+
+    loadTask = () => {
+        axios.get('/api/meetings').then((response) => {
+            this.setState({
+                meetings: response.data
+            });
+        });
+    }
+
+    componentDidMount() {
+        this.loadTask();
+    }
     render() {
         return (
-
             <React.Fragment>
                 <Navbar setUser={this.props.setUser} user={this.props.user} />
                 <DashboardHeader user={this.props.user} />
-                <MeetUps />
+                <SubNavbar match={this.props.routerObj.match} meetings={this.state.meetings} loadTask={this.loadTask} />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />
             </React.Fragment>
@@ -25,32 +39,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-
-// class Dashboard extends Component {
-//     state = {
-//         meetings: []
-//     }
-
-//     loadTask = () => {
-//         axios.get('/api/meetings').then((response) => {
-//             this.setState({
-//                 meetings: response.data
-//             });
-//         });
-//     }
-
-//     componentDidMount() {
-//         this.loadTask();
-//     }
-
-//     render() {
-//         return (
-//             <React.Fragment>
-//                 <Navbar />
-//                 <DashboardHeader />
-//                 <SubNavbar match={this.props.match} meetings={this.state.meetings} loadTask={this.loadTask} />
-//                 <FAQ />
-//                 <Footer />
-//             </React.Fragment>
-//         );
-//     }

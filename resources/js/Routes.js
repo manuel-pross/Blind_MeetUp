@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Styleguide from './containers/Styleguide/Styleguide';
 import LandingPage from './containers/LandingPage/LandingPage';
 
@@ -22,7 +22,7 @@ class Routes extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('api/user')
+        axios.get('/api/user')
             .then(res => {
                 this.setUser(res.data);
             }).catch(err => {
@@ -52,8 +52,8 @@ class Routes extends Component {
 
                 <Route exact path="/login" component={() => <Login setUser={this.setUser} user={this.state.user} />} />
 
-
-                <PrivateRoute exact path="/dashboard" component={() => <Dashboard setUser={this.setUser} user={this.state.user} />} />
+                {/* Private Routes, nicht exact, da Subroutes auch Private sein müssen */}
+                <PrivateRoute path={"/dashboard" || "/dashboard/"} component={(routerObj) => <Dashboard setUser={this.setUser} user={this.state.user} routerObj={routerObj} />} />
             </Switch >
         );
     }
