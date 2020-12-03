@@ -11,7 +11,25 @@ import axios from 'axios'
 
 class Dashboard extends Component {
     state = {
-        meetings: []
+        meetings: [],
+        joinedMeetings:[],
+        pastMeetings:[]
+    }
+
+    loadJoinedMeetings= () => {
+        axios.get('/api/joined_meetings/1').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                joinedMeetings: response.data
+            });
+        });
+    }
+
+    loadPastMeetings= () => {
+        axios.get('/api/past_meetings/1').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                pastMeetings: response.data
+            });
+        });
     }
 
     loadTask = () => {
@@ -24,7 +42,10 @@ class Dashboard extends Component {
 
     componentDidMount() {
         this.loadTask();
+        this.loadJoinedMeetings();
+        this.loadPastMeetings();
     }
+    
     render() {
         return (
             <React.Fragment>
