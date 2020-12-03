@@ -8,7 +8,7 @@ const Feedback = (props) => (
     <React.Fragment>
         <Navbar setUser={props.setUser} user={props.user} />
         <FeedbackForm />
-        <Footer />
+        <Footer setUser={props.setUser} user={props.user} />
     </React.Fragment>
 );
 

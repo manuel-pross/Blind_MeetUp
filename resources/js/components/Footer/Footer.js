@@ -9,11 +9,11 @@ import { withTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 
 class Footer extends Component {
-
+    
     changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     }
-
+    
     render() {
         const { t } = this.props;
         return (
@@ -21,7 +21,7 @@ class Footer extends Component {
                 <div className="row">
                 <div className="col-lg-7">
                         <p className="footer__heading">{t('Informations')}</p>
-                        <FooterButton link="/login">{t('SignIn')}</FooterButton>
+                        { this.props.user != null ? <FooterButton  link="/" setUser={this.props.setUser} signout>Abmelden</FooterButton>: <FooterButton link="/login">{t('SignIn')}</FooterButton>}
                         <FooterButton link="/feedback">{t('Feedback')}</FooterButton>
                         <FooterButton link="/kontakt">{t('Contact')}</FooterButton>
                         <FooterButton href link="https://www.hs-furtwangen.de/">{t('HochschuleFurtwangen')}</FooterButton>

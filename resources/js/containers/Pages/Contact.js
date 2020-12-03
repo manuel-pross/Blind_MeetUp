@@ -8,7 +8,7 @@ const Contact = (props) => {
         <React.Fragment>
             <Navbar setUser={props.setUser} user={props.user} />
             <ContactForm />
-            <Footer />
+            <Footer setUser={props.setUser} user={props.user} />
         </React.Fragment>
     );
 }

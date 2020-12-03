@@ -24,7 +24,6 @@ class Navbar extends Component {
 
     handleScroll = () => {
         let newPosition = window.scrollY;
-        console.log(newPosition)
         if (newPosition > 70) {
             this.setState({ showToolbar: false });
         } else {

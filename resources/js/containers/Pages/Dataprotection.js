@@ -14,7 +14,7 @@ const Dataprotection = (props) => (
             <p className="subpages__subtext mb-300">Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist:</p>
             <p className="subpages__subtext">Hochschule Furtwangen < br /> Robert-Gerwig-Platz 1 < br /> 78120 Furtwangen</p>
         </div>
-        <Footer />
+        <Footer setUser={props.setUser} user={props.user} />
     </React.Fragment>
 );
 

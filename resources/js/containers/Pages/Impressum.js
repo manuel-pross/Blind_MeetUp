@@ -28,7 +28,7 @@ const Impressum = (props) => {
                 <h4 className="subpages__subheading">{t('Technical implementation')}</h4>
                 <p className="subpages__subtext">{t('Technical implementation text')}</p>
             </div>
-            <Footer />
+            <Footer setUser={props.setUser} user={props.user} />
         </React.Fragment >
     );
 }

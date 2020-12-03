@@ -49,8 +49,7 @@ const Guidelines = (props) => (
             <p className="subpages__subtext mb-300">Du bist der Meinung, dass sich jemand in der Anwendung selbst oder während eines Treffens falsch benommen hat, eine oder mehrere unserer Richtlinien nicht eingehalten hat? Bitte kontaktiere uns über das Kontaktformular und wir werden uns so schnell wie möglich mit dir in Kontakt setzen um eine Lösung für das Problem zu finden.</p>
             <Link to="/kontakt"><button className="btn btn-primary">Kontaktieren</button></Link>
         </div>
-        <Footer />
-
+        <Footer setUser={props.setUser} user={props.user} />
     </React.Fragment>
 );
 

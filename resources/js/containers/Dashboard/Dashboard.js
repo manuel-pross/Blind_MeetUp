@@ -18,7 +18,7 @@ class Dashboard extends Component {
                 <DashboardHeader user={this.props.user} />
                 <MeetUps />
                 <FAQ />
-                <Footer />
+                <Footer setUser={this.props.setUser} user={this.props.user} />
             </React.Fragment>
         );
     }
