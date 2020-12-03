@@ -3,6 +3,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Footer extends Component {
+
+    handleLogout = () => {
+        localStorage.clear();
+        this.props.setUser(null);
+    }
+
     render() {
 
         let button = null;
@@ -13,7 +19,12 @@ class Footer extends Component {
                     <button className="btn btn-second mr-100 footer__button">{this.props.children}</button>
                 </a >
             );
-        } else {
+        } else if (this.props.signout) {
+            button = (
+                <Link to={this.props.link} onClick={this.handleLogout}><button className="btn btn-second mr-100 footer__button">{this.props.children}</button></Link>
+            );
+        }
+        else {
             button = (
                 <Link to={this.props.link}><button className="btn btn-second mr-100 footer__button">{this.props.children}</button></Link>
             );

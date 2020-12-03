@@ -11,8 +11,6 @@ import AnimatedSVGItem from './NavigationItems/AnimatedSVGItem/AnimatedSVGItem'
 
 class Navbar extends Component {
     state = {
-        firstPosition: window.scrollY,
-        initScrollEvent: true,
         showToolbar: true,
     }
 
@@ -26,13 +24,11 @@ class Navbar extends Component {
 
     handleScroll = () => {
         let newPosition = window.scrollY;
-        if (((this.state.firstPosition > newPosition) && !this.state.showToolbar) || newPosition === 0) {
+        if (newPosition > 70) {
+            this.setState({ showToolbar: false });
+        } else {
             this.setState({ showToolbar: true });
         }
-        if ((this.state.firstPosition < newPosition) && this.state.showToolbar && !(newPosition === 0)) {
-            this.setState({ showToolbar: false });
-        }
-        this.setState({ firstPosition: newPosition })
     }
 
     scrollToTop() {
@@ -62,7 +58,7 @@ class Navbar extends Component {
                     onClick={this.scrollToTop} />
                 <nav>
                     <ul className="navbar__Items">
-                        <NavigationItems />
+                        <NavigationItems setUser={this.props.setUser} user={this.props.user} />
                     </ul>
                 </nav>
             </header>

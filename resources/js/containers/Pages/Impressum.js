@@ -4,10 +4,12 @@ import Footer from '../../components/Footer/Footer';
 import { withTranslation } from 'react-i18next';
 
 
-const Impressum = ({ t }) => {
+const Impressum = (props) => {
+    const t = props.t
+    // console.log(props.user);
     return (
         <React.Fragment>
-            <Navbar />
+            <Navbar setUser={props.setUser} user={props.user} />
             <div className="container mb-1000" style={{ marginTop: '100px' }}>
                 <h1 className="subpages__heading">{t('Heading')}</h1 >
                 <p className="mb-500">{t('Heading text')}</p>
@@ -26,7 +28,7 @@ const Impressum = ({ t }) => {
                 <h4 className="subpages__subheading">{t('Technical implementation')}</h4>
                 <p className="subpages__subtext">{t('Technical implementation text')}</p>
             </div>
-            <Footer />
+            <Footer setUser={props.setUser} user={props.user} />
         </React.Fragment >
     );
 }

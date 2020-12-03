@@ -61,8 +61,17 @@ Route::get('/kontakt', function () {
     return view('startpage');
 });
 
-Route::get('meetings', 'MeetingController@index');
+// Route::get('meetings', 'MeetingController@index');
 
 Auth::routes();
+Route::get('/login', function () {
+    return view('startpage');
+});
+
+Route::get('/dashboard', function () {
+    return view('startpage');
+});
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
