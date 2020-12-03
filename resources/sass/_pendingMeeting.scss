@@ -1,12 +1,21 @@
 .meeting--closed {
    position: relative;
-   padding: 2.5rem 1.5rem;
+   padding: 2.5rem;
    margin: 1.5rem;
    background-color: $c2-second;
-   border-radius: 45px;
+   border-radius: 75px;
    animation: fadeOut 1.5s;
    animation-delay: 1.5s;
+   height: 260px;
    animation-fill-mode: forwards;
+
+   @include breakpoint("lg") {
+      height: 290px;
+   }
+
+   @include breakpoint("xl") {
+      height: 310px;
+   }
 }
 
 .meeting--disabled {
@@ -15,7 +24,7 @@
 
 .meeting {
    position: relative;
-   padding: 2.5rem 2.5rem;
+   padding: 2.5rem;
    margin: 1.5rem;
    background-color: $c2-second;
    border-radius: 75px;
@@ -355,7 +364,21 @@
       100% {
          background-color: $c-white;
          transform: rotate(135deg);
-         right: 44.5%;
+         right: 41%;
+         top: 23px;
+         width: 24px;
+      }
+   }
+}
+
+@include breakpoint("lg") {
+   @keyframes beforeSlide {
+      0% {
+      }
+      100% {
+         background-color: $c-white;
+         transform: rotate(135deg);
+         right: 43.6%;
          top: 23px;
          width: 24px;
       }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink, Redirect, Route } from 'react-router-dom';
 
 import PendingContainer from '../MeetUps/PendingContainer';
+import JointContainer from '../MeetUps/JointContainer';
+import PastContainer from '../MeetUps/PastContainer';
 
 
 class SubNavbar extends Component {
@@ -56,9 +58,9 @@ class SubNavbar extends Component {
 
 
                 {/* Dashboard SubRoutes */}
-                <Route exact path={this.props.match.url + "/anmelden"} render={() => <div>Angemeldet</div>} />
+                <Route exact path={this.props.match.url + "/anmelden"} render={() => <JointContainer meetings={jointMeetingData} loadTask={this.props.loadTask} />} />
                 <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer meetings={pendingMeetingData} loadTask={this.props.loadTask} />} />
-                <Route exact path={this.props.match.url + "/vergangen"} render={() => <div>Vergangen</div>} />
+                <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={pastMeetingData} loadTask={this.props.loadTask} />} />
             </div>
 
         );

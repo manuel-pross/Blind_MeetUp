@@ -11494,16 +11494,29 @@ template {
 
 .meeting--closed {
   position: relative;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 45px;
+  border-radius: 75px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
+  height: 260px;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+@media (min-width: 992px) {
+  .meeting--closed {
+    height: 290px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .meeting--closed {
+    height: 310px;
+  }
 }
 
 .meeting--disabled {
@@ -11512,7 +11525,7 @@ template {
 
 .meeting {
   position: relative;
-  padding: 2.5rem 2.5rem;
+  padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
   border-radius: 75px;
@@ -11859,7 +11872,7 @@ template {
     100% {
       background-color: #fefefe;
       transform: rotate(135deg);
-      right: 44.5%;
+      right: 41%;
       top: 23px;
       width: 24px;
     }
@@ -11868,7 +11881,28 @@ template {
     100% {
       background-color: #fefefe;
       transform: rotate(135deg);
-      right: 44.5%;
+      right: 41%;
+      top: 23px;
+      width: 24px;
+    }
+}
+}
+
+@media (min-width: 992px) {
+@-webkit-keyframes beforeSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(135deg);
+      right: 43.6%;
+      top: 23px;
+      width: 24px;
+    }
+}
+@keyframes beforeSlide {
+    100% {
+      background-color: #fefefe;
+      transform: rotate(135deg);
+      right: 43.6%;
       top: 23px;
       width: 24px;
     }
@@ -11913,6 +11947,17 @@ template {
   border-radius: inherit;
 }
 
+.jointMeeting__innerWrapper {
+  height: 120px;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .jointMeeting__innerWrapper {
+    height: 250px;
+  }
+}
+
 .jointMeeting__contentWrapper {
   width: 100%;
   padding: 15px;
@@ -11920,44 +11965,18 @@ template {
 
 .jointMeeting__dataWrapper {
   align-self: center;
-  position: relative;
   padding: 10px;
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__dataWrapper {
-    margin-left: 1rem;
-  }
 }
 
 .jointMeeting__dataWrapper--pipe::after {
   content: "";
   position: absolute;
   background-color: #fefefe;
-  width: 46px;
+  width: 30px;
   height: 1.5px;
-  left: -17px;
+  left: 0;
   top: 27px;
   transform: rotate(90deg);
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__dataWrapper--pipe::after {
-    top: 31px;
-  }
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__dataWrapper--pipe::after {
-    top: 37px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .jointMeeting__dataWrapper--pipe::after {
-    width: 54px;
-    top: 43px;
-  }
 }
 
 .jointMeeting__data {
@@ -11982,24 +12001,11 @@ template {
   content: "";
   position: absolute;
   background-color: #fefefe;
-  width: 28px;
+  width: 30px;
   height: 1.5px;
-  left: -8px;
+  left: 0;
   top: 20px;
   transform: rotate(90deg);
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__dataWrapperLocation--pipe::after {
-    top: 22px;
-  }
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__dataWrapperLocation--pipe::after {
-    left: -7px;
-    top: 26px;
-  }
 }
 
 .jointMeeting__clickedBtnWrapper {
@@ -12041,7 +12047,6 @@ template {
 .btn-cancel {
   color: #FF5454;
   width: 80%;
-  transition: all 0.2s ease-in-out;
 }
 
 .btn-cancel:hover {
@@ -12051,6 +12056,22 @@ template {
 .btn-cancel:hover .btn-meeting__arrow::after,
 .btn-cancel:hover .btn-meeting__arrow::before {
   background-color: #fefefe;
+}
+
+.btn-cancel--animation {
+  color: #FF5454;
+  width: 80%;
+  transition: all 1s ease-in-out;
+}
+
+.btn-cancel--animation:focus {
+  background-color: #50b375;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.btn-cancel--animation:focus .jointMeeting__btnDesc {
+  display: none;
 }
 
 .btn-jointMeeting {
