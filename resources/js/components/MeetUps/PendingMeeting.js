@@ -35,7 +35,6 @@ class PendingMeeting extends Component {
 
    render() {
       const { t } = this.props;
-      console.log(this.props.time);
       return (
          <div key={this.props.key} className={this.state.meetingClass}>
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>

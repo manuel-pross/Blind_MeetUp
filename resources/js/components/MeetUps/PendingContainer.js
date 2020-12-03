@@ -177,14 +177,15 @@ class PendingContainer extends Component {
          <div className="container mb-400">
             <div className="meetUps">
                <h2 className="meetUps__heading">{t("title")}</h2>
-               <Slider {...settings}>
-                  {this.props.meetings.meeting.map((e, i) => {
-                     const time = e.date.slice(11, 16);
-                     return (
-                        <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
-                     )
-                  })}
-               </Slider>
+
+                     <Slider {...settings}>
+                        {this.props.meetings.meeting.map((e, i) => {
+                           const time = e.date.slice(11, 16);
+                           return (
+                              <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                           )
+                        })}
+                     </Slider>
             </div>
          </div>
       )

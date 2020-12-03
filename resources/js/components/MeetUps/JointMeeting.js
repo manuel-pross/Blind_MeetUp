@@ -14,9 +14,10 @@ class JointMeeting extends Component {
       displayBeforeClick: { display: "block" },
       displayAfterClick: { display: "none" },
       joinBtnClass: "btn btn-cancel",
-      wrapperClass: "jointMeeting",
+      jointClass: "jointMeeting",
       wrapperStyle: { flexWrap: "initial" },
-      joinBtnStyle: {}
+      joinBtnStyle: {},
+      reasonChoosed: false
    }
 
    stornoClickHandler = () => {
@@ -29,12 +30,15 @@ class JointMeeting extends Component {
             joinBtnStyle: { width: "50%" }
          })
       }
-      if (this.state.btnPressed) {
-         this.setState({ 
-            joinBtnClass: "btn btn-cancel--animation", 
-            meetingClass: "meeting--closed" })
+
+      //TODO: Hier Hinzufügen, was passieren soll, sobald geklickt wurde
+      if (this.state.btnPressed && this.state.reasonChoosed) {
+         this.setState({
+            joinBtnClass: "btn btn-cancel--animation",
+            jointClass: "jointMeeting--closed"
+         })
          setTimeout(() => {
-            // document.querySelector(".meeting--closed").parentElement.parentElement.remove();
+            document.querySelector(".jointMeeting--closed").parentElement.parentElement.remove();
          }, 2500);
       }
    }
@@ -43,11 +47,12 @@ class JointMeeting extends Component {
       if (this.state.btnPressed) {
          this.setState({
             btnPressed: false,
-            joinBtnClass: "btn btn-cancel", 
+            joinBtnClass: "btn btn-cancel",
             wrapperStyle: { flexWrap: "initial" },
             displayAfterClick: { display: "none" },
             displayBeforeClick: { display: "block" },
-            joinBtnStyle: { width: "80%" }
+            joinBtnStyle: { width: "80%" },
+            reasonChoosed: false
          })
       }
    }
@@ -55,16 +60,16 @@ class JointMeeting extends Component {
    render() {
       const { t } = this.props;
       return (
-         <div style={this.state.wrapperStyle} className={this.state.wrapperClass}>
+         <div style={this.state.wrapperStyle} className={this.state.jointClass}>
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
             <div style={this.state.displayAfterClick} className="jointMeeting__clickedBtnWrapper">
                <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={this.acceptBtn} className="btn btn-jointMeeting">{t("btnTime")}</button>
-                  <button onClick={this.acceptBtn} className="btn btn-jointMeeting">{t("btnInteres")}</button>
+                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnTime")}</button>
+                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnInteres")}</button>
                </div>
                <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={this.acceptBtn} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
-                  <button onClick={this.acceptBtn} className="btn btn-jointMeeting">{t("btnOther")}</button>
+                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
+                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnOther")}</button>
                </div>
             </div>
             <img style={this.state.displayBeforeClick} className="jointMeeting__img" src={placeholderImage} alt="" />
@@ -87,7 +92,7 @@ class JointMeeting extends Component {
                         <div className="jointMeeting__btnDesc">
                            {t("btnCancel")}
                         </div>
-                        <img src={cancelSVG} alt="cancelSVG" ></img>
+                        <img className="btn-cancel__svg" src={cancelSVG} alt="cancelSVG" ></img>
                      </span>
                   </button>
                </div >

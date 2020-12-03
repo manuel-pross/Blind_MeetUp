@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1700px;
   }
 }
 
@@ -11510,11 +11510,11 @@ template {
   margin: 1.5rem;
   background-color: #2e6c48;
   border-radius: 75px;
+  height: 260px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
-  height: 260px;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -11650,6 +11650,7 @@ template {
   right: 0;
   padding: 22px;
   transition: all 0.2s;
+  z-index: 1;
 }
 
 .meeting__exitBtn::before {
@@ -11939,6 +11940,33 @@ template {
 }
 }
 
+.jointMeeting--closed {
+  position: relative;
+  display: flex;
+  margin: 0.5rem;
+  background-color: #2e6c48;
+  border-radius: 75px;
+  color: #fefefe;
+  -webkit-animation: fadeOut 1.5s;
+          animation: fadeOut 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+  .jointMeeting--closed {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jointMeeting--closed {
+    height: 336px;
+  }
+}
+
 .jointMeeting {
   position: relative;
   display: flex;
@@ -11946,6 +11974,18 @@ template {
   background-color: #2e6c48;
   border-radius: 75px;
   color: #fefefe;
+}
+
+@media (min-width: 768px) {
+  .jointMeeting {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jointMeeting {
+    height: 336px;
+  }
 }
 
 .jointMeeting__dayCount {
@@ -11964,9 +12004,17 @@ template {
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+  .jointMeeting__innerWrapper {
+    height: 180px;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
   .jointMeeting__innerWrapper {
     height: 250px;
+    padding: 2.5rem;
   }
 }
 
@@ -11976,6 +12024,7 @@ template {
 }
 
 .jointMeeting__dataWrapper {
+  position: relative;
   align-self: center;
   padding: 10px;
 }
@@ -12021,7 +12070,24 @@ template {
 }
 
 .jointMeeting__clickedBtnWrapper {
+  height: 120px;
   width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__clickedBtnWrapper {
+    height: 180px;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .jointMeeting__clickedBtnWrapper {
+    height: 250px;
+    padding: 2.5rem;
+  }
 }
 
 .jointMeeting__clickedBtnWrapper__block {
@@ -12032,7 +12098,7 @@ template {
 
 @media (min-width: 992px) {
   .jointMeeting__clickedBtnWrapper__block {
-    margin: 4rem;
+    margin: 2.5rem;
   }
 }
 
@@ -12086,8 +12152,23 @@ template {
   display: none;
 }
 
+.btn-cancel--animation:focus .jointMeeting__btnWrapper {
+  margin: 0;
+}
+
 .btn-jointMeeting {
   white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.btn-jointMeeting:hover {
+  color: #fefefe;
+  background-color: #50b375;
+}
+
+.btn-jointMeeting:focus {
+  color: #fefefe;
+  background-color: #50b375;
 }
 
 .pastMeeting {

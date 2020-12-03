@@ -27,7 +27,6 @@ class PendingContainer extends Component {
          img_link: ""
       }
    }
-
    deleteMeeting = (id) => {
 
       axios.delete('/api/meeting/' + id).then((response) => {
