@@ -16,7 +16,7 @@ class CreateMeetingUserTable extends Migration
         Schema::create('meeting_user', function (Blueprint $table) {
             $table->unsignedBigInteger('meeting_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->String('status');
+            $table->string('status');
             $table->timestamps();
 
             $table->primary(['meeting_id', 'user_id']); // to avoid a user to have the same meeting many times

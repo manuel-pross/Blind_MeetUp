@@ -16,14 +16,14 @@ class Dashboard extends Component {
     }
 
     loadRelatedMeetings= () => {
-        axios.get('/api/related_meetings/1').then((response) => { //Bitte die id des users dynamisch eingeben
+        axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
             this.setState({
                 relatedMeetings: response.data
             });
         });
     }
 
-    loadTask = () => {
+    loadTask = () => { //Bitte noch in loadMeetings umbenennen
         axios.get('/api/meetings').then((response) => {
             this.setState({
                 meetings: response.data

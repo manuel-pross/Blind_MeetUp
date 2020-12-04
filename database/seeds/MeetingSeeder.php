@@ -20,6 +20,7 @@ class MeetingSeeder extends Seeder
                 [
                     'date' => ("2020-12-2" . $i . " 08:15:00"),
                     'place' => 'Mensa',
+                    'specific_place' => 'Klo',
                     'members' => $i + 1,
                     'max_members' => $i + 2,
                     'rating' => $i + 1
