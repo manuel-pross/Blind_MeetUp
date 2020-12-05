@@ -12,13 +12,22 @@ import axios from 'axios'
 class Dashboard extends Component {
     state = {
         meetings: [],
-        relatedMeetings:[]
+        relatedMeetings:[],
+        pendingMeetings:[]
     }
 
     loadRelatedMeetings= () => {
         axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
             this.setState({
                 relatedMeetings: response.data
+            });
+        });
+    }
+
+    loadPendingMeetings= () => {
+        axios.get('/api/pending_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                pendingMeetings: response.data
             });
         });
     }
@@ -32,8 +41,9 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        this.loadTask();
-        this.loadRelatedMeetings();
+        this.loadTask()
+        this.loadRelatedMeetings()
+        this.loadPendingMeetings()
     }
     
     render() {

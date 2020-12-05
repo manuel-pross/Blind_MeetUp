@@ -15,8 +15,7 @@ class UserSeeder extends Seeder
         factory(App\User::class, 5)->create()
             ->each(function ($user){
                 $meeting_ids = range(1, 5);
-                shuffle($meeting_ids);
-                $connections = array_slice($meeting_ids, 0, rand(0, 3));
+                $connections = array_slice($meeting_ids, 0, 5);
                 foreach ($connections as $value) {
                     DB::table('meeting_user')
                         ->insert(

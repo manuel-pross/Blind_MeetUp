@@ -33,4 +33,17 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Meeting')
         ->withPivot(['status']);
     }
+
+    public function pendingMeetings() {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('status', 'pending');
+    }
+
+    public function pastMeetings() {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('status', 'past')
+        ->take(2);
+    }
 }

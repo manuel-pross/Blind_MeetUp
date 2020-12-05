@@ -28,3 +28,5 @@ Route::put('meeting/{id}', 'MeetingController@update')->middleware('auth:api');
 Route::delete('meeting/{id}', 'MeetingController@delete')->middleware('auth:api');
 
 Route::get('related_meetings/{user_id}', 'MeetingUserController@getRelatedMeetings')->middleware('auth:api');
+Route::get('pending_meetings/{user_id}', 'MeetingUserController@getPendingMeetings')->middleware('auth:api');
+Route::get('pending_meetings/{user_id}', 'MeetingUserController@getPastMeetings')->middleware('auth:api');
