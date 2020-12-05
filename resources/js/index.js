@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from "axios";
 // import './index.scss';
 import Root from './Routes';
 import * as serviceWorker from './serviceWorker';
@@ -7,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
 import ScrollToTop from './components/hoc/ScrollToTop';
 
-import axios from "axios";
 
 // For translations
 import './i18n';

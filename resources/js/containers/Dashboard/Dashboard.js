@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -26,15 +27,21 @@ class Dashboard extends Component {
         this.loadTask();
     }
     render() {
+        if (this.props.user) {
+            return (
+                <React.Fragment>
+                    <Navbar setUser={this.props.setUser} user={this.props.user} />
+                    <DashboardHeader user={this.props.user} />
+                    <SubNavbar match={this.props.routerObj.match} meetings={this.state.meetings} loadTask={this.loadTask} />
+                    <FAQ />
+                    <Footer setUser={this.props.setUser} user={this.props.user} />
+                </React.Fragment>
+            );
+        }
         return (
-            <React.Fragment>
-                <Navbar setUser={this.props.setUser} user={this.props.user} />
-                <DashboardHeader user={this.props.user} />
-                <SubNavbar match={this.props.routerObj.match} meetings={this.state.meetings} loadTask={this.loadTask} />
-                <FAQ />
-                <Footer setUser={this.props.setUser} user={this.props.user} />
-            </React.Fragment>
+            <Redirect to="/login" />
         );
+
     }
 }
 
