@@ -23,17 +23,25 @@ class MeetingUserController extends Controller
 
     public function getPendingMeetings($user_id) {
         $user = new User();
-        $relatedMeetings = $user::findOrFail($user_id)
+        $pendingMeetings = $user::findOrFail($user_id)
             ->pendingMeetings()
             ->get();
-        return $relatedMeetings;
+        return $pendingMeetings;
     }
 
     public function getPastMeetings($user_id) {
         $user = new User();
-        $relatedMeetings = $user::findOrFail($user_id)
+        $pastMeetings = $user::findOrFail($user_id)
             ->pastMeetings()
             ->get();
-        return $relatedMeetings;
+        return $pastMeetings;
+    }
+
+    public function getRegisteredMeetings($user_id) {
+        $user = new User();
+        $registeredMeetings = $user::findOrFail($user_id)
+            ->registeredMeetings()
+            ->get();
+        return $registeredMeetings;
     }
 }
