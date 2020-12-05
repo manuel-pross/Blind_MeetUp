@@ -23,7 +23,7 @@ class Dashboard extends Component {
         });
     }
 
-    loadTask = () => { //Bitte noch in loadMeetings umbenennen
+    loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
         axios.get('/api/meetings').then((response) => {
             this.setState({
                 meetings: response.data
