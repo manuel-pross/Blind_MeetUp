@@ -10,7 +10,7 @@ class Header extends Component {
       const { t } = this.props;
       return (
          <div className="header position-relative">
-            <img className="header__image" src={headerImage} alt="headerImage" />
+            <img className="header__image" src="../images/landing-page-background.jpg" alt="headerImage" />
             <div className="header__wrapper">
                <h1 className="header__title">{t("title")}</h1>
                <p className="header__p">{t("desc")}</p>
