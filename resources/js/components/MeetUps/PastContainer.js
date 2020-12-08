@@ -30,7 +30,7 @@ class PendingContainer extends Component {
 
    deleteMeeting = (id) => {
 
-      axios.delete('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/api/meeting/' + id).then((response) => {
+      axios.delete('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/routes/api/meeting/' + id).then((response) => {
          this.props.loadTask();
       });
    }
