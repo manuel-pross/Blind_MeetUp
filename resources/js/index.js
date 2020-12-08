@@ -16,7 +16,7 @@ import './i18n';
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Blind_MeetUp/public">
     <ScrollToTop>
       <DevSizeBtn />
       <React.StrictMode>
