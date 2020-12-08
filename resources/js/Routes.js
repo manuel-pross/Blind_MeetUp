@@ -22,7 +22,7 @@ class Routes extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/api/user')
+        axios.get('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/api/user')
             .then(res => {
                 this.setUser(res.data);
             }).catch(err => {

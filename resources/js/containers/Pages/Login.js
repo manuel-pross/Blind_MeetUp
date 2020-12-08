@@ -16,7 +16,7 @@ class Login extends Component {
             password: this.password
         }
 
-        axios.post('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/api/login', data)
+        axios.post('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/api/login', data)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 this.setState({
