@@ -28,7 +28,7 @@ const EditMeetingForm = props => {
     }
 
     const updateMeeting = () => {
-        axios.put('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/routes/api/meeting/' + props.editMeetingData.id, { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link })
+        axios.put('/Blind_MeetUp/api/meeting/' + props.editMeetingData.id, { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link })
             .then((response) => {
                 props.loadTask();
                 props.modalHandler();
