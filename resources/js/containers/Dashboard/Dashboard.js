@@ -16,7 +16,7 @@ class Dashboard extends Component {
     }
 
     loadTask = () => {
-        axios.get('/api/meetings').then((response) => {
+        axios.get('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/api/meetings').then((response) => {
             this.setState({
                 meetings: response.data
             });

@@ -20,7 +20,7 @@ const AddMeetingForm = (props) => {
         console.log(sendingData);
         let dummyData = { type: "pending", place: "Mensa", date: "2020-11-11T16:52", members: 7, max_members: 20, rating: 1, img_link: "adsfsfd" }
         console.log(dummyData);
-        axios.post('/api/meeting', sendingData).then((response) => {
+        axios.post('https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/api/meeting', sendingData).then((response) => {
             props.loadTask();
             props.modalHandler();
             resetEditState();
