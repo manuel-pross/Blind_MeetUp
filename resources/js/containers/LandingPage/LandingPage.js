@@ -19,19 +19,19 @@ class LandingPage extends Component {
                 <Navbar />
                 <Header />
                 <div id="Projekt">
-                    {/* <AboutProject />
-                    <TextIconHFU /> */}
+                    <AboutProject />
+                    <TextIconHFU />
                 </div>
                 <div id="Ablauf">
-                    {/* <Timeline /> */}
+                    <Timeline />
                 </div>
                 <div id="Team">
-                    {/* <TeamSlider /> */}
+                    <TeamSlider />
                 </div>
                 <div id="FAQ">
-                    {/* <FAQ />
+                    <FAQ />
                     <CTA />
-                    <SocialMedia /> */}
+                    <SocialMedia />
                 </div>
                 <Footer />
             </React.Fragment>
