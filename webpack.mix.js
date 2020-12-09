@@ -12,5 +12,4 @@ const mix = require('laravel-mix');
  */
 
 mix.react('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .setResourceRoot("https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/");
+    .sass('resources/sass/app.scss', 'public/css');
