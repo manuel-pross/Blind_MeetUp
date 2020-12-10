@@ -1,15 +1,53 @@
-.pastMeeting {
-   display: flex;
-   position: relative;
-   flex-wrap: wrap;
+.pastMeeting--closed {
    padding: 1rem;
    margin: 1.5rem;
+   position: relative;
    border-radius: 75px;
    background-color: $c4-main;
-   text-align: center;
-   align-items: center;
+   color: $c-white;
    height: 363px;
    width: 363px;
+   animation: fadeOut 1.5s;
+   animation-fill-mode: forwards;
+}
+
+.pastMeeting {
+   padding: 1rem;
+   margin: 2.5rem;
+   position: relative;
+   border-radius: 75px;
+   background-color: $c4-main;
+   color: $c-white;
+   // width: 100%;
+   height: 280px;
+
+   @include breakpoint("md") {
+      margin: 1.5rem;
+   }
+
+   @include breakpoint("lg") {
+      height: 330px;
+   }
+
+   &__topWrapper {
+      height: 12.5rem;
+      padding: 2rem;
+
+      @include breakpoint("lg") {
+         height: 14rem;
+      }
+   }
+
+   &__wrapperAfterClick {
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+      height: 100%;
+   }
+
+   &__wrapperBeforeClick {
+      position: relative;
+   }
 
    &__textWrapper {
       width: 100%;
@@ -28,7 +66,56 @@
    }
 
    &__smiley {
+      cursor: pointer;
       width: 50px;
+   }
+
+   &__notRated {
+      color: inherit;
+      padding: 0;
+      margin: 0 0 0.5rem 0;
+   }
+
+   &__dataWrapper {
+      position: relative;
+      align-self: center;
+      padding: 10px;
+
+      &::after {
+         content: "";
+         position: absolute;
+         background-color: $c-white;
+         width: 30px;
+         height: 1.5px;
+         left: -10px;
+         top: 27px;
+         transform: rotate(90deg);
+      }
+   }
+
+   &__dataWrapperLocation {
+      position: relative;
+      align-self: center;
+      padding: 10px;
+
+      &::after {
+         content: "";
+         position: absolute;
+         background-color: $c-white;
+         width: 30px;
+         height: 1.5px;
+         left: -10px;
+         top: 27px;
+         transform: rotate(90deg);
+      }
+   }
+
+   &__data {
+      color: inherit;
+      padding: 0;
+      margin: 0;
+      margin-left: 18px;
+      white-space: nowrap;
    }
 
    &__btnWrapper {

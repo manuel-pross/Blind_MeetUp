@@ -19,5 +19,6 @@
    "tuesday": "Tuesday",
    "friday": "Friday",
    "saturday": "Saturday",
-   "sunday": "Sunday"
+   "sunday": "Sunday",
+   "notRated": "Not yet rated"
 }

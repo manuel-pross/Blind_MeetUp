@@ -71,7 +71,7 @@ html {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1700px;
   }
 }
 
@@ -12171,18 +12171,63 @@ template {
   background-color: #50b375;
 }
 
-.pastMeeting {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
+.pastMeeting--closed {
   padding: 1rem;
   margin: 1.5rem;
+  position: relative;
   border-radius: 75px;
   background-color: #707070;
-  text-align: center;
-  align-items: center;
+  color: #fefefe;
   height: 363px;
   width: 363px;
+  -webkit-animation: fadeOut 1.5s;
+          animation: fadeOut 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.pastMeeting {
+  padding: 1rem;
+  margin: 2.5rem;
+  position: relative;
+  border-radius: 75px;
+  background-color: #707070;
+  color: #fefefe;
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .pastMeeting {
+    margin: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pastMeeting {
+    height: 330px;
+  }
+}
+
+.pastMeeting__topWrapper {
+  height: 12.5rem;
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .pastMeeting__topWrapper {
+    height: 14rem;
+  }
+}
+
+.pastMeeting__wrapperAfterClick {
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.pastMeeting__wrapperBeforeClick {
+  position: relative;
 }
 
 .pastMeeting__textWrapper {
@@ -12202,7 +12247,56 @@ template {
 }
 
 .pastMeeting__smiley {
+  cursor: pointer;
   width: 50px;
+}
+
+.pastMeeting__notRated {
+  color: inherit;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.pastMeeting__dataWrapper {
+  position: relative;
+  align-self: center;
+  padding: 10px;
+}
+
+.pastMeeting__dataWrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 30px;
+  height: 1.5px;
+  left: -10px;
+  top: 27px;
+  transform: rotate(90deg);
+}
+
+.pastMeeting__dataWrapperLocation {
+  position: relative;
+  align-self: center;
+  padding: 10px;
+}
+
+.pastMeeting__dataWrapperLocation::after {
+  content: "";
+  position: absolute;
+  background-color: #fefefe;
+  width: 30px;
+  height: 1.5px;
+  left: -10px;
+  top: 27px;
+  transform: rotate(90deg);
+}
+
+.pastMeeting__data {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-left: 18px;
+  white-space: nowrap;
 }
 
 .pastMeeting__btnWrapper {
