@@ -35,7 +35,6 @@ class SubNavbar extends Component {
                     pendingMeetingData.number++;
                     pendingMeetingData.meeting.push({ date: e.date, place: e.place })
                     break;
-
                 case "joint":
                     jointMeetingData.meeting.number++;
                     jointMeetingData.meeting.push({ date: e.date, place: e.place })

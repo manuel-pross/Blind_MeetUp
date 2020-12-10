@@ -14,35 +14,35 @@ const navigationItems = (props) => {
     if (currentPath == "/") {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem hashLink link="Projekt" offset={-100} duration={500}>Das Projekt</NavigationItem>
-                <NavigationItem hashLink link="Ablauf" offset={-100} duration={500}>Ablauf</NavigationItem>
-                <NavigationItem hashLink link="Team" offset={-100} duration={500}>Unser Team</NavigationItem>
-                <NavigationItem hashLink link="FAQ" offset={-100} duration={500}>FAQ</NavigationItem>
-                <NavigationItem link="login">Anmelden</NavigationItem>
+                <NavigationItem hashLink link="Projekt" offset={-100} duration={500}>{t("project")}</NavigationItem>
+                <NavigationItem hashLink link="Ablauf" offset={-100} duration={500}>{t("procedure")}</NavigationItem>
+                <NavigationItem hashLink link="Team" offset={-100} duration={500}>{t("team")}</NavigationItem>
+                <NavigationItem hashLink link="FAQ" offset={-100} duration={500}>{t("faq")}</NavigationItem>
+                <NavigationItem link="login">{t("logIn")}</NavigationItem>
             </React.Fragment>
         );
-    // Für Dashboard wenn angemeldet
+        // Für Dashboard wenn angemeldet
     } else if (currentPath == "/dashboard") {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem onlyText>Treffen</NavigationItem>
-                <NavigationItem link="/" signOut setUser={props.setUser}>Abmelden</NavigationItem>
+                <NavigationItem onlyText>{t("meeting")}</NavigationItem>
+                <NavigationItem link="/" signOut setUser={props.setUser}>{t("logOut")}</NavigationItem>
             </React.Fragment>
         );
-    // Für Impressum, Datenschutz,... wenn angemeldet
+        // Für Impressum, Datenschutz,... wenn angemeldet
     } else if (props.user != undefined) {
         navbarItems = (
             <React.Fragment>
                 <NavigationItem link="/dashboard" textWithLink>Dashboard</NavigationItem>
-                <NavigationItem link="/" signOut setUser={props.setUser}>Abmelden</NavigationItem>
+                <NavigationItem link="/" signOut setUser={props.setUser}>{t("logOut")}</NavigationItem>
             </React.Fragment>
         );
-    // Für Impressum, Datenschutz,... wenn abgemeldet
+        // Für Impressum, Datenschutz,... wenn abgemeldet
     } else {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem link="/" textWithLink>Startseite</NavigationItem>
-                <NavigationItem link="/dashboard">Anmelden</NavigationItem>
+                <NavigationItem link="/" textWithLink>{t("homePage")}</NavigationItem>
+                <NavigationItem link="/dashboard">{t("logOut")}</NavigationItem>
             </React.Fragment>
         );
     }
