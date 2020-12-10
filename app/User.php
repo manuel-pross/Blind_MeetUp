@@ -30,12 +30,26 @@ class User extends Authenticatable
     ];
 
     public function meetings() {
-        return $this->belongsToMany('App\Meeting');
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status']);
     }
 
-    public function getPendingMeeting() {
+    public function pendingMeetings() {
         return $this->belongsToMany('App\Meeting')
-        ->wherePivot('user_id', $this->id)
-        ->where('type', 'pending');
+        ->withPivot(['status'])
+        ->where('status', 'pending');
+    }
+
+    public function pastMeetings() {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('status', 'past')
+        ->take(2);
+    }
+
+    public function registeredMeetings() {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('status', 'registered');
     }
 }

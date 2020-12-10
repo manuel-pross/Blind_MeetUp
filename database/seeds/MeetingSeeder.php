@@ -18,9 +18,9 @@ class MeetingSeeder extends Seeder
         for ($i = 0; $i < 5; $i++) {
             $meeting = new Meeting(
                 [
-                    'type' => 'pending',
                     'date' => ("2020-12-2" . $i . " 08:15:00"),
                     'place' => 'Mensa',
+                    'specific_place' => 'Klo',
                     'members' => $i + 1,
                     'max_members' => $i + 2,
                     'rating' => $i + 1

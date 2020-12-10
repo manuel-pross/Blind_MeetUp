@@ -12,10 +12,46 @@ import axios from 'axios'
 
 class Dashboard extends Component {
     state = {
-        meetings: []
+        meetings: [],
+        relatedMeetings: [],
+        pendingMeetings: [],
+        pastMeetings: [],
+        registeredMeetings: []
     }
 
-    loadTask = () => {
+    loadRelatedMeetings= () => {
+        axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                relatedMeetings: response.data
+            });
+        });
+    }
+
+    loadPendingMeetings= () => {
+        axios.get('/api/pending_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                pendingMeetings: response.data
+            });
+        });
+    }
+
+    loadPastMeetings= () => {
+        axios.get('/api/past_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                pastMeetings: response.data
+            });
+        });
+    }
+
+    loadRegisteredMeetings= () => {
+        axios.get('/api/registered_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
+            this.setState({
+                registeredMeetings: response.data
+            });
+        });
+    }
+
+    loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
         axios.get('/api/meetings').then((response) => {
             this.setState({
                 meetings: response.data
@@ -24,8 +60,13 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        this.loadTask();
+        this.loadTask()
+        this.loadRelatedMeetings()
+        this.loadPendingMeetings()
+        this.loadPastMeetings()
+        this.loadRegisteredMeetings()
     }
+    
     render() {
         if (this.props.user) {
             return (

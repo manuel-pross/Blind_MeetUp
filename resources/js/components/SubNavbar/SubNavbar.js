@@ -44,6 +44,8 @@ class SubNavbar extends Component {
                     pastMeetingData.meeting.number++;
                     pastMeetingData.meeting.push({ date: e.date, place: e.place })
                     break;
+                default:
+                    pendingMeetingData.meeting.push({ date: e.date, place: e.place })
             }
         });
 
