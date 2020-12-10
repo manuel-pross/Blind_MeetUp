@@ -10574,23 +10574,17 @@ template {
 
 .header__image {
   width: 100%;
-  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 100%;
      object-position: 40% 100%;
-}
-
-@media (min-width: 1200px) {
-  .header__image {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 .header__wrapper {
   position: absolute;
   margin: 35px;
-  top: 2rem;
+  top: 3rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -10599,7 +10593,6 @@ template {
 
 @media (min-width: 576px) {
   .header__wrapper {
-    top: 3rem;
     margin: 45px;
   }
 }
@@ -10672,14 +10665,14 @@ template {
   }
 }
 
-.header__firstBtn {
-  margin-bottom: 1rem;
+.header__secondBtn {
+  margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
-  .header__firstBtn {
-    margin-bottom: 0rem;
-    margin-right: 2rem;
+  .header__secondBtn {
+    margin-top: 0rem;
+    margin-left: 2rem;
   }
 }
 
@@ -11092,6 +11085,13 @@ template {
   .imageText__text {
     margin-top: 0;
     flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .imageText__text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 

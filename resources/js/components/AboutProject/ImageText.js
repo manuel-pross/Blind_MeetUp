@@ -7,8 +7,8 @@ function ImageText(props) {
 
    return (
       <div className="imageText" style={wrapperStyle}>
-         <img src={props.img} alt=""  className="imageText__img" />
-         <p className="imageText__text" className="imageText__text" style={textStyle}>{props.text}</p>
+         <img src={props.img} alt="" className="imageText__img" />
+         <p className="imageText__text" className="imageText__text" style={textStyle}>{props.headerText}<br />{props.text}</p>
       </div>
    )
 }
