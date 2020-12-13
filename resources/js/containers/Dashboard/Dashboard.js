@@ -23,7 +23,7 @@ class Dashboard extends Component {
 
     loadRelatedMeetings = () => {
         axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted) {
+            if (this._isMounted && this.props.user) {
                 this.setState({
                     relatedMeetings: response.data
                 });
@@ -33,7 +33,7 @@ class Dashboard extends Component {
 
     loadPendingMeetings = () => {
         axios.get('/api/pending_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted) {
+            if (this._isMounted && this.props.user) {
                 this.setState({
                     pendingMeetings: response.data
                 });
@@ -43,7 +43,7 @@ class Dashboard extends Component {
 
     loadPastMeetings = () => {
         axios.get('/api/past_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted) {
+            if (this._isMounted && this.props.user) {
                 this.setState({
                     pastMeetings: response.data
                 });
@@ -53,7 +53,7 @@ class Dashboard extends Component {
 
     loadRegisteredMeetings = () => {
         axios.get('/api/registered_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted) {
+            if (this._isMounted && this.props.user) {
                 this.setState({
                     registeredMeetings: response.data
                 });
@@ -63,7 +63,7 @@ class Dashboard extends Component {
 
     loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
         axios.get('/api/meetings').then((response) => {
-            if (this._isMounted) {
+            if (this._isMounted && this.props.user) {
                 this.setState({
                     meetings: response.data
                 });
@@ -72,6 +72,7 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props.user);
         this._isMounted = true;
         this.loadTask()
         this.loadRelatedMeetings()
