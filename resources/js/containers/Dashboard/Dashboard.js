@@ -11,6 +11,8 @@ import axios from 'axios'
 
 
 class Dashboard extends Component {
+    _isMounted = false;
+
     state = {
         meetings: [],
         relatedMeetings: [],
@@ -19,54 +21,69 @@ class Dashboard extends Component {
         registeredMeetings: []
     }
 
-    loadRelatedMeetings= () => {
+    loadRelatedMeetings = () => {
         axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            this.setState({
-                relatedMeetings: response.data
-            });
+            if (this._isMounted) {
+                this.setState({
+                    relatedMeetings: response.data
+                });
+            }
         });
     }
 
-    loadPendingMeetings= () => {
+    loadPendingMeetings = () => {
         axios.get('/api/pending_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            this.setState({
-                pendingMeetings: response.data
-            });
+            if (this._isMounted) {
+                this.setState({
+                    pendingMeetings: response.data
+                });
+            }
         });
     }
 
-    loadPastMeetings= () => {
+    loadPastMeetings = () => {
         axios.get('/api/past_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            this.setState({
-                pastMeetings: response.data
-            });
+            if (this._isMounted) {
+                this.setState({
+                    pastMeetings: response.data
+                });
+            }
         });
     }
 
-    loadRegisteredMeetings= () => {
+    loadRegisteredMeetings = () => {
         axios.get('/api/registered_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            this.setState({
-                registeredMeetings: response.data
-            });
+            if (this._isMounted) {
+                this.setState({
+                    registeredMeetings: response.data
+                });
+            }
         });
     }
 
     loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
         axios.get('/api/meetings').then((response) => {
-            this.setState({
-                meetings: response.data
-            });
+            if (this._isMounted) {
+                this.setState({
+                    meetings: response.data
+                });
+            }
         });
     }
 
     componentDidMount() {
+        this._isMounted = true;
         this.loadTask()
         this.loadRelatedMeetings()
         this.loadPendingMeetings()
         this.loadPastMeetings()
         this.loadRegisteredMeetings()
     }
-    
+
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
     render() {
         if (this.props.user) {
             return (
