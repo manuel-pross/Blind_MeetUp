@@ -22,43 +22,51 @@ class Dashboard extends Component {
     }
 
     loadRelatedMeetings = () => {
-        axios.get('/api/related_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted && this.props.user) {
-                this.setState({
-                    relatedMeetings: response.data
-                });
-            }
-        });
+        if (this.props.user) {
+            axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => { 
+                if (this._isMounted) {
+                    this.setState({
+                        relatedMeetings: response.data
+                    });
+                }
+            });
+        }
     }
 
     loadPendingMeetings = () => {
-        axios.get('/api/pending_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted && this.props.user) {
-                this.setState({
-                    pendingMeetings: response.data
-                });
-            }
-        });
+        if (this.props.user) {
+            axios.get('/api/pending_meetings/' + this.props.user.id + '/').then((response) => { 
+                if (this._isMounted) {
+                    this.setState({
+                        pendingMeetings: response.data
+                    });
+                }
+            });
+        }
     }
 
     loadPastMeetings = () => {
-        axios.get('/api/past_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted && this.props.user) {
-                this.setState({
-                    pastMeetings: response.data
-                });
-            }
-        });
+        if (this.props.user) {
+            axios.get('/api/past_meetings/' + this.props.user.id + '/').then((response) => {
+                if (this._isMounted) {
+                    this.setState({
+                        pastMeetings: response.data
+                    });
+                }
+            });
+        }
     }
 
     loadRegisteredMeetings = () => {
-        axios.get('/api/registered_meetings/2').then((response) => { //Bitte die id des users dynamisch eingeben
-            if (this._isMounted && this.props.user) {
-                this.setState({
-                    registeredMeetings: response.data
-                });
-            }
-        });
+        if (this.props.user) {
+            axios.get('/api/registered_meetings/' + this.props.user.id + '/').then((response) => {
+                if (this._isMounted) {
+                    this.setState({
+                        registeredMeetings: response.data
+                    });
+                }
+            });
+        }
     }
 
     loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
