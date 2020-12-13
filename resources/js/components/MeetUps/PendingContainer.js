@@ -31,7 +31,7 @@ class PendingContainer extends Component {
    deleteMeeting = (id) => {
 
       axios.delete('/api/meeting/' + id).then((response) => {
-         this.props.loadTask();
+         this.props.loadMeetings();
       });
    }
 
@@ -89,10 +89,10 @@ class PendingContainer extends Component {
    //          {meetings}
    //          <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
    //          <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
-   //             <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadTask={this.props.loadTask} />
+   //             <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadMeetings={this.props.loadMeetings} />
    //          </Modal>
    //          <Modal show={this.state.editMeetingModal} modalClosed={this.editMeetingModalHandler}>
-   //             <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadTask={this.props.loadTask} />
+   //             <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadMeetings={this.props.loadMeetings} />
    //          </Modal>
    //       </div>
    //    );
@@ -177,16 +177,19 @@ class PendingContainer extends Component {
          <div className="container mb-400">
             <div className="meetUps">
                <h2 className="meetUps__heading">{t("title")}</h2>
-
-                     <Slider {...settings}>
-                        {this.props.meetings.meeting.map((e, i) => {
-                           const time = e.date.slice(11, 16);
-                           return (
-                              <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
-                           )
-                        })}
-                     </Slider>
+               <Slider {...settings}>
+                  {this.props.meetings.meeting.map((e, i) => {
+                     const time = e.date.slice(11, 16);
+                     return (
+                        <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                     )
+                  })}
+               </Slider>
             </div>
+            <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
+            <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
+               <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadMeetings={this.props.loadMeetings} />
+            </Modal>
          </div>
       )
    };

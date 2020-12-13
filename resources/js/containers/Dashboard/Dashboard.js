@@ -62,7 +62,7 @@ class Dashboard extends Component {
         });
     }
 
-    loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
+    loadMeetings = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
         axios.get('/api/meetings').then((response) => {
             if (this._isMounted && this.props.user) {
                 this.setState({
@@ -73,15 +73,15 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.user);
+        // console.log(this.props.user);
         this._isMounted = true;
         if (this.props.user) {
             axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
-            this.loadTask()
-            this.loadRelatedMeetings()
-            this.loadPendingMeetings()
-            this.loadPastMeetings()
-            this.loadRegisteredMeetings()
+            this.loadMeetings();
+            this.loadRelatedMeetings();
+            this.loadPendingMeetings();
+            this.loadPastMeetings();
+            this.loadRegisteredMeetings();
         }
 
     }
@@ -96,7 +96,7 @@ class Dashboard extends Component {
                 <React.Fragment>
                     <Navbar setUser={this.props.setUser} user={this.props.user} />
                     <DashboardHeader user={this.props.user} />
-                    <SubNavbar match={this.props.routerObj.match} meetings={this.state.meetings} loadTask={this.loadTask} />
+                    <SubNavbar match={this.props.routerObj.match} meetings={this.state.meetings} loadMeetings={this.loadMeetings} />
                     <FAQ />
                     <Footer setUser={this.props.setUser} user={this.props.user} />
                 </React.Fragment>

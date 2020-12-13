@@ -30,7 +30,7 @@ class PendingContainer extends Component {
    deleteMeeting = (id) => {
 
       axios.delete('/api/meeting/' + id).then((response) => {
-         this.props.loadTask();
+         this.props.loadMeetings();
       });
    }
 
@@ -183,10 +183,10 @@ export default withTranslation('meetUps')(PendingContainer);
    //          {meetings}
    //          <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
    //          <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
-   //             <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadTask={this.props.loadTask} />
+   //             <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadMeetings={this.props.loadMeetings} />
    //          </Modal>
    //          <Modal show={this.state.editMeetingModal} modalClosed={this.editMeetingModalHandler}>
-   //             <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadTask={this.props.loadTask} />
+   //             <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadMeetings={this.props.loadMeetings} />
    //          </Modal>
    //       </div>
    //    );

@@ -31,7 +31,7 @@ class PendingContainer extends Component {
    deleteMeeting = (id) => {
 
       axios.delete('/api/meeting/' + id).then((response) => {
-         this.props.loadTask();
+         this.props.loadMeetings();
       });
    }
 
