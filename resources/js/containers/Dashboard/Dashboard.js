@@ -22,51 +22,44 @@ class Dashboard extends Component {
     }
 
     loadRelatedMeetings = () => {
-        if (this.props.user) {
-            axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => { 
-                if (this._isMounted) {
-                    this.setState({
-                        relatedMeetings: response.data
-                    });
-                }
-            });
-        }
+        axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => {
+            if (this._isMounted && this.props.user) {
+                this.setState({
+                    relatedMeetings: response.data
+                });
+            }
+        });
+
     }
 
     loadPendingMeetings = () => {
-        if (this.props.user) {
-            axios.get('/api/pending_meetings/' + this.props.user.id + '/').then((response) => { 
-                if (this._isMounted) {
-                    this.setState({
-                        pendingMeetings: response.data
-                    });
-                }
-            });
-        }
+        axios.get('/api/pending_meetings/' + this.props.user.id + '/').then((response) => {
+            if (this._isMounted && this.props.user) {
+                this.setState({
+                    pendingMeetings: response.data
+                });
+            }
+        });
     }
 
     loadPastMeetings = () => {
-        if (this.props.user) {
-            axios.get('/api/past_meetings/' + this.props.user.id + '/').then((response) => {
-                if (this._isMounted) {
-                    this.setState({
-                        pastMeetings: response.data
-                    });
-                }
-            });
-        }
+        axios.get('/api/past_meetings/' + this.props.user.id + '/').then((response) => {
+            if (this._isMounted && this.props.user) {
+                this.setState({
+                    pastMeetings: response.data
+                });
+            }
+        });
     }
 
     loadRegisteredMeetings = () => {
-        if (this.props.user) {
-            axios.get('/api/registered_meetings/' + this.props.user.id + '/').then((response) => {
-                if (this._isMounted) {
-                    this.setState({
-                        registeredMeetings: response.data
-                    });
-                }
-            });
-        }
+        axios.get('/api/registered_meetings/' + this.props.user.id + '/').then((response) => {
+            if (this._isMounted && this.props.user) {
+                this.setState({
+                    registeredMeetings: response.data
+                });
+            }
+        });
     }
 
     loadTask = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
@@ -82,11 +75,15 @@ class Dashboard extends Component {
     componentDidMount() {
         console.log(this.props.user);
         this._isMounted = true;
-        this.loadTask()
-        this.loadRelatedMeetings()
-        this.loadPendingMeetings()
-        this.loadPastMeetings()
-        this.loadRegisteredMeetings()
+        if (this.props.user) {
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+            this.loadTask()
+            this.loadRelatedMeetings()
+            this.loadPendingMeetings()
+            this.loadPastMeetings()
+            this.loadRegisteredMeetings()
+        }
+
     }
 
     componentWillUnmount() {
