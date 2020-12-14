@@ -18,9 +18,9 @@ const AddMeetingForm = (props) => {
         console.log(date);
         let sendingData = { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link };
         console.log(sendingData);
-        let dummyData = { type: "pending", place: "Mensa", date: "2020-11-11T16:52", members: 7, max_members: 20, rating: 1, img_link: "adsfsfd" }
+        let dummyData = { date: "2020-11-11T16:52", place: "Mensa", specific_place: "lalelu", members: 1, max_members: 2, rating: 1, img_link: "adsfsfd" }
         console.log(dummyData);
-        axios.post('/api/meeting', sendingData).then((response) => {
+        axios.post('/api/meeting', dummyData).then((response) => {
             props.loadTask();
             props.modalHandler();
             resetEditState();
