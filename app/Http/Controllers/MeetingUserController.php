@@ -47,10 +47,7 @@ class MeetingUserController extends Controller
 
     public function registerUser($meeting_id, $user_id) {
         $user = new User();
-
         $registeredMeetings = $this->getRegisteredMeetings($user_id);
-
-        echo(count($registeredMeetings));
 
         if(count($registeredMeetings) == 0) {
             $specific_meeting = $user::findOrFail($user_id)
