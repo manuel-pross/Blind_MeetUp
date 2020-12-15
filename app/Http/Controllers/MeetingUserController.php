@@ -54,7 +54,7 @@ class MeetingUserController extends Controller
 
         if(count($registeredMeetings) == 0) {
             $specific_meeting = $user::findOrFail($user_id)
-            ->meetings()
+            ->pendingMeetings()
             ->updateExistingPivot($meeting_id, [
                 'status' => 'registered',
             ]);
