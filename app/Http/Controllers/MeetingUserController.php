@@ -8,10 +8,10 @@ use App\User;
 
 class MeetingUserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function getRelatedMeetings($user_id) {
         $user = new User();
@@ -43,5 +43,21 @@ class MeetingUserController extends Controller
             ->registeredMeetings()
             ->get();
         return $registeredMeetings;
+    }
+
+    public function registerUser($meeting_id, $user_id) {
+        $user = new User();
+
+        $registeredMeetings = $this->getRegisteredMeetings($user_id);
+
+        echo(count($registeredMeetings));
+
+        if(count($registeredMeetings) == 0) {
+            $specific_meeting = $user::findOrFail($user_id)
+            ->meetings()
+            ->updateExistingPivot($meeting_id, [
+                'status' => 'registered',
+            ]);
+        }
     }
 }

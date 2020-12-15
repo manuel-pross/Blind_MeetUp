@@ -52,4 +52,10 @@ class User extends Authenticatable
         ->withPivot(['status'])
         ->where('status', 'registered');
     }
+
+    public function getSpecificMeeting($meeting_id) {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('meeting_id', $meeting_id);
+    }
 }
