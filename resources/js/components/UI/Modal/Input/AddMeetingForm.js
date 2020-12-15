@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const AddMeetingForm = (props) => {
-    const [type, setType] = useState("");
-    const [place, setPlace] = useState("");
     const [date, setDate] = useState("");
+    const [place, setPlace] = useState("");
+    const [specific_place, setSpecific_place] = useState("");
     const [members, setMembers] = useState("");
     const [max_members, setMaxMembers] = useState("");
     const [rating, seRating] = useState("");
@@ -15,20 +15,20 @@ const AddMeetingForm = (props) => {
     }
 
     const addMeeting = () => {
-        console.log(date);
-        let sendingData = { type: type, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link };
-        console.log(sendingData);
-        let dummyData = { date: "2020-11-11T16:52", place: "Mensa", specific_place: "lalelu", members: 1, max_members: 2, rating: 1, img_link: "adsfsfd" }
-        console.log(dummyData);
-        axios.post('/api/meeting', dummyData).then((response) => {
-            props.loadTask();
+        // console.log(date);
+        let sendingData = { specific_place: specific_place, place: place, date: date, members: members, max_members: max_members, rating: rating, img_link: img_link };
+        // console.log(sendingData);
+        // let dummyData = { date: "2020-11-11T16:52", place: "Mensa", specific_place: "lalelu", members: 1, max_members: 2, rating: 1, img_link: "adsfsfd" }
+        // console.log(dummyData);
+        axios.post('/api/meeting', sendingData).then((response) => {
+            props.loadMeetings();
             props.modalHandler();
             resetEditState();
         })
     }
 
     const resetEditState = () => {
-        setType("");
+        setSpecific_place("");
         setPlace("");
         setMembers("");
         setMaxMembers("");
@@ -45,12 +45,12 @@ const AddMeetingForm = (props) => {
         <form className="contactForm" onSubmit={handleSubmit}>
             <h4 className="mt-0">Termin hinzufügen</h4>
             <div>
-                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Type:</p>
-                <input className="mb-100" type="text" name="type" placeholder="Type" value={type} onChange={(event) => setType(event.target.value)} />
-            </div>
-            <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Place:</p>
                 <input className="mb-100" type="text" name="place" placeholder="Place" value={place} onChange={(event) => setPlace(event.target.value)} />
+            </div>
+            <div>
+                <p className="mb-0 mt-0" style={{ display: 'inline-block' }}>Specific Place:</p>
+                <input className="mb-100" type="text" name="specific_place" placeholder="Specific Place" value={specific_place} onChange={(event) => setSpecific_place(event.target.value)} />
             </div>
             <div>
                 <p className="mb-0 mt-0" style={{ display: 'inline-block' }}> Date:</p>

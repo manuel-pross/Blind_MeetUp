@@ -18,9 +18,9 @@ class PendingContainer extends Component {
       editMeetingModal: false,
       editMeetingData: {
          id: "",
-         type: "",
          date: "",
          place: "",
+         specific_place: "",
          members: "",
          max_members: "",
          rating: "",
@@ -35,13 +35,13 @@ class PendingContainer extends Component {
       });
    }
 
-   editMeeting = (id, type, date, place, members, max_members, rating, img_link) => {
+   editMeeting = (id, date, place, specific_place, members, max_members, rating, img_link) => {
       this.setState({
          editMeetingData: {
             id,
-            type,
             date,
             place,
+            specific_place,
             members,
             max_members,
             rating,
@@ -181,7 +181,11 @@ class PendingContainer extends Component {
                   {this.props.meetings.meeting.map((e, i) => {
                      const time = e.date.slice(11, 16);
                      return (
-                        <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                        <React.Fragment key={i}>
+                           <PendingMeeting  place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                           <button className="btn btn-tertiary" onClick={() => this.editMeeting(e.id, e.date, e.place, e.specific_place, e.members, e.max_members, e.rating, e.img_link)}>Bearbeiten</button>
+                           <button className="btn btn-tertiary" onClick={() => this.deleteMeeting(e.id)}>Löschen</button>
+                        </React.Fragment>
                      )
                   })}
                </Slider>
@@ -189,6 +193,9 @@ class PendingContainer extends Component {
             <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
             <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
                <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadMeetings={this.props.loadMeetings} />
+            </Modal>
+            <Modal show={this.state.editMeetingModal} modalClosed={this.editMeetingModalHandler}>
+               <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadMeetings={this.props.loadMeetings} />
             </Modal>
          </div>
       )

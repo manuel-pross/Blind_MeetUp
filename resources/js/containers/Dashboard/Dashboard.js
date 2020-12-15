@@ -62,7 +62,7 @@ class Dashboard extends Component {
         });
     }
 
-    loadMeetings = () => { //Bitte noch in loadMeetings umbenennen. Das wurde vom Task beispiel kopiert
+    loadMeetings = () => { 
         axios.get('/api/meetings').then((response) => {
             if (this._isMounted && this.props.user) {
                 this.setState({
