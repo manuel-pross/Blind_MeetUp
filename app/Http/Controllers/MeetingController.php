@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meeting;
+use App\User;
+use Illuminate\Support\Facades\DB;
 
 class MeetingController extends Controller
 {
@@ -13,7 +15,22 @@ class MeetingController extends Controller
     }
 
     public function store(Request $request) {
-        return Meeting::create($request->all());
+        $meeting =  Meeting::create($request->all());
+
+        $meeting_id = $meeting->id;
+        $users = User::all();
+        foreach ($users as $user) {
+            DB::table('meeting_user')
+            ->insert(
+                [
+                    'user_id' => $user->id,
+                    'meeting_id' => $meeting_id,
+                    'status' => 'pending',
+                    'created_at' => Now(),
+                    'updated_at' => Now()
+                ]
+            );
+        }
     }
 
     public function update(Request $request, $id) {
