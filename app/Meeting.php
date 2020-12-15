@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Meeting extends Model
 {
     protected $fillable = [
-        'type', 'date', 'place', 'specific_place', 'members', 'max_members', 'rating', 'img_link'
+        'date', 'place', 'specific_place', 'members', 'max_members', 'rating', 'img_link'
     ];
 
-    public function users() {
+    public function users()
+    {
         return $this->belongsToMany('App\User');
     }
 }

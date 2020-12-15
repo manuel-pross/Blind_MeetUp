@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const navigationItem = (props) => {
 
     const handleLogout = () => {
-        localStorage.clear();
+        localStorage.removeItem("token");
         props.setUser(null);
     }
 

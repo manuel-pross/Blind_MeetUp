@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Footer extends Component {
 
     handleLogout = () => {
-        localStorage.clear();
+        localStorage.removeItem("token");
         this.props.setUser(null);
     }
 

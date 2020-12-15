@@ -33,18 +33,18 @@ class SubNavbar extends Component {
             switch (e.type) {
                 case "pending":
                     pendingMeetingData.number++;
-                    pendingMeetingData.meeting.push({ date: e.date, place: e.place })
+                    pendingMeetingData.meeting.push({ date: e.date, place: e.place });
                     break;
                 case "joint":
                     jointMeetingData.meeting.number++;
-                    jointMeetingData.meeting.push({ date: e.date, place: e.place })
+                    jointMeetingData.meeting.push({ date: e.date, place: e.place });
                     break;
                 case "past":
                     pastMeetingData.meeting.number++;
-                    pastMeetingData.meeting.push({ date: e.date, place: e.place })
+                    pastMeetingData.meeting.push({ date: e.date, place: e.place });
                     break;
                 default:
-                    pendingMeetingData.meeting.push({ date: e.date, place: e.place })
+                    pendingMeetingData.meeting.push({ id: e.id, date: e.date, place: e.place, specific_place: e.specific_place, members: e.members, max_members: e.max_members, rating: e.rating, img_link: e.img_link });
             }
         });
 
@@ -59,9 +59,9 @@ class SubNavbar extends Component {
 
 
                 {/* Dashboard SubRoutes */}
-                <Route exact path={this.props.match.url + "/anmelden"} render={() => <JointContainer meetings={jointMeetingData} loadTask={this.props.loadTask} />} />
-                <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer meetings={pendingMeetingData} loadTask={this.props.loadTask} />} />
-                <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={pastMeetingData} loadTask={this.props.loadTask} />} />
+                <Route exact path={this.props.match.url + "/anmelden"} render={() => <JointContainer meetings={jointMeetingData} loadMeetings={this.props.loadMeetings} />} />
+                <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer meetings={pendingMeetingData} loadMeetings={this.props.loadMeetings} />} />
+                <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={pastMeetingData} loadMeetings={this.props.loadMeetings} />} />
             </div>
 
         );
