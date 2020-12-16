@@ -45,10 +45,10 @@ class MeetingUserController extends Controller
         return $registeredMeetings;
     }
 
-    public function registerUser($meeting_id, $user_id) {
+    public function registerUser($user_id, $meeting_id) {
 
         $user = new User();
-        $desired_meeting = $meeting = Meeting::findOrFail($meeting_id);
+        $desired_meeting = Meeting::findOrFail($meeting_id);
         $registeredMeetings = $this->getRegisteredMeetings($user_id);
 
         if($desired_meeting->members < $desired_meeting->max_members) {
