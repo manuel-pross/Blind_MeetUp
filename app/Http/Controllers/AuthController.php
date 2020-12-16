@@ -12,7 +12,13 @@ class AuthController extends Controller
             if(Auth::attempt($request->only('hfu_user_name', 'password'))) {
                 /** @var User $user */
                 $user = Auth::user();
-                $token = $user->createToken('app')->accessToken;
+                $userRole = $user->role;
+
+                if ($userRole) {
+                    $this->scope = $userRole;
+                }
+
+                $token = $user->createToken('app', [$this->scope])->accessToken;
     
                 return response([
                     'message' => 'success',

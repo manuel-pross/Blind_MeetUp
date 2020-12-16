@@ -27,5 +27,10 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Passport::routes();
+
+        Passport::tokensCan([
+            'admin' => 'Add/Update/Delete Meetings',
+            'user' => 'List related meetings/ register for meeting'
+        ]);
     }
 }

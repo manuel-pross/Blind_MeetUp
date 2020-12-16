@@ -22,10 +22,14 @@ Route::post('login', 'AuthController@login');
 
 Route::get('user', 'AuthController@user')->middleware('auth:api');
 
-Route::get('meetings', 'MeetingController@index');
-Route::post('meeting', 'MeetingController@store');
-Route::put('meeting/{id}', 'MeetingController@update');
-Route::delete('meeting/{id}', 'MeetingController@delete');
+Route::get('meetings', 'MeetingController@index')->middleware(['auth:api', 'scope:admin']);
+Route::post('meeting', 'MeetingController@store')->middleware(['auth:api', 'scope:admin']);
+Route::put('meeting/{id}', 'MeetingController@update')->middleware(['auth:api', 'scope:admin']);
+Route::delete('meeting/{id}', 'MeetingController@delete')->middleware(['auth:api', 'scope:admin']);
+
+// Route::get('/meetings', function () {
+//     // Access token has either "check-status" or "place-orders" scope...
+// })
 
 Route::get('related_meetings/{user_id}', 'MeetingUserController@getRelatedMeetings');
 Route::get('pending_meetings/{user_id}', 'MeetingUserController@getPendingMeetings');
