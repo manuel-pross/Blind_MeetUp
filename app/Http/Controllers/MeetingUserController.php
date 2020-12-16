@@ -46,15 +46,24 @@ class MeetingUserController extends Controller
     }
 
     public function registerUser($meeting_id, $user_id) {
+
         $user = new User();
+        $desired_meeting = $meeting = Meeting::findOrFail($meeting_id);
         $registeredMeetings = $this->getRegisteredMeetings($user_id);
 
-        if(count($registeredMeetings) == 0) {
-            $specific_meeting = $user::findOrFail($user_id)
-            ->pendingMeetings()
-            ->updateExistingPivot($meeting_id, [
-                'status' => 'registered',
-            ]);
+        if($desired_meeting->members < $desired_meeting->max_members) {
+            if(count($registeredMeetings) == 0) {
+                $specific_meeting = $user::findOrFail($user_id)
+                ->pendingMeetings()
+                ->updateExistingPivot($meeting_id, [
+                    'status' => 'registered',
+                ]);
+                $desired_meeting->update(array('members' => $desired_meeting->members + 1));
+            } else {
+                return "Du hast dich bereits für ein Treffen registriert.";
+            }
+        } else {
+            return "Die Maximalzahl an Teilnehmern dieses Treffens ist bereits erreicht.";
         }
     }
 }
