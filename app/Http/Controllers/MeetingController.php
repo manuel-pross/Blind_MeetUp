@@ -14,7 +14,23 @@ class MeetingController extends Controller
         return Meeting::all();
     }
 
+    /**
+     * Store a new meeting.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request) {
+        $request->validate(
+            [
+                'date' => 'required|date',
+                'place' => 'required',
+                'specific_place' => 'required',
+                'members' => 'in:0',
+                'max_members' => 'required'
+            ]
+        );
+
         $meeting =  Meeting::create($request->all());
 
         $meeting_id = $meeting->id;
