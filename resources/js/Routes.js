@@ -9,7 +9,7 @@ import Dataprotection from './containers/Pages/Dataprotection';
 import Guidelines from './containers/Pages/Guidelines';
 import Impressum from './containers/Pages/Impressum';
 
-import Dashboard from './containers/Dashboard/Dashboard';
+import Dashboard from './containers/DashboardContainer/DashboardContainer';
 
 import Login from './containers/Pages/Login';
 import PrivateRoute from './components/hoc/PrivateRoute';
