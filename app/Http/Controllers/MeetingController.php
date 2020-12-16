@@ -26,7 +26,6 @@ class MeetingController extends Controller
                 'date' => 'required|date',
                 'place' => 'required',
                 'specific_place' => 'required',
-                'members' => 'in:0',
                 'max_members' => 'required'
             ]
         );
