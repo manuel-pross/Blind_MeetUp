@@ -33,3 +33,4 @@ Route::get('past_meetings/{user_id}', 'MeetingUserController@getPastMeetings');
 Route::get('registered_meetings/{user_id}', 'MeetingUserController@getRegisteredMeetings');
 
 Route::put('register_user/{user_id}_{meeting_id}', 'MeetingUserController@registerUser');
+Route::put('unregister_user/{user_id}_{meeting_id}', 'MeetingUserController@unregisterUser');

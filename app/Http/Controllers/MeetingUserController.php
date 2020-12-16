@@ -66,4 +66,21 @@ class MeetingUserController extends Controller
             return "Die Maximalzahl an Teilnehmern dieses Treffens ist bereits erreicht.";
         }
     }
+
+    public function unregisterUser($user_id, $meeting_id) {
+        $user = new User();
+        $desired_meeting = Meeting::findOrFail($meeting_id);
+        $registeredMeetings = $this->getRegisteredMeetings($user_id);
+
+        if(count($registeredMeetings) == 1) {
+            $specific_meeting = $user::findOrFail($user_id)
+            ->pendingMeetings()
+            ->updateExistingPivot($meeting_id, [
+                'status' => 'pending',
+            ]);
+            $desired_meeting->update(array('members' => $desired_meeting->members - 1));
+        } else {
+            return "Du hast dich noch für kein Treffen registriert.";
+        }
+    }
 }

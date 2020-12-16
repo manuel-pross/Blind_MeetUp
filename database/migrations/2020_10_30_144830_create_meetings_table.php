@@ -18,9 +18,9 @@ class CreateMeetingsTable extends Migration
             $table->dateTime('date');
             $table->string('place');
             $table->string('specific_place');
-            $table->unsignedSmallInteger('members')->nullable();
+            $table->unsignedSmallInteger('members')->default(0);
             $table->unsignedSmallInteger('max_members');
-            $table->unsignedSmallInteger('rating')->nullable();
+            $table->unsignedSmallInteger('rating')->nullable()->default(0);
             $table->string('img_link')->nullable();
             $table->timestamps();
         });

@@ -22,7 +22,6 @@ class UserSeeder extends Seeder
                             [
                                 'user_id' => $user->id,
                                 'meeting_id' => $value,
-                                'status' => 'pending',
                                 'created_at' => Now(),
                                 'updated_at' => Now()
                             ]
