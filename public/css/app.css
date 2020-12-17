@@ -10198,9 +10198,6 @@ html {
 
 body {
   margin: 0;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
 }
 
 /**
@@ -11566,6 +11563,10 @@ template {
   }
 }
 
+.meeting__headlineWrapper {
+  display: flex;
+}
+
 .meeting__dataWrapper {
   position: relative;
   padding: 10px;
@@ -12304,6 +12305,35 @@ template {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.pendingContainer__headlineWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pendingContainer__filterTeam,
+.pendingContainer__filterGroup {
+  transition: opacity 0.2s;
+  color: #fefefe;
+  padding: 5px 10px;
+  border: none;
+}
+
+.pendingContainer__filterTeam:hover,
+.pendingContainer__filterGroup:hover {
+  opacity: 0.8;
+}
+
+.pendingContainer__filterTeam {
+  border-radius: 75px 0 0 75px;
+  margin-right: 1px;
+}
+
+.pendingContainer__filterGroup {
+  border-radius: 0 75px 75px 0;
+  margin-left: 1px;
 }
 
 .navbar {

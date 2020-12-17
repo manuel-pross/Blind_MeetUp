@@ -10,7 +10,7 @@ import OtherContent from './OtherContent';
 class FAQ extends Component {
 
    state = {
-      loginContent: false,
+      loginContent: true,
       generalContent: false,
       meetingContent: false,
       otherContent: false

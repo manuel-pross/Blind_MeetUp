@@ -1,0 +1,28 @@
+.pendingContainer {
+   &__headlineWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__filterTeam,
+   &__filterGroup {
+      transition: opacity 0.2s;
+      color: $c-white;
+      padding: 5px 10px;
+      border: none;
+
+      &:hover {
+         opacity: 0.8;
+      }
+   }
+   &__filterTeam {
+      border-radius: 75px 0 0 75px;
+      margin-right: 1px;
+   }
+
+   &__filterGroup {
+      border-radius: 0 75px 75px 0;
+      margin-left: 1px;
+   }
+}

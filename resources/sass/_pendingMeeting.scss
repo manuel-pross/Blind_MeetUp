@@ -46,6 +46,10 @@
       }
    }
 
+   &__headlineWrapper {
+      display: flex;
+   }
+
    &__dataWrapper {
       position: relative;
       padding: 10px;

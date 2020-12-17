@@ -22,6 +22,10 @@ Workflow:
 2. php artisan serve
 3. npm run watch
 
+Smartphone:
+
+php artisan serve --host [DeineIP] --port 80
+
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
