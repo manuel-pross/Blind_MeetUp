@@ -145,8 +145,8 @@ class DashboardAdmin extends Component {
             <React.Fragment>
                 <Navbar setUser={this.props.setUser} user={this.props.user} />
                 <DashboardHeader user={this.props.user} />
-                <h1>Adminpannel</h1>
-                {/* <Slider {...settings}> */}
+                <h1>Admin</h1>
+                <Slider {...settings}>
                 {this.state.meetings.map((e, i) => {
                     const time = e.date.slice(11, 16);
                     return (
@@ -158,7 +158,7 @@ class DashboardAdmin extends Component {
                         </React.Fragment>
                     )
                 })}
-                {/* </Slider> */}
+                </Slider>
 
                 <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
                 <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >

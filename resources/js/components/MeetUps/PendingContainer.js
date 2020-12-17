@@ -150,6 +150,7 @@ class PendingContainer extends Component {
          );
       }
 
+      // TODO: slideToShow Bedingung für zu viele/wenig Meetings
       const settings = {
          speed: 500,
          slidesToShow: 4,

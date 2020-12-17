@@ -15,22 +15,21 @@ class DashboardUser extends Component {
 
     state = {
         // meetings: [],
-        relatedMeetings: [],
+        // relatedMeetings: [],
         pendingMeetings: [],
         pastMeetings: [],
         registeredMeetings: []
     }
 
-    loadRelatedMeetings = () => {
-        axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => {
-            if (this._isMounted && this.props.user) {
-                this.setState({
-                    relatedMeetings: response.data
-                });
-            }
-        });
-
-    }
+    // loadRelatedMeetings = () => {
+    //     axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => {
+    //         if (this._isMounted && this.props.user) {
+    //             this.setState({
+    //                 relatedMeetings: response.data
+    //             });
+    //         }
+    //     });
+    // }
 
 
     // Bevorstehendes Meeting
@@ -71,7 +70,7 @@ class DashboardUser extends Component {
         this._isMounted = true;
         if (this.props.user) {
             axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
-            this.loadRelatedMeetings();
+            // this.loadRelatedMeetings();
             this.loadPendingMeetings();
             this.loadPastMeetings();
             this.loadRegisteredMeetings();
@@ -89,8 +88,6 @@ class DashboardUser extends Component {
                 <DashboardHeader user={this.props.user} />
                 <SubNavbar
                     match={this.props.routerObj.match}
-                    meetings={this.state.meetings}
-                    relatedMeetings={this.state.relatedMeetings}
                     pendingMeetings={this.state.pendingMeetings}
                     pastMeetings={this.state.pastMeetings}
                     registeredMeetings={this.state.registeredMeetings}
