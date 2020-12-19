@@ -20,20 +20,22 @@ class PendingMeeting extends Component {
       if (this.state.btnPressed) {
          // console.log(this.props.user.id + '_' + this.props.id);
 
-         axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id).then((response) => {
-            console.log(response);
-            notify(response.data);
-            this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
-            setTimeout(() => {
-               // document.querySelector(".meeting--closed").parentElement.parentElement.remove();
-               this.props.loadAllMeetings();
-            }, 2500);
+         axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
+            .then((response) => {
+               console.log(response);
+               notify(response.data);
+               this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
+               setTimeout(() => {
+                  // document.querySelector(".meeting--closed").parentElement.parentElement.remove();
+                  this.props.loadAllMeetings();
+               }, 2500);
 
-         }).catch((error) => {
-            console.log(error);
+            })
+            .catch((error) => {
+               console.log(error);
 
-            // notify(response.data);
-         });
+               // notify(response.data);
+            });
 
       }
    }

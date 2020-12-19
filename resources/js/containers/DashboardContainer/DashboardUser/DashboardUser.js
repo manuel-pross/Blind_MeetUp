@@ -103,7 +103,6 @@ class DashboardUser extends Component {
                 />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />
-                <button onClick={() => notify('Das ist der notifitecidf text')}>klick mich</button>
                 <Notification />
             </React.Fragment>
         );
