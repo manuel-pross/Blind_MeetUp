@@ -65,15 +65,19 @@ class DashboardUser extends Component {
         });
     }
 
+    loadAllMeetings = () => {
+        this.loadPendingMeetings();
+        this.loadPastMeetings();
+        this.loadRegisteredMeetings();
+    }
+
     componentDidMount() {
         // console.log(this.props.user);
         this._isMounted = true;
         if (this.props.user) {
             axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
             // this.loadRelatedMeetings();
-            this.loadPendingMeetings();
-            this.loadPastMeetings();
-            this.loadRegisteredMeetings();
+            this.loadAllMeetings();
         }
     }
 
@@ -91,6 +95,8 @@ class DashboardUser extends Component {
                     pendingMeetings={this.state.pendingMeetings}
                     pastMeetings={this.state.pastMeetings}
                     registeredMeetings={this.state.registeredMeetings}
+                    loadAllMeetings={this.loadAllMeetings}
+                    user={this.props.user}
                 />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />

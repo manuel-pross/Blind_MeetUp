@@ -60,7 +60,7 @@ class SubNavbar extends Component {
                 {/* {console.log(this.props)} */}
                 {/* Dashboard SubRoutes */}
                 <Route exact path={this.props.match.url + "/anmelden"} render={() => <JointContainer meetings={this.props.registeredMeetings} loadMeetings={this.props.loadMeetings} />} />
-                <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer meetings={this.props.pendingMeetings} loadMeetings={this.props.loadMeetings} />} />
+                <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer user={this.props.user} meetings={this.props.pendingMeetings} loadMeetings={this.props.loadMeetings} loadAllMeetings={this.props.loadAllMeetings} />} />
                 <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={this.props.pastMeetings} loadMeetings={this.props.loadMeetings} />} />
             </div>
 

@@ -182,7 +182,7 @@ class PendingContainer extends Component {
                   {this.props.meetings.map((e, i) => {
                      const time = e.date.slice(11, 16);
                      return (
-                        <PendingMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                        <PendingMeeting key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings}/>
                      )
                   })}
                </Slider>

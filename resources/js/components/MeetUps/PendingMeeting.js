@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import { withTranslation } from 'react-i18next';
 
@@ -17,9 +18,16 @@ class PendingMeeting extends Component {
       }
       if (this.state.btnPressed) {
          this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" })
+         console.log(this.props.user.id + '_' + this.props.id);
+         axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id).then((response) => {
+            console.log(response);
+            this.props.loadAllMeetings();
+            // this.props.loadMeetings();
+         });
          setTimeout(() => {
             document.querySelector(".meeting--closed").parentElement.parentElement.remove();
          }, 2500);
+
       }
    }
 
