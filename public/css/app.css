@@ -12847,3 +12847,22 @@ section.route-section {
   transition: all 0.3s ease-out;
 }
 
+.notification {
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  position: fixed;
+  top: 100px;
+  z-index: 999;
+  transition: right 0.5s ease;
+  max-width: 300px;
+}
+
+.notification__show {
+  right: 0px;
+}
+
+.notification__close {
+  right: -300px;
+}
+

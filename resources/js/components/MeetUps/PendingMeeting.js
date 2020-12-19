@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { notify } from '../Notifications/Notification';
 import axios from 'axios';
 
 import { withTranslation } from 'react-i18next';
@@ -22,7 +23,7 @@ class PendingMeeting extends Component {
          axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id).then((response) => {
             console.log(response);
             this.props.loadAllMeetings();
-            // this.props.loadMeetings();
+            notify(response.data);
          });
          setTimeout(() => {
             document.querySelector(".meeting--closed").parentElement.parentElement.remove();

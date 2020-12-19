@@ -5,6 +5,9 @@ import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import DashboardHeader from '../../../components/DashboardHeader/DashboardHeader';
 import FAQ from '../../../components/FAQ/FAQ';
+import Notification from '../../../components/Notifications/Notification';
+
+import { notify } from '../../../components/Notifications/Notification';
 
 import SubNavbar from '../../../components/SubNavbar/SubNavbar';
 import axios from 'axios'
@@ -100,6 +103,8 @@ class DashboardUser extends Component {
                 />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />
+                <button onClick={() => notify('Das ist der notifitecidf text')}>klick mich</button>
+                <Notification />
             </React.Fragment>
         );
     }

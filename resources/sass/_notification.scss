@@ -1,0 +1,19 @@
+.notification {
+    background-color: grey;
+    color: white;
+    padding: 16px;
+    position: fixed;
+    top: 100px;
+    // right: 16px;
+    z-index: 999;
+    transition: right 0.5s ease;
+    max-width: 300px;
+
+    &__show {
+        right: 0px;
+    }
+
+    &__close {
+        right: -300px;
+    }
+}
