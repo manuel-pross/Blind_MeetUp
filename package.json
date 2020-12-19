@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "es6-promise-promise": "^1.0.0",
+        "event-emitter": "^0.3.5",
         "i18next": "^19.8.2",
         "i18next-browser-languagedetector": "^6.0.1",
         "i18next-http-backend": "^1.0.21",
