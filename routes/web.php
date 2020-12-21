@@ -13,65 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('startpage');
-});
 
-Route::get('/dashboard', function () {
-    return view('startpage');
-});
+// Gibt für jede Route die startpage view zurueck
+Route::get('{reactRoutes}', function () {
+    return view('startpage'); // your start view
+})->where('reactRoutes', '^((?!api).)*$'); // except 'api' word
 
-Route::get('/dashboard/anmelden', function () {
-    return view('startpage');
-});
 
-Route::get('/dashboard/anstehend', function () {
-    return view('startpage');
-});
-
-Route::get('/dashboard/vergangen', function () {
-    return view('startpage');
-});
-
-Route::get('/dashboard/angemeldet', function () {
-    return view('startpage');
-});
-
-Route::get('/styleguide', function () {
-    return view('startpage');
-});
-
-Route::get('/impressum', function () {
-    return view('startpage');
-});
-
-Route::get('/richtlinien', function () {
-    return view('startpage');
-});
-
-Route::get('/datenschutz', function () {
-    return view('startpage');
-});
-
-Route::get('/feedback', function () {
-    return view('startpage');
-});
-
-Route::get('/kontakt', function () {
-    return view('startpage');
-});
-
-// Route::get('meetings', 'MeetingController@index');
-
-Auth::routes();
-Route::get('/login', function () {
-    return view('startpage');
-});
-
-Route::get('/dashboard', function () {
-    return view('startpage');
-});
-
-// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

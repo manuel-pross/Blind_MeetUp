@@ -20,9 +20,10 @@ html {
    * Remove the margin in all browsers.
    */
 
-body {
-    margin: 0;
-    min-width: fit-content;
+   body {
+       margin: 0;
+    //    min-width fuehrt zu React-Slick-Slider Bug 
+    // min-width: fit-content;
 }
 
 /**

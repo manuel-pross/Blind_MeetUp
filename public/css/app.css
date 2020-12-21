@@ -10198,9 +10198,6 @@ html {
 
 body {
   margin: 0;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
 }
 
 /**
@@ -12848,5 +12845,25 @@ section.route-section {
   max-height: 70%;
   overflow-y: scroll;
   transition: all 0.3s ease-out;
+}
+
+.notification {
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  position: fixed;
+  top: 100px;
+  z-index: 999;
+  transition: right 0.5s ease;
+  max-width: 300px;
+  border-radius: 0.5rem;
+}
+
+.notification__show {
+  right: 0px;
+}
+
+.notification__close {
+  right: -300px;
 }
 

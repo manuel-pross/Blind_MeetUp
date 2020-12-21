@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { notify } from '../Notifications/Notification';
+import axios from 'axios';
 
 import { withTranslation } from 'react-i18next';
 
@@ -16,10 +18,25 @@ class PendingMeeting extends Component {
          this.setState({ btnPressed: true, displayAfterClick: { display: "block" }, displayBeforeClick: { display: "none" } })
       }
       if (this.state.btnPressed) {
-         this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" })
-         setTimeout(() => {
-            document.querySelector(".meeting--closed").parentElement.parentElement.remove();
-         }, 2500);
+         // console.log(this.props.user.id + '_' + this.props.id);
+
+         axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
+            .then((response) => {
+               console.log(response);
+               notify(response.data);
+               this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
+               setTimeout(() => {
+                  // document.querySelector(".meeting--closed").parentElement.parentElement.remove();
+                  this.props.loadAllMeetings();
+               }, 2500);
+
+            })
+            .catch((error) => {
+               console.log(error);
+
+               // notify(response.data);
+            });
+
       }
    }
 
