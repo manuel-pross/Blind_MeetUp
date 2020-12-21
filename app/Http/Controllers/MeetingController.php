@@ -59,4 +59,20 @@ class MeetingController extends Controller
         $meeting->delete();
         return 204;
     }
+
+    public function rateMeeting(Request $request, $id) {
+        $meeting = Meeting::findOrFail($id);
+
+
+        $meeting->update([
+            'ratings' => ++$meeting->ratings,
+            'overall_rating' => $meeting->overall_rating + $request->overall_rating
+        ]);
+        // Muss das iwi in zwei Schritten machen weil ers sonst falsch ausrechnet...
+        $meeting->update([
+            'average_rating' => $meeting->overall_rating / $meeting->ratings
+        ]);
+
+        return $meeting;
+    }
 }
