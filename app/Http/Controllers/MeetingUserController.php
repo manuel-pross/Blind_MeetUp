@@ -60,10 +60,10 @@ class MeetingUserController extends Controller
                 ]);
                 $desired_meeting->update(array('members' => $desired_meeting->members + 1));
             } else {
-                return "Du hast dich bereits für ein Treffen registriert.";
+                abort(500, 'Du hast dich bereits für ein Treffen registriert.'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
             }
         } else {
-            return "Die Maximalzahl an Teilnehmern dieses Treffens ist bereits erreicht.";
+            abort(500, 'Die Maximalzahl an Teilnehmern für dieses Meetings ist bereits erreicht.'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
         }
     }
 
@@ -80,7 +80,7 @@ class MeetingUserController extends Controller
             ]);
             $desired_meeting->update(array('members' => $desired_meeting->members - 1));
         } else {
-            return "Du hast dich noch für kein Treffen registriert.";
+            abort(500, 'Du hast dich für kein Treffen registriert'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
         }
     }
 }
