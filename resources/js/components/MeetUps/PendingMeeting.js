@@ -26,7 +26,7 @@ class PendingMeeting extends Component {
                notify(response.data);
                this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
                setTimeout(() => {
-                  // document.querySelector(".meeting--closed").parentElement.parentElement.remove();
+                  document.querySelector(".meeting--closed").parentElement.parentElement.remove();
                   this.props.loadAllMeetings();
                }, 2500);
 
