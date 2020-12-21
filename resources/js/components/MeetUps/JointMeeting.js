@@ -30,6 +30,7 @@ class JointMeeting extends Component {
             joinBtnStyle: { width: "50%" }
          })
       }
+      // console.log("bin hier");
 
       //TODO: Hier Hinzufügen, was passieren soll, sobald geklickt wurde
       if (this.state.btnPressed && this.state.reasonChoosed) {
