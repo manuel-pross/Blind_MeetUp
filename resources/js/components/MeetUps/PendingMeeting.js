@@ -32,9 +32,9 @@ class PendingMeeting extends Component {
 
             })
             .catch((error) => {
-               console.log(error);
+               // console.log(error.response)
 
-               // notify(response.data);
+               notify(error.response.data.message);
             });
 
       }
