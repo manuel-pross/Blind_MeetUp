@@ -18,14 +18,16 @@ class PastMeeting extends Component {
       pastMeetingClass: "pastMeeting",
       gooodSmileyOp: opacity05,
       neutralSmileyOp: opacity05,
-      badSmileyOp: opacity05
+      badSmileyOp: opacity05,
+      topWrapperPadding: { padding: "1.5rem" }
    }
 
    pastMeetingClickHandler = () => {
       if (!this.state.btnPressed) {
          this.setState({
             displayAfterClick: { display: "flex" },
-            displayBeforeClick: { display: "none" }
+            displayBeforeClick: { display: "none" },
+            topWrapperPadding: { padding: "0" }
          })
       }
 
@@ -60,7 +62,8 @@ class PastMeeting extends Component {
       this.setState({
          btnPressed: false,
          displayAfterClick: { display: "none" },
-         displayBeforeClick: { display: "block" }
+         displayBeforeClick: { display: "block" },
+         topWrapperPadding: { padding: "1.5rem" }
       })
    }
 
@@ -68,7 +71,7 @@ class PastMeeting extends Component {
       this.setState({
          gooodSmileyOp: { opacity: ".7" },
          neutralSmileyOp: { opacity: ".7" },
-         badSmileyOp: { opacity: ".7" }
+         badSmileyOp: { opacity: ".7" },
       })
    }
 
@@ -76,7 +79,7 @@ class PastMeeting extends Component {
       const { t } = this.props;
       return (
          <div className={this.state.pastMeetingClass}>
-            <div className="pastMeeting__topWrapper">
+            <div style={this.state.topWrapperPadding} className="pastMeeting__topWrapper">
                <div className="pastMeeting__wrapperBeforeClick" style={this.state.displayBeforeClick}>
                   <p className="pastMeeting__notRated">{t("notRated")}</p>
                   <div className="pastMeeting__dataWrapper">

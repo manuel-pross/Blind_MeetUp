@@ -43,8 +43,7 @@ class User extends Authenticatable
     public function pastMeetings() {
         return $this->belongsToMany('App\Meeting')
         ->withPivot(['status'])
-        ->where('status', 'past')
-        ->take(2);
+        ->where('status', 'past');
     }
 
     public function registeredMeetings() {

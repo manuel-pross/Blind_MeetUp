@@ -27,7 +27,8 @@ class PendingContainer extends Component {
          img_link: ""
       },
       memberFilter: false,
-      maxMeetingSetting: 5
+      maxMeetingSetting: 3,
+      maxMeetingSettingMD: 2,
    }
 
    deleteMeeting = (id) => {
@@ -107,27 +108,32 @@ class PendingContainer extends Component {
    setSettingState = (type) => {
       let meetingDuoCount = 0;
       let meetingGroupCount = 0;
+      let meetingDuoMD = 0;
+      let meetingGroupMD = 0;
       this.props.meetings.map(e => {
-         console.log("test1");
          if (e.max_members == 2) {
-            meetingDuoCount++
+            meetingDuoCount++;
+            meetingDuoMD++;
          } else if (e.max_members > 2) {
             meetingGroupCount++
+            meetingGroupMD++;
          }
       })
-
       if (meetingDuoCount > 3) {
          meetingDuoCount = 3
-         console.log("test2");
+         meetingDuoMD = 2;
       }
       if (meetingGroupCount > 3) {
          meetingGroupCount = 3
+         meetingGroupMD = 2;
       }
       if (type == "duo") {
          this.setState({ maxMeetingSetting: meetingDuoCount })
-
-      } else
+         this.setState({ maxMeetingSettingMD: meetingDuoMD })
+      } else {
          this.setState({ maxMeetingSetting: meetingGroupCount })
+         this.setState({ maxMeetingSettingMD: meetingGroupMD })
+      }
    }
 
    componentDidMount() {
@@ -162,7 +168,6 @@ class PendingContainer extends Component {
       const settings = {
          speed: 500,
          slidesToShow: this.state.maxMeetingSetting,
-         slidesToScroll: 1,
          dots: true,
          // nextArrow: <SampleNextArrow />,
          // prevArrow: <SamplePrevArrow />,
@@ -170,7 +175,7 @@ class PendingContainer extends Component {
             {
                breakpoint: 1199,
                settings: {
-                  slidesToShow: 2,
+                  slidesToShow: this.state.maxMeetingSettingMD,
                }
             },
             {
@@ -181,7 +186,6 @@ class PendingContainer extends Component {
             }
          ]
       };
-
 
       // TODO: Image Link hinzufügen
       return (
@@ -195,18 +199,16 @@ class PendingContainer extends Component {
                   </div>
                </div>
                <Slider {...settings}>
-                  {console.log(settings.slidesToShow)}
-
                   {this.props.meetings.map((e, i) => {
                      const time = e.date.slice(11, 16);
                      if (this.state.memberFilter && e.max_members > 2) {
                         return (
-                           <PendingMeeting key={i} index={i} maxMembers={e.max_members} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                           <PendingMeeting key={i} maxMembers={e.max_members} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
                         )
                      } else if (!this.state.memberFilter && e.max_members == 2) {
                         testcount++;
                         return (
-                           <PendingMeeting key={i} index={i} maxMembers={e.max_members} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                           <PendingMeeting key={i} maxMembers={e.max_members} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
                         )
                      }
                   })}

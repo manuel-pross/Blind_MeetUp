@@ -3,7 +3,7 @@
    padding: 2.5rem;
    margin: 1.5rem;
    background-color: $c2-second;
-   border-radius: 75px;
+   border-radius: $border-radius;
    height: 260px;
    animation: fadeOut 1.5s;
    animation-delay: 1.5s;
@@ -27,7 +27,7 @@
    padding: 2.5rem;
    margin: 1.5rem;
    background-color: $c2-second;
-   border-radius: 75px;
+   border-radius: $border-radius;
    height: 260px;
    // width: 100%;
 

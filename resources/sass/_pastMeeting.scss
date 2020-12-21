@@ -2,24 +2,31 @@
    padding: 1rem;
    margin: 1.5rem;
    position: relative;
-   border-radius: 75px;
+   border-radius: $border-radius;
    background-color: $c4-main;
    color: $c-white;
-   height: 363px;
-   width: 363px;
+   height: 300px;
    animation: fadeOut 1.5s;
    animation-fill-mode: forwards;
+   white-space: nowrap;
+
+   @include breakpoint("md") {
+      margin: 1.5rem;
+   }
+
+   @include breakpoint("lg") {
+      height: 330px;
+   }
 }
 
 .pastMeeting {
    padding: 1rem;
-   margin: 2.5rem;
+   margin: 1.5rem;
    position: relative;
-   border-radius: 75px;
+   border-radius: $border-radius;
    background-color: $c4-main;
    color: $c-white;
-   // width: 100%;
-   height: 280px;
+   height: 300px;
 
    @include breakpoint("md") {
       margin: 1.5rem;
@@ -29,9 +36,13 @@
       height: 330px;
    }
 
+   @include breakpoint("xxl") {
+      white-space: nowrap;
+   }
+
    &__topWrapper {
       height: 12.5rem;
-      padding: 2rem;
+      // padding: 1.5rem;
 
       @include breakpoint("lg") {
          height: 14rem;

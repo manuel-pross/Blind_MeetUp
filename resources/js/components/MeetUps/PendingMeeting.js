@@ -44,7 +44,6 @@ class PendingMeeting extends Component {
                   <h3 className="meeting__data">{t("acceptAgain")}</h3>
                </div>
                <div style={this.state.displayBeforeClick} className="meeting__dataWrapper">
-                  <p style={{ position: "absolute", color: "red" }}>{this.props.index}</p>
                   <p className="meeting__data">{this.props.day}</p>
                   <p className="meeting__data meeting__data--date">{this.props.date + ", "} {this.props.time}</p>
                   <span className="meeting__dataWrapperLocation--pipe"></span>

@@ -4344,7 +4344,7 @@ Breakpoint Mixin
 }
 
 .c3-second {
-  color: #EFFCEF !important;
+  color: #effcef !important;
 }
 
 .c_success {
@@ -4392,7 +4392,7 @@ Breakpoint Mixin
 }
 
 .bg-second3 {
-  background-color: #EFFCEF !important;
+  background-color: #effcef !important;
 }
 
 .bg-succes {
@@ -4492,8 +4492,8 @@ Breakpoint Mixin
 }
 
 .btn-select-active {
-  background-color: #2F2F2F !important;
-  border: 2px solid #2F2F2F !important;
+  background-color: #2f2f2f !important;
+  border: 2px solid #2f2f2f !important;
 }
 
 .btn-tertiary {
@@ -10957,7 +10957,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
   z-index: 1;
 }
 
@@ -11015,7 +11015,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
   z-index: 1;
 }
 
@@ -11274,7 +11274,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
 }
 
 .timeline__arrow-right::before {
@@ -11324,7 +11324,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
 }
 
 .timeline__arrow-left::before {
@@ -11376,7 +11376,7 @@ template {
 }
 
 .FAQ {
-  background-color: #EFFCEF;
+  background-color: #effcef;
   padding: 1rem 0;
 }
 
@@ -11429,7 +11429,7 @@ template {
 
 @media (min-width: 992px) {
   .FAQ__btn {
-    background-color: #EFFCEF;
+    background-color: #effcef;
     align-self: flex-start;
     margin-right: 4.5rem;
   }
@@ -11506,7 +11506,7 @@ template {
   padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
   height: 260px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
@@ -11537,7 +11537,7 @@ template {
   padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
   height: 260px;
 }
 
@@ -11941,260 +11941,79 @@ template {
 }
 }
 
-.jointMeeting--closed {
-  position: relative;
-  display: flex;
-  margin: 0.5rem;
-  background-color: #2e6c48;
-  border-radius: 75px;
-  color: #fefefe;
-  -webkit-animation: fadeOut 1.5s;
-          animation: fadeOut 1.5s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@media (min-width: 768px) {
-  .jointMeeting--closed {
-    height: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  .jointMeeting--closed {
-    height: 336px;
-  }
-}
-
 .jointMeeting {
   position: relative;
-  display: flex;
-  margin: 0.5rem;
-  background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
+  background-image: linear-gradient(#50b375, #2e6c48);
   color: #fefefe;
 }
 
-@media (min-width: 768px) {
-  .jointMeeting {
-    height: 300px;
-  }
+.jointMeeting__beforeClickedWrapper {
+  height: 100%;
 }
 
-@media (min-width: 768px) {
-  .jointMeeting {
-    height: 336px;
-  }
-}
-
-.jointMeeting__dayCount {
-  color: inherit;
-  margin: 0.5rem 0 0 1rem;
-  padding: 0;
+.jointMeeting__imgWrapper {
+  width: 50%;
 }
 
 .jointMeeting__img {
-  width: 45%;
-  border-radius: inherit;
-}
-
-.jointMeeting__innerWrapper {
-  height: 120px;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__innerWrapper {
-    height: 180px;
-    padding: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__innerWrapper {
-    height: 250px;
-    padding: 2.5rem;
-  }
+  border-radius: 45px;
+  width: 100%;
+  height: 100%;
 }
 
 .jointMeeting__contentWrapper {
-  width: 100%;
-  padding: 15px;
-}
-
-.jointMeeting__dataWrapper {
   position: relative;
-  align-self: center;
-  padding: 10px;
-}
-
-.jointMeeting__dataWrapper--pipe::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: 0;
-  top: 27px;
-  transform: rotate(90deg);
+  width: 50%;
+  padding-left: 0.5rem;
 }
 
 .jointMeeting__data {
-  color: inherit !important;
-  margin: 0;
-  margin-left: 18px;
-  white-space: nowrap;
-}
-
-.jointMeeting__dataWrapperLocation {
-  position: relative;
-  padding: 10px;
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__dataWrapperLocation {
-    margin-bottom: 3rem;
-  }
-}
-
-.jointMeeting__dataWrapperLocation--pipe::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: 0;
-  top: 20px;
-  transform: rotate(90deg);
-}
-
-.jointMeeting__clickedBtnWrapper {
-  height: 120px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__clickedBtnWrapper {
-    height: 180px;
-    padding: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__clickedBtnWrapper {
-    height: 250px;
-    padding: 2.5rem;
-  }
-}
-
-.jointMeeting__clickedBtnWrapper__block {
-  display: flex;
-  margin: 1.5rem;
-  justify-content: space-around;
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__clickedBtnWrapper__block {
-    margin: 2.5rem;
-  }
+  color: inherit;
 }
 
 .jointMeeting__btnWrapper {
-  display: flex;
-  justify-content: space-around;
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__btnWrapper {
-    margin: 0 3rem;
-  }
-}
-
-.jointMeeting__btnWrapper img {
-  display: inline !important;
-  width: 23px;
-}
-
-.jointMeeting--column {
-  flex-wrap: wrap;
-}
-
-.btn-cancel {
-  color: #FF5454;
-  width: 80%;
-}
-
-.btn-cancel:hover {
-  background-color: #50b375;
-}
-
-.btn-cancel:hover .btn-meeting__arrow::after,
-.btn-cancel:hover .btn-meeting__arrow::before {
-  background-color: #fefefe;
-}
-
-.btn-cancel--animation {
-  color: #FF5454;
-  width: 80%;
-  transition: all 1s ease-in-out;
-}
-
-.btn-cancel--animation:focus {
-  background-color: #50b375;
-  width: 50px !important;
-  height: 50px !important;
-}
-
-.btn-cancel--animation:focus .jointMeeting__btnDesc {
-  display: none;
-}
-
-.btn-cancel--animation:focus .jointMeeting__btnWrapper {
-  margin: 0;
-}
-
-.btn-jointMeeting {
-  white-space: nowrap;
-  transition: all 0.2s;
-}
-
-.btn-jointMeeting:hover {
-  color: #fefefe;
-  background-color: #50b375;
-}
-
-.btn-jointMeeting:focus {
-  color: #fefefe;
-  background-color: #50b375;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
 }
 
 .pastMeeting--closed {
   padding: 1rem;
   margin: 1.5rem;
   position: relative;
-  border-radius: 75px;
+  border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 363px;
-  width: 363px;
+  height: 300px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .pastMeeting--closed {
+    margin: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pastMeeting--closed {
+    height: 330px;
+  }
 }
 
 .pastMeeting {
   padding: 1rem;
-  margin: 2.5rem;
+  margin: 1.5rem;
   position: relative;
-  border-radius: 75px;
+  border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 280px;
+  height: 300px;
 }
 
 @media (min-width: 768px) {
@@ -12209,9 +12028,14 @@ template {
   }
 }
 
+@media (min-width: 1920px) {
+  .pastMeeting {
+    white-space: nowrap;
+  }
+}
+
 .pastMeeting__topWrapper {
   height: 12.5rem;
-  padding: 2rem;
 }
 
 @media (min-width: 992px) {
@@ -12509,7 +12333,7 @@ template {
 }
 
 .footer {
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -12723,7 +12547,7 @@ template {
 }
 
 .feedbackForm__smiley-active {
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
 }
 
 .feedbackForm__smiley {
@@ -12739,7 +12563,7 @@ template {
 .feedbackForm input[type=text] {
   height: 50px;
   width: 100%;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12757,7 +12581,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12771,7 +12595,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12781,7 +12605,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;

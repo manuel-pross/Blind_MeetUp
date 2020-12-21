@@ -11,7 +11,7 @@ class JointMeeting extends Component {
 
    state = {
       btnPressed: false,
-      displayBeforeClick: { display: "block" },
+      displayBeforeClick: { display: "flex" },
       displayAfterClick: { display: "none" },
       joinBtnClass: "btn btn-cancel",
       jointClass: "jointMeeting",
@@ -27,7 +27,7 @@ class JointMeeting extends Component {
             wrapperStyle: { flexWrap: "wrap" },
             displayAfterClick: { display: "block" },
             displayBeforeClick: { display: "none" },
-            joinBtnStyle: { width: "50%" }
+            // joinBtnStyle: { width: "50%" }
          })
       }
 
@@ -50,52 +50,39 @@ class JointMeeting extends Component {
             joinBtnClass: "btn btn-cancel",
             wrapperStyle: { flexWrap: "initial" },
             displayAfterClick: { display: "none" },
-            displayBeforeClick: { display: "block" },
-            joinBtnStyle: { width: "80%" },
+            displayBeforeClick: { display: "flex" },
+            // joinBtnStyle: { width: "80%" },
             reasonChoosed: false
          })
       }
    }
 
+   //TODO: richtiges Image hinzufügen
    render() {
       const { t } = this.props;
       return (
          <div style={this.state.wrapperStyle} className={this.state.jointClass}>
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
-            <div style={this.state.displayAfterClick} className="jointMeeting__clickedBtnWrapper">
-               <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnTime")}</button>
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnInteres")}</button>
+            <div className="jointMeeting__beforeClickedWrapper" style={this.state.displayBeforeClick}>
+               <div className="jointMeeting__imgWrapper">
+                  <img className="jointMeeting__img" src={placeholderImage} />
                </div>
-               <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnOther")}</button>
-               </div>
-            </div>
-            <img style={this.state.displayBeforeClick} className="jointMeeting__img" src={placeholderImage} alt="" />
-            <div className="jointMeeting__contentWrapper">
-               <div className="jointMeeting__innerWrapper" style={this.state.displayBeforeClick} >
-                  {/* <p className="jointMeeting__dayCount">Noch 5 Tage</p> */}
-                  <div className="jointMeeting__dataWrapper">
+               <div className="jointMeeting__contentWrapper">
+                  <div className="jointMeeting__topWrapper">
                      <p className="jointMeeting__data">{this.props.day}</p>
                      <p className="jointMeeting__data jointMeeting__data--date">{this.props.date + ", "} {this.props.time}</p>
-                     <span className="jointMeeting__dataWrapper--pipe"></span>
                   </div>
-                  <div className="jointMeeting__dataWrapperLocation">
-                     <p className="jointMeeting__data jointMeeting__data--place">{this.props.place}</p>
-                     <span className="jointMeeting__dataWrapperLocation--pipe"></span>
+                  <div className="jointMeeting__btnWrapper">
+                     <button onClick={this.stornoClickHandler} className={this.state.joinBtnClass}>
+                        <span className="jointMeeting__span">
+                           <div className="jointMeeting__btnDesc">
+                              {t("btnCancel")}
+                           </div>
+                           {/* <img className="btn-cancel__svg" src={cancelSVG} alt="cancelSVG" ></img> */}
+                        </span>
+                     </button>
                   </div>
-               </div >
-               <div style={{ textAlign: "center" }}>
-                  <button style={this.state.joinBtnStyle} onClick={this.stornoClickHandler} className={this.state.joinBtnClass}>
-                     <span className="jointMeeting__btnWrapper">
-                        <div className="jointMeeting__btnDesc">
-                           {t("btnCancel")}
-                        </div>
-                        <img className="btn-cancel__svg" src={cancelSVG} alt="cancelSVG" ></img>
-                     </span>
-                  </button>
-               </div >
+               </div>
             </div>
          </div>
       );
@@ -103,3 +90,40 @@ class JointMeeting extends Component {
 };
 
 export default withTranslation('meetUps')(JointMeeting);
+
+{/* <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
+   <div style={this.state.displayAfterClick} className="jointMeeting__clickedBtnWrapper">
+      <div className="jointMeeting__clickedBtnWrapper__block">
+         <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnTime")}</button>
+         <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnInteres")}</button>
+      </div>
+      <div className="jointMeeting__clickedBtnWrapper__block">
+         <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
+         <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnOther")}</button>
+      </div>
+   </div>
+   <img style={this.state.displayBeforeClick} className="jointMeeting__img" src={placeholderImage} alt="" />
+   <div className="jointMeeting__contentWrapper">
+      <div className="jointMeeting__innerWrapper" style={this.state.displayBeforeClick} >
+         
+         <div className="jointMeeting__dataWrapper">
+            <p className="jointMeeting__data">{this.props.day}</p>
+            <p className="jointMeeting__data jointMeeting__data--date">{this.props.date + ", "} {this.props.time}</p>
+            <span className="jointMeeting__dataWrapper--pipe"></span>
+         </div>
+         <div className="jointMeeting__dataWrapperLocation">
+            <p className="jointMeeting__data jointMeeting__data--place">{this.props.place}</p>
+            <span className="jointMeeting__dataWrapperLocation--pipe"></span>
+         </div>
+      </div >
+      <div style={{ textAlign: "center" }}>
+         <button style={this.state.joinBtnStyle} onClick={this.stornoClickHandler} className={this.state.joinBtnClass}>
+            <span className="jointMeeting__btnWrapper">
+               <div className="jointMeeting__btnDesc">
+                  {t("btnCancel")}
+               </div>
+               <img className="btn-cancel__svg" src={cancelSVG} alt="cancelSVG" ></img>
+            </span>
+         </button>
+      </div >
+   </div> */}
