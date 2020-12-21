@@ -22,6 +22,12 @@ Workflow:
 2. php artisan serve
 3. npm run watch
 
+Datenbank erneut mit Seeds befüllen:
+
+1. php artisan migrate:fresh --seed
+2. php artisan passport:install
+3. Client_1/Client_2 keys in .env ersetzen
+(4. php artisan config:cache)
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
