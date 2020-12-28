@@ -27,14 +27,12 @@ Route::post('meeting', 'MeetingController@store')->middleware(['auth:api', 'scop
 Route::put('meeting/{id}', 'MeetingController@update')->middleware(['auth:api', 'scope:admin']);
 Route::delete('meeting/{id}', 'MeetingController@delete')->middleware(['auth:api', 'scope:admin']);
 
-// Route::get('/meetings', function () {
-//     // Access token has either "check-status" or "place-orders" scope...
-// })
-
 Route::get('related_meetings/{user_id}', 'MeetingUserController@getRelatedMeetings')->middleware(['auth:api', 'scope:admin,user']);
 Route::get('pending_meetings/{user_id}', 'MeetingUserController@getPendingMeetings')->middleware(['auth:api', 'scope:admin,user']);
 Route::get('past_meetings/{user_id}', 'MeetingUserController@getPastMeetings')->middleware(['auth:api', 'scope:admin,user']);
 Route::get('registered_meetings/{user_id}', 'MeetingUserController@getRegisteredMeetings')->middleware(['auth:api', 'scope:admin,user']);
+
+Route::get('test', 'MeetingController@test');
 
 Route::put('register_user/{user_id}_{meeting_id}', 'MeetingUserController@registerUser')->middleware(['auth:api', 'scope:admin,user']);;
 Route::put('unregister_user/{user_id}_{meeting_id}', 'MeetingUserController@unregisterUser')->middleware(['auth:api', 'scope:admin,user']);
