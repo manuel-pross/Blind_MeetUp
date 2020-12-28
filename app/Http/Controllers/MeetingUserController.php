@@ -47,6 +47,13 @@ class MeetingUserController extends Controller
 
     public function registerUser($user_id, $meeting_id) {
 
+        if(auth()->guest()) {
+            abort(403);
+        }
+
+        if(auth('api')->user()->id != $user_id)
+            abort(403, 'Falsche id');
+            
         $user = new User();
         $desired_meeting = Meeting::findOrFail($meeting_id);
         $registeredMeetings = $this->getRegisteredMeetings($user_id);

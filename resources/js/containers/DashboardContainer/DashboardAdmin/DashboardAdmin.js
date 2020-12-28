@@ -34,6 +34,8 @@ class DashboardAdmin extends Component {
 
     loadMeetings = () => {
         axios.get('/api/meetings').then((response) => {
+            console.log(response)
+            console.log(response.data)
             if (this.props.user) {
                 this.setState({
                     meetings: response.data
