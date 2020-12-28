@@ -50,6 +50,17 @@ class Kernel extends ConsoleKernel
                     );
                 }
             }
+
+            $meetings = Meeting::all();
+
+            foreach($meetings as $meeting) {
+                $meetingDate = strtotime($meeting->date);
+    
+                if($currentDate > $meetingDate)
+                    if($meeting->members <= 0 || $meeting->members == null)
+                        $meeting->delete();
+            }
+
         })->everyMinute();
     }
 
