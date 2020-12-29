@@ -23,7 +23,7 @@ class MeetingController extends Controller
     public function store(Request $request) {
         $request->validate(
             [
-                'date' => 'required|date',
+                'date' => 'required|date|after:today',
                 'place' => 'required',
                 'specific_place' => 'required',
                 'max_members' => 'required'
