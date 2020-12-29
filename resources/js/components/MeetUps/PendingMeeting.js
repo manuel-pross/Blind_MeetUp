@@ -21,11 +21,12 @@ class PendingMeeting extends Component {
          axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
             .then((response) => {
                notify("Erfolgreich für Treffen angemeldet");
-               this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
-               setTimeout(() => {
-                  document.querySelector(".meeting--closed").parentElement.parentElement.remove();
-                  this.props.loadAllMeetings();
-               }, 2500);
+               // this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
+               // setTimeout(() => {
+               //    document.querySelector(".meeting--closed").parentElement.parentElement.remove();
+               // }, 2500);
+               this.props.loadAllMeetings();
+               // this.setState({ btnPressed: false });
             })
             .catch((error) => {
                if (error.response) {

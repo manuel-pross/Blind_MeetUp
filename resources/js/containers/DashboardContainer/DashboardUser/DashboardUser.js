@@ -99,6 +99,7 @@ class DashboardUser extends Component {
                     pastMeetings={this.state.pastMeetings}
                     registeredMeetings={this.state.registeredMeetings}
                     loadAllMeetings={this.loadAllMeetings}
+                    loadPendingMeetings={this.loadPendingMeetings}
                     user={this.props.user}
                 />
                 <FAQ />

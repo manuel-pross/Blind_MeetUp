@@ -5,10 +5,10 @@ import { withTranslation } from 'react-i18next';
 import cancelSVG from '../../../assets/img/icons/action-cancel.svg';
 // TODO :backendanbindung mit dem entsprechend richtigen Bild hinzufügen
 import placeholderImage from '../../../assets/img/placeholder/368x363-placeholder.png';
+import { notify } from '../Notifications/Notification';
 
 
 class JointMeeting extends Component {
-
    state = {
       btnPressed: false,
       displayBeforeClick: { display: "block" },
@@ -21,6 +21,7 @@ class JointMeeting extends Component {
    }
 
    stornoClickHandler = () => {
+      console.log("test");
       if (!this.state.btnPressed) {
          this.setState({
             btnPressed: true,
@@ -33,13 +34,23 @@ class JointMeeting extends Component {
 
       //TODO: Hier Hinzufügen, was passieren soll, sobald geklickt wurde
       if (this.state.btnPressed && this.state.reasonChoosed) {
-         this.setState({
-            joinBtnClass: "btn btn-cancel--animation",
-            jointClass: "jointMeeting--closed"
-         })
-         setTimeout(() => {
-            document.querySelector(".jointMeeting--closed").parentElement.parentElement.remove();
-         }, 2500);
+         axios.put('/api/unregister_user/' + this.props.user.id + '_' + this.props.id)
+            .then((response) => {
+               notify("Treffen erfolgreich storniert");
+               // this.setState({
+               //    joinBtnClass: "btn btn-cancel--animation",
+               //    jointClass: "jointMeeting--closed"
+               // })
+               // setTimeout(() => {
+               //    document.querySelector(".jointMeeting--closed").parentElement.parentElement.remove();
+               // }, 2500);
+               this.props.loadAllMeetings();
+            })
+            .catch((error) => {
+               if (error.response) {
+                  notify(error.response.data.message);
+               }
+            });
       }
    }
 
@@ -64,12 +75,12 @@ class JointMeeting extends Component {
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
             <div style={this.state.displayAfterClick} className="jointMeeting__clickedBtnWrapper">
                <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnTime")}</button>
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnInteres")}</button>
+                  <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnTime")}</button>
+                  <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnInteres")}</button>
                </div>
                <div className="jointMeeting__clickedBtnWrapper__block">
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
-                  <button onClick={() => {this.setState({ reasonChoosed: true })}} className="btn btn-jointMeeting">{t("btnOther")}</button>
+                  <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
+                  <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnOther")}</button>
                </div>
             </div>
             <img style={this.state.displayBeforeClick} className="jointMeeting__img" src={placeholderImage} alt="" />
