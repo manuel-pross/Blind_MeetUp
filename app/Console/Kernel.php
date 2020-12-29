@@ -57,7 +57,7 @@ class Kernel extends ConsoleKernel
                 $meetingDate = strtotime($meeting->date);
     
                 if($currentDate > $meetingDate)
-                    if($meeting->members <= 0 || $meeting->members == null)
+                    if($meeting->members <= 1 || $meeting->members == null)
                         $meeting->delete();
             }
 
