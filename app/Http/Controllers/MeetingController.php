@@ -63,6 +63,7 @@ class MeetingController extends Controller
     public function rateMeeting(Request $request, $id) {
         $meeting = Meeting::findOrFail($id);
 
+        //TODO: Validierung für den Request hinzufügen. Rating muss zwischen ?0? und 5 liegen
 
         $meeting->update([
             'ratings' => ++$meeting->ratings,
