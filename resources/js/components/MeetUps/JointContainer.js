@@ -7,6 +7,7 @@ import JointMeeting from './JointMeeting'
 
 import Slider from "react-slick";
 import { withTranslation } from 'react-i18next';
+
 import { css } from '@emotion/react';
 import { ClipLoader } from "react-spinners";
 
@@ -73,19 +74,16 @@ class PendingContainer extends Component {
          // nextArrow: <SampleNextArrow />,  
          // prevArrow: <SamplePrevArrow />,
       };
-
       console.log(this.props.meetings);
 
-
-
-      // Loader, wenn Daten von DB noch nicht da sind
-      if (this.props.meetings.length === 0) {
+      if (this.props.meetings == null) {
+         console.log("bin hier");
          const override = css`
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px
-            margin-bottom: 10px
-            `;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px
+        margin-bottom: 10px
+        `;
          return (
             <div style={{ display: "flex" }}>
                <ClipLoader

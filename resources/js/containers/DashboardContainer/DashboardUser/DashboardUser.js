@@ -17,23 +17,10 @@ class DashboardUser extends Component {
     _isMounted = false;
 
     state = {
-        // meetings: [],
-        // relatedMeetings: [],
-        pendingMeetings: [],
-        pastMeetings: [],
-        registeredMeetings: []
+        pendingMeetings: null,
+        pastMeetings: null,
+        registeredMeetings: null
     }
-
-    // loadRelatedMeetings = () => {
-    //     axios.get('/api/related_meetings/' + this.props.user.id + '/').then((response) => {
-    //         if (this._isMounted && this.props.user) {
-    //             this.setState({
-    //                 relatedMeetings: response.data
-    //             });
-    //         }
-    //     });
-    // }
-
 
     // Bevorstehendes Meeting
     loadPendingMeetings = () => {
@@ -99,7 +86,7 @@ class DashboardUser extends Component {
                     loadAllMeetings={this.loadAllMeetings}
                     loadPendingMeetings={this.loadPendingMeetings}
                     user={this.props.user}
-                />
+                  />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />
                 <Notification />

@@ -26,8 +26,8 @@ class Routes extends Component {
             .then(res => {
                 this.setUser(res.data);
             }).catch(err => {
-                console.log("User ist nicht angemeldet");
-                console.log(err);
+                // console.log("User ist nicht angemeldet");
+                // console.log(err);
             })
     }
 
