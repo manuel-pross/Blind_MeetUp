@@ -4410,35 +4410,16 @@ Breakpoint Mixin
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 11px 30px !important;
+  padding: 4px 20px !important;
   border-radius: 30px !important;
   border: 0 !important;
   text-decoration: none;
   text-align: center;
-  font-size: 20px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .btn {
-    font-size: 18.5px;
-  }
-}
-
-@media (min-width: 992px) {
-  .btn {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .btn {
-    font-size: 21.5px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .btn {
-    font-size: 23px;
+    padding: 11px 30px !important;
   }
 }
 
@@ -4724,29 +4705,29 @@ Breakpoint Mixin
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 36.3px;
-    line-height: 44.44px;
+    font-size: 33px;
+    line-height: 40.4px;
   }
 
   h2 {
-    font-size: 30.8px;
-    line-height: 29.04px;
+    font-size: 28px;
+    line-height: 26.4px;
   }
 
   h3 {
-    font-size: 19.8px;
-    line-height: 24.64px;
+    font-size: 18px;
+    line-height: 22.4px;
   }
 
   h4 {
-    font-size: 18.7px;
-    line-height: 22.44px;
+    font-size: 17px;
+    line-height: 20.4px;
   }
 
   p,
   a {
-    font-size: 17.6px;
-    line-height: 20.24px;
+    font-size: 16px;
+    line-height: 18.4px;
   }
 }
 
@@ -11647,8 +11628,8 @@ template {
   position: absolute;
   border-radius: 45px;
   border: none;
-  top: 0;
-  right: 0;
+  top: -4px;
+  right: -4px;
   padding: 22px;
   transition: all 0.2s;
   z-index: 1;
@@ -11941,11 +11922,34 @@ template {
 }
 }
 
+.jointMeeting--closed {
+  position: relative;
+  border-radius: 45px;
+  background-image: linear-gradient(#50b375, #2e6c48);
+  color: #fefefe;
+  max-width: 792px;
+  max-height: 363px;
+}
+
+@media (min-width: 1200px) {
+  .jointMeeting--closed {
+    border-radius: 65px;
+  }
+}
+
 .jointMeeting {
   position: relative;
   border-radius: 45px;
   background-image: linear-gradient(#50b375, #2e6c48);
   color: #fefefe;
+  max-width: 792px;
+  max-height: 363px;
+}
+
+@media (min-width: 1200px) {
+  .jointMeeting {
+    border-radius: 65px;
+  }
 }
 
 .jointMeeting__beforeClickedWrapper {
@@ -11953,7 +11957,7 @@ template {
 }
 
 .jointMeeting__imgWrapper {
-  width: 50%;
+  width: 60%;
 }
 
 .jointMeeting__img {
@@ -11962,21 +11966,211 @@ template {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .jointMeeting__img {
+    height: unset;
+    width: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jointMeeting__img {
+    border-radius: 65px;
+  }
+}
+
 .jointMeeting__contentWrapper {
   position: relative;
-  width: 50%;
-  padding-left: 0.5rem;
+  width: 60%;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 380px) {
+  .jointMeeting__contentWrapper {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 170px;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 95px;
+  }
+}
+
+@media only screen and (min-width: 495px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 260px;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .jointMeeting__topWrapper,
+  .jointMeeting__dataWrapperLocation {
+    padding: 10px;
+    position: relative;
+  }
+
+  .jointMeeting__topWrapper::after,
+  .jointMeeting__dataWrapperLocation::after {
+    content: "";
+    position: absolute;
+    background-color: #fefefe;
+    width: 30px;
+    height: 1.5px;
+    left: -10px;
+    top: 50%;
+    transform: rotate(90deg);
+  }
+}
+
+.jointMeeting__topWrapper {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 576px) {
+  .jointMeeting__topWrapper {
+    margin-bottom: 15px;
+  }
+}
+
+.jointMeeting__dataWrapperLocation {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 576px) {
+  .jointMeeting__dataWrapperLocation {
+    margin-bottom: 15px;
+  }
 }
 
 .jointMeeting__data {
   color: inherit;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  .jointMeeting__data {
+    margin-left: 18px;
+  }
 }
 
 .jointMeeting__btnWrapper {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 15px;
+  text-align: center;
+}
+
+.jointMeeting__btnSpan {
+  color: #ff5454;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jointMeeting__btnDesc {
+  margin-right: 5px;
+}
+
+.jointMeeting__cancelSvg {
+  width: 15px;
+}
+
+.jointMeeting__afterClickedWrapper {
+  padding: 0.5rem;
+}
+
+.jointMeeting__afterTitle {
+  text-align: center;
+  color: inherit;
+}
+
+.jointMeeting__afterContentWrapper {
+  margin-bottom: 0.8rem;
+}
+
+.btn-jointMeeting {
+  color: #959595;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.btn-cancel {
+  width: 90%;
+}
+
+.btn-cancel:hover {
+  background-color: #50b375;
+}
+
+.btn-cancel:hover .btn-meeting__arrow::after,
+.btn-cancel:hover .btn-meeting__arrow::before {
+  background-color: #fefefe;
+}
+
+.btn-cancel--animation {
+  transition: all 1s;
+}
+
+.btn-cancel--animation:focus {
+  background-color: #50b375;
+  -webkit-animation: test2 1.5s;
+          animation: test2 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.btn-cancel--animation:focus .jointMeeting__btnDesc {
+  -webkit-animation: test 1.5s;
+          animation: test 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.btn-cancel--animation:focus .jointMeeting__btnWrapper {
+  margin: 0;
+}
+
+@-webkit-keyframes test {
+  100% {
+    width: 0%;
+    visibility: hidden;
+  }
+}
+
+@keyframes test {
+  100% {
+    width: 0%;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes test2 {
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes test2 {
+  100% {
+    width: 0%;
+  }
 }
 
 .pastMeeting--closed {
@@ -12082,29 +12276,14 @@ template {
   margin: 0 0 0.5rem 0;
 }
 
-.pastMeeting__dataWrapper {
-  position: relative;
-  align-self: center;
-  padding: 10px;
-}
-
-.pastMeeting__dataWrapper::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: -10px;
-  top: 27px;
-  transform: rotate(90deg);
-}
-
+.pastMeeting__dataWrapper,
 .pastMeeting__dataWrapperLocation {
   position: relative;
   align-self: center;
   padding: 10px;
 }
 
+.pastMeeting__dataWrapper::after,
 .pastMeeting__dataWrapperLocation::after {
   content: "";
   position: absolute;

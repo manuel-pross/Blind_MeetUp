@@ -20,5 +20,6 @@
    "friday": "Friday",
    "saturday": "Saturday",
    "sunday": "Sunday",
-   "notRated": "Not yet rated"
+   "notRated": "Not yet rated",
+   "cancelReasonTitle": "Why do you want to cancel the meeting?"
 }
