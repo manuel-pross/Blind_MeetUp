@@ -33,10 +33,10 @@ class Login extends Component {
     render() {
         if (this.state.loggedIn || this.props.user) {
             return <Redirect
-            to={{
-                pathname: "/dashboard/anmelden"
-            }}
-        />
+                to={{
+                    pathname: "/dashboard/anmelden"
+                }}
+            />
         }
 
 
