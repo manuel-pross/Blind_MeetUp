@@ -34,7 +34,7 @@ class Login extends Component {
         if (this.state.loggedIn || this.props.user) {
             return <Redirect
             to={{
-                pathname: "/dashboard"
+                pathname: "/dashboard/anmelden"
             }}
         />
         }
