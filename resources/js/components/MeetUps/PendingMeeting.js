@@ -46,7 +46,8 @@ class PendingMeeting extends Component {
          this.setState({ btnPressed: false, displayAfterClick: { display: "none" }, displayBeforeClick: { display: "block" } })
       }
    }
-
+   
+   //TODO: Fehler beim toggeln, nachdem man ein duo Meeting angemeldet hat.
    render() {
       const { t } = this.props;
       return (
