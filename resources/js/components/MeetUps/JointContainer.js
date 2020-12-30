@@ -67,24 +67,9 @@ class PendingContainer extends Component {
 
       const settings = {
          speed: 500,
-         slidesToShow: 2,
-         slidesToScroll: 1,
+         slidesToShow: 1,
          // nextArrow: <SampleNextArrow />,  
          // prevArrow: <SamplePrevArrow />,
-         responsive: [
-            {
-               breakpoint: 1199,
-               settings: {
-                  slidesToShow: 1,
-               }
-            },
-            // {
-            //    breakpoint: 767,
-            //    settings: {
-            //       slidesToShow: 1,
-            //    }
-            // }
-         ]
       };
 
       // TODO: Image Link hinzufügen
@@ -92,14 +77,12 @@ class PendingContainer extends Component {
          <div className="container mb-400">
             <div className="meetUps">
                <h2 className="meetUps__heading">{t("title")}</h2>
-               <Slider {...settings}>
-                  {this.props.meetings.map((e, i) => {
-                     const time = e.date.slice(11, 16);
-                     return (
-                        <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user}  loadAllMeetings={this.props.loadAllMeetings} />
-                     )
-                  })}
-               </Slider>
+               {this.props.meetings.map((e, i) => {
+                  const time = e.date.slice(11, 16);
+                  return (
+                     <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
+                  )
+               })}
             </div>
          </div>
       )

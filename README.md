@@ -29,6 +29,11 @@ Datenbank erneut mit Seeds befüllen:
 3. Client_1/Client_2 keys in .env ersetzen
 (4. php artisan config:cache)
 
+Ansicht über das Smartphone
+
+1. Eigene IP-Adresse: cmd > ipconfig/all > IPv4(bevorzugt)
+2. (sudo) php artisan serve --host EigeneIpAdresse --port 80
+3. Mit dem Smartphone (im gleichen W-LAN) auf die entsprechende IP zugreifen (Funktionert auch mit MAC-Laptops im gleichen W-LAN)
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 

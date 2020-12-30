@@ -4344,7 +4344,7 @@ Breakpoint Mixin
 }
 
 .c3-second {
-  color: #EFFCEF !important;
+  color: #effcef !important;
 }
 
 .c_success {
@@ -4392,7 +4392,7 @@ Breakpoint Mixin
 }
 
 .bg-second3 {
-  background-color: #EFFCEF !important;
+  background-color: #effcef !important;
 }
 
 .bg-succes {
@@ -4410,35 +4410,16 @@ Breakpoint Mixin
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 11px 30px !important;
+  padding: 4px 20px !important;
   border-radius: 30px !important;
   border: 0 !important;
   text-decoration: none;
   text-align: center;
-  font-size: 20px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .btn {
-    font-size: 18.5px;
-  }
-}
-
-@media (min-width: 992px) {
-  .btn {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .btn {
-    font-size: 21.5px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .btn {
-    font-size: 23px;
+    padding: 11px 30px !important;
   }
 }
 
@@ -4492,8 +4473,8 @@ Breakpoint Mixin
 }
 
 .btn-select-active {
-  background-color: #2F2F2F !important;
-  border: 2px solid #2F2F2F !important;
+  background-color: #2f2f2f !important;
+  border: 2px solid #2f2f2f !important;
 }
 
 .btn-tertiary {
@@ -4724,29 +4705,29 @@ Breakpoint Mixin
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 36.3px;
-    line-height: 44.44px;
+    font-size: 33px;
+    line-height: 40.4px;
   }
 
   h2 {
-    font-size: 30.8px;
-    line-height: 29.04px;
+    font-size: 28px;
+    line-height: 26.4px;
   }
 
   h3 {
-    font-size: 19.8px;
-    line-height: 24.64px;
+    font-size: 18px;
+    line-height: 22.4px;
   }
 
   h4 {
-    font-size: 18.7px;
-    line-height: 22.44px;
+    font-size: 17px;
+    line-height: 20.4px;
   }
 
   p,
   a {
-    font-size: 17.6px;
-    line-height: 20.24px;
+    font-size: 16px;
+    line-height: 18.4px;
   }
 }
 
@@ -10957,7 +10938,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
   z-index: 1;
 }
 
@@ -11015,7 +10996,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
   z-index: 1;
 }
 
@@ -11274,7 +11255,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
 }
 
 .timeline__arrow-right::before {
@@ -11324,7 +11305,7 @@ template {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50%;
-  background: #EFFCEF !important;
+  background: #effcef !important;
 }
 
 .timeline__arrow-left::before {
@@ -11376,7 +11357,7 @@ template {
 }
 
 .FAQ {
-  background-color: #EFFCEF;
+  background-color: #effcef;
   padding: 1rem 0;
 }
 
@@ -11429,7 +11410,7 @@ template {
 
 @media (min-width: 992px) {
   .FAQ__btn {
-    background-color: #EFFCEF;
+    background-color: #effcef;
     align-self: flex-start;
     margin-right: 4.5rem;
   }
@@ -11506,7 +11487,7 @@ template {
   padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
   height: 260px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
@@ -11537,7 +11518,7 @@ template {
   padding: 2.5rem;
   margin: 1.5rem;
   background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
   height: 260px;
 }
 
@@ -11561,6 +11542,10 @@ template {
   .meeting__wrapper {
     height: 160px;
   }
+}
+
+.meeting__headlineWrapper {
+  display: flex;
 }
 
 .meeting__dataWrapper {
@@ -11643,8 +11628,8 @@ template {
   position: absolute;
   border-radius: 45px;
   border: none;
-  top: 0;
-  right: 0;
+  top: -4px;
+  right: -4px;
   padding: 22px;
   transition: all 0.2s;
   z-index: 1;
@@ -11939,189 +11924,191 @@ template {
 
 .jointMeeting--closed {
   position: relative;
-  display: flex;
-  margin: 0.5rem;
-  background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
+  background-image: linear-gradient(#50b375, #2e6c48);
   color: #fefefe;
-  -webkit-animation: fadeOut 1.5s;
-          animation: fadeOut 1.5s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  max-width: 792px;
+  max-height: 363px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .jointMeeting--closed {
-    height: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  .jointMeeting--closed {
-    height: 336px;
+    border-radius: 65px;
   }
 }
 
 .jointMeeting {
   position: relative;
-  display: flex;
-  margin: 0.5rem;
-  background-color: #2e6c48;
-  border-radius: 75px;
+  border-radius: 45px;
+  background-image: linear-gradient(#50b375, #2e6c48);
   color: #fefefe;
+  max-width: 792px;
+  max-height: 363px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .jointMeeting {
-    height: 300px;
+    border-radius: 65px;
   }
 }
 
-@media (min-width: 768px) {
-  .jointMeeting {
-    height: 336px;
-  }
+.jointMeeting__beforeClickedWrapper {
+  height: 100%;
 }
 
-.jointMeeting__dayCount {
-  color: inherit;
-  margin: 0.5rem 0 0 1rem;
-  padding: 0;
+.jointMeeting__imgWrapper {
+  width: 60%;
 }
 
 .jointMeeting__img {
-  width: 45%;
-  border-radius: inherit;
-}
-
-.jointMeeting__innerWrapper {
-  height: 120px;
-  position: relative;
+  border-radius: 45px;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
-  .jointMeeting__innerWrapper {
-    height: 180px;
-    padding: 1.5rem;
+  .jointMeeting__img {
+    height: unset;
+    width: unset;
   }
 }
 
-@media (min-width: 992px) {
-  .jointMeeting__innerWrapper {
-    height: 250px;
-    padding: 2.5rem;
+@media (min-width: 1200px) {
+  .jointMeeting__img {
+    border-radius: 65px;
   }
 }
 
 .jointMeeting__contentWrapper {
-  width: 100%;
-  padding: 15px;
-}
-
-.jointMeeting__dataWrapper {
   position: relative;
-  align-self: center;
-  padding: 10px;
+  width: 60%;
+  padding: 0.5rem;
 }
 
-.jointMeeting__dataWrapper--pipe::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: 0;
-  top: 27px;
-  transform: rotate(90deg);
+@media only screen and (min-width: 380px) {
+  .jointMeeting__contentWrapper {
+    padding-top: 1rem;
+  }
 }
 
-.jointMeeting__data {
-  color: inherit !important;
-  margin: 0;
-  margin-left: 18px;
-  white-space: nowrap;
+@media (min-width: 576px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 170px;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 95px;
+  }
+}
+
+@media only screen and (min-width: 495px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jointMeeting__contentTopWrapper {
+    min-height: 260px;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .jointMeeting__topWrapper,
+  .jointMeeting__dataWrapperLocation {
+    padding: 10px;
+    position: relative;
+  }
+
+  .jointMeeting__topWrapper::after,
+  .jointMeeting__dataWrapperLocation::after {
+    content: "";
+    position: absolute;
+    background-color: #fefefe;
+    width: 30px;
+    height: 1.5px;
+    left: -10px;
+    top: 50%;
+    transform: rotate(90deg);
+  }
+}
+
+.jointMeeting__topWrapper {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 576px) {
+  .jointMeeting__topWrapper {
+    margin-bottom: 15px;
+  }
 }
 
 .jointMeeting__dataWrapperLocation {
-  position: relative;
-  padding: 10px;
+  margin-bottom: 7px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .jointMeeting__dataWrapperLocation {
-    margin-bottom: 3rem;
+    margin-bottom: 15px;
   }
 }
 
-.jointMeeting__dataWrapperLocation--pipe::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: 0;
-  top: 20px;
-  transform: rotate(90deg);
+.jointMeeting__data {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.jointMeeting__clickedBtnWrapper {
-  height: 120px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .jointMeeting__clickedBtnWrapper {
-    height: 180px;
-    padding: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__clickedBtnWrapper {
-    height: 250px;
-    padding: 2.5rem;
-  }
-}
-
-.jointMeeting__clickedBtnWrapper__block {
-  display: flex;
-  margin: 1.5rem;
-  justify-content: space-around;
-}
-
-@media (min-width: 992px) {
-  .jointMeeting__clickedBtnWrapper__block {
-    margin: 2.5rem;
+@media (min-width: 576px) {
+  .jointMeeting__data {
+    margin-left: 18px;
   }
 }
 
 .jointMeeting__btnWrapper {
+  text-align: center;
+}
+
+.jointMeeting__btnSpan {
+  color: #ff5454;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 992px) {
-  .jointMeeting__btnWrapper {
-    margin: 0 3rem;
-  }
+.jointMeeting__btnDesc {
+  margin-right: 5px;
 }
 
-.jointMeeting__btnWrapper img {
-  display: inline !important;
-  width: 23px;
+.jointMeeting__cancelSvg {
+  width: 15px;
 }
 
-.jointMeeting--column {
-  flex-wrap: wrap;
+.jointMeeting__afterClickedWrapper {
+  padding: 0.5rem;
+}
+
+.jointMeeting__afterTitle {
+  text-align: center;
+  color: inherit;
+}
+
+.jointMeeting__afterContentWrapper {
+  margin-bottom: 0.8rem;
+}
+
+.btn-jointMeeting {
+  color: #959595;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .btn-cancel {
-  color: #FF5454;
-  width: 80%;
+  width: 90%;
 }
 
 .btn-cancel:hover {
@@ -12134,63 +12121,93 @@ template {
 }
 
 .btn-cancel--animation {
-  color: #FF5454;
-  width: 80%;
-  transition: all 1s ease-in-out;
+  transition: all 1s;
 }
 
 .btn-cancel--animation:focus {
   background-color: #50b375;
-  width: 50px !important;
-  height: 50px !important;
+  -webkit-animation: test2 1.5s;
+          animation: test2 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .btn-cancel--animation:focus .jointMeeting__btnDesc {
-  display: none;
+  -webkit-animation: test 1.5s;
+          animation: test 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .btn-cancel--animation:focus .jointMeeting__btnWrapper {
   margin: 0;
 }
 
-.btn-jointMeeting {
-  white-space: nowrap;
-  transition: all 0.2s;
+@-webkit-keyframes test {
+  100% {
+    width: 0%;
+    visibility: hidden;
+  }
 }
 
-.btn-jointMeeting:hover {
-  color: #fefefe;
-  background-color: #50b375;
+@keyframes test {
+  100% {
+    width: 0%;
+    visibility: hidden;
+  }
 }
 
-.btn-jointMeeting:focus {
-  color: #fefefe;
-  background-color: #50b375;
+@-webkit-keyframes test2 {
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes test2 {
+  100% {
+    width: 0%;
+  }
 }
 
 .pastMeeting--closed {
   padding: 1rem;
   margin: 1.5rem;
   position: relative;
-  border-radius: 75px;
+  border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 363px;
-  width: 363px;
+  height: 300px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .pastMeeting--closed {
+    margin: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pastMeeting--closed {
+    height: 330px;
+  }
 }
 
 .pastMeeting {
   padding: 1rem;
-  margin: 2.5rem;
+  margin: 1.5rem;
   position: relative;
-  border-radius: 75px;
+  border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 280px;
+  height: 300px;
 }
 
 @media (min-width: 768px) {
@@ -12205,9 +12222,14 @@ template {
   }
 }
 
+@media (min-width: 1920px) {
+  .pastMeeting {
+    white-space: nowrap;
+  }
+}
+
 .pastMeeting__topWrapper {
   height: 12.5rem;
-  padding: 2rem;
 }
 
 @media (min-width: 992px) {
@@ -12254,29 +12276,14 @@ template {
   margin: 0 0 0.5rem 0;
 }
 
-.pastMeeting__dataWrapper {
-  position: relative;
-  align-self: center;
-  padding: 10px;
-}
-
-.pastMeeting__dataWrapper::after {
-  content: "";
-  position: absolute;
-  background-color: #fefefe;
-  width: 30px;
-  height: 1.5px;
-  left: -10px;
-  top: 27px;
-  transform: rotate(90deg);
-}
-
+.pastMeeting__dataWrapper,
 .pastMeeting__dataWrapperLocation {
   position: relative;
   align-self: center;
   padding: 10px;
 }
 
+.pastMeeting__dataWrapper::after,
 .pastMeeting__dataWrapperLocation::after {
   content: "";
   position: absolute;
@@ -12301,6 +12308,35 @@ template {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.pendingContainer__headlineWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pendingContainer__filterTeam,
+.pendingContainer__filterGroup {
+  transition: opacity 0.2s;
+  color: #fefefe;
+  padding: 5px 10px;
+  border: none;
+}
+
+.pendingContainer__filterTeam:hover,
+.pendingContainer__filterGroup:hover {
+  opacity: 0.8;
+}
+
+.pendingContainer__filterTeam {
+  border-radius: 75px 0 0 75px;
+  margin-right: 1px;
+}
+
+.pendingContainer__filterGroup {
+  border-radius: 0 75px 75px 0;
+  margin-left: 1px;
 }
 
 .navbar {
@@ -12476,7 +12512,7 @@ template {
 }
 
 .footer {
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -12690,7 +12726,7 @@ template {
 }
 
 .feedbackForm__smiley-active {
-  background-color: #2F2F2F;
+  background-color: #2f2f2f;
 }
 
 .feedbackForm__smiley {
@@ -12706,7 +12742,7 @@ template {
 .feedbackForm input[type=text] {
   height: 50px;
   width: 100%;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12724,7 +12760,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12738,7 +12774,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;
@@ -12748,7 +12784,7 @@ template {
   height: 50px;
   width: 30%;
   min-width: 300px;
-  background-color: #EDEDED;
+  background-color: #ededed;
   padding: 12px 20px;
   border-radius: 25px;
   border-style: none;

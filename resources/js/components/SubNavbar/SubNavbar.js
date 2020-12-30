@@ -13,6 +13,7 @@ class SubNavbar extends Component {
         if (this.props.match.url.substr(-1) === "/") {
             pathEndswithBackslash = true;
         }
+
         return (
             <div className="container subnavbar" style={{ marginTop: '100px' }}>
                 <div className="subnavbar__links">
@@ -21,12 +22,11 @@ class SubNavbar extends Component {
                     <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "vergangen" : "/vergangen")}>Vergangen  </NavLink>
                 </div>
 
-
                 {/* {console.log(this.props)} */}
                 {/* Dashboard SubRoutes */}
                 <Route exact path={this.props.match.url + "/anmelden"} render={() => <JointContainer user={this.props.user} meetings={this.props.registeredMeetings} loadAllMeetings={this.props.loadAllMeetings} />} />
                 <Route exact path={this.props.match.url + "/anstehend"} render={() => <PendingContainer user={this.props.user} meetings={this.props.pendingMeetings} loadAllMeetings={this.props.loadAllMeetings} />} />
-                <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={this.props.pastMeetings}  loadAllMeetings={this.props.loadAllMeetings}  />} />
+                <Route exact path={this.props.match.url + "/vergangen"} render={() => <PastContainer meetings={this.props.pastMeetings} loadAllMeetings={this.props.loadAllMeetings} />} />
             </div>
 
         );

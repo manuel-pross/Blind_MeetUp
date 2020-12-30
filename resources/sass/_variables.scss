@@ -5,24 +5,27 @@ $c4-main: #707070;
 
 $c1-second: #50b375;
 $c2-second: #2e6c48;
-$c3-second: #EFFCEF;
-$c4-second: #FF5454;
+$c3-second: #effcef;
+$c4-second: #ff5454;
 
 $c-white: #fefefe;
 $c-black: #010101;
 $c-grey: #999999;
-$c-darkGrey: #2F2F2F;
+$c-darkGrey: #2f2f2f;
 $c-lightGrey: #959595;
-$c-lightGreyInput :#EDEDED; 
+$c-lightGreyInput: #ededed;
 
 $c-success: #5cb85c;
 $c-warn: #f0ad4e;
 $c-error: #d9534f;
 
-$vertical-gradient: linear-gradient(360deg, rgba(46,108,72,1) 35%, rgba(80,179,117,1) 100%);
-$horizontal-gradient: linear-gradient(270deg, rgba(46,108,72,1) 0%, rgba(80,179,117,1) 100%);
+$vertical-gradient: linear-gradient(360deg, rgba(46, 108, 72, 1) 35%, rgba(80, 179, 117, 1) 100%);
+$horizontal-gradient: linear-gradient(270deg, rgba(46, 108, 72, 1) 0%, rgba(80, 179, 117, 1) 100%);
 $transision: 0.3s;
 $box-shadow: #01010159;
+
+$border-radius: 45px;
+
 
 /* --------------------------------------------------
 
@@ -33,7 +36,6 @@ Fonts
 $font-main-1: "Maven Pro Regular";
 $font-main-2: "Maven Pro Bold";
 $font-main-3: "Maven Pro Black";
-
 
 /* --------------------------------------------------
 
@@ -49,5 +51,5 @@ $breakpoints: (
   "md": 768px,
   "lg": 992px,
   "xl": 1200px,
-  "xxl": 1920px
+  "xxl": 1920px,
 );

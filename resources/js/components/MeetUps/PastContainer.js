@@ -25,7 +25,9 @@ class PendingContainer extends Component {
          max_members: "",
          rating: "",
          img_link: ""
-      }
+      },
+      maxMeetingSetting: 3,
+      maxMeetingSettingMD: 2,
    }
 
    deleteMeeting = (id) => {
@@ -47,7 +49,8 @@ class PendingContainer extends Component {
             rating,
             img_link
          },
-         editMeetingModal: !this.state.editMeetingModal
+         editMeetingModal: !this.state.editMeetingModal,
+         editMeetingModalMD: !this.state.editMeetingModal
       })
    }
 
@@ -94,35 +97,57 @@ class PendingContainer extends Component {
       }
    }
 
+   setSettingState = () => {
+      let meetingCount = 0;
+      let meetingCountMD = 0;
+      this.props.meetings.map(() => {
+         meetingCount++
+         meetingCountMD++
+      })
+      if (meetingCountMD > 2) {
+         meetingCountMD = 2
+      }
+      if (meetingCount > 3) {
+         meetingCount = 3
+      }
+      this.setState({ maxMeetingSetting: meetingCount })
+      this.setState({ maxMeetingSettingMD: meetingCountMD })
+   }
+
+   componentDidMount() {
+      this.setSettingState();
+   }
+
    render() {
       const { t } = this.props;
 
-      function SampleNextArrow(props) {
-         const { onClick } = props;
-         return (
-            <div
-               className={"slick-arrow slick-next teamSlider__arrow-right"}
-               onClick={onClick}>
-               <div className="teamSlider__arrow-right-stroke"></div>
-            </div>
-         );
-      }
+      // function SampleNextArrow(props) {
+      //    const { onClick } = props;
+      //    return (
+      //       <div
+      //          className={"slick-arrow slick-next teamSlider__arrow-right"}
+      //          onClick={onClick}>
+      //          <div className="teamSlider__arrow-right-stroke"></div>
+      //       </div>
+      //    );
+      // }
 
-      function SamplePrevArrow(props) {
-         const { onClick } = props;
-         return (
-            <div
-               className={"slick-arrow slick-prev teamSlider__arrow-left"}
-               onClick={onClick}>
-               <div className="teamSlider__arrow-left-stroke"></div>
-            </div>
-         );
-      }
+      // function SamplePrevArrow(props) {
+      //    const { onClick } = props;
+      //    return (
+      //       <div
+      //          className={"slick-arrow slick-prev teamSlider__arrow-left"}
+      //          onClick={onClick}>
+      //          <div className="teamSlider__arrow-left-stroke"></div>
+      //       </div>
+      //    );
+      // }
 
       const settings = {
          speed: 500,
-         slidesToShow: 4,
-         slidesToScroll: 1,
+         slidesToShow: this.state.maxMeetingSetting,
+         dots: true,
+         // slidesToScroll: this.props.meetingCount
          // nextArrow: <SampleNextArrow />,
          // prevArrow: <SamplePrevArrow />,
          responsive: [
@@ -135,12 +160,11 @@ class PendingContainer extends Component {
             {
                breakpoint: 1199,
                settings: {
-                  slidesToShow: 2,
+                  slidesToShow: this.state.maxMeetingSettingMD,
                }
             }
          ]
       };
-
       // TODO: Image Link hinzufügen
       return (
          <div className="container mb-400">
