@@ -1,9 +1,11 @@
 {
-   "title": "willkommen",
+   "pending": "Anstehend",
    "titlePending": "Anstehende Treffen",
    "subtitlePending": "Siehe dir an, was bald in deiner Nähe ansteht.",
+   "joint": "Angemeldet",
    "titleJoint": "Angemeldete Treffen",
    "subtitleJoint": "Hier siehst du alle Treffen, für die du dich angemeldet hast.",
+   "past": "Vergangen",
    "titlePast": "Vergangene Treffen",
    "subtitlePast": "Zeit um deine vergangenen Treffen zu bewerten.",
    "btnDuo": "Duo-Treffen", 

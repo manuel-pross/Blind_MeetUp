@@ -4,11 +4,14 @@ import { NavLink, Redirect, Route } from 'react-router-dom';
 import PendingContainer from '../MeetUps/PendingContainer';
 import JointContainer from '../MeetUps/JointContainer';
 import PastContainer from '../MeetUps/PastContainer';
+import { withTranslation } from 'react-i18next';
 
 
 class SubNavbar extends Component {
 
     render() {
+        const { t } = this.props;
+
         let pathEndswithBackslash = false;
         if (this.props.match.url.substr(-1) === "/") {
             pathEndswithBackslash = true;
@@ -17,9 +20,9 @@ class SubNavbar extends Component {
         return (
             <div className="container subnavbar" style={{ marginTop: '100px' }}>
                 <div className="subnavbar__links">
-                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anmelden" : "/anmelden")}>Angemeldet  </NavLink>
-                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anstehend" : "/anstehend")}>Anstehend  </NavLink>
-                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "vergangen" : "/vergangen")}>Vergangen  </NavLink>
+                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anmelden" : "/anmelden")}>{t("joint")} {" "}</NavLink>
+                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anstehend" : "/anstehend")}>{t("pending")} {" "}</NavLink>
+                    <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "vergangen" : "/vergangen")}>{t("past")} {" "}</NavLink>
                 </div>
 
                 {/* {console.log(this.props)} */}
@@ -32,4 +35,4 @@ class SubNavbar extends Component {
         );
     }
 }
-export default SubNavbar;
+export default withTranslation('meetUps')(SubNavbar);

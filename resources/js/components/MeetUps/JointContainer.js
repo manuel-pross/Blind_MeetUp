@@ -93,7 +93,6 @@ class PendingContainer extends Component {
             </div>
          );
       }
-      console.log(this.props.meetings);
 
       // TODO: Image Link hinzufügen
       return (
