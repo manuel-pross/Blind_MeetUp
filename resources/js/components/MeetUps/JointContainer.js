@@ -74,10 +74,8 @@ class PendingContainer extends Component {
          // nextArrow: <SampleNextArrow />,  
          // prevArrow: <SamplePrevArrow />,
       };
-      console.log(this.props.meetings);
 
       if (this.props.meetings == null) {
-         console.log("bin hier");
          const override = css`
         margin-left: auto;
         margin-right: auto;

@@ -50,11 +50,11 @@ class Routes extends Component {
                 <Route exact path="/richtlinien" component={() => <Guidelines setUser={this.setUser} user={this.state.user} />} />
                 <Route exact path="/impressum" component={() => <Impressum setUser={this.setUser} user={this.state.user} />} />
 
-                <Route exact path="/login" component={() => <Login setUser={this.setUser} user={this.state.user} />} />
+                <Route exact path="/login" component={(props) => <Login {...props} setUser={this.setUser} user={this.state.user} />} />
 
                 {/* Private Routes, nicht exact, da Subroutes auch Private sein müssen */}
-                <PrivateRoute path={"/dashboard" || "/dashboard/"} component={(routerObj) => <Dashboard setUser={this.setUser} user={this.state.user} routerObj={routerObj} />} />
-                <Route path="/" component={() => <h1>Seite nicht gefunden</h1>} />
+                <PrivateRoute path={"/dashboard" || "/dashboard/"} component={(routerObj, props) => <Dashboard {...props} setUser={this.setUser} user={this.state.user} routerObj={routerObj} />} />
+                <Route path="/" component={() => <Redirect to={{pathname: "/"}} />} />
             </Switch >
         );
     }

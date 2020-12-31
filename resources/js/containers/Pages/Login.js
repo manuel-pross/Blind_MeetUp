@@ -17,7 +17,7 @@ class Login extends Component {
         }
 
         axios.post('/api/login', data)
-        .then(res => {
+            .then(res => {
                 localStorage.setItem('token', res.data.token);
                 this.setState({
                     loggedIn: true
@@ -29,12 +29,15 @@ class Login extends Component {
                 })
             })
     }
-
+    
     render() {
+
+        // console.log(this.props.location.state);
+
         if (this.state.loggedIn || this.props.user) {
             return <Redirect
                 to={{
-                    pathname: "/dashboard/anmelden"
+                    pathname: this.props.location.state
                 }}
             />
         }

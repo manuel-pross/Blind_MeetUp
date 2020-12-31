@@ -8,6 +8,9 @@ import PendingMeeting from './PendingMeeting'
 import Slider from "react-slick";
 import { withTranslation } from 'react-i18next';
 
+import { css } from '@emotion/react';
+import { ClipLoader } from "react-spinners";
+
 import axios from 'axios';
 import i18n from '../../i18n';
 let testcount = 0
@@ -86,7 +89,9 @@ class PendingContainer extends Component {
    }
 
    componentDidMount() {
-      this.setSettingState("duo");
+      if (this.props.meetings != null) {
+         this.setSettingState("duo");
+      }
    }
 
    render() {
@@ -135,6 +140,24 @@ class PendingContainer extends Component {
             }
          ]
       };
+
+      if (this.props.meetings == null) {
+         const override = css`
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px
+        margin-bottom: 10px
+        `;
+         return (
+            <div style={{ display: "flex" }}>
+               <ClipLoader
+                  css={override}
+                  size={110}
+                  color={"#50b375"}
+                  loading />
+            </div>
+         );
+      }
 
       // TODO: Image Link hinzufügen
       return (

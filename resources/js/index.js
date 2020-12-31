@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
 // import './index.scss';
-import Root from './Routes';
+import Routes from './Routes';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
@@ -22,7 +22,7 @@ ReactDOM.render(
     <ScrollToTop>
       <DevSizeBtn />
       <React.StrictMode>
-        <Root />
+        <Routes />
       </React.StrictMode>
     </ScrollToTop>
   </BrowserRouter>,

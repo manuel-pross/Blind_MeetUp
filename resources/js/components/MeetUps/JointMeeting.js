@@ -21,7 +21,6 @@ class JointMeeting extends Component {
    }
 
    stornoClickHandler = () => {
-      console.log("test");
       if (!this.state.btnPressed) {
          this.setState({
             btnPressed: true,

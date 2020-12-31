@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, useLocation, withRouter } from "react-router-dom";
 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -15,8 +15,10 @@ import DashboardUser from './DashboardUser/DashboardUser';
 
 class Dashboard extends Component {
 
+
     render() {
-        // { console.log(this.props.user) }
+        // console.log(this.props.location.pathname);
+
         if (this.props.user) {
             if (this.props.user.role == "admin") {
                 return <DashboardAdmin setUser={this.props.setUser} user={this.props.user} />;
@@ -24,9 +26,12 @@ class Dashboard extends Component {
                 return <DashboardUser setUser={this.props.setUser} user={this.props.user} routerObj={this.props.routerObj} />;
             }
         }
-        return <Redirect to="/login" />
+        return <Redirect to={{
+            pathname: "/login",
+            state: this.props.location.pathname
+        }} />
 
     }
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);
