@@ -5,6 +5,8 @@
    "joint": "Angemeldet",
    "titleJoint": "Angemeldete Treffen",
    "subtitleJoint": "Hier siehst du alle Treffen, für die du dich angemeldet hast.",
+   "alertJoint": "Du hast Dich noch nicht für ein MeetUp angemeldet.",
+   "alertJointLink": "Jetzt anmelden!",
    "past": "Vergangen",
    "titlePast": "Vergangene Treffen",
    "subtitlePast": "Zeit um deine vergangenen Treffen zu bewerten.",

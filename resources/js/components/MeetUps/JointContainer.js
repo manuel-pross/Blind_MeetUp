@@ -15,6 +15,8 @@ import axios from 'axios';
 import i18n from '../../i18n';
 import { Link } from 'react-router-dom';
 
+import AlertWaring from '../../../assets/img/icons/alert-warning.svg';
+
 class PendingContainer extends Component {
 
    formateDate = (date) => {
@@ -107,8 +109,12 @@ class PendingContainer extends Component {
                         <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                      )
                   })
-                  : <p>Du nimmst an noch keinem Treffen teil. <Link to="/dashboard/anstehend">Jetzt Registrieren!</Link></p>}
-
+                  :
+                  <div className="guidelines__container" style={{ backgroundColor: '#EFFCEF', borderRadius: '3em', paddingLeft: '20px' }}>
+                     <img src={AlertWaring} className="guidelines__icon" alt="BlindMeetUp_alert-warning" style={{ width: "200px", float: 'left', maxWidth: "35px" }}></img>
+                     <p style={{ color: "#50b375" }}>{t('alertJoint')}{" "}<Link to="/dashboard/anstehend" style={{ color: "#50b375" }}>{t('alertJointLink')}</Link></p>
+                  </div>
+               }
             </div>
          </div>
       )

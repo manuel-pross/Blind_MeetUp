@@ -5,6 +5,8 @@
    "joint": "Registered",
    "titleJoint": "Registered meetings",
    "subtitleJoint": "Here you can see all the meetings that you have registered for.",
+   "alertJoint": "You have not yet registered for a MeetUp.",
+   "alertJointLink": "Register now!",
    "past": "Past",
    "titlePast": "Past meetings",
    "subtitlePast": "Time to evaluate your past meetings.",
