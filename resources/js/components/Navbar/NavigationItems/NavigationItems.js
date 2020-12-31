@@ -33,7 +33,7 @@ const navigationItems = (props) => {
     } else if (props.user != undefined) {
         navbarItems = (
             <React.Fragment>
-                <NavigationItem link="/dashboard" textWithLink>Dashboard</NavigationItem>
+                <NavigationItem link="/dashboard/anmelden" textWithLink>Dashboard</NavigationItem>
                 <NavigationItem link="/" signOut setUser={props.setUser}>{t("logOut")}</NavigationItem>
             </React.Fragment>
         );
