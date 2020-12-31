@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
+
+import { css } from '@emotion/react';
+import { ClipLoader } from "react-spinners";
 // import ErrorMessage from "./UI/ErrorMessage";
 
 class Login extends Component {
     state = {
-        loggedIn: false
+        loggedIn: false,
+        loadingLogin: false,
     }
 
     handleSubmit = (e) => {
+        this.setState({ loadingLogin: true })
         e.preventDefault();
 
         const data = {
@@ -20,13 +25,12 @@ class Login extends Component {
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 this.setState({
-                    loggedIn: true
+                    loggedIn: true,
+                    loadingLogin: false
                 });
                 this.props.setUser(res.data.user);
             }).catch(err => {
-                this.setState({
-                    message: err.response.data.message
-                })
+                this.setState({ loadingLogin: false })
             })
     }
 
@@ -48,6 +52,25 @@ class Login extends Component {
                     }}
                 />
             }
+        }
+
+        if (this.state.loadingLogin) {
+
+            const override = css`
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px
+                margin-bottom: 10px
+            `;
+            return (
+                <div style={{ display: "flex" }}>
+                    <ClipLoader
+                        css={override}
+                        size={110}
+                        color={"#50b375"}
+                        loading />
+                </div>
+            );
         }
 
         return (
