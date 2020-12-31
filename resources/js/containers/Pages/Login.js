@@ -29,17 +29,25 @@ class Login extends Component {
                 })
             })
     }
-    
+
     render() {
 
         // console.log(this.props.location.state);
 
         if (this.state.loggedIn || this.props.user) {
-            return <Redirect
-                to={{
-                    pathname: this.props.location.state
-                }}
-            />
+            if (this.props.location.state != "/") {
+                return <Redirect
+                    to={{
+                        pathname: "/dashboard/anmelden"
+                    }}
+                />
+            } else {
+                return <Redirect
+                    to={{
+                        pathname: this.props.location.state
+                    }}
+                />
+            }
         }
 
         return (
