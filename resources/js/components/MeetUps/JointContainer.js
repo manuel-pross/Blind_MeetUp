@@ -13,6 +13,7 @@ import { ClipLoader } from "react-spinners";
 
 import axios from 'axios';
 import i18n from '../../i18n';
+import { Link } from 'react-router-dom';
 
 class PendingContainer extends Component {
 
@@ -92,18 +93,23 @@ class PendingContainer extends Component {
             </div>
          );
       }
+      console.log(this.props.meetings);
 
       // TODO: Image Link hinzufügen
       return (
          <div className="container mb-400">
             <div className="meetUps">
-               <h2 className="meetUps__heading">{t("title")}</h2>
-               {this.props.meetings.map((e, i) => {
-                  const time = e.date.slice(11, 16);
-                  return (
-                     <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
-                  )
-               })}
+               <h2 className="meetUps__heading">{t("titleJoint")}</h2>
+               <p style={{ marginTop: "0" }}>{t("subtitleJoint")}</p>
+               {!this.props.meetings.length == 0 ?
+                  this.props.meetings.map((e, i) => {
+                     const time = e.date.slice(11, 16);
+                     return (
+                        <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
+                     )
+                  })
+                  : <p>Du nimmst an noch keinem Treffen teil. <Link to="/dashboard/anstehend">Jetzt Registrieren!</Link></p>}
+
             </div>
          </div>
       )

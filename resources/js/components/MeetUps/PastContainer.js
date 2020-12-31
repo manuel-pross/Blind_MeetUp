@@ -16,61 +16,8 @@ import i18n from '../../i18n';
 
 class PendingContainer extends Component {
    state = {
-      newMeetingModal: false,
-
-      editMeetingModal: false,
-      editMeetingData: {
-         id: "",
-         type: "",
-         date: "",
-         place: "",
-         members: "",
-         max_members: "",
-         rating: "",
-         img_link: ""
-      },
       maxMeetingSetting: 3,
       maxMeetingSettingMD: 2,
-   }
-
-   deleteMeeting = (id) => {
-
-      axios.delete('/api/meeting/' + id).then((response) => {
-         this.props.loadMeetings();
-      });
-   }
-
-   editMeeting = (id, type, date, place, members, max_members, rating, img_link) => {
-      this.setState({
-         editMeetingData: {
-            id,
-            type,
-            date,
-            place,
-            members,
-            max_members,
-            rating,
-            img_link
-         },
-         editMeetingModal: !this.state.editMeetingModal,
-         editMeetingModalMD: !this.state.editMeetingModal
-      })
-   }
-
-   newMeetingModalHandler = () => {
-      if (this.state.newMeetingModal) {
-         this.setState({ newMeetingModal: false });
-      } else {
-         this.setState({ newMeetingModal: true });
-      }
-   }
-
-   editMeetingModalHandler = () => {
-      if (this.state.editMeetingModal) {
-         this.setState({ editMeetingModal: false });
-      } else {
-         this.setState({ editMeetingModal: true });
-      }
    }
 
    formateDate = (date) => {
@@ -118,7 +65,7 @@ class PendingContainer extends Component {
    }
 
    componentDidMount() {
-      if(this.props.meetings != null){
+      if (this.props.meetings != null) {
          this.setSettingState();
       }
    }
@@ -194,7 +141,8 @@ class PendingContainer extends Component {
       return (
          <div className="container mb-400">
             <div className="meetUps">
-               <h2 className="meetUps__heading">{t("title")}</h2>
+               <h2 className="meetUps__heading">{t("titlePast")}</h2>
+               <p style={{ marginTop: "0" }}>{t("subtitlePast")}</p>
                <Slider {...settings}>
                   {this.props.meetings.map((e, i) => {
                      const time = e.date.slice(11, 16);

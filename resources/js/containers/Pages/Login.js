@@ -35,17 +35,16 @@ class Login extends Component {
     }
 
     render() {
-
-        // console.log(this.props.location.state);
-
         if (this.state.loggedIn || this.props.user) {
-            if (this.props.location.state != "/") {
+            if (this.props.location.state == undefined) {
+                // Weiterleitung von der Login Seite
                 return <Redirect
                     to={{
                         pathname: "/dashboard/anmelden"
                     }}
                 />
             } else {
+                // Weiterleitung beim neu laden 
                 return <Redirect
                     to={{
                         pathname: this.props.location.state

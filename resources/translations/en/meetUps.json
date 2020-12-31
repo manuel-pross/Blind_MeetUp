@@ -1,5 +1,11 @@
 {
    "title": "welcome",
+   "titlePending": "Pending Meeting",
+   "subtitlePending": "See what's coming up near you soon.",
+   "titleJoint": "Registered meetings",
+   "subtitleJoint": "Here you can see all the meetings that you have registered for.",
+   "titlePast": "Past meetings",
+   "subtitlePast": "Time to evaluate your past meetings.",
    "btnDuo": "Duo Meeting",
    "btnGroup": "Group Meeting",
    "btnJoin": "Join",

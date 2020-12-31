@@ -164,12 +164,13 @@ class PendingContainer extends Component {
          <div className="container mb-400">
             <div className="pendingContainer">
                <div className="pendingContainer__headlineWrapper">
-                  <h2 className="pendingContainer__heading">{t("title")}</h2>
+                  <h2 className="pendingContainer__heading">{t("titlePending")}</h2>
                   <div className="pendingContainer__filterWrapper">
                      <button onClick={() => { this.filterClickHandler("group") }} style={this.state.memberFilter ? { backgroundColor: "#50b375" } : { backgroundColor: "#707070" }} className="pendingContainer__filterTeam">Group</button>
                      <button onClick={() => { this.filterClickHandler("duo") }} style={this.state.memberFilter ? { backgroundColor: "#707070" } : { backgroundColor: "#50b375" }} className="pendingContainer__filterGroup">Duo</button>
                   </div>
                </div>
+               <p className="pendingContainer__heading" style={{ marginTop: "0" }}>{t("subtitlePending")}</p>
                <Slider {...settings}>
                   {this.props.meetings.map((e, i) => {
                      const time = e.date.slice(11, 16);

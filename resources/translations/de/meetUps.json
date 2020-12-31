@@ -1,6 +1,12 @@
 {
    "title": "willkommen",
-   "btnDuo": "Duo-Treffen",
+   "titlePending": "Anstehende Treffen",
+   "subtitlePending": "Siehe dir an, was bald in deiner Nähe ansteht.",
+   "titleJoint": "Angemeldete Treffen",
+   "subtitleJoint": "Hier siehst du alle Treffen, für die du dich angemeldet hast.",
+   "titlePast": "Vergangene Treffen",
+   "subtitlePast": "Zeit um deine vergangenen Treffen zu bewerten.",
+   "btnDuo": "Duo-Treffen", 
    "btnGroup": "Gruppentreffen",
    "btnJoin": "Annehmen",
    "btnCancel": "Stornieren",
