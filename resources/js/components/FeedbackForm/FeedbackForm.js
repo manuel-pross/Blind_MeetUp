@@ -76,7 +76,7 @@ const FeedbackForm = () => {
             <div className="mb-300">
                 <input type="text" name="feedbackText" placeholder="Möchtest du uns noch etwas mitteilen?" value={feedbackText} onChange={handleUserText} />
             </div >
-            <input className="btn btn-primary mr-100 mb-100" type="submit" value="Abschicken" />
+            <button className="btn btn-primary mr-100 mb-100" type="submit" >Abschicken</button>
             <div className="btn btn-second" onClick={resetValues}>Abbrechen</div>
         </form>
     );

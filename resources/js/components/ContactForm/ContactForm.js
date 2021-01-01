@@ -92,7 +92,7 @@ const ContactForm = () => {
             </div>
             <p className="mb-200 subpages__subtext-small">Mit dem Absenden dieses Formular erklärst du dich einverstanden, dass wir zum Zweck der Kontaktaufnahme die übermittelten personenbezogenen Daten vorübergehend speichern dürfen. Mehr dazu findest du in unserer Datenschutzerklärung.</p>
 
-            <input className="btn btn-primary mr-100 mb-50" type="submit" value="Abschicken" />
+            <button className="btn btn-primary mr-100 mb-50" type="submit">Abschicken</button>
             <div className="btn btn-second" onClick={resetValues}>Abbrechen</div>
         </form>
 
