@@ -18,7 +18,7 @@ const animatedSVGItem = () => (
                 </g>
                 <g transform="matrix(1,0,0,1,303.57,1058.03)">
                     <g id="text1939">
-                        <text x="0px" y="0px" style={{fontFamily: "'Arial-BoldMT', 'Arial', sans-serif", fontWeight: 700, fontSize: 101.591 + "px"}}>Blind MeetUp</text>
+                        <text x="0px" y="0px" style={{fontFamily: "'Maven Pro Black', 'Arial', sans-serif", fontWeight: 700, fontSize: 101.591 + "px", cursor: "default"}}>Blind MeetUp</text>
                     </g>
                 </g>
                 <path id="path1945" d="M274.662,985.02L274.662,1060.38" style={{fill: "none", fillRule: "nonzero", stroke: "black", strokeOpacity: 0.61, strokeWidth: 5 + "px"}}/>
