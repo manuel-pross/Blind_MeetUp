@@ -22,7 +22,7 @@ Route::post('login', 'AuthController@login');
 
 Route::get('user', 'AuthController@user')->middleware('auth:api');
 
-Route::get('meetings', 'MeetingController@index');
+Route::get('meetings', 'MeetingController@index')->name('meetings');
 Route::post('meeting', 'MeetingController@store');
 Route::put('meeting/{id}', 'MeetingController@update');
 Route::delete('meeting/{id}', 'MeetingController@delete');
