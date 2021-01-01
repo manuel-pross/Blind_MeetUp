@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import DevSizeBtn from './components/hoc/DevSizeBtn';
 import ScrollToTop from './components/hoc/ScrollToTop';
+import ScrollTopButton from './components/ScrollTopButton/ScrollTopButton';
 
 
 // For translations
@@ -23,6 +24,7 @@ ReactDOM.render(
       <DevSizeBtn />
       <React.StrictMode>
         <Routes />
+        <ScrollTopButton/>
       </React.StrictMode>
     </ScrollToTop>
   </BrowserRouter>,

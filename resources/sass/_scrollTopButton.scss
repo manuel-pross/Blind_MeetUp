@@ -1,0 +1,77 @@
+.ScrollTopButton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 1.7rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.493);
+    opacity: 0.7;
+    transition: opacity 400ms;
+}
+
+@media (max-width: 499px){
+    .ScrollTopButton{
+        height: 40px;
+        width: 40px;
+        right: 10px;
+    }
+}
+
+
+.ScrollTopButton:hover{
+    opacity: 1;
+}
+
+/* von CSSTransition */
+
+/* .CSSTransition-enter {
+
+} */
+
+.CSSTransition-enter-active {
+    animation: openModal 0.4s ease-out forwards;
+}
+
+/* .CSSTransition-exit {
+
+} */
+
+.CSSTransition-exit-active {
+    animation: closeModal 0.4s ease-out forwards;
+}
+/* -------------------------- */
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+}
