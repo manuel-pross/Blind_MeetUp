@@ -14,6 +14,8 @@ import { ClipLoader } from "react-spinners";
 import axios from 'axios';
 import i18n from '../../i18n';
 class PendingContainer extends Component {
+   _isUpdated = false;
+
    state = {
       memberFilter: false,
       maxMeetingSetting: 3,
@@ -90,6 +92,13 @@ class PendingContainer extends Component {
    componentDidMount() {
       if (this.props.meetings != null) {
          this.setSettingState("duo");
+      }
+   }
+
+   componentDidUpdate() {
+      if (this.props.meetings != null && !this._isUpdated) {
+         this.setSettingState("duo");
+         this._isUpdated = true;
       }
    }
 
