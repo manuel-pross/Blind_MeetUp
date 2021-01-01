@@ -42,7 +42,7 @@ const navigationItems = (props) => {
         navbarItems = (
             <React.Fragment>
                 <NavigationItem link="/" textWithLink>{t("homePage")}</NavigationItem>
-                <NavigationItem link="/dashboard">{t("logOut")}</NavigationItem>
+                <NavigationItem link="/dashboard">{t("logIn")}</NavigationItem>
             </React.Fragment>
         );
     }
