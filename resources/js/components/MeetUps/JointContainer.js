@@ -110,9 +110,9 @@ class PendingContainer extends Component {
                      )
                   })
                   :
-                  <div className="guidelines__container" style={{ backgroundColor: '#EFFCEF', borderRadius: '3em', paddingLeft: '20px' }}>
+                  <div className="guidelines__container" style={{ backgroundColor: '#EFFCEF', borderRadius: '3em', paddingLeft: '20px', paddingRight: '20px' }}>
                      <img src={AlertWaring} className="guidelines__icon" alt="BlindMeetUp_alert-warning" style={{ width: "200px", float: 'left', maxWidth: "35px" }}></img>
-                     <p style={{ color: "#50b375" }}>{t('alertJoint')}{" "}<Link to="/dashboard/anstehend" style={{ color: "#50b375" }}>{t('alertJointLink')}</Link></p>
+                     <p style={{ color: "#50b375" }}>{t('alertJoint')}{" "}<Link to="/dashboard/anstehend" style={{ color: "#50b375", whiteSpace: "nowrap" }}>{t('alertJointLink')}</Link></p>
                   </div>
                }
             </div>
