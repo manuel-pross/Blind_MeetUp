@@ -1,15 +1,17 @@
 .meeting--closed {
+   max-width: 310px;
    position: relative;
-   padding: 2.5rem;
+   padding: 1.5rem;
    margin: 1.5rem;
-   background-color: $c2-second;
+   background-image: linear-gradient(#50b375, #2e6c48);
    border-radius: $border-radius;
-   height: 260px;
+   color: $c-white;
    animation: fadeOut 1.5s;
    animation-delay: 1.5s;
    animation-fill-mode: forwards;
 
    @include breakpoint("lg") {
+      padding: 2.5rem;
       height: 290px;
    }
 
@@ -23,17 +25,19 @@
 }
 
 .meeting {
+   max-width: 310px;
    position: relative;
-   padding: 2.5rem;
+   padding: 1.5rem;
    margin: 1.5rem;
-   background-color: $c2-second;
+   background-image: linear-gradient(#50b375, #2e6c48);
    border-radius: $border-radius;
-   height: 260px;
-   // width: 100%;
+   color: $c-white;
 
    @include breakpoint("lg") {
+      padding: 2.5rem;
       height: 290px;
    }
+
    @include breakpoint("xl") {
       height: 310px;
    }
@@ -43,6 +47,10 @@
 
       @include breakpoint("lg") {
          height: 160px;
+      }
+
+      @include breakpoint("xl") {
+         height: 190px;
       }
    }
 
@@ -61,22 +69,22 @@
             background-color: $c-white;
             width: 46px;
             height: 1.5px;
-            left: -17px;
             top: 27px;
+            left: -10px;
             transform: rotate(90deg);
 
-            @include breakpoint("md") {
-               top: 31px;
-            }
+            // @include breakpoint("md") {
+            //    top: 31px;
+            // }
 
-            @include breakpoint("lg") {
-               top: 37px;
-            }
+            // @include breakpoint("lg") {
+            //    top: 37px;
+            // }
 
-            @include breakpoint("xl") {
-               width: 54px;
-               top: 43px;
-            }
+            // @include breakpoint("xl") {
+            //    width: 54px;
+            //    top: 43px;
+            // }
          }
       }
    }
@@ -109,7 +117,7 @@
    }
 
    &__data {
-      color: $c-white !important;
+      color: inherit !important;
       margin: 0;
       margin-left: 18px;
       white-space: nowrap;
@@ -117,6 +125,13 @@
       &--date {
          margin-bottom: 1rem;
       }
+   }
+
+   &__dataAfterClick {
+      color: inherit !important;
+      margin: 0;
+      white-space: nowrap;
+      text-align: center;
    }
 
    &__btnWrapper {
@@ -232,7 +247,7 @@
          content: "";
          position: absolute;
          right: 43px;
-         top: 18px;
+         top: 30%;
          display: block;
          width: 13px;
          height: 2px;
@@ -240,13 +255,18 @@
          background-color: inherit;
          transform: rotate(45deg);
          background-color: $c1-second;
+
+         @include breakpoint("md") {
+            width: 20px;
+         }
       }
+
       &::after {
          transition: all 0.2s ease-in-out;
          content: "";
          position: absolute;
          right: 42px;
-         top: 27px;
+         bottom: 30%;
          display: block;
          width: 13px;
          height: 2px;
@@ -254,6 +274,10 @@
          background-color: inherit;
          transform: rotate(135deg);
          background-color: $c1-second;
+
+         @include breakpoint("md") {
+            width: 20px;
+         }
       }
    }
 }
@@ -311,7 +335,7 @@
          width: 13px;
          height: 2px;
          border-radius: 3px;
-         background-color: inherit;
+         background-color: $c1-second;
          transform: rotate(45deg);
       }
 
@@ -325,7 +349,7 @@
          width: 13px;
          height: 2px;
          border-radius: 3px;
-         background-color: inherit;
+         background-color: $c1-second;
          transform: rotate(135deg);
       }
    }

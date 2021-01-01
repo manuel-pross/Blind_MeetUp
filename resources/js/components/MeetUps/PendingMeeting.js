@@ -13,18 +13,19 @@ class PendingMeeting extends Component {
       meetingClass: "meeting",
    }
 
-   joinClickHandler = () => {
+   joinClickHandler = (thisMessage) => {
       if (!this.state.btnPressed) {
          this.setState({ btnPressed: true, displayAfterClick: { display: "block" }, displayBeforeClick: { display: "none" } })
       }
       if (this.state.btnPressed) {
          axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
             .then((response) => {
-               notify("Erfolgreich für Treffen angemeldet");
+               notify(thisMessage);
                // this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
                // setTimeout(() => {
                //    document.querySelector(".meeting--closed").parentElement.parentElement.remove();
                // }, 2500);
+               this.exitClickHandler();
                this.props.loadAllMeetings();
                // this.setState({ btnPressed: false });
             })
@@ -46,7 +47,7 @@ class PendingMeeting extends Component {
          this.setState({ btnPressed: false, displayAfterClick: { display: "none" }, displayBeforeClick: { display: "block" } })
       }
    }
-   
+
    //TODO: Fehler beim toggeln, nachdem man ein duo Meeting angemeldet hat.
    render() {
       const { t } = this.props;
@@ -55,8 +56,8 @@ class PendingMeeting extends Component {
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
             <div className="meeting__wrapper">
                <div style={this.state.displayAfterClick} className="meeting__btnWrapper">
-                  <h3 className="meeting__data">{t("accept")}</h3>
-                  <h3 className="meeting__data">{t("acceptAgain")}</h3>
+                  <p className="meeting__dataAfterClick">{t("accept")}</p>
+                  <p className="meeting__dataAfterClick">{t("acceptAgain")}</p>
                </div>
                <div style={this.state.displayBeforeClick} className="meeting__dataWrapper">
                   <p className="meeting__data">{this.props.day}</p>
@@ -69,7 +70,7 @@ class PendingMeeting extends Component {
                </div>
             </div>
             <div className="meeting__joinBtnWrapper">
-               <button onClick={this.joinClickHandler} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
+               <button onClick={() => this.joinClickHandler(t("SuccessfullyRegistered"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
             </div>
          </div >
       );

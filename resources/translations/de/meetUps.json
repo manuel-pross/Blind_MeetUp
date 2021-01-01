@@ -31,5 +31,6 @@
    "saturday": "Samstag",
    "sunday": "Sonntag",
    "notRated": "Noch nicht bewertet",
-   "cancelReasonTitle": "Wieso möchtest du das Treffen absagen?"
+   "cancelReasonTitle": "Wieso möchtest du das Treffen absagen?",
+   "SuccessfullyRegistered": "Erfolgreich für Treffen angemeldet"
 }

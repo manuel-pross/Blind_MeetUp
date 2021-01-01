@@ -31,5 +31,6 @@
    "saturday": "Saturday",
    "sunday": "Sunday",
    "notRated": "Not yet rated",
-   "cancelReasonTitle": "Why do you want to cancel the meeting?"
+   "cancelReasonTitle": "Why do you want to cancel the meeting?",
+   "SuccessfullyRegistered": "Successfully signed up for a meeting"
 }

@@ -11483,12 +11483,13 @@ template {
 }
 
 .meeting--closed {
+  max-width: 310px;
   position: relative;
-  padding: 2.5rem;
+  padding: 1.5rem;
   margin: 1.5rem;
-  background-color: #2e6c48;
+  background-image: linear-gradient(#50b375, #2e6c48);
   border-radius: 45px;
-  height: 260px;
+  color: #fefefe;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-delay: 1.5s;
@@ -11499,6 +11500,7 @@ template {
 
 @media (min-width: 992px) {
   .meeting--closed {
+    padding: 2.5rem;
     height: 290px;
   }
 }
@@ -11514,16 +11516,18 @@ template {
 }
 
 .meeting {
+  max-width: 310px;
   position: relative;
-  padding: 2.5rem;
+  padding: 1.5rem;
   margin: 1.5rem;
-  background-color: #2e6c48;
+  background-image: linear-gradient(#50b375, #2e6c48);
   border-radius: 45px;
-  height: 260px;
+  color: #fefefe;
 }
 
 @media (min-width: 992px) {
   .meeting {
+    padding: 2.5rem;
     height: 290px;
   }
 }
@@ -11544,6 +11548,12 @@ template {
   }
 }
 
+@media (min-width: 1200px) {
+  .meeting__wrapper {
+    height: 190px;
+  }
+}
+
 .meeting__headlineWrapper {
   display: flex;
 }
@@ -11559,28 +11569,9 @@ template {
   background-color: #fefefe;
   width: 46px;
   height: 1.5px;
-  left: -17px;
   top: 27px;
+  left: -10px;
   transform: rotate(90deg);
-}
-
-@media (min-width: 768px) {
-  .meeting__dataWrapper--pipe::after {
-    top: 31px;
-  }
-}
-
-@media (min-width: 992px) {
-  .meeting__dataWrapper--pipe::after {
-    top: 37px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .meeting__dataWrapper--pipe::after {
-    width: 54px;
-    top: 43px;
-  }
 }
 
 .meeting__dataWrapperLocation {
@@ -11613,7 +11604,7 @@ template {
 }
 
 .meeting__data {
-  color: #fefefe !important;
+  color: inherit !important;
   margin: 0;
   margin-left: 18px;
   white-space: nowrap;
@@ -11621,6 +11612,13 @@ template {
 
 .meeting__data--date {
   margin-bottom: 1rem;
+}
+
+.meeting__dataAfterClick {
+  color: inherit !important;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .meeting__exitBtn {
@@ -11720,7 +11718,7 @@ template {
   content: "";
   position: absolute;
   right: 43px;
-  top: 18px;
+  top: 30%;
   display: block;
   width: 13px;
   height: 2px;
@@ -11730,12 +11728,18 @@ template {
   background-color: #50b375;
 }
 
+@media (min-width: 768px) {
+  .btn-meeting__arrow::before {
+    width: 20px;
+  }
+}
+
 .btn-meeting__arrow::after {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
   right: 42px;
-  top: 27px;
+  bottom: 30%;
   display: block;
   width: 13px;
   height: 2px;
@@ -11743,6 +11747,12 @@ template {
   background-color: inherit;
   transform: rotate(135deg);
   background-color: #50b375;
+}
+
+@media (min-width: 768px) {
+  .btn-meeting__arrow::after {
+    width: 20px;
+  }
 }
 
 .btn-meeting--animation {
@@ -11805,7 +11815,7 @@ template {
   width: 13px;
   height: 2px;
   border-radius: 3px;
-  background-color: inherit;
+  background-color: #50b375;
   transform: rotate(45deg);
 }
 
@@ -11819,7 +11829,7 @@ template {
   width: 13px;
   height: 2px;
   border-radius: 3px;
-  background-color: inherit;
+  background-color: #50b375;
   transform: rotate(135deg);
 }
 
@@ -12310,10 +12320,24 @@ template {
   width: 100%;
 }
 
-.pendingContainer__headlineWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (min-width: 576px) {
+  .pendingContainer__headlineWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.pendingContainer__filterWrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .pendingContainer__filterWrapper {
+    text-align: right;
+    margin-bottom: 0;
+  }
 }
 
 .pendingContainer__filterTeam,
@@ -12330,13 +12354,11 @@ template {
 }
 
 .pendingContainer__filterTeam {
-  border-radius: 75px 0 0 75px;
-  margin-right: 1px;
+  border-radius: 7px 0 0 7px;
 }
 
 .pendingContainer__filterGroup {
-  border-radius: 0 75px 75px 0;
-  margin-left: 1px;
+  border-radius: 0 7px 7px 0;
 }
 
 .navbar {

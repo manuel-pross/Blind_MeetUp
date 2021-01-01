@@ -1,8 +1,20 @@
 .pendingContainer {
    &__headlineWrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include breakpoint("sm") {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+
+   &__filterWrapper {
+      text-align: center;
+      margin-bottom: 1rem;
+      
+      @include breakpoint("sm") {
+         text-align: right;
+         margin-bottom: 0;
+      }
    }
 
    &__filterTeam,
@@ -17,12 +29,10 @@
       }
    }
    &__filterTeam {
-      border-radius: 75px 0 0 75px;
-      margin-right: 1px;
+      border-radius: 7px 0 0 7px;
    }
 
    &__filterGroup {
-      border-radius: 0 75px 75px 0;
-      margin-left: 1px;
+      border-radius: 0 7px 7px 0;
    }
 }

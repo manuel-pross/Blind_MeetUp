@@ -13,7 +13,6 @@ import { ClipLoader } from "react-spinners";
 
 import axios from 'axios';
 import i18n from '../../i18n';
-let testcount = 0
 class PendingContainer extends Component {
    state = {
       memberFilter: false,
@@ -166,8 +165,8 @@ class PendingContainer extends Component {
                <div className="pendingContainer__headlineWrapper">
                   <h2 className="pendingContainer__heading">{t("titlePending")}</h2>
                   <div className="pendingContainer__filterWrapper">
-                     <button onClick={() => { this.filterClickHandler("group") }} style={this.state.memberFilter ? { backgroundColor: "#50b375" } : { backgroundColor: "#707070" }} className="pendingContainer__filterTeam">Group</button>
-                     <button onClick={() => { this.filterClickHandler("duo") }} style={this.state.memberFilter ? { backgroundColor: "#707070" } : { backgroundColor: "#50b375" }} className="pendingContainer__filterGroup">Duo</button>
+                     <button onClick={() => { this.filterClickHandler("group") }} style={this.state.memberFilter ? { backgroundColor: "#50b375", color: "#fff" } : { backgroundColor: "#ededed", color: "#707070" }} className="pendingContainer__filterTeam">Group</button>
+                     <button onClick={() => { this.filterClickHandler("duo") }} style={this.state.memberFilter ? { backgroundColor: "#ededed", color: "#707070" } : { backgroundColor: "#50b375", color: "#fff" }} className="pendingContainer__filterGroup">Duo</button>
                   </div>
                </div>
                <p className="pendingContainer__heading" style={{ marginTop: "0" }}>{t("subtitlePending")}</p>
@@ -179,7 +178,6 @@ class PendingContainer extends Component {
                            <PendingMeeting key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                         )
                      } else if (!this.state.memberFilter && e.max_members == 2) {
-                        testcount++;
                         return (
                            <PendingMeeting key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                         )

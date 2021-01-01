@@ -6,10 +6,10 @@ import JointContainer from '../MeetUps/JointContainer';
 import PastContainer from '../MeetUps/PastContainer';
 import { withTranslation } from 'react-i18next';
 
-
 class SubNavbar extends Component {
 
     render() {
+
         const { t } = this.props;
 
         let pathEndswithBackslash = false;
