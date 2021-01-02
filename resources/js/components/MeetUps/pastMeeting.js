@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import smileyGood from '../../../assets/img/icons/smiley-good.svg';
 import smileyNeutral from '../../../assets/img/icons/smiley-neutral.svg';
 import smileyBad from '../../../assets/img/icons/smiley-bad.svg';
+import starSVG from '../../../assets/img/icons/action-rate.svg';
 
 import { withTranslation } from 'react-i18next';
 
@@ -104,7 +105,14 @@ class PastMeeting extends Component {
                </div>
             </div>
             <div onClick={this.pastMeetingClickHandler} className="pastMeeting__btnWrapper" style={{ textAlign: "center" }}>
-               <button className="btn">{t("btnRate")}</button>
+               <button className="btn btn-pastMeeting">
+                  <span className="pastMeeting__btnSpan">
+                     <span className="pastMeeting__btnDesc">
+                        {t("btnRate")}
+                     </span>
+                     <img className="pastMeeting__starSvg" src={starSVG} alt="starSVG" ></img>
+                  </span>
+               </button>
             </div >
          </div>
       );

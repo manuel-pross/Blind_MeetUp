@@ -1,14 +1,17 @@
 .pastMeeting--closed {
    padding: 1rem;
-   margin: 1.5rem;
+   padding: 0.9rem;
    position: relative;
    border-radius: $border-radius;
    background-color: $c4-main;
    color: $c-white;
-   height: 300px;
+   height: 250px;
    animation: fadeOut 1.5s;
    animation-fill-mode: forwards;
    white-space: nowrap;
+   max-width: 360px;
+   margin: 1rem;
+   margin: 0 auto;
 
    @include breakpoint("md") {
       margin: 1.5rem;
@@ -21,13 +24,15 @@
 
 .pastMeeting {
    padding: 1rem;
-   margin: 1.5rem;
+   padding: 0.9rem;
    position: relative;
    border-radius: $border-radius;
    background-color: $c4-main;
    color: $c-white;
-   height: 300px;
-
+   height: 250px;
+   max-width: 360px;
+   margin: 1rem;
+   margin: 0 auto;
    @include breakpoint("md") {
       margin: 1.5rem;
    }
@@ -41,7 +46,7 @@
    }
 
    &__topWrapper {
-      height: 12.5rem;
+      height: 11rem;
       // padding: 1.5rem;
 
       @include breakpoint("lg") {
@@ -58,6 +63,7 @@
 
    &__wrapperBeforeClick {
       position: relative;
+      margin-bottom: 1rem;
    }
 
    &__textWrapper {
@@ -92,6 +98,7 @@
       position: relative;
       align-self: center;
       padding: 10px;
+      margin-bottom: 0.5rem;
 
       &::after {
          content: "";
@@ -100,7 +107,7 @@
          width: 30px;
          height: 1.5px;
          left: -10px;
-         top: 27px;
+         top: 50%;
          transform: rotate(90deg);
       }
    }
@@ -119,4 +126,22 @@
       justify-content: center;
       width: 100%;
    }
+
+   &__starSvg {
+      width: 15px;
+      padding-left: 5px;
+   }
+
+   &__btnSpan {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__btnDesc {
+      color: $c4-main;
+   }
+}
+
+.btn-pastMeeting {
 }

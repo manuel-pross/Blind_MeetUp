@@ -15,6 +15,8 @@ import axios from 'axios';
 import i18n from '../../i18n';
 
 class PendingContainer extends Component {
+   _isUpdated = false;
+   
    state = {
       maxMeetingSetting: 3,
       maxMeetingSettingMD: 2,
@@ -67,6 +69,13 @@ class PendingContainer extends Component {
    componentDidMount() {
       if (this.props.meetings != null) {
          this.setSettingState();
+      }
+   }
+
+   componentDidUpdate() {
+      if (this.props.meetings != null && !this._isUpdated) {
+         this.setSettingState("duo");
+         this._isUpdated = true;
       }
    }
 

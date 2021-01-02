@@ -12252,17 +12252,20 @@ template {
 
 .pastMeeting--closed {
   padding: 1rem;
-  margin: 1.5rem;
+  padding: 0.9rem;
   position: relative;
   border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 300px;
+  height: 250px;
   -webkit-animation: fadeOut 1.5s;
           animation: fadeOut 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   white-space: nowrap;
+  max-width: 360px;
+  margin: 1rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -12279,12 +12282,15 @@ template {
 
 .pastMeeting {
   padding: 1rem;
-  margin: 1.5rem;
+  padding: 0.9rem;
   position: relative;
   border-radius: 45px;
   background-color: #707070;
   color: #fefefe;
-  height: 300px;
+  height: 250px;
+  max-width: 360px;
+  margin: 1rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -12306,7 +12312,7 @@ template {
 }
 
 .pastMeeting__topWrapper {
-  height: 12.5rem;
+  height: 11rem;
 }
 
 @media (min-width: 992px) {
@@ -12324,6 +12330,7 @@ template {
 
 .pastMeeting__wrapperBeforeClick {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .pastMeeting__textWrapper {
@@ -12358,6 +12365,7 @@ template {
   position: relative;
   align-self: center;
   padding: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .pastMeeting__dataWrapper::after,
@@ -12368,7 +12376,7 @@ template {
   width: 30px;
   height: 1.5px;
   left: -10px;
-  top: 27px;
+  top: 50%;
   transform: rotate(90deg);
 }
 
@@ -12385,6 +12393,21 @@ template {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.pastMeeting__starSvg {
+  width: 15px;
+  padding-left: 5px;
+}
+
+.pastMeeting__btnSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pastMeeting__btnDesc {
+  color: #707070;
 }
 
 @media (min-width: 576px) {

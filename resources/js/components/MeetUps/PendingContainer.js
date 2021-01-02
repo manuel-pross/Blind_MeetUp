@@ -95,11 +95,11 @@ class PendingContainer extends Component {
       }
    }
 
-   // componentDidMount() {
-   //    if (this.props.meetings != null) {
-   //       this.setSettingState("duo");
-   //    }
-   // }
+   componentDidMount() {
+      if (this.props.meetings != null) {
+         this.setSettingState("duo");
+      }
+   }
 
    componentDidUpdate() {
       if (this.props.meetings != null && !this._isUpdated) {
