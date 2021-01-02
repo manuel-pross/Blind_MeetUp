@@ -4624,7 +4624,7 @@ Breakpoint Mixin
   font-family: "Maven Pro Regular";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url(/fonts/maven-pro-v20-latin-regular.eot?10a70cffa843943ca7b779abe9cbfb4e) format("embedded-opentype"), url(/fonts/maven-pro-v20-latin-regular.woff2?167af2a4006b90c9902559b1fe636daa) format("woff2"), url(/fonts/maven-pro-v20-latin-regular.woff?864183322a64fd9bb7eb5030a0ac33b6) format("woff"), url(/fonts/maven-pro-v20-latin-regular.ttf?0662688da684377155650fd9ce4137ff) format("truetype"), url(/fonts/maven-pro-v20-latin-regular.svg?9c4648097591162f7570b70c7dc5c68b) format("svg");
+  src: local(""), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-regular.eot?10a70cffa843943ca7b779abe9cbfb4e) format("embedded-opentype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-regular.woff2?167af2a4006b90c9902559b1fe636daa) format("woff2"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-regular.woff?864183322a64fd9bb7eb5030a0ac33b6) format("woff"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-regular.ttf?0662688da684377155650fd9ce4137ff) format("truetype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-regular.svg?9c4648097591162f7570b70c7dc5c68b) format("svg");
   /* Legacy iOS */
 }
 
@@ -4634,9 +4634,9 @@ Breakpoint Mixin
   font-family: "Maven Pro Bold";
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/maven-pro-v20-latin-500.eot?d2fa8b80ff2c57838a7e1ca851e00430);
+  src: url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.eot?d2fa8b80ff2c57838a7e1ca851e00430);
   /* IE9 Compat Modes */
-  src: local(""), url(/fonts/maven-pro-v20-latin-500.eot?d2fa8b80ff2c57838a7e1ca851e00430) format("embedded-opentype"), url(/fonts/maven-pro-v20-latin-500.woff2?9075ff5a13d99094a3aa71d3a7b001d3) format("woff2"), url(/fonts/maven-pro-v20-latin-500.woff?8b75535fc31d129ff8fd3452863234c8) format("woff"), url(/fonts/maven-pro-v20-latin-500.ttf?29fc4993ba7f663a7ca101116e06b105) format("truetype"), url(/fonts/maven-pro-v20-latin-500.svg?6416706c914e77dd32fe444ddf30e883) format("svg");
+  src: local(""), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.eot?d2fa8b80ff2c57838a7e1ca851e00430) format("embedded-opentype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.woff2?9075ff5a13d99094a3aa71d3a7b001d3) format("woff2"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.woff?8b75535fc31d129ff8fd3452863234c8) format("woff"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.ttf?29fc4993ba7f663a7ca101116e06b105) format("truetype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-500.svg?6416706c914e77dd32fe444ddf30e883) format("svg");
   /* Legacy iOS */
 }
 
@@ -4646,9 +4646,9 @@ Breakpoint Mixin
   font-family: "Maven Pro Black";
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/maven-pro-v20-latin-700.eot?f4743d2edb3c74d9ea26df6ad1db863f);
+  src: url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.eot?f4743d2edb3c74d9ea26df6ad1db863f);
   /* IE9 Compat Modes */
-  src: local(""), url(/fonts/maven-pro-v20-latin-700.eot?f4743d2edb3c74d9ea26df6ad1db863f) format("embedded-opentype"), url(/fonts/maven-pro-v20-latin-700.woff2?3a22b7585404bf683011da6913ef1f1e) format("woff2"), url(/fonts/maven-pro-v20-latin-700.woff?2579bb21ce9774c53e5eb00b8f4791d6) format("woff"), url(/fonts/maven-pro-v20-latin-700.ttf?25533400dbd3630aa979ce860cd70861) format("truetype"), url(/fonts/maven-pro-v20-latin-700.svg?accb31e334ab5244d9756e2aaa1abdcc) format("svg");
+  src: local(""), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.eot?f4743d2edb3c74d9ea26df6ad1db863f) format("embedded-opentype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.woff2?3a22b7585404bf683011da6913ef1f1e) format("woff2"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.woff?2579bb21ce9774c53e5eb00b8f4791d6) format("woff"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.ttf?25533400dbd3630aa979ce860cd70861) format("truetype"), url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/fonts/maven-pro-v20-latin-700.svg?accb31e334ab5244d9756e2aaa1abdcc) format("svg");
   /* Legacy iOS */
 }
 
@@ -12913,7 +12913,7 @@ template {
   top: 0;
   bottom: 0;
   width: 20px;
-  background: url(/images/action-check.svg?29b464f9d0dd84b144b0895701a63e0a) center/contain no-repeat;
+  background: url(https://blind-meetup.dm.hs-furtwangen.de/Blind_MeetUp/public/images/action-check.svg?29b464f9d0dd84b144b0895701a63e0a) center/contain no-repeat;
 }
 
 .subnavbar__links {
