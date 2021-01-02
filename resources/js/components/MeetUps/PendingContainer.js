@@ -49,13 +49,16 @@ class PendingContainer extends Component {
       }
    }
 
-   filterClickHandler = (type) => {
+   filterClickHandler = (type, settings) => {
+      // console.log(settings);
+      // console.log(type);
       if (type == "group") {
-         this.setState({ memberFilter: true })
          this.setSettingState(type)
-      } else
+         this.setState({ memberFilter: true })
+      } else {
+         this.setSettingState(type)
          this.setState({ memberFilter: false })
-      this.setSettingState(type)
+      }
    }
 
    setSettingState = (type) => {
@@ -74,16 +77,26 @@ class PendingContainer extends Component {
       })
       if (meetingDuoCount > 3) {
          meetingDuoCount = 3
+      }
+      if (meetingDuoMD > 2) {
          meetingDuoMD = 2;
       }
       if (meetingGroupCount > 3) {
          meetingGroupCount = 3
+      }
+      if (meetingGroupMD > 2) {
          meetingGroupMD = 2;
       }
+
+
       if (type == "duo") {
+         console.log("Duo: " + meetingDuoCount);
+         console.log("DuoMd: " + meetingDuoMD);
          this.setState({ maxMeetingSetting: meetingDuoCount })
          this.setState({ maxMeetingSettingMD: meetingDuoMD })
       } else {
+         console.log("Grou: " + meetingGroupCount);
+         console.log("GroupMd: " + meetingGroupMD);
          this.setState({ maxMeetingSetting: meetingGroupCount })
          this.setState({ maxMeetingSettingMD: meetingGroupMD })
       }
@@ -105,34 +118,11 @@ class PendingContainer extends Component {
    render() {
       const { t } = this.props;
 
-      // function SampleNextArrow(props) {
-      //    const { onClick } = props;
-      //    return (
-      //       <div
-      //          className={"slick-arrow slick-next teamSlider__arrow-right"}
-      //          onClick={onClick}>
-      //          <div className="teamSlider__arrow-right-stroke"></div>
-      //       </div>
-      //    );
-      // }
-      // function SamplePrevArrow(props) {
-      //    const { onClick } = props;
-      //    return (
-      //       <div
-      //          className={"slick-arrow slick-prev teamSlider__arrow-left"}
-      //          onClick={onClick}>
-      //          <div className="teamSlider__arrow-left-stroke"></div>
-      //       </div>
-      //    );
-      // }
-
       // TODO: slideToShow Bedingung für zu viele/wenig Meetings
       const settings = {
          speed: 500,
          slidesToShow: this.state.maxMeetingSetting,
          dots: true,
-         // nextArrow: <SampleNextArrow />,
-         // prevArrow: <SamplePrevArrow />,
          responsive: [
             {
                breakpoint: 1199,
@@ -174,8 +164,8 @@ class PendingContainer extends Component {
                <div className="pendingContainer__headlineWrapper">
                   <h2 className="pendingContainer__heading">{t("titlePending")}</h2>
                   <div className="pendingContainer__filterWrapper">
-                     <button onClick={() => { this.filterClickHandler("group") }} style={this.state.memberFilter ? { backgroundColor: "#50b375", color: "#fff" } : { backgroundColor: "#ededed", color: "#707070" }} className="pendingContainer__filterTeam">Group</button>
-                     <button onClick={() => { this.filterClickHandler("duo") }} style={this.state.memberFilter ? { backgroundColor: "#ededed", color: "#707070" } : { backgroundColor: "#50b375", color: "#fff" }} className="pendingContainer__filterGroup">Duo</button>
+                     <button onClick={() => { this.filterClickHandler("group", settings.slidesToShow) }} style={this.state.memberFilter ? { backgroundColor: "#50b375", color: "#fff" } : { backgroundColor: "#ededed", color: "#707070" }} className="pendingContainer__filterTeam">Group</button>
+                     <button onClick={() => { this.filterClickHandler("duo", settings.slidesToShow) }} style={this.state.memberFilter ? { backgroundColor: "#ededed", color: "#707070" } : { backgroundColor: "#50b375", color: "#fff" }} className="pendingContainer__filterGroup">Duo</button>
                   </div>
                </div>
                <p className="pendingContainer__heading" style={{ marginTop: "0" }}>{t("subtitlePending")}</p>
@@ -201,3 +191,27 @@ class PendingContainer extends Component {
 
 
 export default withTranslation('meetUps')(PendingContainer);
+
+         // nextArrow: <SampleNextArrow />,
+         // prevArrow: <SamplePrevArrow />,
+
+  // function SampleNextArrow(props) {
+      //    const { onClick } = props;
+      //    return (
+      //       <div
+      //          className={"slick-arrow slick-next teamSlider__arrow-right"}
+      //          onClick={onClick}>
+      //          <div className="teamSlider__arrow-right-stroke"></div>
+      //       </div>
+      //    );
+      // }
+      // function SamplePrevArrow(props) {
+      //    const { onClick } = props;
+      //    return (
+      //       <div
+      //          className={"slick-arrow slick-prev teamSlider__arrow-left"}
+      //          onClick={onClick}>
+      //          <div className="teamSlider__arrow-left-stroke"></div>
+      //       </div>
+      //    );
+      // }

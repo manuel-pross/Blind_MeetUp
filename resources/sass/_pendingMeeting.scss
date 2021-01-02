@@ -2,8 +2,8 @@
    max-width: 310px;
    position: relative;
    padding: 1.5rem;
-   margin: 1.5rem;
-   background-image: linear-gradient(#50b375, #2e6c48);
+   margin: 1.5rem auto;
+   background-image: linear-gradient(#50b375, #989e9b);
    border-radius: $border-radius;
    color: $c-white;
    animation: fadeOut 1.5s;
@@ -28,7 +28,7 @@
    max-width: 310px;
    position: relative;
    padding: 1.5rem;
-   margin: 1.5rem;
+   margin: 1.5rem auto;
    background-image: linear-gradient(#50b375, #2e6c48);
    border-radius: $border-radius;
    color: $c-white;
