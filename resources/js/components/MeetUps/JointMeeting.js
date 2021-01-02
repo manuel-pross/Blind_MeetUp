@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 
 import cancelSVG from '../../../assets/img/icons/action-cancel.svg';
-// TODO :backendanbindung mit dem entsprechend richtigen Bild hinzufügen
-import placeholderImage from '../../../assets/img/placeholder/368x363-placeholder.png';
 import { notify } from '../Notifications/Notification';
 
 
@@ -52,6 +50,10 @@ class JointMeeting extends Component {
       }
    }
 
+   reasonBtnHandler = (reason) => {
+      this.setState({ reasonChoosed: true })
+   }
+
    exitClickHandler = () => {
       if (this.state.btnPressed) {
          this.setState({
@@ -64,10 +66,10 @@ class JointMeeting extends Component {
          })
       }
    }
-
    //TODO: richtiges Image hinzufügen 
    render() {
       const { t } = this.props;
+
       return (
          <div style={this.state.wrapperStyle} className={this.state.jointClass}>
             <button onClick={this.exitClickHandler} style={this.state.displayAfterClick} className="meeting__exitBtn"></button>
@@ -75,12 +77,12 @@ class JointMeeting extends Component {
                <p className="jointMeeting__afterTitle">{t("cancelReasonTitle")}</p>
                <div className="jointMeeting__afterContentWrapper">
                   <div className="jointMeeting__clickedBtnWrapper__block">
-                     <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnTime")}</button>
-                     <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnInteres")}</button>
+                     <button onClick={() => { this.reasonBtnHandler("time") }} className="btn btn-jointMeeting">{t("btnTime")}</button>
+                     <button onClick={() => { this.reasonBtnHandler("interest") }} className="btn btn-jointMeeting">{t("btnInterest")}</button>
                   </div>
                   <div className="jointMeeting__clickedBtnWrapper__block">
-                     <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
-                     <button onClick={() => { this.setState({ reasonChoosed: true }) }} className="btn btn-jointMeeting">{t("btnOther")}</button>
+                     <button onClick={() => { this.reasonBtnHandler("accidantlly") }} className="btn btn-jointMeeting">{t("btnAccidantlly")}</button>
+                     <button onClick={() => { this.reasonBtnHandler("other") }} className="btn btn-jointMeeting">{t("btnOther")}</button>
                   </div>
                </div>
                <div className="jointMeeting__btnWrapper">
@@ -96,10 +98,11 @@ class JointMeeting extends Component {
             </div>
             <div className="jointMeeting__beforeClickedWrapper" style={this.state.displayBeforeClick}>
                <div className="jointMeeting__imgWrapper">
-                  <img className="jointMeeting__img" src={placeholderImage} />
+                  <img className="jointMeeting__img" src={this.props.imgLink} />
                </div>
                <div className="jointMeeting__contentWrapper">
                   <div className="jointMeeting__contentTopWrapper">
+                     <p className="jointMeeting__daysLeft">{this.props.leftDays + t("daysToMeeting")}</p>
                      <div className="jointMeeting__topWrapper">
                         <p className="jointMeeting__data">{this.props.day}</p>
                         <p className="jointMeeting__data jointMeeting__data--date">{this.props.date + ", "} {this.props.time}</p>

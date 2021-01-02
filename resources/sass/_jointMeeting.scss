@@ -9,7 +9,7 @@
    // animation-delay: 1.5s;
    // animation-fill-mode: forwards;
 
-   @include breakpoint("xl") {
+   @include breakpoint("lg") {
       border-radius: 65px;
    }
 }
@@ -22,7 +22,7 @@
    max-width: 792px;
    max-height: 363px;
 
-   @include breakpoint("xl") {
+   @include breakpoint("lg") {
       border-radius: 65px;
    }
 
@@ -59,16 +59,18 @@
    }
 
    &__contentTopWrapper {
-      @include breakpoint("sm") {
-         min-height: 170px;
-      }
-
       @media only screen and (min-width: 350px) {
          min-height: 95px;
+         padding: 0.2rem;
       }
 
       @media only screen and (min-width: 495px) {
          min-height: 150px;
+      }
+
+      @include breakpoint("sm") {
+         min-height: 170px;
+         padding: 0.6rem;
       }
 
       @include breakpoint("md") {
@@ -89,9 +91,23 @@
             height: 1.5px;
             left: -10px;
             top: 50%;
-
             transform: rotate(90deg);
          }
+      }
+   }
+
+   &__daysLeft {
+      display: none;
+      color: inherit;
+
+      @media only screen and (min-width: 495px) {
+         display: inline-block;
+         margin: 0;
+         margin-bottom: 1rem;
+      }
+
+      @include breakpoint("md") {
+         margin-bottom: 2rem;
       }
    }
 
@@ -99,6 +115,9 @@
       margin-bottom: 7px;
       @include breakpoint("sm") {
          margin-bottom: 15px;
+      }
+      @include breakpoint("md") {
+         margin-bottom: 25px;
       }
    }
 
@@ -115,7 +134,7 @@
       margin: 0;
       white-space: nowrap;
 
-      @include breakpoint("sm") {
+      @media only screen and (min-width: 380px) {
          margin-left: 18px;
       }
    }
@@ -142,6 +161,7 @@
    //// afterClick
    &__afterClickedWrapper {
       padding: 0.5rem;
+      padding-bottom: 2rem;
    }
 
    &__afterTitle {
@@ -151,6 +171,19 @@
 
    &__afterContentWrapper {
       margin-bottom: 0.8rem;
+
+      @include breakpoint("sm") {
+         padding: 1rem;
+      }
+   }
+
+   &__clickedBtnWrapper {
+      &__block {
+         @include breakpoint("sm") {
+            display: flex;
+            justify-content: space-around;
+         }
+      }
    }
 }
 
@@ -159,13 +192,30 @@
    white-space: nowrap;
    margin-bottom: 0.5rem;
    width: 100%;
+   transition: background-color 0.2s ease-in-out;
+
+   @include breakpoint("sm") {
+      width: 50%;
+      margin: 0.5rem;
+   }
+
+   &:hover {
+      background-color: $c1-second;
+      color: $c-white;
+   }
+
+   &:focus {
+      background-color: $c1-second;
+      color: $c-white;
+   }
 }
 
 .btn-cancel {
    width: 90%;
+   transition: background-color 0.2s ease-in-out;
+
    &:hover {
       background-color: $c1-second;
-
       .btn-meeting__arrow::after,
       .btn-meeting__arrow::before {
          background-color: $c-white;

@@ -26,6 +26,7 @@ class PendingContainer extends Component {
       return (day + "." + month + "." + year)
    }
 
+
    getThisDay = (date) => {
       const thisDate = new Date(date).getDay()
       switch (thisDate) {
@@ -44,6 +45,10 @@ class PendingContainer extends Component {
          case 6:
             return "saturday"
       }
+   }
+
+   getDaysToMeeting(date) {
+      return ((new Date() - new Date(date)) / (1000 * 60 * 60 * 24) * (-1)).toFixed(0);
    }
 
    render() {
@@ -73,7 +78,6 @@ class PendingContainer extends Component {
 
       const settings = {
          speed: 500,
-         slidesToShow: 1,
          // nextArrow: <SampleNextArrow />,  
          // prevArrow: <SamplePrevArrow />,
       };
@@ -106,7 +110,7 @@ class PendingContainer extends Component {
                   this.props.meetings.map((e, i) => {
                      const time = e.date.slice(11, 16);
                      return (
-                        <JointMeeting key={i} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
+                        <JointMeeting key={i} imgLink={e.img_link} place={e.place} leftDays={this.getDaysToMeeting(e.date)} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} id={e.id} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                      )
                   })
                   :

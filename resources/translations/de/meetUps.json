@@ -17,7 +17,7 @@
    "accept": "Bist du sicher?",
    "acceptAgain": "Bestätige noch einmal",
    "btnTime": "Keine Zeit mehr",
-   "btnInteres": "Kein Interesse mehr",
+   "btnInterest": "Kein Interesse mehr",
    "btnAccidantlly": "Versehentlich angemeldet",
    "btnOther": "Sonstiges",
    "satisfiedDesc1": "Warst du zufrieden",
@@ -32,5 +32,6 @@
    "sunday": "Sonntag",
    "notRated": "Noch nicht bewertet",
    "cancelReasonTitle": "Wieso möchtest du das Treffen absagen?",
-   "SuccessfullyRegistered": "Erfolgreich für Treffen angemeldet"
+   "SuccessfullyRegistered": "Erfolgreich für Treffen angemeldet",
+   "daysToMeeting": " TAGE VERBLEIBEN"
 }

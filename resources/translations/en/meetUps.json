@@ -17,7 +17,7 @@
    "accept": "Are you Sure?",
    "acceptAgain": "Accept again",
    "btnTime": "No more time",
-   "btnInteres": "No more time interest",
+   "btnInterest": "No more time interest",
    "btnAccidantlly": "Accidentally signed in",
    "btnOther": "Other",
    "satisfiedDesc1": "Were you satisfied",
@@ -32,5 +32,6 @@
    "sunday": "Sunday",
    "notRated": "Not yet rated",
    "cancelReasonTitle": "Why do you want to cancel the meeting?",
-   "SuccessfullyRegistered": "Successfully signed up for a meeting"
+   "SuccessfullyRegistered": "Successfully signed up for a meeting",
+   "daysToMeeting": " DAYS LEFT"
 }

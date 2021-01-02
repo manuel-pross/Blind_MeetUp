@@ -13,7 +13,8 @@ class PendingMeeting extends Component {
       meetingClass: "meeting",
    }
 
-   joinClickHandler = (thisMessage) => {
+   joinClickHandler = (thisEl, thisMessage) => {
+      console.log(thisEl);
       if (!this.state.btnPressed) {
          this.setState({ btnPressed: true, displayAfterClick: { display: "block" }, displayBeforeClick: { display: "none" } })
       }
@@ -70,7 +71,7 @@ class PendingMeeting extends Component {
                </div>
             </div>
             <div className="meeting__joinBtnWrapper">
-               <button onClick={() => this.joinClickHandler(t("SuccessfullyRegistered"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
+               <button onClick={() => this.joinClickHandler(this, t("SuccessfullyRegistered"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
             </div>
          </div >
       );

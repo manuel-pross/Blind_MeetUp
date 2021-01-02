@@ -49,9 +49,7 @@ class PendingContainer extends Component {
       }
    }
 
-   filterClickHandler = (type, settings) => {
-      // console.log(settings);
-      // console.log(type);
+   filterClickHandler = (type) => {
       if (type == "group") {
          this.setSettingState(type)
          this.setState({ memberFilter: true })
@@ -90,23 +88,19 @@ class PendingContainer extends Component {
 
 
       if (type == "duo") {
-         console.log("Duo: " + meetingDuoCount);
-         console.log("DuoMd: " + meetingDuoMD);
          this.setState({ maxMeetingSetting: meetingDuoCount })
          this.setState({ maxMeetingSettingMD: meetingDuoMD })
       } else {
-         console.log("Grou: " + meetingGroupCount);
-         console.log("GroupMd: " + meetingGroupMD);
          this.setState({ maxMeetingSetting: meetingGroupCount })
          this.setState({ maxMeetingSettingMD: meetingGroupMD })
       }
    }
 
-   componentDidMount() {
-      if (this.props.meetings != null) {
-         this.setSettingState("duo");
-      }
-   }
+   // componentDidMount() {
+   //    if (this.props.meetings != null) {
+   //       this.setSettingState("duo");
+   //    }
+   // }
 
    componentDidUpdate() {
       if (this.props.meetings != null && !this._isUpdated) {
@@ -164,8 +158,8 @@ class PendingContainer extends Component {
                <div className="pendingContainer__headlineWrapper">
                   <h2 className="pendingContainer__heading">{t("titlePending")}</h2>
                   <div className="pendingContainer__filterWrapper">
-                     <button onClick={() => { this.filterClickHandler("group", settings.slidesToShow) }} style={this.state.memberFilter ? { backgroundColor: "#50b375", color: "#fff" } : { backgroundColor: "#ededed", color: "#707070" }} className="pendingContainer__filterTeam">Group</button>
-                     <button onClick={() => { this.filterClickHandler("duo", settings.slidesToShow) }} style={this.state.memberFilter ? { backgroundColor: "#ededed", color: "#707070" } : { backgroundColor: "#50b375", color: "#fff" }} className="pendingContainer__filterGroup">Duo</button>
+                     <button onClick={() => { this.filterClickHandler("group") }} style={this.state.memberFilter ? { backgroundColor: "#50b375", color: "#fff" } : { backgroundColor: "#ededed", color: "#707070" }} className="pendingContainer__filterTeam">Group</button>
+                     <button onClick={() => { this.filterClickHandler("duo") }} style={this.state.memberFilter ? { backgroundColor: "#ededed", color: "#707070" } : { backgroundColor: "#50b375", color: "#fff" }} className="pendingContainer__filterGroup">Duo</button>
                   </div>
                </div>
                <p className="pendingContainer__heading" style={{ marginTop: "0" }}>{t("subtitlePending")}</p>
