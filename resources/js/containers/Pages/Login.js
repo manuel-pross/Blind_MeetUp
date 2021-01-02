@@ -21,7 +21,7 @@ class Login extends Component {
             password: this.password
         }
 
-        axios.post('/api/login', data)
+        axios.post('/public/api/login', data)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 this.setState({
