@@ -67,10 +67,10 @@ class MeetingUserController extends Controller
                 ]);
                 $desired_meeting->update(array('members' => $desired_meeting->members + 1));
             } else {
-                abort(500, 'Du hast dich bereits für ein Treffen registriert.'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
+                abort(500, 'a'); //Du hast dich bereits für ein Treffen registriert.
             }
         } else {
-            abort(500, 'Die Maximalzahl an Teilnehmern für dieses Meetings ist bereits erreicht.'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
+            abort(500, 'b'); //Die Maximalzahl an Teilnehmern für dieses Meetings ist bereits erreicht.
         }
     }
 

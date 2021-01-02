@@ -13,15 +13,14 @@ class PendingMeeting extends Component {
       meetingClass: "meeting",
    }
 
-   joinClickHandler = (thisEl, thisMessage) => {
-      console.log(thisEl);
+   joinClickHandler = (succMsg, stillRegisteredMsg, meetingFull) => {
       if (!this.state.btnPressed) {
          this.setState({ btnPressed: true, displayAfterClick: { display: "block" }, displayBeforeClick: { display: "none" } })
       }
       if (this.state.btnPressed) {
          axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
             .then((response) => {
-               notify(thisMessage);
+               notify(succMsg);
                // this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
                // setTimeout(() => {
                //    document.querySelector(".meeting--closed").parentElement.parentElement.remove();
@@ -29,14 +28,21 @@ class PendingMeeting extends Component {
                this.exitClickHandler();
                this.props.loadAllMeetings();
                // this.setState({ btnPressed: false });
+               this.setShowFilterAfterRegistered();
             })
             .catch((error) => {
                if (error.response) {
-                  notify(error.response.data.message);
+                  error.response == "a" ? notify(meetingFull) : notify(stillRegisteredMsg);
                }
             });
-
       }
+   }
+
+   //TODO: in Verbindung mit dem Registieren, muss danach die SlidesToShow geändert werde. Dieser setTimeOut ist provesorisch
+   setShowFilterAfterRegistered() {
+      setTimeout(() => {
+         this.props.maxMember == 2 ? this.props.meetingJoint("duo") : this.props.meetingJoint("group")
+      }, 400)
    }
 
    acceptBtn = () => {
@@ -49,7 +55,7 @@ class PendingMeeting extends Component {
       }
    }
 
-   //TODO: Fehler beim toggeln, nachdem man ein duo Meeting angemeldet hat.
+   //TODO: Warnung beim toggeln, nachdem man ein meeting angemeldet hat und anschließend kein Meeting mehr in der Liste ist. 
    render() {
       const { t } = this.props;
       return (
@@ -71,7 +77,7 @@ class PendingMeeting extends Component {
                </div>
             </div>
             <div className="meeting__joinBtnWrapper">
-               <button onClick={() => this.joinClickHandler(this, t("SuccessfullyRegistered"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
+               <button onClick={() => this.joinClickHandler(t("SuccessfullyRegistered"), t("stillRegistered"), t("meetingFull"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
             </div>
          </div >
       );

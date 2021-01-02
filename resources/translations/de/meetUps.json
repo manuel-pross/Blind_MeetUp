@@ -10,7 +10,7 @@
    "past": "Vergangen",
    "titlePast": "Vergangene Treffen",
    "subtitlePast": "Zeit um deine vergangenen Treffen zu bewerten.",
-   "btnDuo": "Duo-Treffen", 
+   "btnDuo": "Duo-Treffen",
    "btnGroup": "Gruppentreffen",
    "btnJoin": "Annehmen",
    "btnCancel": "Stornieren",
@@ -31,7 +31,11 @@
    "saturday": "Samstag",
    "sunday": "Sonntag",
    "notRated": "Noch nicht bewertet",
-   "cancelReasonTitle": "Wieso möchtest du das Treffen absagen?",
-   "SuccessfullyRegistered": "Erfolgreich für Treffen angemeldet",
+   "cancelReasonTitle": "Wieso möchtest du das MeetUp absagen?",
+   "SuccessfullyRegistered": "Erfolgreich für MeetUp angemeldet",
+   "SuccessfullyCanceled": "MeetUp erfolgreich storniert",
+   "stillRegistered": "Du hast dich bereits für ein MeetUp registriert.",
+   "meetingFull": "Die Maximalzahl an Teilnehmern für dieses MeetUp ist bereits erreicht.",
+   "notRegistered": "Du hast dich für kein MeetUp registriert.",
    "daysToMeeting": " TAGE VERBLEIBEN"
 }

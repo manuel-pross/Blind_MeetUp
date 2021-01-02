@@ -18,7 +18,7 @@ class JointMeeting extends Component {
       reasonChoosed: false
    }
 
-   stornoClickHandler = () => {
+   stornoClickHandler = (succMsg, notRegisteredMsg) => {
       if (!this.state.btnPressed) {
          this.setState({
             btnPressed: true,
@@ -32,7 +32,7 @@ class JointMeeting extends Component {
       if (this.state.btnPressed && this.state.reasonChoosed) {
          axios.put('/api/unregister_user/' + this.props.user.id + '_' + this.props.id)
             .then((response) => {
-               notify("Treffen erfolgreich storniert");
+               notify(succMsg);
                // this.setState({
                //    joinBtnClass: "btn btn-cancel--animation",
                //    jointClass: "jointMeeting--closed"
@@ -44,7 +44,7 @@ class JointMeeting extends Component {
             })
             .catch((error) => {
                if (error.response) {
-                  notify(error.response.data.message);
+                  notify(notRegisteredMsg);
                }
             });
       }
@@ -86,7 +86,7 @@ class JointMeeting extends Component {
                   </div>
                </div>
                <div className="jointMeeting__btnWrapper">
-                  <button onClick={this.stornoClickHandler} className={this.state.joinBtnClass}>
+                  <button onClick={() => this.stornoClickHandler(t("SuccessfullyRegistered"), t("notRegistered"))} className={this.state.joinBtnClass}>
                      <span className="jointMeeting__btnSpan">
                         <span className="jointMeeting__btnDesc">
                            {t("btnCancel")}

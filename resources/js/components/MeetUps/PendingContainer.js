@@ -86,7 +86,6 @@ class PendingContainer extends Component {
          meetingGroupMD = 2;
       }
 
-
       if (type == "duo") {
          this.setState({ maxMeetingSetting: meetingDuoCount })
          this.setState({ maxMeetingSettingMD: meetingDuoMD })
@@ -168,11 +167,11 @@ class PendingContainer extends Component {
                      const time = e.date.slice(11, 16);
                      if (this.state.memberFilter && e.max_members > 2) {
                         return (
-                           <PendingMeeting key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
+                           <PendingMeeting meetingJoint={this.setSettingState} maxMember={e.max_members} key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                         )
                      } else if (!this.state.memberFilter && e.max_members == 2) {
                         return (
-                           <PendingMeeting key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
+                           <PendingMeeting meetingJoint={this.setSettingState} maxMember={e.max_members} key={i} id={e.id} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} user={this.props.user} loadAllMeetings={this.props.loadAllMeetings} />
                         )
                      }
                   })}
