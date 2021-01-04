@@ -24,7 +24,7 @@ class DashboardUser extends Component {
 
     // Bevorstehendes Meeting
     loadPendingMeetings = () => {
-        axios.get('/api/pending_meetings/' + this.props.user.id + '/').then((response) => {
+        axios.get('/api/pending_meetings/' + this.props.user.id).then((response) => {
             if (this._isMounted && this.props.user) {
                 this.setState({
                     pendingMeetings: response.data
@@ -35,7 +35,7 @@ class DashboardUser extends Component {
 
     // Vergangene Meetings 
     loadPastMeetings = () => {
-        axios.get('/api/past_meetings/' + this.props.user.id + '/').then((response) => {
+        axios.get('/api/past_meetings/' + this.props.user.id).then((response) => {
             if (this._isMounted && this.props.user) {
                 this.setState({
                     pastMeetings: response.data
@@ -46,7 +46,7 @@ class DashboardUser extends Component {
 
     // Registierte Meetings
     loadRegisteredMeetings = () => {
-        axios.get('/api/registered_meetings/' + this.props.user.id + '/').then((response) => {
+        axios.get('/api/registered_meetings/' + this.props.user.id).then((response) => {
             if (this._isMounted && this.props.user) {
                 this.setState({
                     registeredMeetings: response.data
@@ -86,7 +86,7 @@ class DashboardUser extends Component {
                     loadAllMeetings={this.loadAllMeetings}
                     loadPendingMeetings={this.loadPendingMeetings}
                     user={this.props.user}
-                  />
+                />
                 <FAQ />
                 <Footer setUser={this.props.setUser} user={this.props.user} />
                 <Notification />
