@@ -21,7 +21,7 @@ class Login extends Component {
             password: this.password
         }
 
-        axios.post('/Blind_MeetUp/public/api/login', data)
+        axios.post('/api/login', data)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 this.setState({
