@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 class MeetingController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+
     public function index() {
         return Meeting::all();
     }
