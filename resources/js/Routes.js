@@ -22,7 +22,7 @@ class Routes extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/api/user')
+        axios.get('api/user')
             .then(res => {
                 this.setUser(res.data);
             }).catch(err => {
