@@ -47,7 +47,7 @@ class DashboardAdmin extends Component {
     componentDidMount() {
         // console.log(this.props.user);
         if (this.props.user) {
-            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+            axios.defaults.headers.common['Authorization'] = 'bearer ' + localStorage.getItem('token');
             this.loadMeetings();
         }
     }

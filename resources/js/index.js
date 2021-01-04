@@ -14,7 +14,7 @@ import ScrollTopButton from './components/ScrollTopButton/ScrollTopButton';
 import './i18n';
 
 // For Auth
-axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+axios.defaults.headers.common['Authorization'] = 'bearer ' + localStorage.getItem('token');
 
 ReactDOM.render(
   <BrowserRouter basename="/Blind_MeetUp/public">
