@@ -8,10 +8,10 @@ use App\User;
 
 class MeetingUserController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
 
     public function getRelatedMeetings($user_id) {
         $user = new User();
