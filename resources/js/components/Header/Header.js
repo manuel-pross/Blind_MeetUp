@@ -16,8 +16,8 @@ class Header extends Component {
                <h1 className="header__title">{t("title")}</h1>
                <p className="header__p">{t("desc")}</p>
                <div className="header__btn__wrapper">
-                  <NavigationItem link="login">{t("btnJoin")}</NavigationItem>
-                  <button className="header__secondBtn btn btn-secondary">{t("btnMore")}</button>
+                  <button link="/login" className="header__secondBtn btn btn-primary">{t("btnJoin")}</button>
+                  <button className="header__secondBtn btn btn-second">{t("btnMore")}</button>
                </div>
             </div>
          </div>

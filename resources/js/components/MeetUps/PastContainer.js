@@ -16,7 +16,7 @@ import i18n from '../../i18n';
 
 class PendingContainer extends Component {
    _isUpdated = false;
-   
+
    state = {
       maxMeetingSetting: 3,
       maxMeetingSettingMD: 2,
@@ -108,7 +108,7 @@ class PendingContainer extends Component {
          speed: 500,
          slidesToShow: this.state.maxMeetingSetting,
          dots: true,
-         // slidesToScroll: this.props.meetingCount
+         infinite: false,
          // nextArrow: <SampleNextArrow />,
          // prevArrow: <SamplePrevArrow />,
          responsive: [

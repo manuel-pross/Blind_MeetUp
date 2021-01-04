@@ -110,12 +110,11 @@ class PendingContainer extends Component {
 
    render() {
       const { t } = this.props;
-
-      // TODO: slideToShow Bedingung für zu viele/wenig Meetings
       const settings = {
          speed: 500,
          slidesToShow: this.state.maxMeetingSetting,
          dots: true,
+         infinite: false,
          responsive: [
             {
                breakpoint: 1199,

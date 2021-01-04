@@ -6,7 +6,7 @@
   border: 0 !important;
   text-decoration: none;
   text-align: center;
-  
+
   @include breakpoint("md") {
     padding: 11px 30px !important;
   }
@@ -39,6 +39,9 @@
 
   &-second {
     color: $c2-second !important;
+    font-weight: 400 !important;
+    position: relative;
+    z-index: 1;
     background-color: $c-white !important;
     border: 2px solid rgba(46, 107, 71, 0.302) !important;
 

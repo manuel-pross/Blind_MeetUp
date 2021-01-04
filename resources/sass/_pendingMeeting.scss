@@ -3,12 +3,9 @@
    position: relative;
    padding: 1.5rem;
    margin: 1.5rem auto;
-   background-image: linear-gradient(#50b375, #989e9b);
+   background-image: linear-gradient(#50b375, #2e6c48);
    border-radius: $border-radius;
    color: $c-white;
-   animation: fadeOut 1.5s;
-   animation-delay: 1.5s;
-   animation-fill-mode: forwards;
 
    @include breakpoint("lg") {
       padding: 2.5rem;
@@ -135,20 +132,7 @@
    }
 
    &__btnWrapper {
-      // margin: 2.8rem 0;
-
-      // @include breakpoint("lg") {
-      //    margin: 2.95rem 0;
-      // }
-      // @include breakpoint("md") {
-      //    margin: 1.4rem 0;
-      // }
-      // @include breakpoint("xl") {
-      //    margin: 3.1rem 0;
-      // }
-      // @include breakpoint("xxl") {
-      //    margin: 3.15rem 0;
-      // }
+      padding-top: 2rem;
    }
 
    &__exitBtn {
@@ -225,9 +209,9 @@
 }
 
 .btn-meeting {
+   position: relative;
    color: $c1-second;
    width: 100%;
-   transition: all 0.2s ease-in-out;
    display: block;
    margin: 0 auto;
 
@@ -241,18 +225,23 @@
       }
    }
 
+   &__arrowWrapper {
+      position: absolute;
+      right: 20%;
+      top: 45%;
+   }
+
    &__arrow {
-      transition: all 0.2s ease-in-out;
+      position: absolute;
       border-radius: 3px;
       background-color: $c1-second;
       width: 100%;
 
       &::before {
-         transition: all 0.2s ease-in-out;
          content: "";
          position: absolute;
-         right: 43px;
-         top: 30%;
+         right: 0;
+         top: -4px;
          display: block;
          width: 13px;
          height: 2px;
@@ -260,18 +249,13 @@
          background-color: inherit;
          transform: rotate(45deg);
          background-color: $c1-second;
-
-         @include breakpoint("md") {
-            width: 20px;
-         }
       }
 
       &::after {
-         transition: all 0.2s ease-in-out;
          content: "";
          position: absolute;
-         right: 42px;
-         bottom: 30%;
+         right: 0;
+         top: 4px;
          display: block;
          width: 13px;
          height: 2px;
@@ -279,21 +263,21 @@
          background-color: inherit;
          transform: rotate(135deg);
          background-color: $c1-second;
-
-         @include breakpoint("md") {
-            width: 20px;
-         }
       }
    }
 }
 
 .btn-meeting--animation {
+   position: relative;
    color: $c1-second;
    width: 100%;
    transition: color 0.2s ease-in-out;
-   transition: width 1.7s;
    display: block;
    margin: 0 auto;
+   transition: width 1.7s;
+   height: 26px;
+   animation: btnHeight 1.5s;
+   animation-fill-mode: forwards;
 
    &:hover {
       background-color: $c1-second;
@@ -308,7 +292,6 @@
    &:focus {
       background-color: $c1-second;
       width: 50px;
-      height: 50px;
    }
    &:focus .meeting__btnDesc {
       display: none;
@@ -324,109 +307,95 @@
       animation-fill-mode: forwards;
    }
 
+   &:focus .btn-meeting__arrowWrapper {
+      animation: slideWrapper 1.5s;
+      animation-fill-mode: forwards;
+   }
+
+   &__arrowWrapper {
+      position: absolute;
+      right: 20%;
+      top: 45%;
+   }
+
    &__arrow {
+      position: absolute;
       transition: all 0.2s ease-in-out;
-      position: relative;
       border-radius: 3px;
       background-color: $c1-second;
 
+      transition: all 0.2s ease-in-out;
       &::before {
-         transition: all 0.2s ease-in-out;
          content: "";
          position: absolute;
-         right: -19px;
-         bottom: 11px;
+         right: 0;
+         top: -4px;
          display: block;
          width: 13px;
          height: 2px;
          border-radius: 3px;
-         background-color: $c1-second;
+         background-color: inherit;
          transform: rotate(45deg);
+         background-color: $c1-second;
       }
 
       &::after {
-         transition: all 0.2s ease-in-out;
          content: "";
          position: absolute;
-         right: -19px;
-         bottom: 3px;
+         right: 0;
+         top: 4px;
          display: block;
          width: 13px;
          height: 2px;
          border-radius: 3px;
-         background-color: $c1-second;
+         background-color: inherit;
          transform: rotate(135deg);
+         background-color: $c1-second;
       }
    }
 }
 
-@keyframes fadeOut {
-   0% {
-      opacity: 1;
-   }
+//animation für die Buttonhöhe
+@keyframes btnHeight {
    100% {
-      opacity: 0;
-   }
-}
-
-@keyframes beforeSlide {
-   0% {
-   }
-   100% {
-      background-color: $c-white;
-      transform: rotate(135deg);
-      right: 45%;
-      top: 23px;
-      width: 24px;
-   }
-}
-
-@keyframes afterSlide {
-   0% {
-   }
-   100% {
-      background-color: $c-white;
-      transform: rotate(45deg);
-      right: 50%;
-      top: 27px;
+      height: 40px;
    }
 }
 
 @include breakpoint("md") {
-   @keyframes beforeSlide {
+   //animation für die Buttonhöhe
+   @keyframes btnHeight {
       0% {
+         height: 40px;
       }
       100% {
-         background-color: $c-white;
-         transform: rotate(135deg);
-         right: 41%;
-         top: 23px;
-         width: 24px;
+         height: 40px;
       }
    }
 }
 
-@include breakpoint("lg") {
-   @keyframes beforeSlide {
-      0% {
-      }
-      100% {
-         background-color: $c-white;
-         transform: rotate(135deg);
-         right: 43.6%;
-         top: 23px;
-         width: 24px;
-      }
+//animation für den Wrapper der Pfleile
+@keyframes slideWrapper {
+   100% {
+      right: 13%;
+      top: 55%;
    }
+}
 
-   @keyframes afterSlide {
-      0% {
-      }
-      100% {
-         background-color: $c-white;
-         transform: rotate(45deg);
-         right: 50%;
-         top: 27px;
-      }
+// right
+@keyframes beforeSlide {
+   100% {
+      background-color: $c-white;
+      transform: rotate(135deg);
+      width: 24px;
+   }
+}
+// left
+@keyframes afterSlide {
+   100% {
+      background-color: $c-white;
+      transform: rotate(45deg);
+      top: -1px;
+      right: 18px;
    }
 }

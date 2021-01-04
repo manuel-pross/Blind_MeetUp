@@ -21,14 +21,14 @@ class PendingMeeting extends Component {
          axios.put('/api/register_user/' + this.props.user.id + '_' + this.props.id)
             .then((response) => {
                notify(succMsg);
-               // this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
-               // setTimeout(() => {
-               //    document.querySelector(".meeting--closed").parentElement.parentElement.remove();
-               // }, 2500);
                this.exitClickHandler();
-               this.props.loadAllMeetings();
-               // this.setState({ btnPressed: false });
-               this.setShowFilterAfterRegistered();
+               this.setState({ joinBtnSpanClass: "btn btn-meeting--animation", meetingClass: "meeting--closed" });
+               setTimeout(() => {
+                  this.props.loadAllMeetings();
+               }, 2000);
+               setTimeout(() => {
+                  this.setState({ joinBtnSpanClass: "btn btn-meeting", meetingClass: "meeting" });
+               }, 2200);
             })
             .catch((error) => {
                if (error.response) {
@@ -36,13 +36,6 @@ class PendingMeeting extends Component {
                }
             });
       }
-   }
-
-   //TODO: in Verbindung mit dem Registieren, muss danach die SlidesToShow geändert werde. Dieser setTimeOut ist provesorisch
-   setShowFilterAfterRegistered() {
-      setTimeout(() => {
-         this.props.maxMember == 2 ? this.props.meetingJoint("duo") : this.props.meetingJoint("group")
-      }, 400)
    }
 
    acceptBtn = () => {
@@ -77,7 +70,12 @@ class PendingMeeting extends Component {
                </div>
             </div>
             <div className="meeting__joinBtnWrapper">
-               <button onClick={() => this.joinClickHandler(t("SuccessfullyRegistered"), t("stillRegistered"), t("meetingFull"))} className={this.state.joinBtnSpanClass}><span className="meeting__btnDesc">{t("btnJoin")}</span><span className="btn-meeting__arrow" /></button>
+               <button onClick={() => this.joinClickHandler(t("SuccessfullyRegistered"), t("stillRegistered"), t("meetingFull"))} className={this.state.joinBtnSpanClass}>
+                  <span className="meeting__btnDesc">{t("btnJoin")}</span>
+                  <div className="btn-meeting__arrowWrapper">
+                     <span className="btn-meeting__arrow" />
+                  </div>
+               </button>
             </div>
          </div >
       );

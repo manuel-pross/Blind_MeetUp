@@ -4451,6 +4451,9 @@ Breakpoint Mixin
 
 .btn-second {
   color: #2e6c48 !important;
+  font-weight: 400 !important;
+  position: relative;
+  z-index: 1;
   background-color: #fefefe !important;
   border: 2px solid rgba(46, 107, 71, 0.302) !important;
 }
@@ -4659,7 +4662,7 @@ Breakpoint Mixin
 
   h1 {
     font-family: "Maven Pro Black";
-    font-size: 33px;
+    font-size: 1.5rem !important;
     line-height: 40.4px;
     text-align: center;
   }
@@ -4705,7 +4708,7 @@ Breakpoint Mixin
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 33px;
+    font-size: 1.5rem;
     line-height: 40.4px;
   }
 
@@ -4733,7 +4736,7 @@ Breakpoint Mixin
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 39.6px;
+    font-size: 1.8rem;
     line-height: 52.52px;
     text-align: left;
   }
@@ -4765,7 +4768,7 @@ Breakpoint Mixin
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 42.9px;
+    font-size: 1.95rem;
     line-height: 60.6px;
   }
 
@@ -4793,7 +4796,7 @@ Breakpoint Mixin
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 46.2px;
+    font-size: 2.1rem;
     line-height: 72.72px;
   }
 
@@ -4821,7 +4824,7 @@ Breakpoint Mixin
 
 @media (min-width: 1920px) {
   h1 {
-    font-size: 49.5px;
+    font-size: 2.25rem;
     line-height: 72.72px;
   }
 
@@ -11487,15 +11490,9 @@ template {
   position: relative;
   padding: 1.5rem;
   margin: 1.5rem auto;
-  background-image: linear-gradient(#50b375, #989e9b);
+  background-image: linear-gradient(#50b375, #2e6c48);
   border-radius: 45px;
   color: #fefefe;
-  -webkit-animation: fadeOut 1.5s;
-          animation: fadeOut 1.5s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 @media (min-width: 992px) {
@@ -11621,6 +11618,10 @@ template {
   text-align: center;
 }
 
+.meeting__btnWrapper {
+  padding-top: 2rem;
+}
+
 .meeting__exitBtn {
   cursor: pointer;
   position: absolute;
@@ -11696,9 +11697,9 @@ template {
 }
 
 .btn-meeting {
+  position: relative;
   color: #50b375;
   width: 100%;
-  transition: all 0.2s ease-in-out;
   display: block;
   margin: 0 auto;
 }
@@ -11713,19 +11714,24 @@ template {
   background-color: #fefefe;
 }
 
+.btn-meeting__arrowWrapper {
+  position: absolute;
+  right: 20%;
+  top: 45%;
+}
+
 .btn-meeting__arrow {
-  transition: all 0.2s ease-in-out;
+  position: absolute;
   border-radius: 3px;
   background-color: #50b375;
   width: 100%;
 }
 
 .btn-meeting__arrow::before {
-  transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: 43px;
-  top: 30%;
+  right: 0;
+  top: -4px;
   display: block;
   width: 13px;
   height: 2px;
@@ -11735,18 +11741,11 @@ template {
   background-color: #50b375;
 }
 
-@media (min-width: 768px) {
-  .btn-meeting__arrow::before {
-    width: 20px;
-  }
-}
-
 .btn-meeting__arrow::after {
-  transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: 42px;
-  bottom: 30%;
+  right: 0;
+  top: 4px;
   display: block;
   width: 13px;
   height: 2px;
@@ -11756,19 +11755,19 @@ template {
   background-color: #50b375;
 }
 
-@media (min-width: 768px) {
-  .btn-meeting__arrow::after {
-    width: 20px;
-  }
-}
-
 .btn-meeting--animation {
+  position: relative;
   color: #50b375;
   width: 100%;
   transition: color 0.2s ease-in-out;
-  transition: width 1.7s;
   display: block;
   margin: 0 auto;
+  transition: width 1.7s;
+  height: 26px;
+  -webkit-animation: btnHeight 1.5s;
+          animation: btnHeight 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .btn-meeting--animation:hover {
@@ -11784,7 +11783,6 @@ template {
 .btn-meeting--animation:focus {
   background-color: #50b375;
   width: 50px;
-  height: 50px;
 }
 
 .btn-meeting--animation:focus .meeting__btnDesc {
@@ -11805,58 +11803,99 @@ template {
           animation-fill-mode: forwards;
 }
 
+.btn-meeting--animation:focus .btn-meeting__arrowWrapper {
+  -webkit-animation: slideWrapper 1.5s;
+          animation: slideWrapper 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.btn-meeting--animation__arrowWrapper {
+  position: absolute;
+  right: 20%;
+  top: 45%;
+}
+
 .btn-meeting--animation__arrow {
+  position: absolute;
   transition: all 0.2s ease-in-out;
-  position: relative;
   border-radius: 3px;
   background-color: #50b375;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-meeting--animation__arrow::before {
-  transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: -19px;
-  bottom: 11px;
+  right: 0;
+  top: -4px;
   display: block;
   width: 13px;
   height: 2px;
   border-radius: 3px;
-  background-color: #50b375;
+  background-color: inherit;
   transform: rotate(45deg);
+  background-color: #50b375;
 }
 
 .btn-meeting--animation__arrow::after {
-  transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  right: -19px;
-  bottom: 3px;
+  right: 0;
+  top: 4px;
   display: block;
   width: 13px;
   height: 2px;
   border-radius: 3px;
-  background-color: #50b375;
+  background-color: inherit;
   transform: rotate(135deg);
+  background-color: #50b375;
 }
 
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
+@-webkit-keyframes btnHeight {
   100% {
-    opacity: 0;
+    height: 40px;
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
+@keyframes btnHeight {
   100% {
-    opacity: 0;
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+@-webkit-keyframes btnHeight {
+    0% {
+      height: 40px;
+    }
+
+    100% {
+      height: 40px;
+    }
+}
+@keyframes btnHeight {
+    0% {
+      height: 40px;
+    }
+
+    100% {
+      height: 40px;
+    }
+}
+}
+
+@-webkit-keyframes slideWrapper {
+  100% {
+    right: 13%;
+    top: 55%;
+  }
+}
+
+@keyframes slideWrapper {
+  100% {
+    right: 13%;
+    top: 55%;
   }
 }
 
@@ -11864,8 +11903,6 @@ template {
   100% {
     background-color: #fefefe;
     transform: rotate(135deg);
-    right: 45%;
-    top: 23px;
     width: 24px;
   }
 }
@@ -11874,69 +11911,9 @@ template {
   100% {
     background-color: #fefefe;
     transform: rotate(45deg);
-    right: 50%;
-    top: 27px;
+    top: -1px;
+    right: 18px;
   }
-}
-
-@media (min-width: 768px) {
-@-webkit-keyframes beforeSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(135deg);
-      right: 41%;
-      top: 23px;
-      width: 24px;
-    }
-}
-@keyframes beforeSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(135deg);
-      right: 41%;
-      top: 23px;
-      width: 24px;
-    }
-}
-}
-
-@media (min-width: 992px) {
-@-webkit-keyframes beforeSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(135deg);
-      right: 43.6%;
-      top: 23px;
-      width: 24px;
-    }
-}
-@keyframes beforeSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(135deg);
-      right: 43.6%;
-      top: 23px;
-      width: 24px;
-    }
-}
-
-@-webkit-keyframes afterSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(45deg);
-      right: 50%;
-      top: 27px;
-    }
-}
-
-@keyframes afterSlide {
-    100% {
-      background-color: #fefefe;
-      transform: rotate(45deg);
-      right: 50%;
-      top: 27px;
-    }
-}
 }
 
 .jointMeeting--closed {
