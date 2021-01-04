@@ -64,7 +64,7 @@ class DashboardUser extends Component {
     componentDidMount() {
         this._isMounted = true;
         if (this.props.user) {
-            axios.defaults.headers.common['Authorization'] = 'bearer ' + localStorage.getItem('token');
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
             this.loadAllMeetings();
         }
     }
