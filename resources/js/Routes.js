@@ -18,7 +18,7 @@ import axios from "axios";
 
 class Routes extends Component {
     state = {
-
+        user: null
     }
 
     componentDidMount = () => {
@@ -28,7 +28,7 @@ class Routes extends Component {
             }).catch(err => {
                 // console.log("User ist nicht angemeldet");
                 // console.log(err);
-            })
+            });
     }
 
     setUser = user => {
