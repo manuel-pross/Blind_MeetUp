@@ -18,7 +18,7 @@ class SubNavbar extends Component {
         }
 
         return (
-            <div className="container subnavbar" style={{ marginTop: '100px' }}>
+            <div className="container subnavbar">
                 <div className="subnavbar__links">
                     <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anmelden" : "/anmelden")}>{t("joint")} {" "}</NavLink>
                     <NavLink activeClassName="subnavbar__active" className="subnavbar__link" to={this.props.match.url + (pathEndswithBackslash ? "anstehend" : "/anstehend")}>{t("pending")} {" "}</NavLink>

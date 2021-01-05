@@ -1,0 +1,17 @@
+{
+   "title": "Kontaktformular",
+   "desc": "Du hast eine Frage zu unserer Anwendung oder ein bestehendes Problem? Wir helfen dir gerne. Bitte fülle das Formular vollständig aus, sodass wir wissen, worum es geht.",
+   "referProblem": "Worauf bezieht sich das Problem?",
+   "login": "Anmeldung",
+   "joinCancel": "Meetup anmelden/stornieren",
+   "profile": "Mein Profil",
+   "other": "Sonstiges",
+   "privacy": "Mit dem Absenden dieses Formular erklärst du dich einverstanden, dass wir zum Zweck der Kontaktaufnahme die übermittelten personenbezogenen Daten vorübergehend speichern dürfen. Mehr dazu findest du in unserer Datenschutzerklärung.",
+   "submit": "Abschicken",
+   "cancel": "Abbrechen",
+   "feedbackTxt": "Vielen Dank, Wir haben haben deine Anfrage erhalten und werden uns demnächst bei dir melden.",
+   "fillAllFields": "Bitte alle Felder korrekt ausfüllen.",
+   "yourName": "Dein Name",
+   "emailAdress": "Deine Mail-Adresse",
+   "yourMsg": "Deine Nachricht an uns"
+}

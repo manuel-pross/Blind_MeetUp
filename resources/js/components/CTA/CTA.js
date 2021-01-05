@@ -2,7 +2,6 @@ import React from 'react';
 
 import { withTranslation } from 'react-i18next';
 
-
 const cta = (props) => {
 
     const { t } = props;
@@ -18,6 +17,5 @@ const cta = (props) => {
         </div>
     )
 };
-
 
 export default withTranslation('cta')(cta);

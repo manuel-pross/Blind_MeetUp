@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
 import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
+import { withTranslation } from 'react-i18next';
 
-
-const ContactForm = () => {
+const ContactForm = (props) => {
+    const { t } = props;
     const [name, setName] = useState("");
     const [isName, setIsName] = useState(false);
     const [email, setEmail] = useState("");
@@ -42,6 +43,8 @@ const ContactForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (isName && isEmail && problem != null && problemText != "") {
+            //TODO: translation mit googleTranslater. Inhalte überprüfen
+            //TODO: delete this?
             console.log("Name: " + name);
             console.log("Email: " + email);
             console.log("Problem: " + problem);
@@ -72,28 +75,28 @@ const ContactForm = () => {
         <form className="contactForm" onSubmit={handleSubmit}>
             <div className="mb-100">
                 <label className={isName ? "contactForm__inputSymbol" : null} >
-                    <input type="text" name="Name" placeholder="Dein Name" value={name} onChange={handleUserName} />
+                    <input type="text" name="Name" placeholder={t("yourName")} value={name} onChange={handleUserName} />
                 </label>
             </div >
             <div className="mb-100">
                 <label className={isEmail ? "contactForm__inputSymbol" : null}  >
-                    <input type="email" name="Name" placeholder="Deine Mail-Adresse" value={email} onChange={handleEmail} />
+                    <input type="email" name="Name" placeholder={t("emailAdress")} value={email} onChange={handleEmail} />
                 </label>
             </div>
-            <p className="subpages__subtext">Worauf bezieht sich das Problem?</p>
+            <p className="subpages__subtext">{t("referProblem")}</p>
             <div className="mb-200">
-                <div className={problem == "Anmeldung" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Anmeldung")}>Anmeldung</div>
-                <div className={problem == "Treffen teilnehmen/stornieren" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Treffen teilnehmen/stornieren")}>Treffen teilnehmen/stornieren</div>
-                <div className={problem == "Mein Profil" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Mein Profil")}>Mein Profil</div>
-                <div className={problem == "Sonstiges" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Sonstiges")}>Sonstiges</div>
+                <div className={problem == "Anmeldung" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Anmeldung")}>{t("login")}</div>
+                <div className={problem == "Treffen teilnehmen/stornieren" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Treffen teilnehmen/stornieren")}>{t("joinCancel")}</div>
+                <div className={problem == "Mein Profil" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Mein Profil")}>{t("profile")}</div>
+                <div className={problem == "Sonstiges" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Sonstiges")}>{t("other")}</div>
             </div>
             <div className="mb-300">
-                <input className="contactForm__inputText" type="text" name="Name" placeholder="Deine ausführliche Nachricht an uns" value={problemText} onChange={handleProblemText} />
+                <input className="contactForm__inputText" type="text" name="Name" placeholder={t("yourMsg")} value={problemText} onChange={handleProblemText} />
             </div>
-            <p className="mb-200 subpages__subtext-small">Mit dem Absenden dieses Formular erklärst du dich einverstanden, dass wir zum Zweck der Kontaktaufnahme die übermittelten personenbezogenen Daten vorübergehend speichern dürfen. Mehr dazu findest du in unserer Datenschutzerklärung.</p>
+            <p className="mb-200 subpages__subtext-small">{t("privacy")}</p>
 
-            <button className="btn btn-primary mr-100 mb-50" type="submit">Abschicken</button>
-            <div className="btn btn-second" onClick={resetValues}>Abbrechen</div>
+            <button className="btn btn-primary mr-100 mb-50" type="submit">{t("submit")}</button>
+            <div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div>
         </form>
 
     );
@@ -101,22 +104,22 @@ const ContactForm = () => {
     const formFeedbackText = (
         <div className="guidelines__container mb-600">
             <img src={AlertCheck} className="guidelines__icon" alt="BlindMeetUp_alert-cross" style={{ width: "200px", float: 'left' }}></img>
-            <p className="subpages__subtext feedbackForm__feedbackText">Vielen Dank, Wir haben haben deine Anfrage erhalten und werden uns demnächst bei dir melden.</p>
+            <p className="subpages__subtext feedbackForm__feedbackText">{t("feedbackTxt")}</p>
         </div>
     );
 
     const notCompletedMessage = (
         <div className="guidelines__container">
             <img src={ActionCancel} className="guidelines__icon" alt="BlindMeetUp_action-cancel" style={{ width: "200px", float: 'left' }}></img>
-            <p className="subpages__subtext feedbackForm__feedbackText-error">Bitte alle Felder korrekt ausfüllen</p>
+            <p className="subpages__subtext feedbackForm__feedbackText-error">{t("fillAllFields")}</p>
         </div>
     );
 
 
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
-            <h1>Kontaktformular</h1>
-            <p className="mb-400">Du hast eine Frage zu unserer Anwendung oder ein bestehendes Problem? Wir helfen dir gerne. Bitte fülle das Formular vollständig aus, sodass wir wissen, worum es geht.</p>
+            <h1>{t("title")}</h1>
+            <p className="mb-400">{t("desc")}</p>
             {!isSubmitted ? fomular : formFeedbackText}
             {showFillError ? notCompletedMessage : null}
 
@@ -124,4 +127,4 @@ const ContactForm = () => {
     );
 }
 
-export default ContactForm;
+export default withTranslation('contactForm')(ContactForm);

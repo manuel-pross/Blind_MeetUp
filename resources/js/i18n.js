@@ -34,6 +34,10 @@ import dashboardHeaderEN from '../translations/en/dashboardHeader.json';
 import dashboardHeaderDE from '../translations/de/dashboardHeader.json';
 import meetUpsEN from '../translations/en/meetups.json';
 import meetUpsDE from '../translations/de/meetUps.json';
+import contactFormEN from '../translations/en/contactForm.json';
+import contactFormDE from '../translations/de/contactForm.json';
+import feedbackFormEN from '../translations/en/feedbackForm.json';
+import feedbackFormDE from '../translations/de/feedbackForm.json';
 
 // the translations
 const resources = {
@@ -50,7 +54,9 @@ const resources = {
         socialMedia: socialMediaEN,
         teamSlider: teamSliderEN,
         dashboardHeader: dashboardHeaderEN,
-        meetUps: meetUpsEN
+        meetUps: meetUpsEN,
+        contactForm: contactFormEN,
+        feedbackForm: feedbackFormEN
     },
     de: {
         impressum: impressumDE,
@@ -65,14 +71,16 @@ const resources = {
         socialMedia: socialMediaDE,
         teamSlider: teamSliderDE,
         dashboardHeader: dashboardHeaderDE,
-        meetUps: meetUpsDE
+        meetUps: meetUpsDE,
+        contactForm: contactFormDE,
+        feedbackForm: feedbackFormDE
     }
 };
 
 // Options for LanugageDetector
 const options = {
     // order and from where user language should be detected; All Options ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain']
-    order:  ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+    order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
 
     // keys or params to lookup language from
     lookupQuerystring: 'lng',

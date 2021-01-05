@@ -5,10 +5,7 @@ import Collapsible from 'react-collapsible';
 
 
 class MeetingContent extends Component {
-
-   // state = {
-   //    display: "style={{display: 'none'}}"
-   // }
+   
    render() {
       const { t } = this.props;
       const contentStyle = this.props.displayContent ? 'block' : 'none';

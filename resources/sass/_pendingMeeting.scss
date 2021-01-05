@@ -140,16 +140,11 @@
       position: absolute;
       border-radius: 45px;
       border: none;
-      top: -15px;
-      right: -15px;
       padding: 22px;
       transition: all 0.2s;
       z-index: 1;
-
-      @include breakpoint("sm") {
-         top: -4px;
-         right: -4px;
-      }
+      top: -4px;
+      right: -4px;
 
       &::before {
          content: "";

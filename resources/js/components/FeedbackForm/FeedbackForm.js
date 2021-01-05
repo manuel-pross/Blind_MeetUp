@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { FaRegSmile, FaRegMeh, FaRegFrown } from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import { withTranslation } from 'react-i18next';
 
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
 import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
 
-const FeedbackForm = () => {
+const FeedbackForm = (props) => {
+    const { t } = props;
     const [feedbackSmiley, setFeedbackSmiley] = useState(null);
     const [feedbackDevice, setFeedbackDevice] = useState(null);
     const [feedbackText, setFeedbackText] = useState("");
@@ -23,6 +25,8 @@ const FeedbackForm = () => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
+        //TODO: translation mit googleTranslater. Inhalte überprüfen
+        //TODO: delete this?
         if (feedbackSmiley != null && feedbackDevice != null && feedbackText != "") {
             console.log("Smiley: " + feedbackSmiley);
             console.log("Device: " + feedbackDevice);
@@ -46,7 +50,7 @@ const FeedbackForm = () => {
 
     const fomular = (
         <form onSubmit={handleSubmit} className="feedbackForm">
-            <p className="subpages__subtext">Wie gefällt dir die Anwendung?</p>
+            <p className="subpages__subtext">{t("yourRate")}</p>
             {[...Array(3)].map((element, i) => {
                 const feedbackOptions = [
                     "good",
@@ -67,41 +71,41 @@ const FeedbackForm = () => {
                     </label>
                 );
             })}
-            <p className="subpages__subtext">Mit welchem Gerät nutzt du unsere Anwendung? </p>
+            <p className="subpages__subtext">{t("whichDevice")}</p>
             <div className="mb-200">
                 <div className={feedbackDevice == "PC/Laptop" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("PC/Laptop")}>PC/Laptop</div>
                 <div className={feedbackDevice == "Tablet-PC" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Tablet-PC")}>Tablet-PC</div>
                 <div className={feedbackDevice == "Smartphone" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Smartphone")}>Smartphone</div>
             </div>
             <div className="mb-300">
-                <input type="text" name="feedbackText" placeholder="Möchtest du uns noch etwas mitteilen?" value={feedbackText} onChange={handleUserText} />
+                <input type="text" name="feedbackText" placeholder={t("tellUs")} value={feedbackText} onChange={handleUserText} />
             </div >
-            <button className="btn btn-primary mr-100 mb-100" type="submit" >Abschicken</button>
-            <div className="btn btn-second" onClick={resetValues}>Abbrechen</div>
+            <button className="btn btn-primary mr-100 mb-100" type="submit">{t("submit")}</button>
+            <div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div>
         </form>
     );
 
     const formFeedbackText = (
         <div className="guidelines__container">
             <img src={AlertCheck} className="guidelines__icon" alt="BlindMeetUp_alert-cross" style={{ width: "200px", float: 'left' }}></img>
-            <p className="subpages__subtext feedbackForm__feedbackText">Vielen Dank, Wir haben dein Feedback erhalten.</p>
+            <p className="subpages__subtext feedbackForm__feedbackText">{t("thank")}</p>
         </div>
     );
 
     const notCompletedMessage = (
         <div className="guidelines__container">
             <img src={ActionCancel} className="guidelines__icon" alt="BlindMeetUp_action-cancel" style={{ width: "200px", float: 'left' }}></img>
-            <p className="subpages__subtext feedbackForm__feedbackText-error">Bitte alle Felder korrekt ausfüllen</p>
+            <p className="subpages__subtext feedbackForm__feedbackText-error">{t("fillAllFields")}</p>
         </div>
     );
 
-
+        console.log(t("desc"));
 
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
 
-            <h1>Feedback geben</h1>
-            <p className="mb-400">Wir freuen uns sehr, dass du hier her gefunden hast! Nur mithilfe deines ehrlichen und ausführlichen Feedbacks können wir unser Angebot und die Anwendung stetig verbessern. Also hau in die Tasten und lass uns von dir hören.</p>
+            <h1>{t("giveFeedback")}</h1>
+            <p className="mb-400">{t("desc")}</p>
 
             {!isSubmitted ? fomular : formFeedbackText}
             {showFillError ? notCompletedMessage : null}
@@ -109,4 +113,4 @@ const FeedbackForm = () => {
     );
 }
 
-export default FeedbackForm;
+export default withTranslation('feedbackForm')(FeedbackForm);
