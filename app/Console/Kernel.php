@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\UpdatePastMeetings::class
     ];
 
     /**
@@ -26,42 +26,42 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('update:pastMeetings')->everyMinute();
 
-        $schedule->call(function () {
-            date_default_timezone_set('Europe/Berlin');
-            $currentDate = strtotime(date('Y-m-d h:i:s', time()));
+        // $schedule->call(function () {
+        //     date_default_timezone_set('Europe/Berlin');
+        //     $currentDate = strtotime(date('Y-m-d h:i:s', time()));
     
-            $joins = DB::table('meeting_user')
-                ->get();
+        //     $joins = DB::table('meeting_user')
+        //         ->get();
             
-            foreach($joins as $join) {
-                $meeting = Meeting::findOrFail($join->meeting_id);
-                $meetingDate = strtotime($meeting->date);
+        //     foreach($joins as $join) {
+        //         $meeting = Meeting::findOrFail($join->meeting_id);
+        //         $meetingDate = strtotime($meeting->date);
     
-                if($currentDate > $meetingDate) {
-                    DB::table('meeting_user')
-                    ->where('user_id', $join->user_id)
-                    ->where('meeting_id', $join->meeting_id)
-                    ->update(
-                        [
-                            'status' => 'past',
-                        ]
-                    );
-                }
-            }
+        //         if($currentDate > $meetingDate) {
+        //             DB::table('meeting_user')
+        //             ->where('user_id', $join->user_id)
+        //             ->where('meeting_id', $join->meeting_id)
+        //             ->update(
+        //                 [
+        //                     'status' => 'past',
+        //                 ]
+        //             );
+        //         }
+        //     }
 
-            $meetings = Meeting::all();
+        //     $meetings = Meeting::all();
 
-            foreach($meetings as $meeting) {
-                $meetingDate = strtotime($meeting->date);
+        //     foreach($meetings as $meeting) {
+        //         $meetingDate = strtotime($meeting->date);
     
-                if($currentDate > $meetingDate)
-                    if($meeting->members <= 1 || $meeting->members == null)
-                        $meeting->delete();
-            }
+        //         if($currentDate > $meetingDate)
+        //             if($meeting->members <= 1 || $meeting->members == null)
+        //                 $meeting->delete();
+        //     }
 
-        })->everyMinute();
+        // })->everyMinute();
     }
 
     /**
