@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaRegSmile, FaRegMeh, FaRegFrown } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
+import {Email} from '../../smtp';
+
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
 import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
 
@@ -24,16 +26,39 @@ const FeedbackForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (feedbackSmiley != null && feedbackDevice != null && feedbackText != "") {
-            console.log("Smiley: " + feedbackSmiley);
-            console.log("Device: " + feedbackDevice);
-            console.log("Text: " + feedbackText);
             setShowFillError(false);
             setIsSubmitted(true);
             goToTop();
+            sendEmail();
         } else {
             setShowFillError(true);
         }
     }
+
+    const sendEmail = () => {
+        Email.send({
+            SecureToken: "6a874af8-d44a-48ec-9f35-d9e49db014d3",
+            To: 'blindlunch@web.de',
+            From: "blindlunch@web.de",
+            Subject: `Feedback | Formular `,
+            Body:
+                `
+                <p> <strong>Feedback Formular: </strong> <br/><br/>
+                <strong>Die Anwendung gefällt mir: </strong> <br/>
+                ${feedbackSmiley}  <br/> <br/>
+                <strong>Ich nutze die Anwendung auf folgednem Gerät:  </strong> <br/>
+                ${feedbackDevice}  <br/> <br/>
+                <strong>Freitext: </strong><br/> 
+                ${feedbackText} <p/>
+            `
+        }).then((message) => {
+            console.log(message);
+        }).catch(err => {
+            console.log(err);
+            return err
+        });
+    }
+
     const resetValues = () => {
         setShowFillError(false);
         setFeedbackSmiley(null);
@@ -49,9 +74,9 @@ const FeedbackForm = () => {
             <p className="subpages__subtext">Wie gefällt dir die Anwendung?</p>
             {[...Array(3)].map((element, i) => {
                 const feedbackOptions = [
-                    "good",
+                    "gut",
                     "ok",
-                    "bad"
+                    "nicht gut"
                 ];
                 const icons = [
                     <FaRegSmile className="feedbackForm__smiley" color="#ffffff" size='50' />,
