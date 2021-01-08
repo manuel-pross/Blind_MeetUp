@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Email } from '../../smtp';
+
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
 import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
 import { withTranslation } from 'react-i18next';
@@ -17,7 +19,6 @@ const ContactForm = (props) => {
 
 
     const handleUserName = (event) => {
-        console.log(event.target.value);
         if (event.target.value.length >= 3) {
             setIsName(true);
         } else {
@@ -43,20 +44,42 @@ const ContactForm = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (isName && isEmail && problem != null && problemText != "") {
-            //TODO: translation mit googleTranslater. Inhalte überprüfen
-            //TODO: delete this?
-            console.log("Name: " + name);
-            console.log("Email: " + email);
-            console.log("Problem: " + problem);
-            console.log("Problem Text: " + problemText);
             setShowFillError(false);
             setIsSubmitted(true);
             goToTop();
+            sendEmail();
         } else {
             setShowFillError(true);
         }
 
     }
+
+    const sendEmail = () => {
+        Email.send({
+            SecureToken: "6a874af8-d44a-48ec-9f35-d9e49db014d3",
+            To: 'blindlunch@web.de',
+            From: "blindlunch@web.de",
+            Subject: `Kontakt | Formular `,
+            Body:
+                `
+                <p> <strong>Kontakt Formular: </strong> <br/><br/>
+                <strong>Name: </strong> <br/>
+                ${name}  <br/> <br/>
+                <strong>E-Mail: </strong> <br/>
+                ${email}  <br/> <br/>
+                <strong>Worauf bezieht sich das Problem: </strong> <br/>
+                ${problem}  <br/> <br/>
+                <strong>Ausführlicher Freitext: </strong> <br/>
+                ${problemText}  <br/> <br/>
+                <p/>
+            `
+        }).then((message) => {
+            // console.log(message);
+        }).catch(err => {
+            return err
+        });
+    }
+
     const resetValues = () => {
         setIsName(false);
         setIsName(false);
