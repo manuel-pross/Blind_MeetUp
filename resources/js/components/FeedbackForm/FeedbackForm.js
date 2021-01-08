@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaRegSmile, FaRegMeh, FaRegFrown } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
-import {Email} from '../../smtp';
+import { Email } from '../../smtp';
 
 import AlertCheck from '../../../assets/img/icons/alert-check.svg';
 import ActionCancel from '../../../assets/img/icons/action-cancel.svg';
@@ -52,9 +52,8 @@ const FeedbackForm = () => {
                 ${feedbackText} <p/>
             `
         }).then((message) => {
-            console.log(message);
+            // console.log(message);
         }).catch(err => {
-            console.log(err);
             return err
         });
     }
