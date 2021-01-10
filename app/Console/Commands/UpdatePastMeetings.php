@@ -44,6 +44,7 @@ class UpdatePastMeetings extends Command
 
         $joins = DB::table('meeting_user')
             ->get();
+        
 
         foreach($joins as $join) {
             $meeting = Meeting::findOrFail($join->meeting_id);
@@ -53,11 +54,18 @@ class UpdatePastMeetings extends Command
                 DB::table('meeting_user')
                 ->where('user_id', $join->user_id)
                 ->where('meeting_id', $join->meeting_id)
+                ->where('status', 'registered')
                 ->update(
                     [
                         'status' => 'past',
                     ]
                 );
+
+                DB::table('meeting_user')
+                ->where('user_id', $join->user_id)
+                ->where('meeting_id', $join->meeting_id)
+                ->where('status', 'pending')
+                ->delete();                
             }
         }
 
