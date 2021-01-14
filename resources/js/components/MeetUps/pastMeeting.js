@@ -7,6 +7,8 @@ import starSVG from '../../../assets/img/icons/action-rate.svg';
 
 import { withTranslation } from 'react-i18next';
 
+import axios from 'axios';
+
 const opacity05 = { opacity: ".7" };
 const opacity1 = { opacity: "1" };
 class PastMeeting extends Component {
@@ -33,10 +35,15 @@ class PastMeeting extends Component {
       }
 
       if (this.state.btnPressed) {
-         this.setState({ pastMeetingClass: "pastMeeting--closed" })
-         setTimeout(() => {
-            document.querySelector(".pastMeeting--closed").parentElement.parentElement.remove();
-         }, 1100);
+
+         axios.put('/api/rate_meeting/' + this.props.id)
+            .then(() => {
+               this.props.loadAllMeetings()
+               console.log("geklappt");
+            }).catch((error) => {
+               console.log(error);
+            })
+         // this.setState({ pastMeetingClass: "pastMeeting--closed" })
       }
    }
 
