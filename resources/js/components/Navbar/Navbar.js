@@ -43,12 +43,12 @@ class Navbar extends Component {
                     className="navbar__logo1"
                     alt="BlindMeetUp_Logo1"
                     onClick={this.scrollToTop} /> */}
-                <AnimatedSVGItem />
+                    <AnimatedSVGItem user={this.props.user} />
                 <img
                     src={Bildmarke}
                     className="navbar__logo2"
                     alt="BlindMeetUp_Logo2"
-                    />
+                />
                 <nav>
                     <ul className="navbar__Items">
                         <NavigationItems setUser={this.props.setUser} user={this.props.user} />
