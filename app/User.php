@@ -35,6 +35,7 @@ class User extends Authenticatable
 
     public function pendingMeetings() {
         return $this->belongsToMany('App\Meeting')
+        ->whereRaw('members < max_members')
         ->withPivot(['status'])
         ->where('status', 'pending');
     }
