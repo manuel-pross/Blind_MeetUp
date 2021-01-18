@@ -1,11 +1,11 @@
 {
+   "giveFeedback": "Feedback geben",
    "yourRate": "Wie gefällt dir die Anwendung?",
-   "whichDevice": "Mit welchem Gerät nutzt du unsere Anwendung?",
+   "whichDevice": "Mit welchen Geräten nutzt du unsere Anwendung?",
    "tellUs": "Möchtest du uns noch etwas mitteilen?",
    "submit": "Abschicken",
    "cancel": "Abbrechen",
    "thank": "Vielen Dank, Wir haben dein Feedback erhalten.",
    "fillAllFields": "Bitte alle Felder korrekt ausfüllen.",
-   "giveFeedback": "Feedback geben",
    "desc": "Wir freuen uns sehr, dass du hier her gefunden hast! Nur mithilfe deines ehrlichen und ausführlichen Feedbacks können wir unser Angebot und die Anwendung stetig verbessern. Also hau in die Tasten und lass uns von dir hören."
 }

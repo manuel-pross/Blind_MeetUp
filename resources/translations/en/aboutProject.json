@@ -1,7 +1,6 @@
 {
-   "title": "About Project",
-   "text": "EN Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non expedita quae impedit quas excepturi eveniet eum, culpa nesciunt maxime porro, quibusdam doloremque eaque fugit est repellendus tenetur labore dolore?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum laboriosam voluptatibus, consectetur animi possimus cumque repudiandae debitis necessitatibus neque voluptate",
-   "headerText": "EN Lorem ipsum dolor sit amet consectetur",
-   "firstText": "EN Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non expedita quae impedit quas excepturi eveniet eum, culpa nesciunt maxime porro, quibusdam doloremque eaque fugit est repellendus tenetur labore dolore?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum laboriosam voluptatibus, consectetur animi possimus cumque repudiandae debitis m non expedita quae impedit quas excepturi eveniet eum, culpa nesciunt maxime porro, quibusdam doloremque eaque",
-   "secText": "EN Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non expedita quae impedit quas excepturi eveniet eum, culpa nesciunt maxime porro, quibusdam doloremque eaque fugit est repellendus tenetur labore dolore?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum laboriosam voluptatibus, consectetur animi possimus cumque repudiandae debitis m non expedita quae impedit quas excepturi eveniet eum, culpa nesciunt maxime porro, quibusdam doloremque eaque"
+   "title": "About our project",
+   "headerText": "Why should you use Blind MeetUp?",
+   "firstText": "This web application offers the possibility to easily and anonymously register for meetings at different Furtwangen locations. With this we want to promote trans-faculty communication at Furtwangen University, as we find that most faculties tend to be fairly insular. This is an opportunity for students and internationals to meet new people and participate in campus live.",
+   "secText": "We lower barriers to communication and promote university-wide exchange. New contacts and good communication, free from prejudice are important motivating factors for students. This allows students to expand their personal network and make friends more easily. Blind MeetUp provides participants with joy and variety during their everyday studies."
 }

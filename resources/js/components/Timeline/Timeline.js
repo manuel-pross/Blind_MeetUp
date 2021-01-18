@@ -37,7 +37,6 @@ class Timeline extends Component {
             { pointColor: '' },
             { pointColor: '' },
             { pointColor: '' },
-            { pointColor: '' },
         ],
         activeSlide: 0
     }
@@ -47,11 +46,10 @@ class Timeline extends Component {
 
         const content = {
             descs: [
-                { headingText: t('header1'), descText: t('desc1')},
-                { headingText: t('header2'), descText: t('desc2')},
-                { headingText: t('header3'), descText: t('desc3')},
-                { headingText: t('header4'), descText: t('desc4')},
-                { headingText: t('header5'), descText: t('desc5')},
+                { headingText: t('header1'), descText: t('desc1') },
+                { headingText: t('header2'), descText: t('desc2') },
+                { headingText: t('header3'), descText: t('desc3') },
+                { headingText: t('header4'), descText: t('desc4') },
             ],
         }
 
@@ -86,6 +84,7 @@ class Timeline extends Component {
                     <div className="timeline__content">
                         <div className="timeline__stroke">
                             {this.state.descs.map((desc, i) => {
+                                console.log(desc);
                                 return (
                                     <div key={i} className="timeline__point" style={{ backgroundColor: desc.pointColor }} />
                                 )

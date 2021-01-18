@@ -1,12 +1,11 @@
 {
-   "header1": "DE heading 1",
-   "desc1": "DE Desc lorem Ipsum 1",
-   "header2": "DE heading 2",
-   "desc2": "DE Desc lorem Ipsum 2",
-   "header3": "DE heading 3",
-   "desc3": "DE Desc lorem Ipsum 3",
-   "header4": "DE heading 4",
-   "desc4": "DE Desc lorem Ipsum 4",
-   "header5": "DE heading 5",
-   "desc5": "DE Desc lorem Ipsum 5"
+   "head": "Ablauf & Funktionsweise",
+   "header1": "Anmeldung",
+   "desc1": "Melde dich ganz einfach mit deiner bereits vorhandenen Hochschul-E-Mail Adresse und deinem Passwort an.",
+   "header2": "Treffen auswählen ",
+   "desc2": "Wähle aus den anstehenden Treffen Deinen Wunschtermin aus. Treffen kannst du dich an folgenden Locations: Biercafé Engel, Café Edelweiss, Cafeteria, I-Bau, Mensa und im Sommer auch im Park in Furtwangen. ",
+   "header3": "Am Treffen teilnehmen",
+   "desc3": "Nachdem du dich erfolgreich für ein Treffen eingetragen hast, triff dich zum MeetUp an der ausgewählten Location. ",
+   "header4": "Treffen bewerten",
+   "desc4": "Teile uns deine Erfahrung zum Ablauf des Treffens und hilf uns dabei, Blind MeetUp für dich und andere Studierende zu verbessern. "
 }

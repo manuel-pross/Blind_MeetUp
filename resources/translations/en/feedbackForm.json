@@ -1,11 +1,11 @@
 {
-   "yourRate": "How do you like the application?",
-   "whichDevice":  "With which device do you use our application?",
+   "giveFeedback": "Give feedback",
+   "yourRate": "How do you like our application?",
+   "whichDevice": "What hardware do you use for our application?",
    "tellUs": "Anything else you'd like to share?",
    "submit": "Submit",
    "cancel": "cancel",
    "thank": "Thank you, We have received your feedback.",
    "fillAllFields": "Please fill in all fields correctly.",
-   "giveFeedback": "Give feedback",
-   "desc": "We are very happy that you found your way here! Only with the help of your honest and detailed feedback we can constantly improve our offer and the application. So hit the keys and let us hear from you."
+   "desc": "We are so happy that you have found your way here! Only with your honest and detailed feedback are we able to constantly improve our service and our application. So, hit the keyboard and let us hear from you."
 }
