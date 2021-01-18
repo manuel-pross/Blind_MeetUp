@@ -35,6 +35,7 @@ class User extends Authenticatable
 
     public function pendingMeetings() {
         return $this->belongsToMany('App\Meeting')
+        ->whereRaw('members < max_members')
         ->withPivot(['status'])
         ->where('status', 'pending');
     }
@@ -49,6 +50,19 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Meeting')
         ->withPivot(['status'])
         ->where('status', 'registered');
+    }
+
+    public function ratedMeeting($id) {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('meeting_id', $id)
+        ->where('status', 'rated');
+    }
+
+    public function ratedMeetings() {
+        return $this->belongsToMany('App\Meeting')
+        ->withPivot(['status'])
+        ->where('status', 'rated');
     }
 
     public function getSpecificMeeting($meeting_id) {

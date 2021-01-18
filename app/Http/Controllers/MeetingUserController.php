@@ -45,6 +45,14 @@ class MeetingUserController extends Controller
         return $registeredMeetings;
     }
 
+    public function getRatedMeetings($user_id) {
+        $user = new User();
+        $ratedMeetings = $user::findOrFail($user_id)
+            ->ratedMeetings()
+            ->get();
+        return $ratedMeetings;
+    }
+
     public function registerUser($user_id, $meeting_id) {
 
         if(auth()->guest()) {
@@ -88,6 +96,21 @@ class MeetingUserController extends Controller
             $desired_meeting->update(array('members' => $desired_meeting->members - 1));
         } else {
             abort(500, 'Du hast dich für kein Treffen registriert'); //Hier erfolgt leider eine Weiterleitung, versuch mal obs damit im Frontentfunktioniert
+        }
+    }
+
+    public function rateMeeting($user_id, $meeting_id) {
+        $rated_meeting = $user::findOrFail($user_id)
+        ->ratedMeeting($meeting_id);
+
+        if($rated_meeting >= 1)
+            abort(500, 'Du hast dieses Treffen bereits bewertet');
+        else {
+            $user::findOrFail($user_id)
+            ->pendingMeetings()
+            ->updateExistingPivot($meeting_id, [
+                'status' => 'rated',
+            ]);
         }
     }
 }
