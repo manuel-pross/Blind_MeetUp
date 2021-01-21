@@ -223,249 +223,26 @@
    }
 
    &--animation {
-      transition: all 1s;
+      transition: background-color 0.2s ease-in-out;
+      transition: width 1.7s;
+      background-color: $c-white;
 
       &:focus {
          background-color: $c1-second;
-         animation: test2 1.5s;
-         animation-delay: 1.5s;
-         animation-fill-mode: forwards;
+         width: 50px;
       }
 
       &:focus .jointMeeting__btnDesc {
-         animation: test 1.5s;
-         animation-delay: 1.5s;
-         animation-fill-mode: forwards;
+         display: none;
       }
 
       &:focus .jointMeeting__btnWrapper {
          margin: 0;
       }
+
+      &:focus .btn-jointMeeting__cancelSvg {
+         animation: slideWrapper 1.5s;
+         animation-fill-mode: forwards;
+      }
    }
 }
-
-@keyframes test {
-   0% {
-   }
-   100% {
-      width: 0%;
-      visibility: hidden;
-   }
-}
-@keyframes test2 {
-   0% {
-   }
-   100% {
-      width: 0%;
-   }
-}
-
-// .jointMeeting--closed {
-//    position: relative;
-//    display: flex;
-//    margin: 0.5rem;
-//    background-color: $c2-second;
-//    border-radius: $border-radius;
-//    color: $c-white;
-//    animation: fadeOut 1.5s;
-//    animation-delay: 1.5s;
-//    animation-fill-mode: forwards;
-
-//    @include breakpoint("md") {
-//       height: 300px;
-//    }
-//    @include breakpoint("md") {
-//       height: 336px;
-//    }
-// }
-
-// .jointMeeting {
-//    position: relative;
-//    display: flex;
-//    margin: 0.5rem;
-//    background-color: $c2-second;
-//    border-radius: $border-radius;
-//    color: $c-white;
-
-//    @include breakpoint("md") {
-//       height: 300px;
-//    }
-//    @include breakpoint("md") {
-//       height: 336px;
-//    }
-
-//    &__dayCount {
-//       color: inherit;
-//       margin: 0.5rem 0 0 1rem;
-//       padding: 0;
-//    }
-
-//    &__img {
-//       width: 45%;
-//       border-radius: inherit;
-//    }
-
-//    &__innerWrapper {
-//       height: 120px;
-//       position: relative;
-
-//       @include breakpoint("md") {
-//          height: 180px;
-//          padding: 1.5rem;
-//       }
-//       @include breakpoint("lg") {
-//          height: 250px;
-//          padding: 2.5rem;
-//       }
-//    }
-
-//    &__contentWrapper {
-//       width: 100%;
-//       padding: 15px;
-//    }
-
-//    &__dataWrapper {
-//       position: relative;
-//       align-self: center;
-//       padding: 10px;
-
-//       @include breakpoint("lg") {
-//          // margin-left: 1rem;
-//       }
-
-//       &--pipe {
-//          &::after {
-//             content: "";
-//             position: absolute;
-//             background-color: $c-white;
-//             width: 30px;
-//             height: 1.5px;
-//             left: 0;
-//             top: 27px;
-//             transform: rotate(90deg);
-//          }
-//       }
-//    }
-
-//    &__data {
-//       color: inherit !important;
-//       margin: 0;
-//       margin-left: 18px;
-//       white-space: nowrap;
-//    }
-
-//    &__dataWrapperLocation {
-//       position: relative;
-//       padding: 10px;
-
-//       @include breakpoint("md") {
-//          margin-bottom: 3rem;
-//       }
-
-//       &--pipe {
-//          &::after {
-//             content: "";
-//             position: absolute;
-//             background-color: $c-white;
-//             width: 30px;
-//             height: 1.5px;
-//             left: 0;
-//             top: 20px;
-//             transform: rotate(90deg);
-//          }
-//       }
-//    }
-
-//    &__clickedBtnWrapper {
-//       height: 120px;
-//       width: 100%;
-//       position: relative;
-//       margin: 0 auto;
-
-//       @include breakpoint("md") {
-//          height: 180px;
-//          padding: 1.5rem;
-//       }
-//       @include breakpoint("lg") {
-//          height: 250px;
-//          padding: 2.5rem;
-//       }
-
-//       &__block {
-//          display: flex;
-//          margin: 1.5rem;
-//          justify-content: space-around;
-
-//          @include breakpoint("lg") {
-//             margin: 2.5rem;
-//          }
-//       }
-//    }
-
-//    &__btnWrapper {
-//       display: flex;
-//       justify-content: space-around;
-
-//       @include breakpoint("lg") {
-//          margin: 0 3rem;
-//       }
-
-//       img {
-//          display: inline !important;
-//          width: 23px;
-//       }
-//    }
-
-//    &--column {
-//       flex-wrap: wrap;
-//    }
-// }
-
-// .btn-cancel {
-//    color: $c4-second;
-//    width: 80%;
-
-//    &:hover {
-//       background-color: $c1-second;
-
-//       .btn-meeting__arrow::after,
-//       .btn-meeting__arrow::before {
-//          background-color: $c-white;
-//       }
-//    }
-
-//    &--animation {
-//       color: $c4-second;
-//       width: 80%;
-//       transition: all 1s ease-in-out;
-
-//       &:focus {
-//          background-color: $c1-second;
-//          width: 50px !important;
-//          height: 50px !important;
-//       }
-
-//       &:focus .jointMeeting__btnDesc {
-//          display: none;
-//       }
-
-//       &:focus .jointMeeting__btnWrapper {
-//          margin: 0;
-//       }
-//    }
-// }
-
-// .btn-jointMeeting {
-//    white-space: nowrap;
-//    transition: all 0.2s;
-
-//    &:hover {
-//       color: $c-white;
-//       background-color: $c1-second;
-//    }
-
-//    &:focus {
-//       color: $c-white;
-//       background-color: $c1-second;
-//    }
-// }

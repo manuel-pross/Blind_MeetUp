@@ -11196,7 +11196,6 @@ template {
 @media (min-width: 992px) {
   .timeline__stroke {
     flex-wrap: wrap;
-    align-content: space-between;
     align-self: center;
     width: 6px;
     height: 100%;
@@ -11738,9 +11737,9 @@ template {
   color: #50b375;
   width: 100%;
   transition: color 0.2s ease-in-out;
+  transition: width 1.7s;
   display: block;
   margin: 0 auto;
-  transition: width 1.7s;
   height: 26px;
   -webkit-animation: btnHeight 1.5s;
           animation: btnHeight 1.5s;
@@ -12153,56 +12152,29 @@ template {
 }
 
 .btn-cancel--animation {
-  transition: all 1s;
+  transition: background-color 0.2s ease-in-out;
+  transition: width 1.7s;
+  background-color: #fefefe;
 }
 
 .btn-cancel--animation:focus {
   background-color: #50b375;
-  -webkit-animation: test2 1.5s;
-          animation: test2 1.5s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 50px;
 }
 
 .btn-cancel--animation:focus .jointMeeting__btnDesc {
-  -webkit-animation: test 1.5s;
-          animation: test 1.5s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  display: none;
 }
 
 .btn-cancel--animation:focus .jointMeeting__btnWrapper {
   margin: 0;
 }
 
-@-webkit-keyframes test {
-  100% {
-    width: 0%;
-    visibility: hidden;
-  }
-}
-
-@keyframes test {
-  100% {
-    width: 0%;
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes test2 {
-  100% {
-    width: 0%;
-  }
-}
-
-@keyframes test2 {
-  100% {
-    width: 0%;
-  }
+.btn-cancel--animation:focus .btn-jointMeeting__cancelSvg {
+  -webkit-animation: slideWrapper 1.5s;
+          animation: slideWrapper 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .pastMeeting--closed {

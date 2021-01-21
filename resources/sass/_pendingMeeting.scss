@@ -267,9 +267,9 @@
    color: $c1-second;
    width: 100%;
    transition: color 0.2s ease-in-out;
+   transition: width 1.7s;
    display: block;
    margin: 0 auto;
-   transition: width 1.7s;
    height: 26px;
    animation: btnHeight 1.5s;
    animation-fill-mode: forwards;

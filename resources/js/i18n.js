@@ -38,6 +38,8 @@ import contactFormEN from '../translations/en/contactForm.json';
 import contactFormDE from '../translations/de/contactForm.json';
 import feedbackFormEN from '../translations/en/feedbackForm.json';
 import feedbackFormDE from '../translations/de/feedbackForm.json';
+import dataProtectionEN from '../translations/en/dataProtection.json';
+import dataProtectionDE from '../translations/de/dataProtection.json';
 
 // the translations
 const resources = {
@@ -56,7 +58,8 @@ const resources = {
         dashboardHeader: dashboardHeaderEN,
         meetUps: meetUpsEN,
         contactForm: contactFormEN,
-        feedbackForm: feedbackFormEN
+        feedbackForm: feedbackFormEN,
+        dataProtection: dataProtectionEN
     },
     de: {
         impressum: impressumDE,
@@ -73,7 +76,8 @@ const resources = {
         dashboardHeader: dashboardHeaderDE,
         meetUps: meetUpsDE,
         contactForm: contactFormDE,
-        feedbackForm: feedbackFormDE
+        feedbackForm: feedbackFormDE,
+        dataProtection: dataProtectionDE
     }
 };
 

@@ -40,7 +40,6 @@
 
         @include breakpoint("lg") {
             flex-wrap: wrap;
-            align-content: space-between;
             align-self: center;
             width: 6px;
             height: 100%;
