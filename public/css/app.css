@@ -11163,7 +11163,7 @@ template {
   align-items: center;
   height: 9px;
   border-radius: 5px;
-  background: linear-gradient(270deg, #2e6c48 0%, #50b375 100%);
+  background: #50b375;
   margin-bottom: 1.75rem;
   margin-right: 0.6rem;
 }
@@ -11181,7 +11181,6 @@ template {
     width: 6px;
     height: 100%;
     margin: 0 2rem 0 0;
-    background: linear-gradient(360deg, #2e6c48 35%, #50b375 100%);
   }
 }
 
