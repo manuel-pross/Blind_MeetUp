@@ -10,13 +10,12 @@ class Header extends Component {
    render() {
       const { t } = this.props;
       return (
-         <div className="header position-relative">
-            <img className="header__image" src={headerImage} alt="headerImage" />
+         <div className="header">
             <div className="header__wrapper">
                <h1 className="header__title">{t("title")}</h1>
                <p className="header__p">{t("desc")}</p>
                <div className="header__btn__wrapper">
-                  <Link className="btn btn-primary  header__secondBtn" to={"/login"}>
+                  <Link className="btn btn-primary" to={"/login"}>
                      {t("btnJoin")}
                   </Link>
                   <LinkScroll
