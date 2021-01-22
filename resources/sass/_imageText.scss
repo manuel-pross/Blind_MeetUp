@@ -1,4 +1,9 @@
 .imageText {
+
+   &:nth-child(even) {
+      margin-bottom: 3.5rem;
+   }
+
    @include breakpoint("xl") {
       display: flex;
       justify-content: space-between;
@@ -7,7 +12,6 @@
    }
 
    &__img {
-      margin-bottom: 2rem;
       width: 100%;
 
       @include breakpoint("xl") {

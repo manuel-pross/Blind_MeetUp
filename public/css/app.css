@@ -11022,6 +11022,10 @@ template {
   transform: rotate(45deg);
 }
 
+.imageText:nth-child(even) {
+  margin-bottom: 3.5rem;
+}
+
 @media (min-width: 1200px) {
   .imageText {
     display: flex;
@@ -11032,7 +11036,6 @@ template {
 }
 
 .imageText__img {
-  margin-bottom: 2rem;
   width: 100%;
 }
 
