@@ -11,7 +11,7 @@ class AboutProject extends Component {
       const { t } = this.props;
       return (
          <div className="container mb-300">
-            <h1 className="aboutProject__title">{t("title")}</h1>
+            <h2 className="aboutProject__title">{t("title")}</h2>
             <ImageText alignment img={firstImage} headerText={t("headerText")} text={t("firstText")} />
             <ImageText alignment={false} img={secondImage} headerText={t("headerText")} text={t("secText")} />
          </div>
