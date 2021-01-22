@@ -122,9 +122,7 @@ const FeedbackForm = (props) => {
             <p className="subpages__subtext feedbackForm__feedbackText-error">{t("fillAllFields")}</p>
         </div>
     );
-
-        console.log(t("desc"));
-
+    
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
 

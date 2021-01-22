@@ -12770,6 +12770,10 @@ template {
   margin-right: 25px;
 }
 
+.feedbackForm__smiley-container:hover {
+  background-color: #2f2f2f;
+}
+
 .feedbackForm__smiley-active {
   background-color: #2f2f2f;
 }
@@ -12782,6 +12786,11 @@ template {
 .feedbackForm__button {
   margin-top: 10px;
   margin-right: 20px;
+}
+
+.feedbackForm__button:hover {
+  background-color: #2f2f2f !important;
+  border: 2px solid #2f2f2f !important;
 }
 
 .feedbackForm input[type=text] {
