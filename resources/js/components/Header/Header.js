@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 import headerImage from '../../../assets/img/placeholder/landing-page-background.jpg'
 import { Link } from 'react-router-dom';
-import NavigationItem from '../Navbar/NavigationItems/NavigationItem/NavigationItem';
+import { Link as LinkScroll } from 'react-scroll';
 
 class Header extends Component {
    render() {
@@ -16,8 +16,20 @@ class Header extends Component {
                <h1 className="header__title">{t("title")}</h1>
                <p className="header__p">{t("desc")}</p>
                <div className="header__btn__wrapper">
-                  <button link="/login" className="header__secondBtn btn btn-primary">{t("btnJoin")}</button>
-                  <button className="header__secondBtn btn btn-second">{t("btnMore")}</button>
+                  <Link className="btn btn-primary  header__secondBtn" to={"/login"}>
+                     {t("btnJoin")}
+                  </Link>
+                  <LinkScroll
+                     className="btn btn-second header__secondBtn"
+                     style={{ cursor: 'pointer' }}
+                     to={"Projekt"}
+                     smooth={true}
+                     duration={500}
+                     offset={-100}
+                     spy={true}
+                  >
+                     {t("btnMore")}
+                  </LinkScroll>
                </div>
             </div>
          </div>
