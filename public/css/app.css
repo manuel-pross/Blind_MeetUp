@@ -12597,13 +12597,18 @@ template {
 .footer__text {
   color: #fefefe;
   font-size: 19px !important;
+  margin-top: 0 !important;
 }
 
 .footer__button {
   background: none !important;
   background-color: none !important;
   color: #fefefe !important;
-  border: 2px solid #fefefe !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.footer__button:hover {
+  border: 2px solid white !important;
 }
 
 .footer__logo {

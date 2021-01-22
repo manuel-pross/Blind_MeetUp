@@ -30,7 +30,7 @@ class Footer extends Component {
                         <p className="footer__heading">{t('Legal')}</p>
                         <FooterButton link="/impressum">{t('Impressum')}</FooterButton>
                         <FooterButton link="/datenschutz">{t('DataProtection')}</FooterButton>
-                        <FooterButton link="/richtlinien">{t('Guidelines')}</FooterButton>
+                        {/* <FooterButton link="/richtlinien">{t('Guidelines')}</FooterButton> */}
                     </div>
                 </div>
                 <div className="row">
