@@ -12648,7 +12648,7 @@ template {
 }
 
 .footer__flag {
-  transform: 0.3s;
+  transition: 0.3s;
   opacity: 0.7;
   width: 100%;
   max-width: 35px;

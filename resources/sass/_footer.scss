@@ -59,7 +59,7 @@
     }
 
     &__flag{
-        transform: $transition;
+        transition: $transition;
         opacity: 0.7;
         width: 100%;
         max-width: 35px;
