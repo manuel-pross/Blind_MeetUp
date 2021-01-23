@@ -1,23 +1,9 @@
 import React from 'react';
 
-import { useHistory } from "react-router-dom";
-
 
 const animatedSVGItem = (props) => {
-    const history = useHistory();
-
-    const toLandingPage = () => {
-        window.scroll(0,0);
-        if(props.user){
-            history.push("/dashboard/anmelden");
-        }else{
-            history.push("/");
-        }
-    }
-
-
     return (
-        <svg className="navbar__logo1" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" onClick={toLandingPage} style={{cursor: "pointer"}}>
+        <svg className="navbar__logo1" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" onClick={() => props.toLandingPage()} style={{ cursor: "pointer" }}>
             <g id="Ebene-1" transform="matrix(1,0,0,1,0,-922.52)">
                 <rect id="rect1612" x="0" y="922.52" width="1000" height="200" style={{ fill: "white" }} />
                 <g id="g2044">
@@ -33,7 +19,7 @@ const animatedSVGItem = (props) => {
                     </g>
                     <g transform="matrix(1,0,0,1,303.57,1058.03)">
                         <g id="text1939">
-                            <text x="0px" y="0px" style={{ fontFamily: "'Maven Pro Black', 'Arial', sans-serif", fontWeight: 700, fontSize: 101.591 + "px"}}>Blind MeetUp</text>
+                            <text x="0px" y="0px" style={{ fontFamily: "'Maven Pro Black', 'Arial', sans-serif", fontWeight: 700, fontSize: 101.591 + "px" }}>Blind MeetUp</text>
                         </g>
                     </g>
                     <path id="path1945" d="M274.662,985.02L274.662,1060.38" style={{ fill: "none", fillRule: "nonzero", stroke: "black", strokeOpacity: 0.61, strokeWidth: 5 + "px" }} />

@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import Wortmarke_OneLine from '../../../assets/img/Wortmarke_OneLine.png';
 import Bildmarke from '../../../assets/img/Bildmarke.png';
+import { withRouter } from 'react-router-dom';
 
 import NavigationItems from './NavigationItems/NavigationItems';
-import AnimatedSVGItem from './NavigationItems/AnimatedSVGItem/AnimatedSVGItem'
+import AnimatedSVGItem from './NavigationItems/AnimatedSVGItem/AnimatedSVGItem';
 
 class Navbar extends Component {
     state = {
@@ -28,6 +29,15 @@ class Navbar extends Component {
         }
     }
 
+    toLandingPage = () => {
+        window.scroll(0, 0);
+        if (this.props.user) {
+            this.props.history.push("/dashboard/anmelden");
+        } else {
+            this.props.history.push("/");
+        }
+    }
+
     render() {
         let classesForScrollHide = "navbar";
         if (this.state.showToolbar) {
@@ -38,16 +48,12 @@ class Navbar extends Component {
 
         return (
             <header className={classesForScrollHide}>
-                {/* <img
-                    src={Wortmarke_OneLine}
-                    className="navbar__logo1"
-                    alt="BlindMeetUp_Logo1"
-                    onClick={this.scrollToTop} /> */}
-                    <AnimatedSVGItem user={this.props.user} />
+                <AnimatedSVGItem user={this.props.user} toLandingPage={this.toLandingPage} />
                 <img
                     src={Bildmarke}
                     className="navbar__logo2"
                     alt="BlindMeetUp_Logo2"
+                    onClick={this.toLandingPage}
                 />
                 <nav>
                     <ul className="navbar__Items">
@@ -59,4 +65,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
