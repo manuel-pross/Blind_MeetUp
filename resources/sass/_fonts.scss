@@ -50,9 +50,9 @@ $lh-h1: 40.4px;
 $lh-h2: 26.4px;
 $lh-h3: 22.4px;
 $lh-h4: 20.4px;
-$lh-p: 18.4px;
+$lh-p: 19.4px;
 
-$fs-h1: 1.5rem;
+$fs-h1: 32px;
 $fs-h2: 28px;
 $fs-h3: 18px;
 $fs-h4: 17px;
@@ -70,7 +70,7 @@ $fs-p: 16px;
 
     h1 {
         font-family: "Maven Pro Black";
-        font-size: 1.5rem !important;
+        font-size: $fs-h1;
         line-height: $lh-h1;
         text-align: center;
     }
