@@ -1,9 +1,9 @@
 {
    "categories": {
       "cat1": "Login",
-      "cat2": "General",
-      "cat3": "Meeting",
-      "cat4": "Other"
+      "cat2": "Meeting",
+      "cat3": "Profil",
+      "cat4": "Cancelation"
    },
    "title": "FAQ for new users",
    "text": "Choose a category to show the most frequently asked questions",
@@ -12,47 +12,47 @@
       "open": "Show less"
    },
    "Login": {
-      "title1": "Login 01",
-      "content1": "Login 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Login 02",
-      "content2": "Login 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Login 03",
-      "content3": "Login 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title4": "Login 04",
-      "content4": "Login 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title5": "Login 05",
-      "content5": "Login 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title6": "Login 06",
-      "content6": "Login 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
-   },
-   "General": {
-      "title1": "General 01",
-      "content1": "General 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "General 02",
-      "content2": "General 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "General 03",
-      "content3": "General 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title4": "General 04",
-      "content4": "General 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title5": "General 05",
-      "content5": "General 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title6": "General 06",
-      "content6": "General 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+      "title1": "How can I register with Blind MeetUp?",
+      "content1": "You can simply use your university access details to sign up on our website. Thus a separate registration is not necessary.",
+      "title2": "How often can I sign up for meetings?",
+      "content2": "You can sign up for one meeting per day.",
+      "title3": "Can I sign up for more than one meeting?",
+      "content3": "Of course, you can sign up for several meetings at once.",
+      "title4": "I want to go to a meeting – but I cannot make any of the times proposed. Are there alternatives?",
+      "content4": "We are constantly adding new meetings. Hopefully one of the next meetings will be at a time to suit you."
    },
    "Meeting": {
-      "title1": "Meeting 01",
-      "content1": "Meeting 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Meeting 02",
-      "content2": "Meeting 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Meeting 03",
-      "content3": "Meeting 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+      "title1": "How does a meeting work?",
+      "content1": "Using our dashboard you can register with BlindMeetUp and sign up for a meeting. We propose a time and a place for you to meet with one or several other students.",
+      "title2": "Where do the meetings take place?",
+      "content2": "We offer a number of locations. For example, the I-building, the Biercafe Engel, the refectory (Mensa) or in the park. We will introduce other locations on our homepage or our Instagram account.",
+      "title3": "How do I recognise the people I am meeting with?",
+      "content3": "As soon as you sign up for a meeting, you will get a notification including the exact meeting location. You will not receive any information on the other student(s) prior to the meeting – the whole point is for this to be anonymous and free from preconceptions.",
+      "title4": "Do I get information on the other person(s) prior to the meeting?",
+      "content4": "No, as we want to give students the chance to connect to other students anonymously (up to the time you actually meet) and without preconceptions.",
+      "title5": "I would like to change the meeting location. Can I?",
+      "content5": "You can meet at one of the suggested locations for meetings with other students. But you do not have to stay there; once you meet, you are free to move elsewhere. \n Additionally, you have the option to suggest other meeting locations via our contact form or make any other suggestions. If you convince us of your proposed location, we could add it to our list.",
+      "title6": "My partner did not show up for the meeting. What can I do?",
+      "content6": "After each meeting, you have the option to rate it. There you can note that your partner did not show up. If someone accumulates repeated breaches, they will be excluded from our application.",
+      "title7": "Which different types of meetings are there?",
+      "content7": "You can choose between duo meeting and group meeting",
+      "title8": "How can I take part in a meeting?",
+      "content8": "Go to the dashboard and select one of the meetings listed in the pending meetings category.",
+      "title9": "I would like to add another location. How can I do that?",
+      "content9": "Using the contact function, you can suggest improvements or new locations to us anytime you want. We are grateful for any input.",
+      "title10": "Can I get in touch with the person(s) prior to the meeting?",
+      "content10": "No, as we want to facilitate anonymous meetings free of preconceptions. Up until you meet the other student(s) remain(s) anonymous.",
+      "title11": "How can I rate a meeting once it has taken place?",
+      "content11": "Under the heading past meetings, you can find all meetings which you took part in. Here you can rate each of your meetings. Please leave us your honest feedback"
    },
-   "Other": {
-      "title1": "Other 01",
-      "content1": "Other 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Other 02",
-      "content2": "Other 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Other 03",
-      "content3": "Other 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   "Profil": {
+      "title1": "Do I have to enter personal details in my profile?",
+      "content1": "No, for the time being, no personal details need to be entered in your profile"
+   },
+   "Cancelation": {  
+      "title1": "What happens if I cannot make it to a meeting on short notice?",
+      "content1": "Up to 24h prior to a meeting, you can simply sign out online. If you are unable to meet this deadline, please contact us to make sure that the other person does not wait in vain at the location.",
+      "title2": "I signed up for a meeting by mistake. Can I sign out again?",
+      "content2": "You can sign out of any meeting up to 24h prior to it, no problem. Please go to \"Registered\" to do so."
    }
 }

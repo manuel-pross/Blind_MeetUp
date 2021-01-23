@@ -1,58 +1,58 @@
 {
    "categories": {
       "cat1": "Anmeldung",
-      "cat2": "Allgemein",
-      "cat3": "Treffen",
-      "cat4": "Sonstiges"
+      "cat2": "Treffen",
+      "cat3": "Profil",
+      "cat4": "Stornierung"
    },
    "title": "Häufig gestellte Fragen für neue Nutzer",
    "text": "Wähle eine Kategorie um die am meisten gestellten Fragen anzuzeigen",
    "buttonDesc": {
-      "collapsed": "Mehr Zeigen",
-      "open": "Weniger Zeigen"
+      "collapsed": "Mehr zeigen",
+      "open": "Weniger zeigen"
    },
-   "Login": {
-      "title1": "Anmeldung 01",
-      "content1": "Anmeldung 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Anmeldung 02",
-      "content2": "Anmeldung 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Anmeldung 03",
-      "content3": "Anmeldung 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title4": "Anmeldung 04",
-      "content4": "Anmeldung 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title5": "Anmeldung 05",
-      "content5": "Anmeldung 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title6": "Anmeldung 06",
-      "content6": "Anmeldung 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   "Anmeldung": {
+      "title1": "Wie kann ich mich bei Blind MeetUp registrieren?",
+      "content1": "Du kannst dich ganz einfach mit deinen Hochschulzugangsdaten auf unserer Website anmelden. Eine Registrierung ist somit nicht notwendig.",
+      "title2": "Wie oft kann ich mich für ein Treffen eintragen? ",
+      "content2": "Du kannst dich für ein Treffen pro Tag eintragen.",
+      "title3": "Kann ich mich auch für mehrere Treffen anmelden?",
+      "content3": "Natürlich, du kannst an mehreren anstehenden Treffen teilnehmen.",
+      "title4": "Ich würde gerne an einem Treffe teilnehmen. Ich habe aber leider keine Zeit an den vorgeschlagenen Terminen. Gibt es Alternativen? ",
+      "content4": "Es werden immer wieder neue Treffen hinzugefügt. Vielleicht ist bei den nächsten Treffen ein passender Termin für dich dabei. "
    },
-   "General": {
-      "title1": "Allgmeines 01",
-      "content1": "Allgmeines 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Allgmeines 02",
-      "content2": "Allgmeines 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Allgmeines 03",
-      "content3": "Allgmeines 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title4": "Allgmeines 04",
-      "content4": "Allgmeines 04, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title5": "Allgmeines 05",
-      "content5": "Allgmeines 05, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title6": "Allgmeines 06",
-      "content6": "Allgmeines 06, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   "Treffen": {
+      "title1": "Wie läuft ein Treffen ab?",
+      "content1": "Über unser Dashboard kannst du dich bei BlindMeetUp anmelden und für ein Treffen eintragen. Wir schlagen eine Uhrzeit und eine Location vor. Hier triffst du dich dann gemeinsam mit einem oder mehreren Studierenden zum Austausch.",
+      "title2": "Wo finden die Treffen statt?",
+      "content2": "Wir schlagen euch verschiedene Locations vor. Zum Beispiel vor dem I-Bau, im Biercafe Engel, in der Mensa oder im Park. Weitere Locations stellen wir auf unserer Startseite oder auf dem Instagram-Account vor.",
+      "title3": "Wie erkenne ich mit wem ich mich treffe?",
+      "content3": "Sobald ihr euch für ein Treffen angemeldet habt, bekommt ihr eine Benachrichtigung von uns mit dem genauen Treffpunkt an der Location. Informationen vor dem Treffen des anderen Studierenden gibt es nicht. Das ganze soll ja anonym und vorurteilsfrei sein.",
+      "title4": "Bekomme ich vor dem Treffen Angaben der/den anderen Person(en)?",
+      "content4": "Nein, da wir gerne den Studierenden eine Möglichkeit bieten möchten, sich anonym (bis zum Treffen) und vorurteilsfrei mit anderen Studierenden zu connecten.",
+      "title5": "Ich würde gerne die Location für mein Treffen ändern. Geht das? ",
+      "content5": "Du hast zum einen die Möglichkeit dich an einer vorgegeben Location mit einem anderen Studierenden zu treffen. An diese Location seid ihr nicht gebunden. Wir möchten nur die Möglichkeit für einen Treffpunkt bieten. Danach könnt ihr gerne zu einer anderen Location gehen \n Zum Anderen gibt es auch die Möglichkeit uns über das Kontaktformular zu kontaktieren. Schlag hier gerne neue Anregungen und Locations vor. Wenn deine Location überzeugt, nehmen wir diese gerne mit auf.",
+      "title6": "Mein Partner ist nicht zu dem Treffen erschienen. Was kann ich tun?",
+      "content6": "Nach jedem Treffen gibt es die Möglichkeit, das Treffen zu bewerten. Hier kannst du vermerken, dass dein Partner nicht erschienen ist. Bei zu vielen Verstößen wird dieser von der Anwendung ausgeschlossen.",
+      "title7": "Welche Arten von Treffen gibt es?",
+      "content7": "Du hast die Wahl zwischen einem Duo-Treffen (2 Personen) und einem Gruppentreffen (3-6 Personen) zu wählen.",
+      "title8": "Wie kann ich an einem Treffen teilnehmen?",
+      "content8": "Begebe dich auf das Dashboard und wähle eines der aufgelisteten Treffen in der Kategorie „anstehende Treffen“ aus.",
+      "title9": "ch würde gerne eine weitere Location hinzufügen. Wie kann ich das machen?",
+      "content9": "Über die Kontakt-Funktion kannst du uns jederzeit gerne Verbesserungen oder neue Locationvorschläge zukommen lassen. Wir sind für jede Anmerkung dankbar.",
+      "title10": "Kann ich mich vor dem Treffen mit der Person vorher austauschen?",
+      "content10": "Nein, da wir gerne ein anonymes und vorurteilsfreies Treffen zum Austausch ermöglichen möchten. Bis zu dem Treffen, bleibt der andere Studierende anonym.",
+      "title11": "Wie kann ich ein abgeschlossenes Treffen bewerten?",
+      "content11": "Unter der Rubrik „vergangene Treffen\" findest du alle Treffen an denen du teilgenommen hast. Hierüber hast du auch die Möglichkeit jedes Treffen einzeln zu bewerten. Lass uns gerne dein ehrliches Feedback da."
    },
-   "Meeting": {
-      "title1": "Treffen 01",
-      "content1": "Treffen 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Treffen 02",
-      "content2": "Treffen 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Treffen 03",
-      "content3": "Treffen 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   "Profil": {
+      "title1": "Muss ich persönliche Angaben im Profil hinterlegen?",
+      "content1": "Nein, vorerst musst du keine persönlichen Informationen von dir in deinem Profil hinterlegen."
    },
-   "Other": {
-      "title1": "Sonstiges 01",
-      "content1": "Sonstiges 01, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title2": "Sonstiges 02",
-      "content2": "Sonstiges 02, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et.",
-      "title3": "Sonstiges 03",
-      "content3": "Sonstiges 03, amet consectetur adipisicing elit. Sunt, repellat! Suscipit inventore, natus mollitia beatae temporibus, pariatur quidem aliquam ipsa nemo accusantium ratione neque repudiandae magni consectetur, est autem et."
+   "Stornierung": {
+      "title1": "Was ist, wenn ich kurzfristig doch nicht an dem Treffen teilnehmen kann?",
+      "content1": "Du hast bis 24h vor dem Treffen die Möglichkeit dich online aus dem Treffen auszutragen. Falls du diese Frist unterschreitest, bitten wir dich uns zu kontaktieren, damit dein Partner nicht an der Location wartet.",
+      "title2": "Ich habe mich versehentlich bei einem Treffen eingetragen. Kann ich mich auch wieder austragen?",
+      "content2": "Bis 24h vor dem Treffen kannst du dich problemlos online unter „Angemeldet“ austragen."
    }
 }

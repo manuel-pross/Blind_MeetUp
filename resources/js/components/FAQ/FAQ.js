@@ -3,17 +3,24 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 
 import LoginContent from './LoginContent';
-import GeneralContent from './GeneralContent';
 import MeetingContent from './MeetingContent';
-import OtherContent from './OtherContent';
+import ProfilContent from './ProfilContent';
+import CancelationContent from './CancelationContent';
+import { useEffect } from 'react';
 
 class FAQ extends Component {
 
    state = {
       loginContent: true,
-      generalContent: false,
       meetingContent: false,
-      otherContent: false
+      profilContent: false,
+      cancelationContent: false,
+      isActive: false
+   }
+
+   componentDidMount() {
+      // console.log(document.querySelector(".FAQ__btn--first"));
+      document.querySelector(".FAQ__btn--first").focus();
    }
 
    render() {
@@ -30,17 +37,17 @@ class FAQ extends Component {
                break;
             case 1:
                this.setState({
-                  generalContent: true
+                  meetingContent: true
                })
                break;
             case 2:
                this.setState({
-                  meetingContent: true
+                  profilContent: true
                })
                break;
             case 3:
                this.setState({
-                  otherContent: true
+                  cancelationContent: true
                })
                break;
          }
@@ -49,9 +56,9 @@ class FAQ extends Component {
       const hideContent = () => {
          this.setState({
             loginContent: false,
-            generalContent: false,
             meetingContent: false,
-            otherContent: false
+            profilContent: false,
+            cancelationContent: false
          })
       }
 
@@ -64,16 +71,16 @@ class FAQ extends Component {
                   <div className="FAQ__catWrapper">
                      {categories.map((e, i) => {
                         return (
-                           <button key={i} onClick={() => catHandleClick(i)} className="btn btn-tertiary FAQ__btn">{e}</button>
+                           <button key={i} onClick={() => catHandleClick(i)} className={i == 0 ? "btn btn-tertiary FAQ__btn FAQ__btn--first" : "btn btn-tertiary FAQ__btn"}>{e}</button>
                         )
                      })}
                   </div>
                   <div>
                      <h4 className="FAQ__desc">{t("text")}</h4>
                      <LoginContent displayContent={this.state.loginContent} />
-                     <GeneralContent displayContent={this.state.generalContent} />
                      <MeetingContent displayContent={this.state.meetingContent} />
-                     <OtherContent displayContent={this.state.otherContent} />
+                     <ProfilContent displayContent={this.state.profilContent} />
+                     <CancelationContent displayContent={this.state.cancelationContent} />
                   </div>
                </div>
             </div>

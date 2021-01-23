@@ -21,10 +21,6 @@ class LoginContent extends Component {
             <Collapsible triggerClassName="FAQ__trigger" triggerOpenedClassName="FAQ__trigger--collapsed" trigger={t('buttonDesc.collapsed')}>
                <h4 className="FAQ__content__title">{t('Login.title4')}</h4>
                <p className="FAQ__content__text">{t('Login.content4')}</p>
-               <h4 className="FAQ__content__title">{t('Login.title5')}</h4>
-               <p className="FAQ__content__text">{t('Login.content5')}</p>
-               <h4 className="FAQ__content__title">{t('Login.title6')}</h4>
-               <p className="FAQ__content__text">{t('Login.content6')}</p>
             </Collapsible>
          </div>
       );

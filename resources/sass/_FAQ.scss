@@ -53,6 +53,10 @@
          align-self: flex-start;
          margin-right: 4.5rem;
       }
+
+      &:focus {
+         color: $c-black;
+      }
    }
 
    &__trigger {
