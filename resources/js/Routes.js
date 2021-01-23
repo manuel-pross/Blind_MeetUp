@@ -54,7 +54,7 @@ class Routes extends Component {
 
                 {/* Private Routes, nicht exact, da Subroutes auch Private sein müssen */}
                 <PrivateRoute path={"/dashboard" || "/dashboard/"} component={(routerObj, props) => <Dashboard {...props} setUser={this.setUser} user={this.state.user} routerObj={routerObj} />} />
-                {/* <Route path="/" component={() => <Redirect to={{pathname: "/"}} />} /> */}
+                <Route path="/" component={() => <Redirect to={{pathname: "/"}} />} />
             </Switch >
         );
     }

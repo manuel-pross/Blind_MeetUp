@@ -97,15 +97,15 @@ const FeedbackForm = (props) => {
             })}
             <p className="subpages__subtext">{t("whichDevice")}</p>
             <div className="mb-200">
-                <div className={feedbackDevice == "PC/Laptop" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("PC/Laptop")}>PC/Laptop</div>
-                <div className={feedbackDevice == "Tablet-PC" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Tablet-PC")}>Tablet-PC</div>
-                <div className={feedbackDevice == "Smartphone" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Smartphone")}>Smartphone</div>
+                <a><div className={feedbackDevice == "PC/Laptop" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("PC/Laptop")}>PC/Laptop</div></a>
+                <a><div className={feedbackDevice == "Tablet-PC" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Tablet-PC")}>Tablet-PC</div></a>
+                <a> <div className={feedbackDevice == "Smartphone" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => togglefeedbackDevice("Smartphone")}>Smartphone</div></a>
             </div>
             <div className="mb-300">
                 <input type="text" name="feedbackText" placeholder={t("tellUs")} value={feedbackText} onChange={handleUserText} />
             </div >
-            <button className="btn btn-primary mr-100 mb-100" type="submit">{t("submit")}</button>
-            <div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div>
+            <a><div className="btn btn-primary mr-100 mb-100" onClick={(e) => handleSubmit(e)}>{t("submit")}</div></a>
+            <a><div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div></a>
         </form>
     );
 
@@ -122,7 +122,7 @@ const FeedbackForm = (props) => {
             <p className="subpages__subtext feedbackForm__feedbackText-error">{t("fillAllFields")}</p>
         </div>
     );
-    
+
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
 

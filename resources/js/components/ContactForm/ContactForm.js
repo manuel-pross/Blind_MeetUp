@@ -108,18 +108,18 @@ const ContactForm = (props) => {
             </div>
             <p className="subpages__subtext">{t("referProblem")}</p>
             <div className="mb-200">
-                <div className={problem == "Anmeldung" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Anmeldung")}>{t("login")}</div>
-                <div className={problem == "Treffen teilnehmen/stornieren" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Treffen teilnehmen/stornieren")}>{t("joinCancel")}</div>
-                <div className={problem == "Mein Profil" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Mein Profil")}>{t("profile")}</div>
-                <div className={problem == "Sonstiges" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Sonstiges")}>{t("other")}</div>
+                <a><div className={problem == "Anmeldung" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Anmeldung")}>{t("login")}</div></a>
+                <a><div className={problem == "Treffen teilnehmen/stornieren" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Treffen teilnehmen/stornieren")}>{t("joinCancel")}</div></a>
+                <a><div className={problem == "Mein Profil" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Mein Profil")}>{t("profile")}</div></a>
+                <a> <div className={problem == "Sonstiges" ? "btn btn-select btn-select-active feedbackForm__button" : "btn btn-select feedbackForm__button"} onClick={() => toggleProblem("Sonstiges")}>{t("other")}</div></a>
             </div>
             <div className="mb-300">
                 <input className="contactForm__inputText" type="text" name="Name" placeholder={t("yourMsg")} value={problemText} onChange={handleProblemText} />
             </div>
             <p className="mb-200 subpages__subtext-small">{t("privacy")}</p>
 
-            <button className="btn btn-primary mr-100 mb-50" type="submit">{t("submit")}</button>
-            <div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div>
+            <a><div className="btn btn-primary mr-100 mb-50" onClick={(e) => handleSubmit(e)}>{t("submit")}</div></a>
+            <a><div className="btn btn-second" onClick={resetValues}>{t("cancel")}</div></a>
         </form>
 
     );
@@ -142,7 +142,7 @@ const ContactForm = (props) => {
     return (
         <div className="container" style={{ marginTop: '100px', marginBottom: '400px' }}>
             <h1>{t("title")}</h1>
-            <p className="mb-400">{t("desc")}</p>
+            <p className="mb-300">{t("desc")}</p>
             {!isSubmitted ? fomular : formFeedbackText}
             {showFillError ? notCompletedMessage : null}
 
