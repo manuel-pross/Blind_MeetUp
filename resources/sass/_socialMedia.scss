@@ -16,7 +16,11 @@
         margin-right: 1rem;
         padding: 0.75rem;
         border-radius: 50%;
-        background: $vertical-gradient;
+        background: $horizontal-gradient;
+        
+        &:hover {
+            background: linear-gradient(to top, #4dac71, #2e6c48);
+        }
 
         &:last-child {
             margin-right: 0;

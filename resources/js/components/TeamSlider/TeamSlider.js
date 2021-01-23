@@ -58,7 +58,7 @@ class Teamslider extends Component {
       };
 
       return (
-         <div className="container mb-400">
+         <div className="container">
             <div className="teamSlider">
                <h2 className="teamSlider__heading">Unser Team</h2>
                <Slider {...settings}>

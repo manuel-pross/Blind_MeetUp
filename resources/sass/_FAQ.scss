@@ -60,6 +60,7 @@
    }
 
    &__trigger {
+      transition: $transition;
       cursor: pointer;
       content: "Show more";
       color: #2e6c48;

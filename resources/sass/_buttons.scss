@@ -6,6 +6,7 @@
   border: 0 !important;
   text-decoration: none;
   text-align: center;
+  
 
   @include breakpoint("md") {
     padding: 7px 25px !important;
@@ -16,7 +17,7 @@
     font-weight: 400 !important;
     position: relative;
     z-index: 1;
-    background: linear-gradient(to top, #2e6c48, #4dac71);
+    background: $horizontal-gradient;
 
     &::before {
       content: "";
@@ -44,6 +45,7 @@
     z-index: 1;
     background-color: $c-white !important;
     border: 2px solid rgba(46, 107, 71, 0.302) !important;
+    transition: $transition;
 
     &:hover {
       border-color: $c2-second !important;
