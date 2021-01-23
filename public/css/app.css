@@ -4410,7 +4410,7 @@ Breakpoint Mixin
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 4px 20px !important;
+  padding: 6px 20px !important;
   border-radius: 30px !important;
   border: 0 !important;
   text-decoration: none;
@@ -4419,7 +4419,7 @@ Breakpoint Mixin
 
 @media (min-width: 768px) {
   .btn {
-    padding: 11px 30px !important;
+    padding: 7px 25px !important;
   }
 }
 

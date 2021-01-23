@@ -4,12 +4,12 @@ import TeamImage from './TeamImage';
 
 import { withTranslation } from 'react-i18next';
 
-import pia from '../../../assets/img/TeamImages/pia.png';
-import patrickK from '../../../assets/img/TeamImages/patrickK.png';
-import patrickN from '../../../assets/img/TeamImages/patrickN.png';
-import manuel from '../../../assets/img/TeamImages/manuel.png';
-import simon from '../../../assets/img/TeamImages/simon.png';
-import gion from '../../../assets/img/TeamImages/gion.png';
+import pia from '../../../assets/img/TeamImages/Pia.png';
+import patrickK from '../../../assets/img/TeamImages/PatrickK.png';
+import patrickN from '../../../assets/img/TeamImages/PatrickN.png';
+import manuel from '../../../assets/img/TeamImages/Manuel.png';
+import simon from '../../../assets/img/TeamImages/Simon.png';
+import gion from '../../../assets/img/TeamImages/Gion.png';
 
 class Teamslider extends Component {
 
