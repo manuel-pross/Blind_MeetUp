@@ -39,9 +39,7 @@ class PastMeeting extends Component {
          axios.put('/api/rate_meeting/' + this.props.id)
             .then(() => {
                this.props.loadAllMeetings()
-               console.log("geklappt");
             }).catch((error) => {
-               console.log(error);
             })
          // this.setState({ pastMeetingClass: "pastMeeting--closed" })
       }

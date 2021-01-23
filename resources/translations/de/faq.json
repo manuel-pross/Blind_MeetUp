@@ -11,7 +11,7 @@
       "collapsed": "Mehr zeigen",
       "open": "Weniger zeigen"
    },
-   "Anmeldung": {
+   "Login": {
       "title1": "Wie kann ich mich bei Blind MeetUp registrieren?",
       "content1": "Du kannst dich ganz einfach mit deinen Hochschulzugangsdaten auf unserer Website anmelden. Eine Registrierung ist somit nicht notwendig.",
       "title2": "Wie oft kann ich mich für ein Treffen eintragen? ",
@@ -21,7 +21,7 @@
       "title4": "Ich würde gerne an einem Treffe teilnehmen. Ich habe aber leider keine Zeit an den vorgeschlagenen Terminen. Gibt es Alternativen? ",
       "content4": "Es werden immer wieder neue Treffen hinzugefügt. Vielleicht ist bei den nächsten Treffen ein passender Termin für dich dabei. "
    },
-   "Treffen": {
+   "Meeting": {
       "title1": "Wie läuft ein Treffen ab?",
       "content1": "Über unser Dashboard kannst du dich bei BlindMeetUp anmelden und für ein Treffen eintragen. Wir schlagen eine Uhrzeit und eine Location vor. Hier triffst du dich dann gemeinsam mit einem oder mehreren Studierenden zum Austausch.",
       "title2": "Wo finden die Treffen statt?",
@@ -49,7 +49,7 @@
       "title1": "Muss ich persönliche Angaben im Profil hinterlegen?",
       "content1": "Nein, vorerst musst du keine persönlichen Informationen von dir in deinem Profil hinterlegen."
    },
-   "Stornierung": {
+   "Cancelation": {
       "title1": "Was ist, wenn ich kurzfristig doch nicht an dem Treffen teilnehmen kann?",
       "content1": "Du hast bis 24h vor dem Treffen die Möglichkeit dich online aus dem Treffen auszutragen. Falls du diese Frist unterschreitest, bitten wir dich uns zu kontaktieren, damit dein Partner nicht an der Location wartet.",
       "title2": "Ich habe mich versehentlich bei einem Treffen eingetragen. Kann ich mich auch wieder austragen?",

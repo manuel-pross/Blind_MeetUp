@@ -6,7 +6,6 @@ import LoginContent from './LoginContent';
 import MeetingContent from './MeetingContent';
 import ProfilContent from './ProfilContent';
 import CancelationContent from './CancelationContent';
-import { useEffect } from 'react';
 
 class FAQ extends Component {
 
@@ -19,7 +18,6 @@ class FAQ extends Component {
    }
 
    componentDidMount() {
-      // console.log(document.querySelector(".FAQ__btn--first"));
       document.querySelector(".FAQ__btn--first").focus();
    }
 

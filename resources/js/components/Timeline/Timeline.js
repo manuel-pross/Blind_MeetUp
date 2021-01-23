@@ -84,7 +84,6 @@ class Timeline extends Component {
                     <div className="timeline__content">
                         <div className="timeline__stroke">
                             {this.state.descs.map((desc, i) => {
-                                console.log(desc);
                                 return (
                                     <div key={i} className="timeline__point" style={{ backgroundColor: desc.pointColor }} />
                                 )

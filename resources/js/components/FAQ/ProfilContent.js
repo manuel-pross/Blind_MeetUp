@@ -7,7 +7,6 @@ class ProfilContent extends Component {
     render() {
         const { t } = this.props;
         const contentStyle = this.props.displayContent ? "block" : "none";
-        console.log(t("Profil.title1"));
 
         return (
             <div className="FAQ__content" style={{ display: contentStyle }}>
