@@ -1,4 +1,7 @@
 {
-   "greetings": "Guten Abend, ",
-   "text": "Endlich Wochenende. Endlich Zeit sich mit Studierenden aus deiner Hochschule zu treffen!"
+   "greetingsMo": "Guten Morgen, ",
+   "greetingsMi": "Guten Tag, ",
+   "greetingsEv": "Guten Abend, ",
+   "textWE": "Endlich Wochenende. Zeit sich mit Studierenden aus deiner Hochschule zu treffen!",
+   "text": "Zeit sich mit Studierenden aus deiner Hochschule zu treffen!"
 }

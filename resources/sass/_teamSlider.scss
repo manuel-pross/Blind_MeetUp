@@ -178,7 +178,7 @@
       }
 
       @include breakpoint("xl") {
-        left: unset;
+         left: unset;
       }
 
       &-title,
@@ -201,6 +201,7 @@
    }
 
    &__arrow-right {
+      transition: $transision;
       display: flex !important;
       top: 80% !important;
       left: 120px;
@@ -215,6 +216,12 @@
       @include breakpoint("lg") {
          left: auto;
          right: 0;
+      }
+
+      @include breakpoint("md") {
+         &:hover {
+            background: $c1-second !important;
+         }
       }
 
       &::before {
@@ -267,6 +274,12 @@
       border-radius: 50%;
       background: $c3-second !important;
       z-index: 1;
+
+      @include breakpoint("md") {
+         &:hover {
+            background: $c1-second !important;
+         }
+      }
 
       &::before {
          display: none;

@@ -10,6 +10,7 @@ const Impressum = (props) => {
         <React.Fragment>
             <Navbar setUser={props.setUser} user={props.user} />
             <div className="container mb-1000" style={{ marginTop: '100px' }}>
+                <h2>{t("title")}</h2>
                 <p>{t("content")}</p>
             </div>
             <Footer setUser={props.setUser} user={props.user} />

@@ -9,7 +9,7 @@ import { withTranslation } from 'react-i18next';
 
 import axios from 'axios';
 
-const opacity05 = { opacity: ".7" };
+const opacity07 = { opacity: ".7" };
 const opacity1 = { opacity: "1" };
 class PastMeeting extends Component {
 
@@ -19,9 +19,9 @@ class PastMeeting extends Component {
       displayBeforeClick: { display: "block" },
       displayAfterClick: { display: "none" },
       pastMeetingClass: "pastMeeting",
-      gooodSmileyOp: opacity05,
-      neutralSmileyOp: opacity05,
-      badSmileyOp: opacity05,
+      gooodSmileyOp: opacity07,
+      neutralSmileyOp: opacity07,
+      badSmileyOp: opacity07,
       topWrapperPadding: { padding: "1.5rem" }
    }
 

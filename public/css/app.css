@@ -10611,12 +10611,13 @@ template {
 .header__btn__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0px 60px;
 }
 
 @media (min-width: 576px) {
   .header__btn__wrapper {
-    margin: 0 2rem;
     flex-direction: row;
+    padding: 0;
     margin: 0;
   }
 }
@@ -10909,6 +10910,7 @@ template {
 }
 
 .teamSlider__arrow-right {
+  transition: 0.3s;
   display: flex !important;
   top: 80% !important;
   left: 120px;
@@ -10925,6 +10927,12 @@ template {
   .teamSlider__arrow-right {
     left: auto;
     right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .teamSlider__arrow-right:hover {
+    background: #50b375 !important;
   }
 }
 
@@ -10977,6 +10985,12 @@ template {
   border-radius: 50%;
   background: #effcef !important;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .teamSlider__arrow-left:hover {
+    background: #50b375 !important;
+  }
 }
 
 .teamSlider__arrow-left::before {
@@ -11405,13 +11419,19 @@ template {
   content: "Show more";
   color: #2e6c48;
   display: inline-block;
-  padding: 15px 30px !important;
+  padding: 6px 20px !important;
   border-radius: 30px !important;
   border: 1px solid #2e6b474d !important;
   background-color: #fefefe;
   text-decoration: none;
   text-align: center;
   font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .FAQ__trigger {
+    padding: 7px 25px !important;
+  }
 }
 
 .FAQ__trigger:hover {
@@ -12159,6 +12179,24 @@ template {
           animation-fill-mode: forwards;
 }
 
+.pastMeeting--rated {
+  padding: 1rem;
+  padding: 0.9rem;
+  position: relative;
+  border-radius: 45px;
+  background-color: #707070;
+  color: #fefefe;
+  margin: 0.5rem;
+  max-width: 260px;
+}
+
+@media (min-width: 992px) {
+  .pastMeeting--rated {
+    max-width: 310px;
+    height: 310px;
+  }
+}
+
 .pastMeeting--closed {
   padding: 1rem;
   padding: 0.9rem;
@@ -12173,12 +12211,6 @@ template {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   white-space: nowrap;
-}
-
-@media only screen and (min-width: 350px) {
-  .pastMeeting--closed {
-    margin: 0.3rem auto;
-  }
 }
 
 @media (min-width: 992px) {
@@ -12197,12 +12229,6 @@ template {
   color: #fefefe;
   margin: 0.5rem;
   max-width: 260px;
-}
-
-@media only screen and (min-width: 350px) {
-  .pastMeeting {
-    margin: 0.3rem auto;
-  }
 }
 
 @media (min-width: 992px) {
@@ -12257,8 +12283,14 @@ template {
 }
 
 .pastMeeting__smiley {
+  transition: 0.3s;
   cursor: pointer;
+  opacity: 0.7;
   width: 50px;
+}
+
+.pastMeeting__smiley:hover {
+  opacity: 1 !important;
 }
 
 .pastMeeting__notRated {
@@ -12344,6 +12376,7 @@ template {
 
 .pendingContainer__filterTeam,
 .pendingContainer__filterGroup {
+  cursor: pointer;
   transition: opacity 0.2s;
   color: #fefefe;
   padding: 5px 10px;

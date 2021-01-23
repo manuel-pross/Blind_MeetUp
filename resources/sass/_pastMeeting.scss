@@ -1,3 +1,22 @@
+.pastMeeting--rated {
+   padding: 1rem;
+   padding: 0.9rem;
+   position: relative;
+   border-radius: $border-radius;
+   background-color: $c4-main;
+   color: $c-white;
+   margin: 0.5rem;
+   max-width: 260px;
+
+   @media only screen and (min-width: 350px) {
+      // margin: 0.3rem auto;
+   }
+
+   @include breakpoint("lg") {
+      max-width: 310px;
+      height: 310px;
+   }
+}
 .pastMeeting--closed {
    padding: 1rem;
    padding: 0.9rem;
@@ -13,7 +32,7 @@
    white-space: nowrap;
 
    @media only screen and (min-width: 350px) {
-      margin: 0.3rem auto;
+      // margin: 0.3rem auto;
    }
 
    @include breakpoint("lg") {
@@ -33,7 +52,7 @@
    max-width: 260px;
 
    @media only screen and (min-width: 350px) {
-      margin: 0.3rem auto;
+      // margin: 0.3rem auto;
    }
 
    @include breakpoint("lg") {
@@ -82,8 +101,14 @@
    }
 
    &__smiley {
+      transition: $transision;
       cursor: pointer;
+      opacity: 0.7;
       width: 50px;
+
+      &:hover {
+         opacity: 1 !important;
+      }
    }
 
    &__notRated {

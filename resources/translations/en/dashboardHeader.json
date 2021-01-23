@@ -1,4 +1,7 @@
 {
-   "greetings": "Good evening, ",
-   "text": "Finally Weekend. It's time to MeetUp some people from the University"
+   "greetingsMo": "Good morning, ",
+   "greetingsMi": "Hello, ",
+   "greetingsEv": "Good evening, ",
+   "textWE": "TGIF! It's time to MeetUp some people from the University",
+   "text": "It's time to MeetUp some people from the University"
 }

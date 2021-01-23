@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import Modal from '../UI/Modal/Modal';
-import AddMeetingForm from '../UI/Modal/Input/AddMeetingForm';
-import EditMeetingForm from '../UI/Modal/Input/EditMeetingForm';
 import PastMeeting from './pastMeeting'
 
 import Slider from "react-slick";
@@ -10,9 +7,6 @@ import { withTranslation } from 'react-i18next';
 
 import { css } from '@emotion/react';
 import { ClipLoader } from "react-spinners";
-
-import axios from 'axios';
-import i18n from '../../i18n';
 
 class PendingContainer extends Component {
    _isUpdated = false;
@@ -82,35 +76,11 @@ class PendingContainer extends Component {
    render() {
       const { t } = this.props;
 
-      // function SampleNextArrow(props) {
-      //    const { onClick } = props;
-      //    return (
-      //       <div
-      //          className={"slick-arrow slick-next teamSlider__arrow-right"}
-      //          onClick={onClick}>
-      //          <div className="teamSlider__arrow-right-stroke"></div>
-      //       </div>
-      //    );
-      // }
-
-      // function SamplePrevArrow(props) {
-      //    const { onClick } = props;
-      //    return (
-      //       <div
-      //          className={"slick-arrow slick-prev teamSlider__arrow-left"}
-      //          onClick={onClick}>
-      //          <div className="teamSlider__arrow-left-stroke"></div>
-      //       </div>
-      //    );
-      // }
-
       const settings = {
          speed: 500,
          slidesToShow: this.state.maxMeetingSetting,
          dots: true,
          infinite: false,
-         // nextArrow: <SampleNextArrow />,
-         // prevArrow: <SamplePrevArrow />,
          responsive: [
             {
                breakpoint: 767,
