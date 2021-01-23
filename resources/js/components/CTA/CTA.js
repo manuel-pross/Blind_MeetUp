@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 
 const cta = (props) => {
@@ -10,8 +10,12 @@ const cta = (props) => {
             <div className="cta">
                 <h3 className="cta__heading">{t("heading")}</h3>
                 <div className="cta__buttons">
-                    <a className="cta__button-item btn btn-primary" href="https://www.hs-furtwangen.de/">{t("logIn")}</a>
-                    <button className="cta__button-item btn btn-second">{t("feedback")}</button>
+                    <Link className="btn btn-primary cta__button-item" to={"/login"}>
+                        {t("logIn")}
+                    </Link>
+                    <Link className="btn btn-second cta__button-item" to={"/feedback"}>
+                        {t("feedback")}
+                    </Link>
                 </div>
             </div>
         </div>
