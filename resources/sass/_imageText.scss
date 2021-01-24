@@ -9,6 +9,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       margin-bottom: 2rem;
+      align-items: center;
    }
 
    &__img {
@@ -16,7 +17,7 @@
 
       @include breakpoint("xl") {
          width: 44%;
-         max-height: 485px;
+         max-height: 330px;
       }
    }
 

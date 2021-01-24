@@ -3,11 +3,11 @@ import ImageText from './ImageText'
 
 import { withTranslation } from 'react-i18next';
 
-import firstImage from '../../../assets/img/placeholder/720x485-placeholder.png'
-import secondImage from '../../../assets/img/placeholder/720x485-placeholder.png'
+import firstImage from '../../../assets/img/teaser-1.jpg'
+import secondImage from '../../../assets/img/teaser-2.jpg'
 
 class AboutProject extends Component {
-   render() {
+   render() {#
       const { t } = this.props;
       return (
          <div className="container mb-300">
