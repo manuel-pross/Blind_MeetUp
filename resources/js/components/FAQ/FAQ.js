@@ -67,14 +67,16 @@ class FAQ extends Component {
                <h2 className="FAQ__title">{t("title")}</h2>
                <div className="FAQ__wrapper">
                   <div className="FAQ__catWrapper">
-                     {categories.map((e, i) => {
-                        return (
-                           <button key={i} onClick={() => catHandleClick(i)} className={i == 0 ? "btn btn-tertiary FAQ__btn FAQ__btn--first" : "btn btn-tertiary FAQ__btn"}>{e}</button>
-                        )
-                     })}
+                     <div className="FAQ__catInnerWrapper">
+                        {categories.map((e, i) => {
+                           return (
+                              <button key={i} onClick={() => catHandleClick(i)} className={i == 0 ? "btn btn-tertiary FAQ__btn FAQ__btn--first" : "btn btn-tertiary FAQ__btn"}>{e}</button>
+                           )
+                        })}
+                     </div>
                   </div>
                   <div>
-                     <h4 className="FAQ__desc">{t("text")}</h4>
+                     <h3 className="FAQ__desc">{t("text")}</h3>
                      <LoginContent displayContent={this.state.loginContent} />
                      <MeetingContent displayContent={this.state.meetingContent} />
                      <ProfilContent displayContent={this.state.profilContent} />
