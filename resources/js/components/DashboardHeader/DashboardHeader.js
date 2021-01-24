@@ -1,8 +1,7 @@
 import React from 'react';
-import DashboardHeaderImage from '../../../assets/img/placeholder/1920x395-placeholder.png'
+import DashboardHeaderImage from '../../../assets/img/dashboard-map.png'
 
 import { withTranslation } from 'react-i18next';
-import { Switch } from 'react-router';
 
 const DashboardHeader = (props) => {
    const { t } = props;

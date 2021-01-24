@@ -18,7 +18,7 @@ class DashboardAdmin extends Component {
         meetings: [],
 
         newMeetingModal: false,
-
+        maxMeetingSetting: 3,
         editMeetingModal: false,
         editMeetingData: {
             id: "",
@@ -124,10 +124,10 @@ class DashboardAdmin extends Component {
 
         const settings = {
             speed: 500,
-            slidesToShow: 4,
             slidesToScroll: 1,
-            // nextArrow: <SampleNextArrow />,
-            // prevArrow: <SamplePrevArrow />,
+            slidesToShow: 4,
+            infinite: false,
+            dots: true,
             responsive: [
                 {
                     breakpoint: 1199,
@@ -147,29 +147,32 @@ class DashboardAdmin extends Component {
             <React.Fragment>
                 <Navbar setUser={this.props.setUser} user={this.props.user} />
                 <DashboardHeader user={this.props.user} />
-                <h1>Admin</h1>
-                <Slider {...settings}>
-                {this.state.meetings.map((e, i) => {
-                    const time = e.date.slice(11, 16);
-                    return (
-                        <React.Fragment key={i}>
-                            <AdminMeeting key={i} meetings={this.state.meetings} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
-                            {/* <PendingMeeting  place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} /> */}
-                            <button className="btn btn-tertiary" onClick={() => this.editMeeting(e.id, e.date, e.place, e.specific_place, e.members, e.max_members, e.rating, e.img_link)}>Bearbeiten</button>
-                            <button className="btn btn-tertiary" onClick={() => this.deleteMeeting(e.id)}>Löschen</button>
-                        </React.Fragment>
-                    )
-                })}
-                </Slider>
 
-                <button className="btn btn-primary" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
+                <h1 className="container">Admin</h1>
+                <Slider {...settings}>
+                    {this.state.meetings.map((e, i) => {
+                        const time = e.date.slice(11, 16);
+                        return (
+                            <React.Fragment key={i}>
+                                <AdminMeeting key={i} meetings={this.state.meetings} place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} />
+                                {/* <PendingMeeting  place={e.place} date={this.formateDate(e.date)} time={time} day={t(this.getThisDay(e.date))} /> */}
+                                <div className="d-flex justify-content-center">
+                                    <button className="btn btn-tertiary" onClick={() => this.editMeeting(e.id, e.date, e.place, e.specific_place, e.members, e.max_members, e.rating, e.img_link)}>Bearbeiten</button>
+                                    <button className="btn btn-tertiary" onClick={() => this.deleteMeeting(e.id)}>Löschen</button>
+                                </div>
+                            </React.Fragment>
+                        )
+                    })}
+                </Slider>
+                <div className="container">
+                    <button className="btn btn-primary my-200" onClick={() => this.newMeetingModalHandler()}>Treffen Hinzufügen</button>
+                </div>
                 <Modal show={this.state.newMeetingModal} modalClosed={this.newMeetingModalHandler} >
                     <AddMeetingForm modalHandler={this.newMeetingModalHandler} loadMeetings={this.loadMeetings} />
                 </Modal>
                 <Modal show={this.state.editMeetingModal} modalClosed={this.editMeetingModalHandler}>
                     <EditMeetingForm modalHandler={this.editMeetingModalHandler} editMeetingData={this.state.editMeetingData} loadMeetings={this.loadMeetings} />
                 </Modal>
-
 
                 <Footer setUser={this.props.setUser} user={this.props.user} />
             </React.Fragment>

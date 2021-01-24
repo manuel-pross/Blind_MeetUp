@@ -65,7 +65,6 @@ class JointMeeting extends Component {
          })
       }
    }
-   //TODO: richtiges Image hinzufügen 
    render() {
       const { t } = this.props;
 

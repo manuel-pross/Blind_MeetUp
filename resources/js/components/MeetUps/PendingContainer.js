@@ -149,8 +149,8 @@ class PendingContainer extends Component {
          );
       }
 
-      // TODO: Image Link hinzufügen
       return (
+      
          <div className="container mb-400">
             <div className="pendingContainer">
                <div className="pendingContainer__headlineWrapper">
