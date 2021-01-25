@@ -3,11 +3,6 @@
         Options -MultiViews
     </IfModule>
 
-    <Files .env>
-        order allow,deny
-        Deny from all
-    </Files>
-
     RewriteEngine On
     RewriteBase /Blind_MeetUp/public/
    # change above to your site i.e.,  RewriteBase /whatever/public/
