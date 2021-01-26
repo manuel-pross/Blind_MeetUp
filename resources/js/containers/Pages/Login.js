@@ -73,15 +73,15 @@ class Login extends Component {
         }
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="loginForm" onSubmit={this.handleSubmit}>
                 {/* <ErrorMessage>{this.state.message}</ErrorMessage> */}
                 <h3>Einloggen</h3>
-                <div className="form-group">
-                    <label>Benutzername</label>
+                <div className="form-group loginForm__wrapper">
+                    <label className="loginForm__user" >Benutzername</label>
                     <input type="text" className="form-control" placeholder="Name" onChange={e => this.hfu_user_name = e.target.value}></input>
                 </div>
-                <div className="form-group">
-                    <label>Passwort</label>
+                <div className="form-group loginForm__wrapper">
+                    <label className="loginForm__pw">Passwort</label>
                     <input type="password" className="form-control" placeholder="Passwort" onChange={e => this.password = e.target.value}></input>
                 </div>
                 <button className="btn btn-primary btn-block">Anmelden</button>

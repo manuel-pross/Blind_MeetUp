@@ -13125,3 +13125,22 @@ section.route-section {
   }
 }
 
+.loginForm {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+}
+
+.loginForm__user {
+  margin-right: 0.5rem;
+}
+
+.loginForm__pw {
+  margin-right: 2.9rem;
+}
+
+.loginForm__wrapper {
+  margin-bottom: 0.8rem;
+}
+

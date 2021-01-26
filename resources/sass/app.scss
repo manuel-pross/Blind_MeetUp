@@ -56,3 +56,22 @@
 @import "./Modal";
 @import "./notification";
 @import "./scrollTopButton";
+
+.loginForm {
+   position: absolute;
+   left: 50%;
+   top: 30%;
+   transform: translateX(-50%);
+
+   &__user {
+      margin-right: 0.5rem;
+   }
+
+   &__pw {
+      margin-right: 2.9rem;
+   }
+
+   &__wrapper {
+      margin-bottom: 0.8rem;
+   }
+}
