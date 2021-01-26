@@ -21,7 +21,7 @@ ReactDOM.render(
   // basename="/Blind_MeetUp/public"
   >
     <ScrollToTop>
-      <DevSizeBtn />
+      {/* <DevSizeBtn /> */}
       <React.StrictMode>
         <Routes />
         <ScrollTopButton/>
