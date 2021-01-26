@@ -74,6 +74,7 @@ class Login extends Component {
 
         return (
             <form className="loginForm" onSubmit={this.handleSubmit}>
+                <p>HINWEIS: <br /> Dieser Login ist ein Platzhalter und wird  in Zukunft durch einen SSO (Shibboleth) ersetzt, bei dem sich Studierende ohne Registrierung anmelden können. <br /> Aus technischen Gründen und wegen Covid-19, ist unsere Anwendung aktuell jedoch noch nicht nutzbar.</p>
                 {/* <ErrorMessage>{this.state.message}</ErrorMessage> */}
                 <h3>Einloggen</h3>
                 <div className="form-group loginForm__wrapper">
