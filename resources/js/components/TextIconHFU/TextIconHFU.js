@@ -11,7 +11,9 @@ const textIconHFU = (props) => {
             <div className="text-icon">
                 <p className="text-icon__heading-mobile">{t("headingMobile")}</p>
                 <p className="text-icon__heading-desktop">{t("headingDesktop")}</p>
-                <img className="text-icon__img" src={hfuIcon}></img>
+                <a href="https://www.hs-furtwangen.de/">
+                    <img className="text-icon__img" src={hfuIcon}></img>
+                </a>
             </div>
         </div>
     )
