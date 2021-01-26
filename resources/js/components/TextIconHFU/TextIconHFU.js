@@ -1,5 +1,5 @@
 import React from 'react';
-import hfuIcon from '../../../assets/img/Hochschule_Furtwangen_logo.svg'
+import hfuIcon from '../../../assets/img/Hochschule_Furtwangen_logo.jpg'
 
 import { withTranslation } from 'react-i18next';
 
